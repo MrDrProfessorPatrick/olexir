@@ -7,7 +7,7 @@ export default function HeroPage() {
         src="/titleTest.png"
         alt="Background"
         fill
-        className="object-cover"
+        className="object-cover animate-image-slideRight "
         priority
         sizes="1000px"
       />
