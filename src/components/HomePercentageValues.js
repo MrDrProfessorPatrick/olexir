@@ -1,7 +1,9 @@
 "use client";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 import AnimatedNumber from "./AnimatedNumber";
+import TypewriterText from "./TypeWriterText";
 
 export default function HomePercentageValues() {
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -19,10 +21,14 @@ export default function HomePercentageValues() {
             {show ? <AnimatedNumber value="60" /> : null}
           </div>
           <div className="w-[440px] h-[320px] bg-[#CED3CF] rounded-[62px] flex justify-center items-center text-center text-[32px]">
-            <div className="p-10">
-              skincare & haircare stuck with petroleum or animal base: plant
-              oils can’t solidify
-            </div>
+            <motion.div
+              className="p-10"
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 2 }}
+            >
+              <TypewriterText text="skincare & haircare stuck with petroleum or animal base: plant oils can’t solidify" />
+            </motion.div>
           </div>
         </div>
         <div className="flex flex-col justify-around w-[440px] h-[518px]">
@@ -32,8 +38,7 @@ export default function HomePercentageValues() {
           </div>
           <div className="w-[440px] h-[320px] bg-[#FFFFED] rounded-[62px] flex justify-center items-center text-center text-[32px]">
             <div className="p-10 text-[32px]">
-              reduced stability of cosmetics & food  due to rapid oxidation of
-              oils
+              <TypewriterText text="reduced stability of cosmetics & food due to rapid oxidation of oils" />
             </div>
           </div>
         </div>
@@ -44,8 +49,7 @@ export default function HomePercentageValues() {
           </div>
           <div className="w-[440px] h-[320px] bg-[#FAEBA9] rounded-[62px] flex justify-center items-center text-center">
             <div className="p-10 text-[32px]">
-              liphophilic bioactive compounds leak out: no solid structure, no
-              retention
+              <TypewriterText text="lipophilic bioactive compounds leak out: no solid structure, no retention" />
             </div>
           </div>
         </div>
