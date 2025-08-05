@@ -4,20 +4,29 @@ export default function HeroPage() {
   return (
     <section className="relative w-full h-[80vh]">
       <Image
-        src="/titleTest.png"
+        src="/OlexirPresentation.png"
         alt="Background"
         fill
         className="object-cover animate-image-slideRight "
         priority
-        sizes="1000px"
+        sizes="(max-width: 200px)"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center top-[-180px]">
-        <div className="p-0 m-0 animate-slideDown">
-          <h1 className="lg:text-[200px] md:text-[140px] text-[62px] font-bold text-black leading-[10rem]">
-            Olexir
-          </h1>
-        </div>
-        <div className="md:text-[47px] text-[27px] text-white text-center bg-black w-full pt-[20px] pb-[20px] animate-slideLeft">
+      <div className="absolute right-15 mt-6 pb-4 pt-4 flex flex-row items-center">
+        <button className="bg-black rounded-2xl pt-2 pb-2 pl-4 pr-4 mr-5">
+          Home
+        </button>
+        <button className="bg-black rounded-2xl pt-2 pb-2 pl-4 pr-4 mr-5">
+          Technology
+        </button>
+        <button className="bg-black rounded-2xl pt-2 pb-2 pl-4 pr-4 mr-5">
+          Team
+        </button>
+        <button className="bg-black rounded-2xl pt-2 pb-2 pl-4 pr-4 mr-5">
+          Amout
+        </button>
+      </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <div className="md:text-[37px] text-[17px] text-white text-center bg-black w-full animate-slideLeft">
           Versatile Platform for Lipid Engineering
         </div>
       </div>
