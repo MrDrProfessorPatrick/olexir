@@ -2,7 +2,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default function AnimatedNumber({ value, duration }) {
+export default function AnimatedNumber({ value, duration, className = "" }) {
   const { ref, inView } = useInView({ triggerOnce: false });
   const [finalValue] = useState(+value);
   const count = useMotionValue(0);
@@ -19,7 +19,7 @@ export default function AnimatedNumber({ value, duration }) {
   }, [inView, count, finalValue]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className={className}>
       <motion.span>{rounded}</motion.span>%
     </div>
   );

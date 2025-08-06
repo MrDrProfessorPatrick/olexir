@@ -15,7 +15,7 @@ export default function HomePercentageValues() {
 
   return (
     <div className="w-full min-h-screen pt-[10vh] bg-black overflow-x-auto">
-      <div className="flex justify-center gap-6 px-4">
+      <div className="flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-around max-w-[100vw] overflow-hidden">
         {[
           {
             value: 60,
@@ -25,7 +25,7 @@ export default function HomePercentageValues() {
           {
             value: 90,
             bg: "#FFFFED",
-            text: "reduced stability of cosmetics & food due to rapid oxidation of oils",
+            text: "reeduced stability of cosmetics & food due to rapid oxidation of oils",
           },
           {
             value: 92,
@@ -35,11 +35,11 @@ export default function HomePercentageValues() {
         ].map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-around 2xl:w-[440px] 2xl:h-[518px] 2xl:h-[336px] xl:w-[400px] xl:h-[471px] lg:w-[350px] lg:h-[412px] md:w-[300px] md:h-[353px] sm:w-[200px] sm:h-[235px] w-[100px] h-[117px] shrink-0"
+            className="flex flex-col justify-around 2xl:w-[440px] 2xl:h-[518px] 2xl:h-[336px] xl:w-[400px] xl:h-[471px] lg:w-[350px] lg:h-[412px] md:w-[300px] md:h-[353px] sm:w-[200px] sm:h-[350px] w-[300px] h-[353px] shrink-1"
           >
             <div
               ref={index === 0 ? ref : null}
-              className="text-center text-[#CED3CF]"
+              className="text-[48px] 2xl:text-[98px] xl:text-[68px] lg:text-[32px] sm:text-[20px] md:text-[26px] text-center text-[#CED3CF]"
             >
               {show ? <AnimatedNumber value={item.value} duration={4} /> : null}
             </div>
@@ -51,8 +51,11 @@ export default function HomePercentageValues() {
                 height: "60%",
               }}
             >
-              <div className="text-[1vw] sm:text-[20px] md:text-[26px] lg:text-[32px]">
-                <TypewriterText text={item.text} />
+              <div className="">
+                <TypewriterText
+                  text={item.text}
+                  className="text-[22px] 2xl:text-[32px] xl:text-[26px] lg:text-[24px] sm:text-[18px] md:text-[22px] text-[#000000] leading-snug text-jusify mx-auto break-normal"
+                />
               </div>
             </div>
           </div>

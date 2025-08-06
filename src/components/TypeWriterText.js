@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function TypewriterText({ text, delay = 0.03 }) {
+export default function TypewriterText({ text, delay = 0.03, className = "" }) {
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function TypewriterText({ text, delay = 0.03 }) {
   }, [text, delay]);
 
   return (
-    <div className="leading-snug text-center">
+    <div className={`${className}`}>
       {displayed.split("").map((char, index) => (
         <motion.span
           key={index}
@@ -25,7 +25,7 @@ export default function TypewriterText({ text, delay = 0.03 }) {
           transition={{ duration: 0.3 }}
           className="inline-block"
         >
-          {char === " " ? "\u00A0" : char}
+          {char === " " ? "\u2002" : char}
         </motion.span>
       ))}
     </div>
