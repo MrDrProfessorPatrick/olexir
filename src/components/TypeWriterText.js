@@ -16,7 +16,7 @@ export default function TypewriterText({ text, delay = 0.03 }) {
   }, [text, delay]);
 
   return (
-    <div className="leading-snug text-[32px] text-center">
+    <div className="leading-snug text-center">
       {displayed.split("").map((char, index) => (
         <motion.span
           key={index}
