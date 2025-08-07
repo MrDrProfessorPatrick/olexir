@@ -35,7 +35,7 @@ export default function HomePercentageValues() {
         ].map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-around 2xl:w-[440px] 2xl:h-[518px] 2xl:h-[336px] xl:w-[400px] xl:h-[471px] lg:w-[350px] lg:h-[412px] md:w-[300px] md:h-[353px] sm:w-[200px] sm:h-[350px] w-[300px] h-[353px] shrink-1"
+            className="flex flex-col justify-around 2xl:w-[440px] 2xl:h-[518px] 2xl:h-[336px] xl:w-[400px] xl:h-[471px] lg:w-[320px] lg:h-[377px] md:w-[240px] md:h-[282px] sm:w-[200px] sm:h-[350px] w-[300px] h-[353px] shrink-1"
           >
             <div
               ref={index === 0 ? ref : null}

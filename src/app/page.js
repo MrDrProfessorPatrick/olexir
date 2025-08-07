@@ -1,6 +1,7 @@
 import HeroPage from "@/components/HeroPage";
 import HomePageContent from "@/components/HomePageContent";
 import HomePercentageValues from "@/components/HomePercentageValues";
+import CaruselHome from "@/components/CaruselHome";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <HeroPage />
         <HomePageContent />
         <HomePercentageValues />
+        <CaruselHome />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
     </div>
