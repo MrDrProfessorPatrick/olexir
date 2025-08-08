@@ -51,12 +51,7 @@ export default function HomePercentageValues() {
                 height: "60%",
               }}
             >
-              <div className="">
-                <TypewriterText
-                  text={item.text}
-                  className="text-[22px] 2xl:text-[32px] xl:text-[26px] lg:text-[24px] sm:text-[18px] md:text-[22px] text-[#000000] leading-snug text-jusify mx-auto break-normal"
-                />
-              </div>
+              <div className="">{item.text}</div>
             </div>
           </div>
         ))}

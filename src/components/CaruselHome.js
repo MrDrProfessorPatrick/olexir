@@ -78,7 +78,6 @@ export default function CaruselHome() {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots */}
       <div className="flex justify-center gap-2 mt-4">
         {scrollSnaps.map((_, index) => (
           <button
