@@ -23,8 +23,8 @@ export default function HeroPage() {
         priority
         sizes="(max-width: 200px)"
       />
-      <div className="z-1000">
-        <MenuButtons buttons={["Home", "Technology", "Team", "About"]} />
+      <div className="">
+        <MenuButtons buttons={["Home", "Solution", "Team", "About"]} />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="md:text-[37px] text-[17px] text-white text-center bg-black w-full animate-slideLeft">
