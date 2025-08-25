@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function MenuButtons({ buttons }) {
   const router = useRouter();
   return (
-    <div className="absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-10 pb-4 pt-4 flex flex-row items-center">
+    <div className="absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-6 pb-4 pt-4 flex flex-row items-center">
       {buttons.map((button) => (
         <motion.button
           onClick={() => router.push(`/${button.toLowerCase()}`)}
