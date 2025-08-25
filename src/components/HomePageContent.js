@@ -1,13 +1,16 @@
 // HomeImage1
 import Image from "next/image";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function HomePageContent() {
   return (
-    <div className="w-full h-[1500px]">
-      <div className="w-fit text-center text-2xl mt-[283px] ml-35 mb-[156px]">
-        Focus on <span className="font-bold">[Feel. Taste. Heal]</span> our
-        Wellness
-      </div>
+    <div className="w-full">
       <div className="relative w-full h-[496px]">
         <Image
           src="/HomeImage1.png"
@@ -18,22 +21,44 @@ export default function HomePageContent() {
           sizes="(max-width: 200px)"
         />
       </div>
-      <div>
-        <h2 className="lg:text-6xl md:text-3xl sm:text-2xl font-bold mt-[76px] text-center">
-          Where your wellness begins
-        </h2>
-        <p className="mt-[66px] lg:text-4xl md:text-2xl sm:text-xl pl-10 pr-10 pt-4 pb-4">
-          Over 60% of cosmetics rely on fossil-derived or animal fats, while
-          edible fats are packed with trans and saturated lipids that contribute
-          to obesity, diabetes and cardiovascular diseases, killing one in three
-          people globally.
+      <div className="bg-[url('/caruselBg.webp')]">
+        <div className="flex items-start pl-20 pt-50 pb-10">
+          <span
+            className={`text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
+          >
+            “
+          </span>
+        </div>
+
+        <p className={`text-[24px] text-white ${montserrat.className} px-20`}>
+          Olexir emerged from ETH Zurich with the support of the ETH Pioneer
+          Fellowship. We combine breakthroughs in food science, material
+          engineering, and proteomics with a deep commitment to sustainability —
+          building a new class of functional wellness materials that bridge
+          cutting-edge research with global market potential
         </p>
-        <p className="mt-[36px] lg:text-4xl md:text-2xl sm:text-xl pl-10 pr-10 pt-4 pb-4">
-          Plant oils, rich in PUFA polyunsaturated fats, offer a sustainable,
-          bioactive alternative; however, their fluidity and oxidative
-          instability drastically limit their applications in food, cosmetics,
-          and pharmaceuticals.
+        <p className={`text-xl text-white px-20 pt-10 ${montserrat.className}`}>
+          — Dr Svitlana Mykolenko
         </p>
+        <div className="flex justify-end pr-30 pb-10">
+          <div className=" pr-20 pb-20 pt-10">
+            <span
+              className={`text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
+            >
+              ”
+            </span>
+          </div>
+          <div className="relative w-[342px] h-[374px]">
+            <Image
+              src="/svitlanaHomePage.png"
+              alt="svitlana scientist"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 200px)"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

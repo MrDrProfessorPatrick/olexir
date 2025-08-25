@@ -4,6 +4,20 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Lato } from "next/font/google";
+import { Inter } from "next/font/google";
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function CaruselHome() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -44,7 +58,33 @@ export default function CaruselHome() {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-84 pb-84 2xl:pl-34 2xl:pr-34 xl:pl-24 xl:pr-24 lg:pl-16 lg:pr-16 md:pl-8 md:pr-8 sm:pl-4 sm:pr-4 pl-2 pr-2 bg-[url('/caruselBg.webp')] bg-cover bg-center">
+    <div className="relative pt-40 pb-40 2xl:pl-34 2xl:pr-34 xl:pl-24 xl:pr-24 lg:pl-16 lg:pr-16 md:pl-8 md:pr-8 sm:pl-4 sm:pr-4 pl-2 pr-2 bg-[url('/caruselBg.webp')] bg-cover bg-center">
+      <div className="flex w-full pb-40">
+        <div className="flex-4">
+          <h2 className="text-[60px] font-medium text-white">
+            Amplify Oleosensation:
+          </h2>
+          <p className="text-[40px] font-medium text-white">
+            [Feel. Taste. Heal]
+          </p>
+        </div>
+        <div className="flex-3">
+          <p
+            className={`text-[28px] font-normal text-white ${inter.className}`}
+          >
+            At <span className="font-bold">Olexir</span>, we harness the power
+            of plant proteins to microencapsulate natural oils into next‑gen
+            functional oleogels. Through interface engineering, we employ
+            structured plant protein hydrolysates to empower natural oils with
+            boosted bioavailability and stability for beauty, food and health.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <h2 className={`text-[40px] font-medium text-white ${lato.className}`}>
+          We turn liquid oils into solid wellness with plant proteins
+        </h2>
+      </div>
       <div className="overflow-hidden " ref={emblaRef}>
         <div className="flex ">
           {images.map((src, index) => (
