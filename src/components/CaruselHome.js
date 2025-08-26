@@ -85,38 +85,39 @@ export default function CaruselHome() {
           We turn liquid oils into solid wellness with plant proteins
         </h2>
       </div>
-      <div className="overflow-hidden " ref={emblaRef}>
-        <div className="flex ">
-          {images.map((src, index) => (
-            <div
-              className="flex-[0_0_100%] md:flex-[0_0_33.3333%] flex items-center justify-center content-center p-4"
-              key={index}
-            >
-              <div className="relative w-[250px] h-[250px] 2xl:w-[500px] xl:w-[500px] lg:w-[500px] md:w-[500px] sm:w-[400px] 2xl:w-[500px] xl:h-[500px] lg:h-[500px] md:h-[500px] sm:h-[400px] rounded-lg overflow-hidden">
-                <Image
-                  src={src}
-                  alt={`Carousel image ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
+
+      <div className="flex">
+        <div className="flex items-center justify-center">
+          <button onClick={scrollPrev} className="cursor-pointer">
+            <ChevronLeft color="white" className="z-10" />
+          </button>
+        </div>
+        <div className="overflow-hidden " ref={emblaRef}>
+          <div className="flex">
+            {images.map((src, index) => (
+              <div
+                className="flex-[0_0_100%] 2xl:flex-[0_0_33.333%] xl:flex-[0_0_50%] lg:flex-[0_0_50%] md:flex-[0_0_100%] sm:flex-[0_0_100%] flex items-center justify-center content-center p-4"
+                key={index}
+              >
+                <div className="relative w-[250px] h-[250px] 2xl:w-[500px] xl:w-[500px] lg:w-[500px] md:w-[500px] 2xl:w-[500px] xl:h-[500px] lg:h-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] rounded-lg overflow-hidden">
+                  <Image
+                    src={src}
+                    alt={`Carousel image ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+          <button onClick={scrollNext} className="cursor-pointer">
+            <ChevronRight color="white" className="z-1000" />
+          </button>
         </div>
       </div>
-      <button
-        onClick={scrollPrev}
-        className="absolute top-1/2 left-10 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 shadow"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        onClick={scrollNext}
-        className="absolute top-1/2 right-10 -translate-y-1/2 z-10 bg-white/70 hover:bg-white rounded-full p-2 shadow"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
 
       <div className="flex justify-center gap-2 mt-4">
         {scrollSnaps.map((_, index) => (
