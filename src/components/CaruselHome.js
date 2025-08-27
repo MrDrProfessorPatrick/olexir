@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import CarouselItem from "./CaruselItem";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
 import BigImage from "./BigImage";
@@ -21,6 +21,14 @@ const inter = Inter({
   weight: ["100", "300", "400", "700", "900"],
 });
 
+const images = [
+  { src: "/CaruselHome1.jpg", index: 0 },
+  { src: "/CaruselHome2.png", index: 1 },
+  { src: "/CaruselHome3.png", index: 2 },
+  { src: "/CaruselHome4.jpg", index: 3 },
+  { src: "/CaruselHome5.png", index: 4 },
+];
+
 export default function CaruselHome() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -32,25 +40,43 @@ export default function CaruselHome() {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
-  const [isBigImageShown, showBigImage] = useState(false);
+
   const [bigImageSrc, setBigImageSrc] = useState("");
-  const [imageIndex, setImageIndex] = useState(1);
+  const [imageIndexes, setImageIndexes] = useState([
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
 
-  const images = [
-    "/CaruselHome1.jpg",
-    "/CaruselHome2.png",
-    "/CaruselHome3.png",
-    "/CaruselHome4.jpg",
-    "/CaruselHome5.png",
-  ];
+  const [openedImageIndex, setOpenedImageIndex] = useState(null);
 
-  // Update selected index on scroll
+  useEffect(() => {
+    for (let index of imageIndexes) {
+      if (index !== null) setOpenedImageIndex(index);
+      break;
+    }
+  }, [imageIndexes]);
+
+  const selectImg = useCallback((currIndex) => {
+    const selected = images.find((img) => img.index === currIndex);
+    if (selected) {
+      setImageIndexes((prev) =>
+        prev.map((val, i) => (i === currIndex ? currIndex : val))
+      );
+    }
+  }, []);
+
+  const deSelectImg = useCallback(() => {
+    setImageIndexes((prev) => prev.map((val, i) => (i !== null ? null : val)));
+  }, []);
+
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
-  // Setup Embla callbacks
   useEffect(() => {
     if (!emblaApi) return;
     setScrollSnaps(emblaApi.scrollSnapList());
@@ -64,12 +90,13 @@ export default function CaruselHome() {
 
   return (
     <div className="relative pt-40 pb-40 2xl:pl-34 2xl:pr-34 xl:pl-24 xl:pr-24 lg:pl-16 lg:pr-16 md:pl-8 md:pr-8 sm:pl-4 sm:pr-4 pl-2 pr-2 bg-[url('/caruselBg.webp')] bg-cover bg-center">
-      {isBigImageShown && (
+      {bigImageSrc && (
         <BigImage
           src={bigImageSrc}
           alt={`Carousel image ${selectedIndex + 1}`}
-          showBigImage={showBigImage}
-          imageIndex={imageIndex}
+          setBigImageSrc={setBigImageSrc}
+          openedImageIndex={openedImageIndex}
+          deSelectImg={deSelectImg}
         />
       )}
       <div className="flex w-full pb-40">
@@ -107,35 +134,16 @@ export default function CaruselHome() {
         </div>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {images.map((src, index) => {
-              const isSelected = isBigImageShown && imageIndex === index + 1;
-
+            {images.map((imgObj, currIndex) => {
               return (
-                <div
-                  onClick={() => {
-                    console.log("imageIndex set", index + 1);
-                    showBigImage(true);
-                    setBigImageSrc(src);
-                    setImageIndex(index + 1);
-                  }}
-                  className="flex-[0_0_100%] 2xl:flex-[0_0_33.333%] xl:flex-[0_0_50%] lg:flex-[0_0_50%] md:flex-[0_0_100%] sm:flex-[0_0_100%] flex items-center justify-center content-center p-4"
-                  key={index}
-                >
-                  <div className="relative w-[250px] h-[250px] 2xl:w-[500px] xl:w-[500px] lg:w-[500px] md:w-[500px] 2xl:w-[500px] xl:h-[500px] lg:h-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] cursor-pointer rounded-lg overflow-hidden">
-                    {!isSelected && (
-                      <motion.img
-                        src={src}
-                        alt={`Carousel image ${index + 1}`}
-                        layoutId={
-                          isBigImageShown && imageIndex === index + 1
-                            ? `expandable-image-${index + 1}`
-                            : undefined
-                        }
-                        className="object-cover w-full h-full"
-                      />
-                    )}
-                  </div>
-                </div>
+                <CarouselItem
+                  key={imgObj.index}
+                  src={imgObj.src}
+                  index={imgObj.index}
+                  setBigImageSrc={setBigImageSrc}
+                  imageIndex={imageIndexes[currIndex]}
+                  selectImg={selectImg}
+                />
               );
             })}
           </div>
