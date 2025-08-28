@@ -32,7 +32,7 @@ const images = [
 export default function CaruselHome() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true,
+      loop: false,
       align: "start",
     }
     // [Autoplay({ delay: 4000, stopOnInteraction: true })]
@@ -50,15 +50,15 @@ export default function CaruselHome() {
     null,
   ]);
   const [bigImageIndex, setBigImageIndex] = useState(null);
-
-  useEffect(() => {
-    for (let index of imageIndexes) {
-      if (index !== null) {
-        setBigImageIndex(index);
-        break;
-      }
-    }
-  }, [imageIndexes]);
+  console.log("imageIndexes=", imageIndexes);
+  // useEffect(() => {
+  //   for (let index of imageIndexes) {
+  //     if (index !== null) {
+  //       setBigImageIndex(index);
+  //       break;
+  //     }
+  //   }
+  // }, [imageIndexes]);
 
   const selectImg = useCallback((currIndex) => {
     const selected = images.find((img) => img.index === currIndex);
@@ -71,8 +71,9 @@ export default function CaruselHome() {
   }, []);
 
   const deSelectImg = useCallback(() => {
+    console.log("before deselection", imageIndexes);
     setImageIndexes((prev) => prev.map((val, i) => (i !== null ? null : val)));
-  }, []);
+  }, [imageIndexes]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;

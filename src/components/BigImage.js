@@ -16,46 +16,40 @@ export default function BigImage({
           setBigImageSrc("");
           deSelectImg(bigImageIndex);
         }}
-        style={{
-          position: "fixed",
-          inset: 0,
-          background: "rgba(0, 0, 0, 0.8)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          zIndex: 999,
-        }}
+        className="fixed inset-0 bg-[rgba(0,0,0,0.8)] flex flex-col justify-center items-center z-[999]"
       >
         <motion.div
-            className="relative w-[600px] rounded-t-xl h-[600px] cursor-pointer overflow-hidden"
-            key={bigImageIndex}
-            layoutId={`expandable-image-${bigImageIndex}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              layout: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
-            }}
-         >
+          className="relative w-[600px] h-[600px] cursor-pointer overflow-hidden"
+          key={bigImageIndex}
+          layoutId={`expandable-image-${bigImageIndex}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            layout: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+          }}
+        >
           <motion.img
             src={src}
             alt="Expanded"
-             className="w-[700px] h-[700px] object-contain"
+            className="w-[700px]  object-contain rounded-t-[10px]"
           />
         </motion.div>
-        <motion.div 
-            className="bg-white w-[600px] p-6 rounded-b-xl"
-            initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: [0.4, 0, 0.2, 1],
-              delay: 0.4,
-      }}
+        <motion.div
+          className="bg-white w-[600px] p-6 rounded-b-[10px]"
+          initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
+          animate={{ opacity: 1, scaleY: 1 }}
+          exit={{ opacity: 0, scaleY: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: [0.4, 0, 0.2, 1],
+            delay: 0.4,
+          }}
         >
-          THIS DIV SHOULD EXPAND HERE
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </motion.div>
       </motion.div>
     </AnimatePresence>
