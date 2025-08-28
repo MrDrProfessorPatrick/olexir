@@ -26,19 +26,21 @@ export default function BigImage({
           zIndex: 999,
         }}
       >
-        <motion.div className="relative w-[700px] h-[700px] cursor-pointer rounded-lg overflow-hidden">
-          <motion.img
-            src={src}
+        <motion.div
+            className="relative w-[700px] h-[700px] cursor-pointer rounded-lg overflow-hidden"
             key={bigImageIndex}
-            alt="Expanded"
             layoutId={`expandable-image-${bigImageIndex}`}
-            className="w-[700px] h-[700px] rounded-lg object-contain"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
-              layout: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+              layout: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
             }}
+         >
+          <motion.img
+            src={src}
+            alt="Expanded"
+             className="w-[700px] h-[700px] rounded-lg object-contain"
           />
         </motion.div>
       </motion.div>

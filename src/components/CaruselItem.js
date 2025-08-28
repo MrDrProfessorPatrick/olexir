@@ -23,7 +23,7 @@ const CarouselItem = React.memo(function CarouselItem({
       onClick={() => itemClick(index, src)}
       layoutId={`expandable-image-${index}`} // animation problem is here
       transition={{
-        layout: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+        layout: { duration: 0 },
       }}
     >
       <div className="relative w-[250px] h-[250px] 2xl:w-[500px] xl:w-[500px] lg:w-[500px] md:w-[500px] 2xl:w-[500px] xl:h-[500px] lg:h-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] cursor-pointer rounded-lg overflow-hidden">
