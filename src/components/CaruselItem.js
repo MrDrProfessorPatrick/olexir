@@ -14,7 +14,7 @@ const CarouselItem = React.memo(function CarouselItem({
     setBigImageSrc(src);
     selectImg(index);
   }
-  console.log("carouselItem index", imageIndex);
+  console.log("carouselItem imageIndex", imageIndex, "index", index);
 
   return (
     <motion.div

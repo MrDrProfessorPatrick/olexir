@@ -49,13 +49,14 @@ export default function CaruselHome() {
     null,
     null,
   ]);
-
-  const [openedImageIndex, setOpenedImageIndex] = useState(null);
+  const [bigImageIndex, setBigImageIndex] = useState(null);
 
   useEffect(() => {
     for (let index of imageIndexes) {
-      if (index !== null) setOpenedImageIndex(index);
-      break;
+      if (index !== null) {
+        setBigImageIndex(index);
+        break;
+      }
     }
   }, [imageIndexes]);
 
@@ -65,6 +66,7 @@ export default function CaruselHome() {
       setImageIndexes((prev) =>
         prev.map((val, i) => (i === currIndex ? currIndex : val))
       );
+      setBigImageIndex(selected.index);
     }
   }, []);
 
@@ -95,7 +97,7 @@ export default function CaruselHome() {
           src={bigImageSrc}
           alt={`Carousel image ${selectedIndex + 1}`}
           setBigImageSrc={setBigImageSrc}
-          openedImageIndex={openedImageIndex}
+          bigImageIndex={bigImageIndex}
           deSelectImg={deSelectImg}
         />
       )}

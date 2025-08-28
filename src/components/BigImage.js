@@ -5,16 +5,16 @@ export default function BigImage({
   src,
   alt,
   setBigImageSrc,
-  openedImageIndex,
+  bigImageIndex,
   deSelectImg,
 }) {
-  console.log("BigImage index", openedImageIndex);
+  console.log("BigImage index", bigImageIndex);
   return (
     <AnimatePresence mode="wait">
       <motion.div
         onClick={() => {
           setBigImageSrc("");
-          deSelectImg(openedImageIndex);
+          deSelectImg(bigImageIndex);
         }}
         style={{
           position: "fixed",
@@ -29,9 +29,9 @@ export default function BigImage({
         <motion.div className="relative w-[700px] h-[700px] cursor-pointer rounded-lg overflow-hidden">
           <motion.img
             src={src}
-            key={openedImageIndex}
+            key={bigImageIndex}
             alt="Expanded"
-            layoutId={`expandable-image-${openedImageIndex}`}
+            layoutId={`expandable-image-${bigImageIndex}`}
             className="w-[700px] h-[700px] rounded-lg object-contain"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
