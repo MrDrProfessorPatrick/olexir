@@ -1,5 +1,12 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  variable: "--font-lato",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function BigImage({
   src,
@@ -36,12 +43,12 @@ export default function BigImage({
           />
         </motion.div>
         <motion.div
-          className="bg-white w-[600px] p-6 rounded-b-[10px]"
+          className={`bg-zinc-400 w-[600px] p-6 rounded-b-[10px] ${lato.className} text-justify`}
           initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
           animate={{ opacity: 1, scaleY: 1 }}
           exit={{ opacity: 0, scaleY: 0 }}
           transition={{
-            duration: 0.3,
+            duration: 0.5,
             ease: [0.4, 0, 0.2, 1],
             delay: 0.4,
           }}

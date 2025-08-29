@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --background: #fbfded;
@@ -9,6 +6,10 @@
 }
 
 @theme inline {
+  --breakpoint-small: 600px;
+  --breakpoint-mid: 1230px;
+  --breakpoint-big: 1890px;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
