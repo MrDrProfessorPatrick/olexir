@@ -21,7 +21,7 @@ export default function HomePageContent() {
           sizes="(max-width: 200px)"
         />
       </div>
-      <div className="bg-[url('/caruselBg.webp')]">
+      <div className="bg-[url('/caruselBg.png')]">
         <div className="flex items-start pl-20 pt-50 pb-10">
           <span
             className={`text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
