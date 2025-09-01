@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 
 export default function HeroPage() {
   return (
-    <section className="relative w-full h-[916px]">
+    <section className="relative w-full h-[1216px] lg:h-[916px]">
       <div className="w-full h-[100px]">
         <div className="absolute inset-0 flex items-center justify-center z-10 w-[220px] h-[70px] ml-[5%] mt-[2%]">
           <Image
@@ -42,9 +42,9 @@ export default function HeroPage() {
       />
 
       <div className="absolute inset-0 mt-[201px]">
-        <div className={`relative  animate-slideLeft max-w-[1200px] pl-[5%]`}>
+        <div className={`relative animate-slideLeft max-w-[1200px] pl-[5%]`}>
           <span
-            className={`2xl:text-[87px] xl:text-[87px] lg:text-[77px] md:text-[67px] sm:text-[57px] text-[32px] font-extrabold text-black text-left ${lato.className}  h-[212px]`}
+            className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] text-[32px] font-extrabold text-black text-left ${lato.className}  h-[212px]`}
           >
             Versatile platform for lipid engineering
           </span>
@@ -62,35 +62,35 @@ export default function HeroPage() {
           </div>
         </div>
         <div
-          className={`flex justify-center mt-18 gap-14 mx-auto w-full px-19 ${lato.className}`}
+          className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-14 mx-auto px-18  ${lato.className}`}
         >
-          <div className="flex-1 h-[232px] max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 pl-8 pr-20">
-              <h3 className="text-[40px]">Beauty</h3>
+          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="pt-6 lg:pl-8">
+              <h3 className="text-[40px] text-center lg:text-left">Beauty</h3>
               <ul className="text-[24px]">
-                <li>Silky.</li>
-                <li>Vegan.</li>
-                <li>Smart.</li>
+                <li className="text-center lg:text-left">Silky.</li>
+                <li className="text-center lg:text-left">Vegan.</li>
+                <li className="text-center lg:text-left">Smart.</li>
               </ul>
             </div>
           </div>
-          <div className="flex-1 h-[232px] max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 pl-8 pr-20">
-              <h3 className="text-[40px]">Beauty</h3>
+          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="pt-6 pl-8">
+              <h3 className="text-[40px] text-center lg:text-left">Beauty</h3>
               <ul className="text-[24px]">
-                <li>Silky.</li>
-                <li>Vegan.</li>
-                <li>Smart.</li>
+                <li className="text-center lg:text-left">Silky.</li>
+                <li className="text-center lg:text-left">Vegan.</li>
+                <li className="text-center lg:text-left">Smart.</li>
               </ul>
             </div>
           </div>
-          <div className="flex-1 h-[232px] max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 pl-8 pr-20">
-              <h3 className="text-[40px]">Beauty</h3>
+          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="pt-6 pl-8">
+              <h3 className="text-[40px] text-center lg:text-left">Beauty</h3>
               <ul className="text-[24px]">
-                <li>Silky.</li>
-                <li>Vegan.</li>
-                <li>Smart.</li>
+                <li className="text-center lg:text-left">Silky.</li>
+                <li className="text-center lg:text-left">Vegan.</li>
+                <li className="text-center lg:text-left">Smart.</li>
               </ul>
             </div>
           </div>
