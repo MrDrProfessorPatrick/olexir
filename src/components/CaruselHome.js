@@ -32,7 +32,7 @@ const images = [
 export default function CaruselHome() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: true,
+      loop: false,
       align: "start",
     }
     // [Autoplay({ delay: 4000, stopOnInteraction: true })]
