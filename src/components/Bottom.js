@@ -12,31 +12,43 @@ export default function Bottom() {
     <div
       className={`grid grid-cols-[1fr_1.5fr_1fr] bg-[#D8AE02] w-full h-[248px] ${montserrat.variable}`}
     >
-      <div className="relative w-[220px] h-[70px] ml-[5%] mt-25">
-        <Image
-          src="/OlexirLogoBlackDiomondUnderI2.png"
-          alt="logo"
-          fill
-          className="object-cover"
-          priority
-          sizes="(max-width: 200px)"
-        />
-      </div>
-      <div className="mt-[5%] flex flex-col items-center justify-center">
-        <div className="text-[24px] font-semibold">
-          <span>Reach out to collaborate or learn more.</span>
-        </div>
-        <div className="text-[24px] font-semibold mt-2">
-          <span>olexir@olexir.ch</span>
-        </div>
-        <div className="mt-2">
-          <button className="text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md">
-            Let’s Connect 📩
-          </button>
+      <div className="flex items-center pl-[5%]">
+        <div className="relative w-[220px] h-[70px]">
+          <Image
+            src="/OlexirLogoBlackDiomondUnderI2.png"
+            alt="logo"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 200px)"
+          />
         </div>
       </div>
-      <div className="text-[16px] mr-[5%] flex flex-col items-end mt-50">
-        <span>© 2025 by Olexir</span>
+      <div className="flex items-center justify-center">
+        <div className="flex flex-col justify-start items-center">
+          <div
+            className={`flex flex-start text-[16px] lg:text-[24px] font-semibold ${montserrat.variable}`}
+          >
+            <span>Reach out to collaborate or learn more.</span>
+          </div>
+          <div
+            className={`flex justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
+          >
+            <span>olexir@olexir.ch</span>
+          </div>
+          <div className="flex justify-start w-full pt-2">
+            <button className="text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md">
+              Let’s Connect 📩
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-end items-end w-full">
+        <div
+          className={`text-[16px] pr-8 pb-5 flex flex-col items-end ${montserrat.variable}`}
+        >
+          <span>© 2025 by Olexir</span>
+        </div>
       </div>
     </div>
   );

@@ -122,8 +122,10 @@ export default function CaruselHome() {
           </p>
         </div>
       </div>
-      <div className="flex justify-center">
-        <h2 className={`text-[40px] font-medium text-white ${lato.className}`}>
+      <div className="flex justify-center pb-8">
+        <h2
+          className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] font-medium text-white ${lato.className}`}
+        >
           We turn liquid oils into solid wellness with plant proteins
         </h2>
       </div>

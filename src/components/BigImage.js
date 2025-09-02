@@ -28,32 +28,32 @@ export default function BigImage({
         }}
       >
         <motion.div
-            className="relative w-[600px] rounded-t-xl h-[600px] cursor-pointer overflow-hidden"
-            key={bigImageIndex}
-            layoutId={`expandable-image-${bigImageIndex}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              layout: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
-            }}
-         >
+          className="relative w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-t-xl cursor-pointer overflow-hidden"
+          key={bigImageIndex}
+          layoutId={`expandable-image-${bigImageIndex}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            layout: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+          }}
+        >
           <motion.img
             src={src}
             alt="Expanded"
-             className="w-[700px] h-[700px] object-contain"
+            className="w-[400px] h-[400px] md:w-[600px] md:h-[600px] object-contain"
           />
         </motion.div>
-        <motion.div 
-            className="bg-white w-[600px] p-6 rounded-b-xl"
-            initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
-            animate={{ opacity: 1, scaleY: 1 }}
-            exit={{ opacity: 0, scaleY: 0 }}
-            transition={{
-              duration: 0.3,
-              ease: [0.4, 0, 0.2, 1],
-              delay: 0.4,
-      }}
+        <motion.div
+          className="bg-white w-[400px] md:w-[600px] p-6 rounded-b-xl"
+          initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
+          animate={{ opacity: 1, scaleY: 1 }}
+          exit={{ opacity: 0, scaleY: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: [0.4, 0, 0.2, 1],
+            delay: 0.4,
+          }}
         >
           THIS DIV SHOULD EXPAND HERE
         </motion.div>
