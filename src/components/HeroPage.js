@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MenuButtons from "./MenuButtons";
+import NavBar from "./NavBar";
 import { Lato } from "next/font/google";
 import { Montserrat } from "next/font/google";
 
@@ -18,20 +18,6 @@ const montserrat = Montserrat({
 export default function HeroPage() {
   return (
     <section className="relative w-full h-[1216px] lg:h-[916px]">
-      <div className="w-full h-[100px]">
-        <div className="absolute inset-0 flex items-center justify-center z-10 w-[220px] h-[70px] ml-[5%] mt-[2%]">
-          <Image
-            src="/OlexirLogoBlackDiomondUnderI2.png"
-            alt="logo"
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 200px)"
-          />
-        </div>
-        <MenuButtons buttons={["Solution", "Team", "About"]} />
-      </div>
-
       <Image
         src="/OlexirPresentation.png"
         alt="Background"
@@ -40,7 +26,7 @@ export default function HeroPage() {
         priority
         sizes="(max-width: 200px)"
       />
-
+      <NavBar />
       <div className="absolute inset-0 mt-[201px]">
         <div className={`relative animate-slideLeft max-w-[1200px] pl-[5%]`}>
           <span
@@ -75,7 +61,7 @@ export default function HeroPage() {
             </div>
           </div>
           <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 pl-8">
+            <div className="pt-6 lg:pl-8">
               <h3 className="text-[40px] text-center lg:text-left">Beauty</h3>
               <ul className="text-[24px]">
                 <li className="text-center lg:text-left">Silky.</li>
@@ -85,7 +71,7 @@ export default function HeroPage() {
             </div>
           </div>
           <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 pl-8">
+            <div className="pt-6 lg:pl-8">
               <h3 className="text-[40px] text-center lg:text-left">Beauty</h3>
               <ul className="text-[24px]">
                 <li className="text-center lg:text-left">Silky.</li>

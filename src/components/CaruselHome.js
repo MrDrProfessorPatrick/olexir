@@ -101,9 +101,9 @@ export default function CaruselHome() {
           deSelectImg={deSelectImg}
         />
       )}
-      <div className="flex w-full pb-40">
+      <div className="flex flex-col lg:flex-row w-full pb-40">
         <div className="flex-4">
-          <h2 className="text-[60px] font-medium text-white">
+          <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
             Amplify Oleosensation:
           </h2>
           <p className="text-[40px] font-medium text-white">
@@ -112,7 +112,7 @@ export default function CaruselHome() {
         </div>
         <div className="flex-3">
           <p
-            className={`text-[28px] font-normal text-white ${inter.className}`}
+            className={`text-[18px] font-normal text-white mt-10 lg:mt-0 lg:text-[24px] ${inter.className}`}
           >
             At <span className="font-bold">Olexir</span>, we harness the power
             of plant proteins to microencapsulate natural oils into next‑gen
