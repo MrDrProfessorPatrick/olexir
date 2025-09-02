@@ -36,19 +36,19 @@ export default function HeroPage() {
           </span>
           <div className="relative mt-4">
             <button
-              className={`px-6 py-2 rounded-xl relative cursor-pointer bg-black z-1000 text-white text-[18px] mr-[10px] ${montserrat.className}`}
+              className={`w-[150px] h-[49px] sm:w-[179px] h-[59px] rounded-xl relative cursor-pointer bg-black z-1000 text-white text-[14px] md:text-[18px] ${montserrat.className}`}
             >
               Discover More
             </button>
             <button
-              className={`px-6 py-2 rounded-xl relative cursor-pointer bg-[#D8AE02] z-1000 text-black text-[18px] ml-[10px] ${montserrat.className}`}
+              className={`w-[150px] h-[49px] sm:w-[179px] h-[59px]  rounded-xl relative cursor-pointer bg-[#D8AE02] z-1000 text-black text-[14px] md:text-[18px] ml-[10px] ${montserrat.className}`}
             >
               Partner With Us
             </button>
           </div>
         </div>
         <div
-          className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-14 mx-auto px-18  ${lato.className}`}
+          className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-14 mx-auto  ${lato.className}`}
         >
           <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
             <div className="pt-6 lg:pl-8">
