@@ -16,13 +16,12 @@
 }
 
 @theme {
-  /* --breakpoint-minimal: 100px; */
-  /* --breakpoint-extrasmall: 480px;
-  --breakpoint-small: 760px;
-  --breakpoin-extramid: 890px;
-  --breakpoint-mid: 1200px;
-  --breakpoint-big: 1900px;
-  --breakpoint-extrabig: 2000px; */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1900px;
 }
 
 @media (prefers-color-scheme: dark) {

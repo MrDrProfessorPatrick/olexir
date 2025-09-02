@@ -19,7 +19,7 @@ const CarouselItem = React.memo(function CarouselItem({
   return (
     <motion.div
       key={index}
-      className="extrabig:flex-[0_0_33.333%] big:flex-[0_0_50%] mid:flex-[0_0_50%] small:flex-[0_0_100%] extrasmall:flex-[0_0_100%] flex items-center justify-center content-center p-4"
+      className="flex items-center flex-[0_0_100%] xl:flex-[0_0_50%] 3xl:flex-[0_0_33.333%] justify-center content-center p-4"
       onClick={() => itemClick(index, src)}
       layoutId={`expandable-image-${index}`} // animation problem is here
       transition={{
