@@ -30,9 +30,9 @@ export default function MenuButtons({ buttons }) {
               mass: 0.1,
             },
           }}
-          className="px-6 py-2 rounded-xl relative cursor-pointer radial-gradient z-1000"
+          className="px-2 lg:px-6 py-2 rounded-xl relative cursor-pointer radial-gradient z-1000"
         >
-          <span className="text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask">
+          <span className="text-neutral-100 tracking-wide font-light px-4 block relative linear-mask">
             {button}
           </span>
           <span className="pointer-events-none block absolute inset-0 rounded-xl p-px linear-overlay" />

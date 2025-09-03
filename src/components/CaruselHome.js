@@ -91,7 +91,7 @@ export default function CaruselHome() {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-40 pb-40 2xl:pl-34 2xl:pr-34 xl:pl-24 xl:pr-24 lg:pl-16 lg:pr-16 md:pl-8 md:pr-8 sm:pl-4 sm:pr-4 pl-2 pr-2 bg-[url('/caruselBg.png')] bg-cover bg-center">
+    <div className="relative pt-10 lg:pt-40 pb-40 px-6 2xl:px-34 xl:px-24 lg:px-16 md:px-8 sm:px-4 bg-[url('/caruselBg.png')] bg-cover bg-center">
       {bigImageSrc && (
         <BigImage
           src={bigImageSrc}
@@ -112,13 +112,15 @@ export default function CaruselHome() {
         </div>
         <div className="flex-3">
           <p
-            className={`text-[18px] font-normal text-white mt-10 lg:mt-0 lg:text-[24px] ${inter.className}`}
+            className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
           >
             At <span className="font-bold">Olexir</span>, we harness the power
             of plant proteins to microencapsulate natural oils into next‑gen
-            functional oleogels. Through interface engineering, we employ
-            structured plant protein hydrolysates to empower natural oils with
-            boosted bioavailability and stability for beauty, food and health.
+            functional oleogels.
+            <br />
+            Through interface engineering, we employ structured plant protein
+            hydrolysates to empower natural oils with boosted bioavailability
+            and stability for beauty, food and health.
           </p>
         </div>
       </div>

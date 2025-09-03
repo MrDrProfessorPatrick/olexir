@@ -1,5 +1,12 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export default function BigImage({
   src,
@@ -28,7 +35,7 @@ export default function BigImage({
         }}
       >
         <motion.div
-          className="relative w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-t-xl cursor-pointer overflow-hidden"
+          className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] rounded-t-xl cursor-pointer overflow-hidden"
           key={bigImageIndex}
           layoutId={`expandable-image-${bigImageIndex}`}
           initial={{ opacity: 0 }}
@@ -41,11 +48,11 @@ export default function BigImage({
           <motion.img
             src={src}
             alt="Expanded"
-            className="w-[400px] h-[400px] md:w-[600px] md:h-[600px] object-contain"
+            className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] object-contain"
           />
         </motion.div>
         <motion.div
-          className="bg-white w-[400px] md:w-[600px] p-6 rounded-b-xl"
+          className="bg-stone-900 w-[300px] sm:w-[400px] md:w-[600px] p-6 rounded-b-xl"
           initial={{ opacity: 0, scaleY: 0, transformOrigin: "top" }}
           animate={{ opacity: 1, scaleY: 1 }}
           exit={{ opacity: 0, scaleY: 0 }}
@@ -55,7 +62,12 @@ export default function BigImage({
             delay: 0.4,
           }}
         >
-          THIS DIV SHOULD EXPAND HERE
+          <span className={`${montserrat.className} text-white`}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </span>
         </motion.div>
       </motion.div>
     </AnimatePresence>

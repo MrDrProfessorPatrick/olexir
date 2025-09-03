@@ -18,13 +18,13 @@ export default function NavBar() {
       </div>
 
       {/* Mobile (<640px) */}
-      <div className="absolute block sm:hidden z-999 right-10 top-5">
-        <GiHamburgerMenu size="4em" />
+      <div className="absolute block md:hidden z-999 right-10 top-5">
+        <GiHamburgerMenu size="3em" />
       </div>
 
       {/* Desktop (≥640px) */}
-      <div className="hidden sm:block">
-        <MenuButtons buttons={["Solution", "Team", "About"]} />
+      <div className="hidden md:block">
+        <MenuButtons buttons={["Technology", "Applications", "About Us"]} />
       </div>
     </div>
   );
