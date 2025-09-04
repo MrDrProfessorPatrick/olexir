@@ -12,7 +12,7 @@ export default function Bottom() {
     <div
       className={`grid grid-rows-3 md:grid-rows-none md:grid-cols-[1fr_1.5fr_1fr] bg-[#D8AE02] w-full h-[248px] ${montserrat.variable}`}
     >
-      <div className="flex items-center justify-left pl-5 sm:pl-8 md:pl-10 md:justify-left">
+      <div className="flex items-center justify-left pl-5 lg:pl-10 md:justify-left">
         <div className="relative w-[220px] h-[70px]">
           <Image
             src="/OlexirLogoBlackDiomondUnderI2.png"
@@ -24,7 +24,7 @@ export default function Bottom() {
           />
         </div>
       </div>
-      <div className="flex items-center justify-left pl-[7%] md:justify-center">
+      <div className="flex items-center justify-left pl-8 md:justify-center">
         <div className="flex flex-col justify-start items-center pt-5 md:pt-0">
           <div
             className={`flex flex-start text-[16px] lg:text-[24px] font-semibold ${montserrat.variable}`}
