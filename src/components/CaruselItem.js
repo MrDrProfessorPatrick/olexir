@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useCallback } from "react";
+import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -14,8 +14,6 @@ const CarouselItem = React.memo(function CarouselItem({
     setBigImageSrc(src);
     selectImg(index);
   }
-  console.log("carouselItem imageIndex", imageIndex, "index", index);
-  // flex-[0_0_100%] 2xl:flex-[0_0_33.333%] xl:flex-[0_0_50%] lg:flex-[0_0_50%] md:flex-[0_0_100%] sm:flex-[0_0_100%]
   return (
     <motion.div
       key={index}

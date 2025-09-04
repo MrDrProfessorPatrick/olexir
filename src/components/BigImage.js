@@ -14,8 +14,8 @@ export default function BigImage({
   setBigImageSrc,
   bigImageIndex,
   deSelectImg,
+  text,
 }) {
-  console.log("BigImage index", bigImageIndex);
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -62,12 +62,7 @@ export default function BigImage({
             delay: 0.4,
           }}
         >
-          <span className={`${montserrat.className} text-white`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </span>
+          <span className={`${montserrat.className} text-white`}>{text}</span>
         </motion.div>
       </motion.div>
     </AnimatePresence>
