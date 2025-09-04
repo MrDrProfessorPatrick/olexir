@@ -111,7 +111,7 @@ export default function CaruselHome() {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-10 lg:pt-40 pb-40 px-6 2xl:px-34 xl:px-24 lg:px-16 md:px-8 sm:px-4 bg-[url('/caruselBg.png')] bg-cover bg-center">
+    <div className="relative pt-10 lg:pt-40 pb-40 px-1 xs:px-6 2xl:px-34 xl:px-24 lg:px-16 md:px-8 sm:px-4 bg-[url('/caruselBg.png')] bg-cover bg-center">
       {bigImageSrc && (
         <BigImage
           src={bigImageSrc}

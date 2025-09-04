@@ -66,7 +66,7 @@ export default function HomePageContent() {
               ”
             </span>
           </div>
-          <div className="relative w-[242px] h-[274px] lg:w-[342px] lg:h-[374px]">
+          <div className="relative w-[222px] h-[254px] lg:w-[342px] lg:h-[374px]">
             <Image
               src="/svitlanaHomePage.png"
               alt="svitlana scientist"
