@@ -50,36 +50,36 @@ export default function HeroPage() {
         <div
           className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-4 lg:gap-14 mx-1 lg:mx-5  ${lato.className}`}
         >
-          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 lg:pl-8">
-              <h3 className="text-[40px] text-center font-bold lg:text-left">
+          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8 h-inherit">
+              <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Beauty
               </h3>
-              <ul className="text-[24px]">
+              <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                 <li className="text-center lg:text-left">Silky.</li>
                 <li className="text-center lg:text-left">Vegan.</li>
                 <li className="text-center lg:text-left">Translucent.</li>
               </ul>
             </div>
           </div>
-          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 lg:pl-8">
-              <h3 className="text-[40px] text-center font-bold lg:text-left">
+          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
+              <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Food
               </h3>
-              <ul className="text-[24px]">
+              <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                 <li className="text-center lg:text-left">Good fats.</li>
                 <li className="text-center lg:text-left">Structured.</li>
                 <li className="text-center lg:text-left">Sustainable.</li>
               </ul>
             </div>
           </div>
-          <div className="flex-1 h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
-            <div className="pt-6 lg:pl-8">
-              <h3 className="text-[40px] text-center font-bold lg:text-left">
+          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+            <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
+              <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Health
               </h3>
-              <ul className="text-[24px]">
+              <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                 <li className="text-center lg:text-left">Therapeutic.</li>
                 <li className="text-center lg:text-left">Effective.</li>
                 <li className="text-center lg:text-left">Natural.</li>
