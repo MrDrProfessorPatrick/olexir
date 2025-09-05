@@ -26,7 +26,6 @@ export default function HeroPage() {
         priority
         sizes="(max-width: 200px)"
       />
-      <NavBar />
       <div className="absolute inset-0 mt-[201px]">
         <div className={`relative max-w-[1200px] pl-[5%]`}>
           <span
@@ -36,12 +35,12 @@ export default function HeroPage() {
           </span>
           <div className="relative mt-4">
             <button
-              className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-black z-1000 text-white text-[11px] sm:text-[14px] md:text-[18px] ${montserrat.className}`}
+              className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-black z-100 text-white text-[11px] sm:text-[14px] md:text-[18px] ${montserrat.className}`}
             >
               Discover More
             </button>
             <button
-              className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-1000 text-black text-[11px] sm:text-[14px] md:text-[18px] ml-[10px] ${montserrat.className}`}
+              className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] sm:text-[14px] md:text-[18px] ml-[10px] ${montserrat.className}`}
             >
               Partner With Us
             </button>

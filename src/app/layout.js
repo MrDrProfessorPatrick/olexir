@@ -1,4 +1,5 @@
 import { Geist } from "next/font/google";
+import NavBar from "../components/NavBar";
 import "./globals.css";
 import { Lato } from "next/font/google";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${lato.variable} antialiased`}>
+        <NavBar />
         {children}
       </body>
     </html>
