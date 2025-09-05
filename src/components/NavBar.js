@@ -5,6 +5,7 @@ import MenuButtons from "./MenuButtons";
 
 export default function NavBar() {
   const buttons = ["Technology", "Applications", "About Us"];
+
   return (
     <div className="absolute w-full h-[100px]">
       <div className="absolute inset-0 flex items-center justify-center z-10 w-[180px] h-[60px] xs:w-[220px] xs:h-[70px] ml-[5%] mt-[2%]">
@@ -34,15 +35,16 @@ export default function NavBar() {
         </label>
         <div className="sidebar">
           <div className="">
-            {buttons.map((button) => (
+            {buttons.map((button) => {
+              console.log(button, button.replace(/\s+/g, '').toLowerCase())
               <Link
                 key={button}
-                href={`/${button.toLowerCase()}`}
+                href={`/${button.replace(/\s+/g, '').toLowerCase()}`}
                 className="block p-4 text-white text-4xl font-semibold border-b border-gray-700 hover:bg-gray-700 text-center"
               >
                 {button}
               </Link>
-            ))}
+})}
           </div>
         </div>
       </div>
