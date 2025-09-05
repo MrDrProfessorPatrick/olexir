@@ -4,7 +4,7 @@ import Link from "next/link";
 import MenuButtons from "./MenuButtons";
 
 export default function NavBar() {
-  const buttons = ["Technology", "Applications", "AboutUs"];
+  const buttons = ["Technology", "Applications", "About Us"];
 
   return (
     <div className="absolute w-full h-[100px]">

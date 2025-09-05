@@ -5,6 +5,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CarouselItem from "./CaruselItem";
+import LineCircleRight from "./LineCircleRight";
+import LineCircleLeft from "./LineCircleLeft";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
 import BigImage from "./BigImage";
@@ -154,6 +156,7 @@ export default function CaruselHome() {
       </div>
 
       <div className="flex">
+        <LineCircleRight />
         <div className="flex items-center justify-center">
           <button onClick={scrollPrev} className="cursor-pointer">
             <ChevronLeft color="white" className="z-10" />
@@ -180,6 +183,7 @@ export default function CaruselHome() {
             <ChevronRight color="white" className="z-1000" />
           </button>
         </div>
+        <LineCircleLeft />
       </div>
 
       <div className="flex justify-center gap-2 mt-4">

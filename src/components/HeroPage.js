@@ -47,9 +47,9 @@ export default function HeroPage() {
           </div>
         </div>
         <div
-          className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-4 lg:gap-14 mx-1 lg:mx-5  ${lato.className}`}
+          className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-4 lg:gap-14 mx-6 xs:md:mx-3  lg:mx-5  ${lato.className}`}
         >
-          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+          <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
             <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8 h-inherit">
               <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Beauty
@@ -61,7 +61,7 @@ export default function HeroPage() {
               </ul>
             </div>
           </div>
-          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+          <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
             <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
               <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Food
@@ -73,7 +73,7 @@ export default function HeroPage() {
               </ul>
             </div>
           </div>
-          <div className="h-[192px] lg:h-[232px] w-[90%] lg:max-w-[420px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+          <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
             <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
               <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                 Health
