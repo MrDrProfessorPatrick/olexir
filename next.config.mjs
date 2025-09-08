@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 import withVideos from "next-videos";
-const nextConfig = {};
+const nextConfig = {
+  output: "standalone",
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
 
 export default {
   ...nextConfig,
