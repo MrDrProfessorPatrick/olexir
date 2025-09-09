@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -14,7 +15,7 @@ export default function Bottom() {
               md:justify-center bg-[#D8AE02] w-full h-[418px] md:h-[268px] 
                ${montserrat.variable}`}
     >
-      <div className="flex items-center justify-center md:pl-5 lg:pl-10 mt-0 md:mt-15">
+      <div className="flex flex-1 items-center justify-center md:justify-start md:ml-16 mt-0 md:mt-21">
         <div className="flex flex-col justify-center items-center h-full">
           <div className="relative w-[220px] h-[70px]">
             <Image
@@ -29,13 +30,13 @@ export default function Bottom() {
           <div className="flex items-center hidden md:flex justify-center text-[12px] lg:text-[16px] flex-2">
             <div className={`flex flex-row gap-4 ${montserrat.variable}`}>
               <span>Terms & Conditions</span>
-              <span>Privacy Policy</span>
+              <Link href="/privacypolicy">Privacy Policy</Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center md:pl-8">
-        <div className="flex flex-col justify-center items-center md:pt-5 md:pt-0">
+      <div className="flex flex-4 items-center justify-center md:pl-8">
+        <div className="flex flex-col justify-center items-center ">
           <div
             className={`flex flex-start justify-center text-[16px] lg:text-[24px] font-semibold ${montserrat.variable}`}
           >
@@ -53,7 +54,7 @@ export default function Bottom() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-around w-full">
+      <div className="flex flex-4 flex-col justify-around md:justify-end w-full">
         <div
           className={`flex md:hidden flex-col items-center justify-center ${montserrat.variable}`}
         >
@@ -61,11 +62,11 @@ export default function Bottom() {
             <span>Terms & Conditions</span>
           </div>
           <div>
-            <span>Privacy Policy</span>
+            <Link href="/privacypolicy">Privacy Policy</Link>
           </div>
         </div>
         <div
-          className={`text-[16px] pr-8 md:pb-5 flex flex-col pl-6 ${montserrat.variable}`}
+          className={`flex flex-col md:items-end text-[16px] pr-8 md:pb-5 pl-6 ${montserrat.variable}`}
         >
           <span>© 2025 by Olexir</span>
         </div>
