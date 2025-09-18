@@ -9,51 +9,71 @@ const lato = Lato({
 
 export default function Solution() {
   return (
-    <>
-      <div className="h-[620px] bg-grey">
-        <BgVideo link={"/solutionVideo.mp4"} />
-        <div className="absolute top-116  z-20 w-full flex justify-center">
-          <h1 className={`text-[56px] font-bold text-white ${lato.className}`}>
-            World needs efficient, healthy and sustainable fats
-          </h1>
-        </div>
-        <div>
-          <div className="relative w-full px-10">
-            <div className="pt-20 pb-12 h-[115px]">
-              <h3 className="">Problem</h3>
+    <div className="h-[1920px] bg-zinc-900">
+      <BgVideo link={"/solutionVideo.mp4"} />
+      <div className="absolute top-116  z-20 w-full flex justify-center">
+        <h1 className={`text-[56px] font-bold text-white ${lato.className}`}>
+          World needs efficient, healthy and sustainable fats
+        </h1>
+      </div>
+      <div>
+        <div className="relative w-full px-10">
+          <div className="pt-23 pb-15">
+            <h3
+              className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+            >
+              Problem
+            </h3>
+          </div>
+          <div className="flex w-[100%] bg-zinc-700 rounded-md">
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                #1
+              </div>
+              <div
+                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>
+                  Heart attack and stroke, triggered by saturated fats, are the
+                  #1 killer in the world
+                </p>
+              </div>
             </div>
-            <div className="flex">
-              <div>
-                <div>#1</div>
-                <div>
-                  <p>
-                    Heart attack and stroke, triggered by saturated fats, are
-                    the #1 killer in the world
-                  </p>
-                </div>
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                60%
               </div>
-              <div>
-                <div>60%</div>
-                <div>
-                  <span>
-                    Weight is a global burden: 43% overweight + 16% obesity in
-                    2022
-                  </span>
-                </div>
+              <div
+                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>
+                  Weight is a global burden: 43% overweight + 16% obesity in
+                  2022
+                </p>
               </div>
-              <div>
-                <div>5%</div>
-                <div>
-                  <span>
-                    adsorption of lipophilic bioactives, e.g. curcumin and CBD,
-                    by the human body
-                  </span>
-                </div>
+            </div>
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                5%
+              </div>
+              <div
+                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>
+                  adsorption of lipophilic bioactives, e.g. curcumin and CBD, by
+                  the human body
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
