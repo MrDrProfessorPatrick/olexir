@@ -1,5 +1,4 @@
 "use client";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 import AnimatedNumber from "./AnimatedNumber";

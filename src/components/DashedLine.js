@@ -16,13 +16,24 @@ function getCenter(el) {
 
 function getRightMiddleEdge(el) {
   const elementCords = el.getBoundingClientRect();
-  console.log("elementCords", elementCords);
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
     x: elementCords.left + elementCords.width,
     y: elementCords.top + elementCords.height / 2 - container.top,
+  };
+}
+
+function getUpperEndRight(el) {
+  const elementCords = el.getBoundingClientRect();
+  console.log("elementCords", elementCords);
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.right - elementCords.right * 0.1,
+    y: elementCords.top - container.top,
   };
 }
 
@@ -37,7 +48,7 @@ export default function DashedLine({ fromId, toId }) {
       if (!fromEl || !toEl) return;
 
       const a = getRightMiddleEdge(fromEl);
-      const b = getCenter(toEl);
+      const b = getUpperEndRight(toEl);
 
       const dx = Math.abs(b.x - a.x);
       const dy = Math.abs(b.y - a.y);
