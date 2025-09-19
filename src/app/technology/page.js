@@ -1,3 +1,4 @@
+import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
 import DashedLine from "@/components/DashedLine";
 import { Lato } from "next/font/google";
@@ -81,6 +82,29 @@ export default function Solution() {
           </div>
         </div>
       </div>
+      <div>
+        <div>
+        <Image
+          src="/Leaking.png"
+          width={500}
+          height={500}
+          alt="leaking"
+        />
+        </div>
+        <div>
+          <div>
+            <span>Fluidity</span>
+            <span>Instability</span>
+            <span>Non-absorbability</span>
+          </div>
+          <div>
+            <p>Majority of cosmetics rely on fossil-derived or animal fats, while edible fats are packed with trans and saturated lipids.</p>
+            <p>Plant oils, rich in healthy mono- and polyunsaturated fats, offer a sustainable, bioactive alternative; however, their fluidity and instability drastically limit their applications in food, cosmetics, and pharmaceuticals.</p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }

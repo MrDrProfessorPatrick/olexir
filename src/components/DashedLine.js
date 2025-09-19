@@ -52,7 +52,7 @@ export default function DashedLine({ fromId, toId }) {
 
       const dx = Math.abs(b.x - a.x);
       const dy = Math.abs(b.y - a.y);
-      const curvature = Math.max(60, dx * 0.45 + dy * 0.1);
+      const curvature = Math.max(60, dx * 0 + dy * 0.9); // curve change here
 
       const cx = (a.x + b.x) / 2;
       const cy = (a.y + b.y) / 2 + (a.y < b.y ? -curvature : curvature);
@@ -110,7 +110,7 @@ export default function DashedLine({ fromId, toId }) {
         strokeDasharray="12 8"
         animate={{ strokeDashoffset: [0, -20] }}
         transition={{
-          duration: 1.5,
+          duration: 1,
           repeat: Infinity,
           ease: "linear",
         }}
