@@ -1,4 +1,5 @@
 import BgVideo from "@/components/BgVideo";
+import DashedLine from "@/components/DashedLine";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -16,16 +17,22 @@ export default function Solution() {
           World needs efficient, healthy and sustainable fats
         </h1>
       </div>
-      <div>
+      <div id="container">
         <div className="relative w-full px-10">
-          <div className="pt-23 pb-15">
+          <div className="pt-23 pb-15 w-[160px]">
             <h3
+              id="problem"
               className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
             >
               Problem
             </h3>
           </div>
-          <div className="flex w-[100%] bg-zinc-700 rounded-md">
+          <DashedLine fromId="problem" toId="problemsTable" />
+
+          <div
+            id="problemsTable"
+            className="flex w-[100%] bg-zinc-700 rounded-md"
+          >
             <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
