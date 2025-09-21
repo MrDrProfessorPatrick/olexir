@@ -14,6 +14,28 @@ function getCenter(el) {
   };
 }
 
+function getUpperCenter(el) {
+  const r = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: r.left + r.width / 2,
+    y: r.top - container.top,
+  };
+}
+
+function getLefttMiddleEdge(el) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.left,
+    y: elementCords.top + elementCords.height / 2 - container.top,
+  };
+}
+
 function getRightMiddleEdge(el) {
   const elementCords = el.getBoundingClientRect();
   const container = document
@@ -25,9 +47,8 @@ function getRightMiddleEdge(el) {
   };
 }
 
-function getUpperEndRight(el) {
+function getEndUpperRightEdge(el) {
   const elementCords = el.getBoundingClientRect();
-  console.log("elementCords", elementCords);
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
@@ -37,7 +58,34 @@ function getUpperEndRight(el) {
   };
 }
 
-export default function DashedLine({ fromId, toId }) {
+function getMiddleBottomEdge(el) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.right - elementCords.width / 2,
+    y: elementCords.bottom - container.top,
+  };
+}
+
+const positionFunctions = {
+  getCenter,
+  getUpperCenter,
+  getLefttMiddleEdge,
+  getRightMiddleEdge,
+  getEndUpperRightEdge,
+  getMiddleBottomEdge,
+};
+
+export default function DashedLine({
+  fromId,
+  toId,
+  startFn,
+  endFn,
+  curveIndex,
+  curveDist = 2,
+}) {
   const pathRef = useRef(null);
   const [d, setD] = useState("");
 
@@ -47,15 +95,19 @@ export default function DashedLine({ fromId, toId }) {
       const toEl = document.getElementById(toId);
       if (!fromEl || !toEl) return;
 
-      const a = getRightMiddleEdge(fromEl);
-      const b = getUpperEndRight(toEl);
+      const a = positionFunctions[startFn](fromEl);
+      const b = positionFunctions[endFn](toEl);
 
       const dx = Math.abs(b.x - a.x);
       const dy = Math.abs(b.y - a.y);
-      const curvature = Math.max(60, dx * 0 + dy * 0.9); // curve change here
+      const curvature = dx * 0 + dy * curveIndex; // curve size change here
 
-      const cx = (a.x + b.x) / 2;
-      const cy = (a.y + b.y) / 2 + (a.y < b.y ? -curvature : curvature);
+      // const cx = (a.x + b.x) / 2;
+      // const cy = (a.y + b.y) / 2 + (a.y < b.y ? -curvature : curvature);
+
+      const cx = (a.x + b.x) / curveDist + curveIndex; // this is middle of the line if is diviede by 2 (curveDist)
+      const cy = (a.y + b.y) / curveDist + curveIndex;
+      console.log("cx", cx, "cy", cy);
 
       setD(`M ${a.x} ${a.y} Q ${cx} ${cy} ${b.x} ${b.y}`);
     }
