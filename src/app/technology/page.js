@@ -18,7 +18,7 @@ const inter = Inter({
 
 export default function Solution() {
   return (
-    <div className="h-[2920px] bg-zinc-900">
+    <div className="h-[4920px] bg-zinc-900">
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116  z-20 w-full flex justify-center">
         <h1 className={`text-[56px] font-bold text-white ${lato.className}`}>
@@ -222,6 +222,113 @@ export default function Solution() {
                 To solidity plant oils
               </span>
             </div>
+          </div>
+          <div
+            id="solutionTable"
+            className="flex w-[100%] bg-zinc-700 rounded-md mt-20"
+          >
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                <Image
+                  src="/VectorLeave.png"
+                  width={50}
+                  height={50}
+                  alt="vectorLeave"
+                />
+              </div>
+              <div
+                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>Exclusively based on essential plant proteins</p>
+              </div>
+            </div>
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                <Image
+                  src="/VectorDiamond.png"
+                  width={50}
+                  height={50}
+                  alt="vectorDiamond"
+                />
+              </div>
+              <div
+                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>Naturally saved plant oil riсhness</p>
+              </div>
+            </div>
+            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+              <div
+                className={`text-[100px] font-light text-white ${lato.className}`}
+              >
+                <Image
+                  src="/VectorSwitchers.png"
+                  width={50}
+                  height={50}
+                  alt="vectorDiamond"
+                />
+              </div>
+              <div
+                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+              >
+                <p>Tuneable consistency serving your needs</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex mt-14 justify-around">
+            <div className="flex flex-col">
+              <Image
+                src="/Leacking2.png"
+                width={490}
+                height={505}
+                alt="Leacking2"
+              />
+              <div
+                className={`mt-3 text-[24px] w-[490px] text-center font-light text-white ${lato.className}`}
+              >
+                We know how to employ hydrolysed plant proteins and turn liquid
+                oils into stable oleogels at high oil concentrations without the
+                need for heating, toxic solvents, nickel or expensive
+                cross-linkers.
+              </div>
+            </div>
+            <div className="flex flex-col justify-start items-start">
+              <div className="flex justify-start items-start">
+                <Image
+                  src="/blueMicroscope.png"
+                  width={751}
+                  height={505}
+                  alt="blueMicroscope"
+                />
+              </div>
+              <div
+                className={`mt-3 text-[24px] w-[751px] text-center font-light text-white ${lato.className}`}
+              >
+                By unlocking the protein oleogelating capacity, we intoduce
+                stability, firmness, and a solid structure to liquid oils,
+                protecting every tiny oily droplet from oxidation and UV to
+                serve the diverse needs of industries that touch every aspect of
+                life.
+              </div>
+            </div>
+          </div>
+          <div
+            id="sustainability"
+            className={`pt-70 pl-160 text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+          >
+            Sustainability
+          </div>
+          <div
+            className={`mt-8 text-[24px] w-full font-light text-white ${lato.className}`}
+          >
+            Every Olexir oleogel is plant-protein based. To amplify
+            sustainability, we also offer an upcycled feedstock route that
+            recovers proteins from industrial side streams.
           </div>
         </div>
       </div>

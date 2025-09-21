@@ -107,7 +107,6 @@ export default function DashedLine({
 
       const cx = (a.x + b.x) / curveDist + curveIndex; // this is middle of the line if is diviede by 2 (curveDist)
       const cy = (a.y + b.y) / curveDist + curveIndex;
-      console.log("cx", cx, "cy", cy);
 
       setD(`M ${a.x} ${a.y} Q ${cx} ${cy} ${b.x} ${b.y}`);
     }
