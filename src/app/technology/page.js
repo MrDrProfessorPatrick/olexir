@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
 import DashedLine from "@/components/DashedLine";
+import Bottom from "@/components/Bottom";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
 import { FaPlus } from "react-icons/fa6";
@@ -443,17 +445,23 @@ export default function Solution() {
               </h2>
             </div>
 
-            <div>
+            <div className="pb-20">
               {FAQList.map((faqObj, i) => {
                 const isExpanded = faqShownArr.includes(i);
+                const isLast = i === FAQList.length - 1;
+
                 return (
-                  <div
-                    className={`flex flex-col px-7 py-7 rounded-md ${
+                  <motion.div
+                    className={`flex flex-col px-7 py-7 rounded-md       ${
                       isExpanded
-                        ? "bg-[#4f430f] "
-                        : "border-b border-white pb-5 rounded-none"
+                        ? "bg-[#4f430f]"
+                        : !isLast
+                        ? "border-b border-white pb-5 rounded-none"
+                        : ""
                     }`}
                     key={faqObj.q}
+                    layout
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
                   >
                     <div className="flex justify-between">
                       <h3
@@ -482,18 +490,19 @@ export default function Solution() {
                     </div>
                     {isExpanded && (
                       <div
-                        className={`pt-5 text-[20px] text-white font-light bg-[#4f430f] ${lato.className}`}
+                        className={`overflow-hidden pt-5 text-[20px] text-white font-light ${lato.className}`}
                       >
                         {faqObj.a}
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
           </div>
         </div>
       </div>
+      <Bottom />
     </div>
   );
 }
