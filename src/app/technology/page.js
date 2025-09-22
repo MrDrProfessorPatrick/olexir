@@ -324,9 +324,8 @@ export default function Solution() {
             sustainability, we also offer an upcycled feedstock route that
             recovers proteins from industrial side streams.
           </div>
-        </div>
 
-        <div className="flex justify-around mt-12">
+                  <div className="flex justify-around mt-12">
           <div
             className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
           >
@@ -349,44 +348,52 @@ export default function Solution() {
             <span>~30% lost in tofu production</span>
           </div>
         </div>
-        <div className="flex mt-20">
-          <div>
-            <div>
-              <Image src="/sustainability1.png" fill alt="vectorDiamond" />
+        <div className="flex mt-20 gap-10 justify-between">
+          <div className="flex flex-col w-[407px]">
+            <div className="flex relative w-[407px] h-[407px]">
+              <Image src="/sustainability1.png" fill alt="sustainability" />
             </div>
             <div>
-              <h3>Plant sources</h3>
-              <span>
+              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Plant sources</h3>
+              <span className={`text-[24px] text-white font-light ${lato.className}`}>
                 Field-grown pulses & oilseeds used for our plant-protein
                 matrices.
               </span>
             </div>
           </div>
-          <div>
-            <div>
-              <Image src="/sustainability2.png" fill alt="vectorDiamond" />
+          <div className="flex flex-col w-[407px]">
+            <div className="flex relative  w-[407px] h-[407px]">
+              <Image src="/sustainability2.png" fill alt="sustainability" />
             </div>
             <div>
-              <h3>Side-streams to upcycle</h3>
-              <span>
+              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Side-streams to upcycle</h3>
+              <span className={`text-[24px] text-white font-light ${lato.className}`}>
                 Oilseed cakes and other co-products rich in proteins that often
                 bypass human use.
               </span>
             </div>
           </div>
-          <div>
-            <div>
-              <Image src="/sustainability3.png" fill alt="vectorDiamond" />
+          <div className="flex flex-col w-[407px]">
+            <div className="flex relative w-[407px] h-[407px]">
+              <Image src="/sustainability3.png" fill alt="sustainability3" />
             </div>
             <div>
-              <h3>Recovered proteins</h3>
-              <span>
+              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Recovered proteins</h3>
+              <span className={`text-[24px] text-white font-light ${lato.className}`}>
                 Refined, food/cosmetic-grade inputs ready for the same
                 oleogelation route.
               </span>
             </div>
           </div>
         </div>
+
+        <div className="flex justify-center mt-10">
+          <h2 className={`text-[40px] text-white font-semibold ${lato.className}`}>FAQ</h2>
+        </div>
+
+        </div>
+
+
       </div>
     </div>
   );
