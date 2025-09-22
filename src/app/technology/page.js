@@ -326,27 +326,65 @@ export default function Solution() {
           </div>
         </div>
 
-        <div className="flex justify-around mt-10">
+        <div className="flex justify-around mt-12">
           <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
           >
             <span>Plant protein</span>
             <span>generate ~90× lower</span>
             <span>CO₂eq vs beef per 100 g protein</span>
           </div>
           <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
           >
             <span>~10% of global CO₂</span>
             <span>comes from</span>
             <span>food loss & waste</span>
           </div>
           <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
           >
             <span>30–50% protein remains</span>
             <span>underutilized in oilseed cakes; </span>
             <span>~30% lost in tofu production</span>
+          </div>
+        </div>
+        <div className="flex mt-20">
+          <div>
+            <div>
+              <Image src="/sustainability1.png" fill alt="vectorDiamond" />
+            </div>
+            <div>
+              <h3>Plant sources</h3>
+              <span>
+                Field-grown pulses & oilseeds used for our plant-protein
+                matrices.
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <Image src="/sustainability2.png" fill alt="vectorDiamond" />
+            </div>
+            <div>
+              <h3>Side-streams to upcycle</h3>
+              <span>
+                Oilseed cakes and other co-products rich in proteins that often
+                bypass human use.
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <Image src="/sustainability3.png" fill alt="vectorDiamond" />
+            </div>
+            <div>
+              <h3>Recovered proteins</h3>
+              <span>
+                Refined, food/cosmetic-grade inputs ready for the same
+                oleogelation route.
+              </span>
+            </div>
           </div>
         </div>
       </div>
