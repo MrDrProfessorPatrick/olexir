@@ -280,16 +280,14 @@ export default function Solution() {
             </div>
           </div>
 
-          <div className="flex mt-14 justify-around">
-            <div className="flex flex-col">
-              <Image
-                src="/Leacking2.png"
-                width={490}
-                height={505}
-                alt="Leacking2"
-              />
+          <div className="flex mt-14 gap-22 justify-around">
+            <div className="flex flex-3 flex-col w-[50%] h-[670px]">
+              <div className="relative w-full h-full flex justify-start items-start">
+                <Image src="/Leacking2.png" fill alt="Leacking2" />
+              </div>
+
               <div
-                className={`mt-3 text-[24px] w-[490px] text-center font-light text-white ${lato.className}`}
+                className={`mt-3 text-[24px] w-full text-center font-light text-white ${lato.className}`}
               >
                 We know how to employ hydrolysed plant proteins and turn liquid
                 oils into stable oleogels at high oil concentrations without the
@@ -297,17 +295,13 @@ export default function Solution() {
                 cross-linkers.
               </div>
             </div>
-            <div className="flex flex-col justify-start items-start">
-              <div className="flex justify-start items-start">
-                <Image
-                  src="/blueMicroscope.png"
-                  width={751}
-                  height={505}
-                  alt="blueMicroscope"
-                />
+
+            <div className="flex flex-4 flex-col w-[50%] h-[670px]">
+              <div className="relative w-full h-full flex justify-start items-start">
+                <Image src="/blueMicroscope.png" fill alt="blueMicroscope" />
               </div>
               <div
-                className={`mt-3 text-[24px] w-[751px] text-center font-light text-white ${lato.className}`}
+                className={`mt-3 text-[24px] w-full text-center font-light text-white ${lato.className}`}
               >
                 By unlocking the protein oleogelating capacity, we intoduce
                 stability, firmness, and a solid structure to liquid oils,
