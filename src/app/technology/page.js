@@ -325,6 +325,30 @@ export default function Solution() {
             recovers proteins from industrial side streams.
           </div>
         </div>
+
+        <div className="flex justify-around mt-10">
+          <div
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+          >
+            <span>Plant protein</span>
+            <span>generate ~90× lower</span>
+            <span>CO₂eq vs beef per 100 g protein</span>
+          </div>
+          <div
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+          >
+            <span>~10% of global CO₂</span>
+            <span>comes from</span>
+            <span>food loss & waste</span>
+          </div>
+          <div
+            className={`flex flex-col items-center border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+          >
+            <span>30–50% protein remains</span>
+            <span>underutilized in oilseed cakes; </span>
+            <span>~30% lost in tofu production</span>
+          </div>
+        </div>
       </div>
     </div>
   );
