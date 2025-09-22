@@ -1,8 +1,12 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
 import DashedLine from "@/components/DashedLine";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
 
 const lato = Lato({
   variable: "--font-lato",
@@ -17,8 +21,33 @@ const inter = Inter({
 });
 
 export default function Solution() {
+  const [faqShownArr, setFaqInfo] = useState([]);
+
+  const FAQList = [
+    {
+      q: "1) What is saturated fat?",
+      a: "Saturated fats are fatty acids with no double bonds (fully “saturated” with hydrogen). They’re typically solid at room temperature (e.g., butter, tallow; coconut/palm; margarine). Their intake triggers elevated LDL and cardiovascular diseases.",
+    },
+    {
+      q: "2) Why do we need polyunsaturated fats (PUFAs) in food-grade materials?",
+      a: "(PUFAs) in food-grade materials? PUFAs have multiple double bonds and include essential fatty acids (LA, ALA) that the human body cannot produce and must obtain from the diet.",
+    },
+    {
+      q: "3) What are protein hydrolysates?",
+      a: "Protein hydrolysates are proteins partially broken into peptides and amino acids. Their solubility and interfacial activity make them effective plant-derived building blocks for our protein-structured oleogels.",
+    },
+    {
+      q: "4) What is an oleogel?",
+      a: "An oleogel is a material where liquid oil is immobilized inside a microscopic 3D network, so it behaves like a solid-like material. In our case, the network is built from plant proteins — delivering silky feel, tunable firmness, high oil loading, and protection of sensitive oils— without solvents or oil heating.",
+    },
+    {
+      q: "5) What’s the advantage versus conventional structuring (waxes, hydrogenation, silicones/mineral oils)?",
+      a: "No hydrogenation or trans fats, no waxy/silicone feel, no mineral oils, cross-linkers, or heat/solvent steps. You get a high oil loading, predictable firmness, and gentle, scalable processing on standard equipment—a modern, plant-first way to achieve performance.",
+    },
+  ];
+
   return (
-    <div className="h-[4920px] bg-zinc-900">
+    <div className="bg-zinc-900">
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116  z-20 w-full flex justify-center">
         <h1 className={`text-[56px] font-bold text-white ${lato.className}`}>
@@ -325,75 +354,145 @@ export default function Solution() {
             recovers proteins from industrial side streams.
           </div>
 
-                  <div className="flex justify-around mt-12">
-          <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
-          >
-            <span>Plant protein</span>
-            <span>generate ~90× lower</span>
-            <span>CO₂eq vs beef per 100 g protein</span>
-          </div>
-          <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
-          >
-            <span>~10% of global CO₂</span>
-            <span>comes from</span>
-            <span>food loss & waste</span>
-          </div>
-          <div
-            className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
-          >
-            <span>30–50% protein remains</span>
-            <span>underutilized in oilseed cakes; </span>
-            <span>~30% lost in tofu production</span>
-          </div>
-        </div>
-        <div className="flex mt-20 gap-10 justify-between">
-          <div className="flex flex-col w-[407px]">
-            <div className="flex relative w-[407px] h-[407px]">
-              <Image src="/sustainability1.png" fill alt="sustainability" />
+          <div className="flex justify-around mt-12">
+            <div
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+            >
+              <span>Plant protein</span>
+              <span>generate ~90× lower</span>
+              <span>CO₂eq vs beef per 100 g protein</span>
             </div>
+            <div
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+            >
+              <span>~10% of global CO₂</span>
+              <span>comes from</span>
+              <span>food loss & waste</span>
+            </div>
+            <div
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+            >
+              <span>30–50% protein remains</span>
+              <span>underutilized in oilseed cakes; </span>
+              <span>~30% lost in tofu production</span>
+            </div>
+          </div>
+          <div className="flex mt-20 gap-10 justify-between">
+            <div className="flex flex-col w-[407px]">
+              <div className="flex relative w-[407px] h-[407px]">
+                <Image src="/sustainability1.png" fill alt="sustainability" />
+              </div>
+              <div>
+                <h3
+                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                >
+                  Plant sources
+                </h3>
+                <span
+                  className={`text-[24px] text-white font-light ${lato.className}`}
+                >
+                  Field-grown pulses & oilseeds used for our plant-protein
+                  matrices.
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col w-[407px]">
+              <div className="flex relative  w-[407px] h-[407px]">
+                <Image src="/sustainability2.png" fill alt="sustainability" />
+              </div>
+              <div>
+                <h3
+                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                >
+                  Side-streams to upcycle
+                </h3>
+                <span
+                  className={`text-[24px] text-white font-light ${lato.className}`}
+                >
+                  Oilseed cakes and other co-products rich in proteins that
+                  often bypass human use.
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col w-[407px]">
+              <div className="flex relative w-[407px] h-[407px]">
+                <Image src="/sustainability3.png" fill alt="sustainability3" />
+              </div>
+              <div>
+                <h3
+                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                >
+                  Recovered proteins
+                </h3>
+                <span
+                  className={`text-[24px] text-white font-light ${lato.className}`}
+                >
+                  Refined, food/cosmetic-grade inputs ready for the same
+                  oleogelation route.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center mt-30">
+            <div className="flex justify-center pb-10">
+              <h2
+                className={`text-[40px] text-white font-semibold ${lato.className}`}
+              >
+                FAQ
+              </h2>
+            </div>
+
             <div>
-              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Plant sources</h3>
-              <span className={`text-[24px] text-white font-light ${lato.className}`}>
-                Field-grown pulses & oilseeds used for our plant-protein
-                matrices.
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col w-[407px]">
-            <div className="flex relative  w-[407px] h-[407px]">
-              <Image src="/sustainability2.png" fill alt="sustainability" />
-            </div>
-            <div>
-              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Side-streams to upcycle</h3>
-              <span className={`text-[24px] text-white font-light ${lato.className}`}>
-                Oilseed cakes and other co-products rich in proteins that often
-                bypass human use.
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col w-[407px]">
-            <div className="flex relative w-[407px] h-[407px]">
-              <Image src="/sustainability3.png" fill alt="sustainability3" />
-            </div>
-            <div>
-              <h3 className={`text-[32px] text-white font-semibold ${lato.className}`}>Recovered proteins</h3>
-              <span className={`text-[24px] text-white font-light ${lato.className}`}>
-                Refined, food/cosmetic-grade inputs ready for the same
-                oleogelation route.
-              </span>
+              {FAQList.map((faqObj, i) => {
+                const isExpanded = faqShownArr.includes(i);
+                return (
+                  <div
+                    className={`flex flex-col px-7 py-7 rounded-md ${
+                      isExpanded
+                        ? "bg-[#4f430f] "
+                        : "border-b border-white pb-5 rounded-none"
+                    }`}
+                    key={faqObj.q}
+                  >
+                    <div className="flex justify-between">
+                      <h3
+                        className={`text-[22px] text-white font-bold  ${lato.className}`}
+                      >
+                        {faqObj.q}
+                      </h3>
+
+                      <button
+                        onClick={(e) => {
+                          if (isExpanded) {
+                            let filtered = faqShownArr.filter((n) => n !== i);
+                            setFaqInfo(filtered);
+                            return;
+                          }
+                          setFaqInfo((prev) => [...prev, i]);
+                        }}
+                        className="cursor-pointer"
+                      >
+                        {isExpanded ? (
+                          <FaMinus color="white" />
+                        ) : (
+                          <FaPlus color="white" />
+                        )}
+                      </button>
+                    </div>
+                    {isExpanded && (
+                      <div
+                        className={`pt-5 text-[20px] text-white font-light bg-[#4f430f] ${lato.className}`}
+                      >
+                        {faqObj.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
-
-        <div className="flex justify-center mt-10">
-          <h2 className={`text-[40px] text-white font-semibold ${lato.className}`}>FAQ</h2>
-        </div>
-
-        </div>
-
-
       </div>
     </div>
   );
