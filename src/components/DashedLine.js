@@ -69,6 +69,17 @@ function getMiddleBottomEdge(el) {
   };
 }
 
+function getBottomRightEdge(el) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.right - 40, // change to some % value
+    y: elementCords.bottom - container.top,
+  };
+}
+
 const positionFunctions = {
   getCenter,
   getUpperCenter,
@@ -76,6 +87,7 @@ const positionFunctions = {
   getRightMiddleEdge,
   getEndUpperRightEdge,
   getMiddleBottomEdge,
+  getBottomRightEdge,
 };
 
 export default function DashedLine({
@@ -83,8 +95,11 @@ export default function DashedLine({
   toId,
   startFn,
   endFn,
-  curveIndex,
-  curveDist = 2,
+  curveIndex = 2,
+  curveDistX1 = 2,
+  curveDistY1 = 2,
+  curveDistX2 = 2,
+  curveDistY2 = 2,
 }) {
   const pathRef = useRef(null);
   const [d, setD] = useState("");
@@ -102,13 +117,13 @@ export default function DashedLine({
       const dy = Math.abs(b.y - a.y);
       const curvature = dx * 0 + dy * curveIndex; // curve size change here
 
-      // const cx = (a.x + b.x) / 2;
-      // const cy = (a.y + b.y) / 2 + (a.y < b.y ? -curvature : curvature);
+      const cx1 = (a.x + b.x) / curveDistX1; // this is middle of the line if is diviede by 2 (curveDist)
+      const cy1 = (a.y + b.y) / curveDistY1;
 
-      const cx = (a.x + b.x) / curveDist + curveIndex; // this is middle of the line if is diviede by 2 (curveDist)
-      const cy = (a.y + b.y) / curveDist + curveIndex;
+      const cx2 = (a.x + b.x) / curveDistX2; // this is middle of the line if is diviede by 2 (curveDist)
+      const cy2 = (a.y + b.y) / curveDistY2;
 
-      setD(`M ${a.x} ${a.y} Q ${cx} ${cy} ${b.x} ${b.y}`);
+      setD(`M ${a.x} ${a.y} C ${cx1} ${cy1} ${cx2} ${cy2} ${b.x} ${b.y}`);
     }
     update();
     window.addEventListener("resize", update);

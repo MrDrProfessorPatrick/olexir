@@ -71,8 +71,10 @@ export default function Solution() {
             toId="problemsTable"
             startFn="getRightMiddleEdge"
             endFn="getEndUpperRightEdge"
-            curveIndex={-155}
-            curveDist={1.111}
+            curveDistX1={2.1}
+            curveDistY1={2.4}
+            curveDistX2={1.2}
+            curveDistY2={2}
           />
           <div
             id="problemsTable"
@@ -171,21 +173,25 @@ export default function Solution() {
               fromId="fluidity"
               toId="solutionCurve"
               startFn="getMiddleBottomEdge"
-              endFn="getRightMiddleEdge"
-              curveIndex={15}
-              curveDist={2}
+              endFn="getUpperCenter"
+              curveDistX1={2}
+              curveDistY1={1.9}
+              curveDistX2={3}
+              curveDistY2={2}
             />
-            <div id="solutionCurve" className="mt-10 ml-15 w-3 h-3"></div>
+            <div id="solutionCurve" className="mt-35 ml-15 w-1 h-1"></div>
             <DashedLine
               fromId="solutionCurve"
               toId="solution"
               startFn="getMiddleBottomEdge"
               endFn="getUpperCenter"
-              curveIndex={-40}
-              curveDist={2}
+              curveDistX1={2}
+              curveDistY1={2}
+              curveDistX2={2}
+              curveDistY2={2}
             />
 
-            <div className="pt-25 pb-15 w-[160px]">
+            <div className="pt-30 pb-15 w-[160px]">
               <h3
                 id="solution"
                 className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
@@ -199,8 +205,10 @@ export default function Solution() {
               toId="solutionResult"
               startFn="getMiddleBottomEdge"
               endFn="getLefttMiddleEdge"
-              curveIndex={-40}
-              curveDist={1.888}
+              curveDistX1={2}
+              curveDistY1={2}
+              curveDistX2={6}
+              curveDistY2={2}
             />
 
             <div className="flex justify-around">
@@ -328,7 +336,10 @@ export default function Solution() {
             </div>
 
             <div className="flex flex-4 flex-col w-[50%] h-[670px]">
-              <div className="relative w-full h-full flex justify-start items-start">
+              <div
+                id="blueMicroscope"
+                className="relative w-full h-full flex justify-start items-start"
+              >
                 <Image src="/blueMicroscope.png" fill alt="blueMicroscope" />
               </div>
               <div
@@ -342,11 +353,53 @@ export default function Solution() {
               </div>
             </div>
           </div>
+          <DashedLine
+            fromId="blueMicroscope"
+            toId="sustainabilityCurve1"
+            startFn="getBottomRightEdge"
+            endFn="getLefttMiddleEdge"
+            curveDistX1={1.8}
+            curveDistY1={1.9}
+            curveDistX2={1.999999}
+            curveDistY2={1.9}
+          />
+
           <div
-            id="sustainability"
+            id="sustainabilityCurve1"
+            className="absolute w-1 h-1 top-700 right-80"
+          ></div>
+
+          <DashedLine
+            fromId="sustainabilityCurve1"
+            toId="sustainabilityCurve2"
+            startFn="getLefttMiddleEdge"
+            endFn="getCenter"
+            curveDistX1={2}
+            curveDistY1={2}
+            curveDistX2={20}
+            curveDistY2={2.011}
+          />
+
+          <div
+            id="sustainabilityCurve2"
+            className="absolute w-2 h-2 top-720 left-50 "
+          ></div>
+
+          <DashedLine
+            fromId="sustainabilityCurve2"
+            toId="sustainability"
+            startFn="getCenter"
+            endFn="getLefttMiddleEdge"
+            curveDistX1={2.8}
+            curveDistY1={2}
+            curveDistX2={2}
+            curveDistY2={2}
+          />
+
+          <div
             className={`pt-70 pl-160 text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
           >
-            Sustainability
+            <h3 id="sustainability">Sustainability</h3>
           </div>
           <div
             className={`mt-8 text-[24px] w-full font-light text-white ${lato.className}`}
@@ -358,20 +411,43 @@ export default function Solution() {
 
           <div className="flex justify-around mt-12">
             <div
+              id="planProtein"
               className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
             >
               <span>Plant protein</span>
               <span>generate ~90× lower</span>
               <span>CO₂eq vs beef per 100 g protein</span>
             </div>
+            <DashedLine
+              fromId="planProtein"
+              toId="secondPlanProtein"
+              startFn="getRightMiddleEdge"
+              endFn="getLefttMiddleEdge"
+              curveDistX1={2}
+              curveDistY1={2}
+              curveDistX2={2}
+              curveDistY2={2}
+            />
             <div
+              id="secondPlanProtein"
               className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
             >
               <span>~10% of global CO₂</span>
               <span>comes from</span>
               <span>food loss & waste</span>
             </div>
+            <DashedLine
+              fromId="secondPlanProtein"
+              toId="thirdPlanProtein"
+              startFn="getRightMiddleEdge"
+              endFn="getLefttMiddleEdge"
+              curveDistX1={2}
+              curveDistY1={2}
+              curveDistX2={2}
+              curveDistY2={2}
+            />
             <div
+              id="thirdPlanProtein"
               className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
             >
               <span>30–50% protein remains</span>
