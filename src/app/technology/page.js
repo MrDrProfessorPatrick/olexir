@@ -397,12 +397,15 @@ export default function Solution() {
           />
 
           <div
-            className={`flex  h-[400px] text-[#D8AE02] font-semibold ${lato.className}`}
+            className={`flex h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
           >
-            <h3 id="sustainability">Sustainability</h3>
+            <div className="flex-[1_16_auto]"></div>
+            <div className="flex self-end flex-[1_0_auto]">
+              <h3 id="sustainability">Sustainability</h3>
+            </div>
           </div>
           <div
-            className={`mt-8 text-[24px] w-full font-light text-white ${lato.className}`}
+            className={`mt-16 text-[24px] w-full font-light text-white ${lato.className}`}
           >
             Every Olexir oleogel is plant-protein based. To amplify
             sustainability, we also offer an upcycled feedstock route that
