@@ -397,7 +397,7 @@ export default function Solution() {
           />
 
           <div
-            className={`pt-70 pl-160 text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+            className={`flex  h-[400px] text-[#D8AE02] font-semibold ${lato.className}`}
           >
             <h3 id="sustainability">Sustainability</h3>
           </div>
@@ -456,8 +456,8 @@ export default function Solution() {
             </div>
           </div>
           <div className="flex mt-20 gap-10 justify-between">
-            <div className="flex flex-col w-[407px]">
-              <div className="flex relative w-[407px] h-[407px]">
+            <div className="flex flex-[1_1_0] flex-col w-[407px]">
+              <div className="flex relative h-full">
                 <Image src="/sustainability1.png" fill alt="sustainability" />
               </div>
               <div>
@@ -474,8 +474,8 @@ export default function Solution() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col w-[407px]">
-              <div className="flex relative  w-[407px] h-[407px]">
+            <div className="flex flex-[1_1_0] flex-col ">
+              <div className="flex relative h-[407px]">
                 <Image src="/sustainability2.png" fill alt="sustainability" />
               </div>
               <div>
@@ -492,8 +492,8 @@ export default function Solution() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col w-[407px]">
-              <div className="flex relative w-[407px] h-[407px]">
+            <div className="flex flex-[1_1_0] flex-col">
+              <div className="flex relative h-[407px]">
                 <Image src="/sustainability3.png" fill alt="sustainability3" />
               </div>
               <div>
