@@ -266,7 +266,7 @@ export default function Solution() {
           </div>
           <div
             id="solutionTable"
-            className="flex w-[100%] bg-zinc-700 rounded-md mt-20"
+            className="flex w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
           >
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
@@ -280,9 +280,11 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Exclusively based on essential plant proteins</p>
+                <p>Exclusively based</p>
+                <p>on essential plant proteins</p>
+                
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -297,9 +299,10 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Naturally saved plant oil riсhness</p>
+                <p>Naturally saved</p>
+                <p>plant oil riсhness</p>
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -314,9 +317,10 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Tuneable consistency serving your needs</p>
+                <p>Tuneable consistency</p>
+                <p>serving your needs</p>
               </div>
             </div>
           </div>
@@ -462,17 +466,17 @@ export default function Solution() {
           </div>
           <div className="flex mt-20 gap-10 justify-between">
             <div className="flex flex-[1_1_0] flex-col w-[407px]">
-              <div className="flex relative h-full">
-                <Image src="/sustainability1.png" fill alt="sustainability" />
+              <div className="flex relative">
+                <Image src="/sustainability1.png" width={400} height={400} alt="sustainability" />
               </div>
               <div>
                 <h3
-                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                  className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
                   Plant sources
                 </h3>
                 <span
-                  className={`text-[24px] text-white font-light ${lato.className}`}
+                  className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                 >
                   Field-grown pulses & oilseeds used for our plant-protein
                   matrices.
@@ -480,17 +484,17 @@ export default function Solution() {
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col ">
-              <div className="flex relative h-[407px]">
-                <Image src="/sustainability2.png" fill alt="sustainability" />
+              <div className="flex relative">
+                <Image src="/sustainability2.png" width={400} height={400} alt="sustainability" />
               </div>
               <div>
                 <h3
-                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                  className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
                   Side-streams to upcycle
                 </h3>
                 <span
-                  className={`text-[24px] text-white font-light ${lato.className}`}
+                  className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                 >
                   Oilseed cakes and other co-products rich in proteins that
                   often bypass human use.
@@ -498,17 +502,17 @@ export default function Solution() {
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col">
-              <div className="flex relative h-[407px]">
-                <Image src="/sustainability3.png" fill alt="sustainability3" />
+              <div className="flex relative">
+                <Image src="/sustainability3.png" width={400} height={400} alt="sustainability3" />
               </div>
               <div>
                 <h3
-                  className={`text-[32px] text-white font-semibold ${lato.className}`}
+                  className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
                   Recovered proteins
                 </h3>
                 <span
-                  className={`text-[24px] text-white font-light ${lato.className}`}
+                  className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                 >
                   Refined, food/cosmetic-grade inputs ready for the same
                   oleogelation route.
