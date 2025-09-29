@@ -140,27 +140,27 @@ export default function Solution() {
             <div className="flex flex-2 flex-col pl-8 lg:pl-25">
               <div className="flex justify-between max-w-[600px]">
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Fluidity
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Instability
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Non-absorbability
                 </span>
               </div>
               <div>
-                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24] font-semibold text-white">
+                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white">
                   Majority of cosmetics rely on fossil-derived or animal fats,
                   while edible fats are packed with trans and saturated lipids.
                 </p>
-                <p className="text-[18px] md:text-[20px] lg:text-[24] font-normal text-white">
+                <p className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white">
                   Plant oils, rich in healthy mono- and polyunsaturated fats,
                   offer a sustainable, bioactive alternative; however, their
                   fluidity and instability drastically limit their applications
@@ -258,7 +258,7 @@ export default function Solution() {
               />
               <span
                 id="solidityPlant"
-                className={`rounded-full text-[18px] md:text-[20px] lg:text-[24] bg-[#D8AE02] px-10 py-4 ${lato.className}`}
+                className={`rounded-full text-[18px] md:text-[20px] lg:text-[24px] bg-[#D8AE02] px-10 py-4 ${lato.className}`}
               >
                 To solidity plant oils
               </span>
@@ -407,17 +407,17 @@ export default function Solution() {
             </div>
           </div>
           <div
-            className={`mt-16 text-[24px] w-full font-light text-white ${lato.className}`}
+            className={`mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
           >
             Every Olexir oleogel is plant-protein based. To amplify
             sustainability, we also offer an upcycled feedstock route that
             recovers proteins from industrial side streams.
           </div>
 
-          <div className="flex justify-around mt-12">
+          <div className="flex flex-col gap-14 lg:flex-row justify-around mt-12">
             <div
               id="planProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>Plant protein</span>
               <span>generate ~90× lower</span>
@@ -435,7 +435,7 @@ export default function Solution() {
             />
             <div
               id="secondPlanProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>~10% of global CO₂</span>
               <span>comes from</span>
@@ -453,10 +453,10 @@ export default function Solution() {
             />
             <div
               id="thirdPlanProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[24px] text-white px-10 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>30–50% protein remains</span>
-              <span>underutilized in oilseed cakes; </span>
+              <span>underutilized in oilseed cakes </span>
               <span>~30% lost in tofu production</span>
             </div>
           </div>
