@@ -52,7 +52,9 @@ export default function Solution() {
     <div className="bg-zinc-900">
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116  z-20 w-full flex justify-center">
-        <h1 className={`text-[56px] font-bold text-white ${lato.className}`}>
+        <h1
+          className={`text-[24px] md:text-[36px] lg:text-[44px] xl:text-[56px] font-bold text-white ${lato.className}`}
+        >
           World needs efficient, healthy and sustainable fats
         </h1>
       </div>
@@ -80,14 +82,14 @@ export default function Solution() {
             id="problemsTable"
             className="flex w-[100%] bg-zinc-700 rounded-md"
           >
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
                 #1
               </div>
               <div
-                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Heart attack and stroke, triggered by saturated fats, are the
@@ -95,14 +97,14 @@ export default function Solution() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
                 60%
               </div>
               <div
-                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Weight is a global burden: 43% overweight + 16% obesity in
@@ -110,14 +112,14 @@ export default function Solution() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
                 5%
               </div>
               <div
-                className={`px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   adsorption of lipophilic bioactives, e.g. curcumin and CBD, by
@@ -127,7 +129,7 @@ export default function Solution() {
             </div>
           </div>
           <div className="flex pt-20">
-            <div id="fluidity" className="min-w-[400px]">
+            <div id="fluidity" className="relative flex-1">
               <Image
                 src="/Leaking.png"
                 width={600}
@@ -135,30 +137,30 @@ export default function Solution() {
                 alt="leaking"
               />
             </div>
-            <div className="flex flex-col pl-25">
+            <div className="flex flex-2 flex-col pl-8 lg:pl-25">
               <div className="flex justify-between max-w-[600px]">
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
                 >
                   Fluidity
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
                 >
                   Instability
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24] text-white px-4 py-2 ${inter.className}`}
                 >
                   Non-absorbability
                 </span>
               </div>
               <div>
-                <p className="pb-10 pt-10 text-[24px] text-white">
+                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24] font-semibold text-white">
                   Majority of cosmetics rely on fossil-derived or animal fats,
                   while edible fats are packed with trans and saturated lipids.
                 </p>
-                <p className="text-[24px] text-white">
+                <p className="text-[18px] md:text-[20px] lg:text-[24] font-normal text-white">
                   Plant oils, rich in healthy mono- and polyunsaturated fats,
                   offer a sustainable, bioactive alternative; however, their
                   fluidity and instability drastically limit their applications
@@ -266,7 +268,7 @@ export default function Solution() {
             id="solutionTable"
             className="flex w-[100%] bg-zinc-700 rounded-md mt-20"
           >
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
@@ -278,12 +280,12 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>Exclusively based on essential plant proteins</p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
@@ -295,12 +297,12 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>Naturally saved plant oil riсhness</p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-20 px-10">
+            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
                 className={`text-[100px] font-light text-white ${lato.className}`}
               >
@@ -312,7 +314,7 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-80 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>Tuneable consistency serving your needs</p>
               </div>
@@ -366,7 +368,7 @@ export default function Solution() {
 
           <div
             id="sustainabilityCurve1"
-            className="absolute w-1 h-1 top-700 right-80"
+            className="absolute w-1 h-1 mt-40 right-50"
           ></div>
 
           <DashedLine
@@ -382,7 +384,7 @@ export default function Solution() {
 
           <div
             id="sustainabilityCurve2"
-            className="absolute w-2 h-2 top-720 left-50 "
+            className="absolute w-2 h-2 mt-60 left-50 "
           ></div>
 
           <DashedLine
