@@ -53,7 +53,7 @@ export default function Solution() {
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116  z-20 w-full flex justify-center">
         <h1
-          className={`text-[24px] md:text-[36px] lg:text-[44px] xl:text-[56px] font-bold text-white ${lato.className}`}
+          className={`text-[24px] md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white ${lato.className}`}
         >
           World needs efficient, healthy and sustainable fats
         </h1>
@@ -84,12 +84,12 @@ export default function Solution() {
           >
             <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
+                className={`text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 #1
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Heart attack and stroke, triggered by saturated fats, are the
@@ -97,14 +97,14 @@ export default function Solution() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
+            <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
+                className={`text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 60%
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Weight is a global burden: 43% overweight + 16% obesity in
@@ -114,12 +114,12 @@ export default function Solution() {
             </div>
             <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
               <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
+                className={`text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 5%
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   adsorption of lipophilic bioactives, e.g. curcumin and CBD, by
@@ -216,7 +216,7 @@ export default function Solution() {
             <div className="flex justify-around">
               <span
                 id="solutionResult"
-                className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
               >
                 No toxic solvents
               </span>
@@ -230,7 +230,7 @@ export default function Solution() {
               />
               <span
                 id="noOilHeating"
-                className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
               >
                 No oil heating
               </span>
@@ -244,7 +244,7 @@ export default function Solution() {
               />
               <span
                 id="proteinPower"
-                className={`border-1 border-solid border-white rounded-full text-[24px] text-white px-10 py-4 ${inter.className}`}
+                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
               >
                 Just protein power
               </span>
@@ -258,7 +258,7 @@ export default function Solution() {
               />
               <span
                 id="solidityPlant"
-                className={`rounded-full text-[24px] bg-[#D8AE02] px-10 py-4 ${inter.className}`}
+                className={`rounded-full text-[18px] md:text-[20px] lg:text-[24] bg-[#D8AE02] px-10 py-4 ${lato.className}`}
               >
                 To solidity plant oils
               </span>
@@ -321,14 +321,14 @@ export default function Solution() {
             </div>
           </div>
 
-          <div className="flex mt-14 gap-22 justify-around">
-            <div className="flex flex-3 flex-col w-[50%] h-[670px]">
-              <div className="relative w-full h-full flex justify-start items-start">
-                <Image src="/Leacking2.png" fill alt="Leacking2" />
+          <div className="flex mt-14 gap-5 lg:gap-22 justify-around">
+            <div className="flex flex-3 flex-col">
+              <div className="relative flex justify-start items-start">
+                <Image src="/Leacking2.png" width={483} height={505} alt="Leacking2" />
               </div>
 
               <div
-                className={`mt-3 text-[24px] w-full text-center font-light text-white ${lato.className}`}
+                className={`mt-3 text-[16px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
               >
                 We know how to employ hydrolysed plant proteins and turn liquid
                 oils into stable oleogels at high oil concentrations without the
@@ -337,15 +337,15 @@ export default function Solution() {
               </div>
             </div>
 
-            <div className="flex flex-4 flex-col w-[50%] h-[670px]">
+            <div className="flex flex-5 flex-col">
               <div
                 id="blueMicroscope"
-                className="relative w-full h-full flex justify-start items-start"
+                className="relative w-full flex justify-start items-start"
               >
-                <Image src="/blueMicroscope.png" fill alt="blueMicroscope" />
+                <Image src="/blueMicroscope.png" width={751} height={505} alt="blueMicroscope" />
               </div>
               <div
-                className={`mt-3 text-[24px] w-full text-center font-light text-white ${lato.className}`}
+                className={`mt-3 text-[16px] lg:text-[24px] w-full h-full font-light text-white ${lato.className}`}
               >
                 By unlocking the protein oleogelating capacity, we intoduce
                 stability, firmness, and a solid structure to liquid oils,
