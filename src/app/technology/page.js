@@ -215,11 +215,11 @@ export default function Solution() {
               curveDistX2={6}
               curveDistY2={2}
             />
-            <div className="">
-              <div className="flex flex-col  gap-10 md:gap-0 md:flex-row justify-around">
+            <div className="flex justify-center md:justify-around">
+              <div className="flex flex-col w-[60%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
                 <span
                   id="solutionResult"
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
                 >
                   No toxic solvents
                 </span>
