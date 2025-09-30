@@ -128,7 +128,7 @@ export default function Solution() {
               </div>
             </div>
           </div>
-          <div className="flex pt-20">
+          <div className="flex flex-col items-center md:flex-row pt-20">
             <div id="fluidity" className="relative flex-1">
               <Image
                 src="/Leaking.png"
@@ -137,8 +137,8 @@ export default function Solution() {
                 alt="leaking"
               />
             </div>
-            <div className="flex flex-2 flex-col pl-8 lg:pl-25">
-              <div className="flex justify-between max-w-[600px]">
+            <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
+              <div className="flex justify-between w-[100%] md:max-w-[600px]">
                 <span
                   className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
@@ -156,11 +156,11 @@ export default function Solution() {
                 </span>
               </div>
               <div>
-                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white">
+                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white text-justify">
                   Majority of cosmetics rely on fossil-derived or animal fats,
                   while edible fats are packed with trans and saturated lipids.
                 </p>
-                <p className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white">
+                <p className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white text-justify">
                   Plant oils, rich in healthy mono- and polyunsaturated fats,
                   offer a sustainable, bioactive alternative; however, their
                   fluidity and instability drastically limit their applications
