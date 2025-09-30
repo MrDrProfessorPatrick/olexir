@@ -59,7 +59,7 @@ export default function Solution() {
         </h1>
       </div>
       <div id="container">
-        <div className="relative w-full px-3 md:px-10">
+        <div className="relative w-full px-4 md:px-10">
           <div className="pt-23 pb-15 w-[160px]">
             <h3
               id="problem"
@@ -270,7 +270,7 @@ export default function Solution() {
           </div>
           <div
             id="solutionTable"
-            className="flex w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
+            className="flex flex-col md:flex-row w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
           >
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
@@ -286,8 +286,7 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Exclusively based</p>
-                <p>on essential plant proteins</p>
+                <p>Exclusively based <br className="hidden md:inline" /> on essential plant proteins</p>
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -304,8 +303,7 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Naturally saved</p>
-                <p>plant oil riсhness</p>
+                <p>Naturally saved <br className="hidden md:inline" />  plant oil riсhness</p>
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -322,8 +320,7 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Tuneable consistency</p>
-                <p>serving your needs</p>
+                <p>Tuneable consistency <br className="hidden md:inline" /> serving your needs</p>
               </div>
             </div>
           </div>
@@ -385,7 +382,7 @@ export default function Solution() {
 
           <div
             id="sustainabilityCurve1"
-            className="absolute w-1 h-1 mt-40 right-50"
+            className="absolute w-1 h-1 mt-5 md:mt-40 right-50"
           ></div>
 
           <DashedLine
@@ -401,7 +398,7 @@ export default function Solution() {
 
           <div
             id="sustainabilityCurve2"
-            className="absolute w-2 h-2 mt-60 left-50 "
+            className="absolute w-2 h-2 mt-5 md:mt-60 left-50 "
           ></div>
 
           <DashedLine
@@ -416,7 +413,7 @@ export default function Solution() {
           />
 
           <div
-            className={`flex h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+            className={`flex h-[20vh] md:h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
           >
             <div className="flex-[1_16_auto]"></div>
             <div className="flex self-end flex-[1_0_auto]">
@@ -424,17 +421,17 @@ export default function Solution() {
             </div>
           </div>
           <div
-            className={`mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
+            className={`mt-6 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
           >
             Every Olexir oleogel is plant-protein based. To amplify
             sustainability, we also offer an upcycled feedstock route that
             recovers proteins from industrial side streams.
           </div>
 
-          <div className="flex flex-col gap-14 lg:flex-row justify-around mt-12">
+          <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
             <div
               id="planProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>Plant protein</span>
               <span>generate ~90× lower</span>
@@ -452,7 +449,7 @@ export default function Solution() {
             />
             <div
               id="secondPlanProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>~10% of global CO₂</span>
               <span>comes from</span>
@@ -470,14 +467,14 @@ export default function Solution() {
             />
             <div
               id="thirdPlanProtein"
-              className={`flex flex-col items-center border-1 border-solid border-white rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+              className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
             >
               <span>30–50% protein remains</span>
               <span>underutilized in oilseed cakes </span>
               <span>~30% lost in tofu production</span>
             </div>
           </div>
-          <div className="flex mt-20 gap-10 justify-between">
+          <div className="flex flex-col md:flex-row mt-20 gap-10 justify-between">
             <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
                 <Image
@@ -487,7 +484,7 @@ export default function Solution() {
                   alt="sustainability"
                 />
               </div>
-              <div className="max-w-[400px]">
+              <div className="max-w-[400px] pt-4 md:pt-8">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
@@ -510,7 +507,7 @@ export default function Solution() {
                   alt="sustainability"
                 />
               </div>
-              <div className="max-w-[400px]">
+              <div className="max-w-[400px] pt-4 md:pt-8">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
@@ -533,7 +530,7 @@ export default function Solution() {
                   alt="sustainability3"
                 />
               </div>
-              <div className="max-w-[400px]">
+              <div className="max-w-[400px] pt-4 md:pt-8">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
