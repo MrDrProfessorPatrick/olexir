@@ -216,7 +216,7 @@ export default function Solution() {
               curveDistY2={2}
             />
             <div className="flex justify-center md:justify-around">
-              <div className="flex flex-col w-[60%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
+              <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
                 <span
                   id="solutionResult"
                   className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
@@ -233,7 +233,7 @@ export default function Solution() {
                 />
                 <span
                   id="noOilHeating"
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
                 >
                   No oil heating
                 </span>
@@ -247,7 +247,7 @@ export default function Solution() {
                 />
                 <span
                   id="proteinPower"
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
                 >
                   Just protein power
                 </span>
@@ -261,7 +261,7 @@ export default function Solution() {
                 />
                 <span
                   id="solidityPlant"
-                  className={`rounded-full text-[18px] md:text-[20px] lg:text-[24px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                  className={`w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
                 >
                   To solidity plant oils
                 </span>
