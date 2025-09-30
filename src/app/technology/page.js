@@ -181,7 +181,10 @@ export default function Solution() {
               curveDistX2={3}
               curveDistY2={2}
             />
-            <div id="solutionCurve" className="mt-35 ml-15 w-1 h-1"></div>
+            <div
+              id="solutionCurve"
+              className="mt-5 md:mt-35 ml-15 w-1 h-1"
+            ></div>
             <DashedLine
               fromId="solutionCurve"
               toId="solution"
@@ -193,7 +196,7 @@ export default function Solution() {
               curveDistY2={2}
             />
 
-            <div className="pt-30 pb-15 w-[160px]">
+            <div className="pt-5 md:pt-30 pb-15 w-[160px]">
               <h3
                 id="solution"
                 className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
@@ -212,56 +215,57 @@ export default function Solution() {
               curveDistX2={6}
               curveDistY2={2}
             />
-
-            <div className="flex justify-around">
-              <span
-                id="solutionResult"
-                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
-              >
-                No toxic solvents
-              </span>
-              <DashedLine
-                fromId="solutionResult"
-                toId="noOilHeating"
-                startFn="getRightMiddleEdge"
-                endFn="getLefttMiddleEdge"
-                curveIndex={2}
-                curveDist={2}
-              />
-              <span
-                id="noOilHeating"
-                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
-              >
-                No oil heating
-              </span>
-              <DashedLine
-                fromId="noOilHeating"
-                toId="proteinPower"
-                startFn="getRightMiddleEdge"
-                endFn="getLefttMiddleEdge"
-                curveIndex={2}
-                curveDist={2}
-              />
-              <span
-                id="proteinPower"
-                className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 ${lato.className}`}
-              >
-                Just protein power
-              </span>
-              <DashedLine
-                fromId="proteinPower"
-                toId="solidityPlant"
-                startFn="getRightMiddleEdge"
-                endFn="getLefttMiddleEdge"
-                curveIndex={2}
-                curveDist={2}
-              />
-              <span
-                id="solidityPlant"
-                className={`rounded-full text-[18px] md:text-[20px] lg:text-[24px] bg-[#D8AE02] px-10 py-4 ${lato.className}`}
-              >
-                To solidity plant oils
-              </span>
+            <div className="">
+              <div className="flex flex-col  gap-10 md:gap-0 md:flex-row justify-around">
+                <span
+                  id="solutionResult"
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                >
+                  No toxic solvents
+                </span>
+                <DashedLine
+                  fromId="solutionResult"
+                  toId="noOilHeating"
+                  startFn="getRightMiddleEdge"
+                  endFn="getLefttMiddleEdge"
+                  curveIndex={2}
+                  curveDist={2}
+                />
+                <span
+                  id="noOilHeating"
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                >
+                  No oil heating
+                </span>
+                <DashedLine
+                  fromId="noOilHeating"
+                  toId="proteinPower"
+                  startFn="getRightMiddleEdge"
+                  endFn="getLefttMiddleEdge"
+                  curveIndex={2}
+                  curveDist={2}
+                />
+                <span
+                  id="proteinPower"
+                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                >
+                  Just protein power
+                </span>
+                <DashedLine
+                  fromId="proteinPower"
+                  toId="solidityPlant"
+                  startFn="getRightMiddleEdge"
+                  endFn="getLefttMiddleEdge"
+                  curveIndex={2}
+                  curveDist={2}
+                />
+                <span
+                  id="solidityPlant"
+                  className={`rounded-full text-[18px] md:text-[20px] lg:text-[24px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                >
+                  To solidity plant oils
+                </span>
+              </div>
             </div>
           </div>
           <div
