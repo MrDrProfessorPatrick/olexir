@@ -284,7 +284,6 @@ export default function Solution() {
               >
                 <p>Exclusively based</p>
                 <p>on essential plant proteins</p>
-                
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -328,7 +327,12 @@ export default function Solution() {
           <div className="flex mt-14 gap-5 lg:gap-22">
             <div className="flex flex-3 flex-col items-center">
               <div className="relative flex justify-start items-start">
-                <Image src="/Leacking2.png" width={483} height={505} alt="Leacking2" />
+                <Image
+                  src="/Leacking2.png"
+                  width={483}
+                  height={505}
+                  alt="Leacking2"
+                />
               </div>
 
               <div
@@ -346,7 +350,12 @@ export default function Solution() {
                 id="blueMicroscope"
                 className="relative flex justify-start items-start"
               >
-                <Image src="/blueMicroscope.png" width={751} height={505} alt="blueMicroscope" />
+                <Image
+                  src="/blueMicroscope.png"
+                  width={751}
+                  height={505}
+                  alt="blueMicroscope"
+                />
               </div>
               <div
                 className={`mt-3 text-[16px] lg:text-[24px] max-w-[751px] font-light text-white ${lato.className}`}
@@ -465,11 +474,16 @@ export default function Solution() {
             </div>
           </div>
           <div className="flex mt-20 gap-10 justify-between">
-            <div className="flex flex-[1_1_0] flex-col w-[407px]">
+            <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
-                <Image src="/sustainability1.png" width={400} height={400} alt="sustainability" />
+                <Image
+                  src="/sustainability1.png"
+                  width={400}
+                  height={400}
+                  alt="sustainability"
+                />
               </div>
-              <div>
+              <div className="max-w-[400px]">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
@@ -483,11 +497,16 @@ export default function Solution() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-[1_1_0] flex-col ">
+            <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
-                <Image src="/sustainability2.png" width={400} height={400} alt="sustainability" />
+                <Image
+                  src="/sustainability2.png"
+                  width={400}
+                  height={400}
+                  alt="sustainability"
+                />
               </div>
-              <div>
+              <div className="max-w-[400px]">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
@@ -501,11 +520,16 @@ export default function Solution() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-[1_1_0] flex-col">
+            <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
-                <Image src="/sustainability3.png" width={400} height={400} alt="sustainability3" />
+                <Image
+                  src="/sustainability3.png"
+                  width={400}
+                  height={400}
+                  alt="sustainability3"
+                />
               </div>
-              <div>
+              <div className="max-w-[400px]">
                 <h3
                   className={`text-[18px] lg:text-[32px] text-white font-semibold ${lato.className}`}
                 >
