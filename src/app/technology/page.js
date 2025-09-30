@@ -51,7 +51,7 @@ export default function Solution() {
   return (
     <div className="bg-zinc-900">
       <BgVideo link={"/solutionVideo.mp4"} />
-      <div className="absolute top-116  z-20 w-full flex justify-center">
+      <div className="absolute top-116 z-20 w-full flex justify-center">
         <h1
           className={`text-[24px] md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white ${lato.className}`}
         >
@@ -59,7 +59,7 @@ export default function Solution() {
         </h1>
       </div>
       <div id="container">
-        <div className="relative w-full px-10">
+        <div className="relative w-full px-3 md:px-10">
           <div className="pt-23 pb-15 w-[160px]">
             <h3
               id="problem"
@@ -82,14 +82,14 @@ export default function Solution() {
             id="problemsTable"
             className="flex w-[100%] bg-zinc-700 rounded-md"
           >
-            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
               <div
-                className={`text-[100px] font-light h-full text-white ${lato.className}`}
+                className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 #1
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Heart attack and stroke, triggered by saturated fats, are the
@@ -97,14 +97,14 @@ export default function Solution() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
+            <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
               <div
-                className={`text-[100px] font-light h-full text-white ${lato.className}`}
+                className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 60%
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Weight is a global burden: 43% overweight + 16% obesity in
@@ -112,14 +112,14 @@ export default function Solution() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-5 lg:px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
               <div
-                className={`text-[100px] font-light h-full text-white ${lato.className}`}
+                className={`flex-0  text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 5%
               </div>
               <div
-                className={`px-0 lg:px-10 text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   adsorption of lipophilic bioactives, e.g. curcumin and CBD, by
