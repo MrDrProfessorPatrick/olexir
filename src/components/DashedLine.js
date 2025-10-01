@@ -36,14 +36,14 @@ function getLefttMiddleEdge(el) {
   };
 }
 
-function getRightMiddleEdge(el) {
+function getRightMiddleEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.left + elementCords.width,
-    y: elementCords.top + elementCords.height / 2 - container.top,
+    x: elementCords.left + elementCords.width + edgeShiftX,
+    y: elementCords.top + elementCords.height / 2 - container.top + edgeShiftY,
   };
 }
 
@@ -80,14 +80,14 @@ function getBottomRightEdge(el) {
   };
 }
 
-function getLeftBottomCorner(el) {
+function getLeftBottomCorner(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.left,
-    y: elementCords.top + elementCords.height - container.top,
+    x: elementCords.left + edgeShiftX,
+    y: elementCords.top + elementCords.height - container.top + edgeShiftY,
   };
 }
 
@@ -107,11 +107,14 @@ export default function DashedLine({
   toId,
   startFn,
   endFn,
-  curveIndex = 2,
   curveDistX1 = 2,
   curveDistY1 = 2,
   curveDistX2 = 2,
   curveDistY2 = 2,
+  edgeShiftXStart = 0,
+  edgeShiftYStart = 0,
+  edgeShiftXEnd = 0,
+  edgeShiftYEnd = 0,
 }) {
   const pathRef = useRef(null);
   const [d, setD] = useState("");
@@ -122,12 +125,15 @@ export default function DashedLine({
       const toEl = document.getElementById(toId);
       if (!fromEl || !toEl) return;
 
-      const a = positionFunctions[startFn](fromEl);
-      const b = positionFunctions[endFn](toEl);
+      const a = positionFunctions[startFn](
+        fromEl,
+        edgeShiftXStart,
+        edgeShiftYStart
+      );
+      const b = positionFunctions[endFn](toEl, edgeShiftXEnd, edgeShiftYEnd);
 
       const dx = Math.abs(b.x - a.x);
       const dy = Math.abs(b.y - a.y);
-      const curvature = dx * 0 + dy * curveIndex; // curve size change here
 
       const cx1 = (a.x + b.x) / curveDistX1; // this is middle of the line if is diviede by 2 (curveDist)
       const cy1 = (a.y + b.y) / curveDistY1;

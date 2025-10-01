@@ -285,6 +285,16 @@ export default function Solution() {
                     To solidity plant oils
                   </span>
                 </div>
+                <DashedLine
+                  fromId="solidityPlant"
+                  toId="solutionTable"
+                  startFn="getRightMiddleEdge"
+                  endFn="getRightMiddleEdge"
+                  curveDistX1={1.9}
+                  curveDistY1={2.101}
+                  curveDistX2={1.9}
+                  edgeShiftYEnd={-130}
+                />
               </div>
             </div>
           )}
@@ -313,11 +323,14 @@ export default function Solution() {
                 toId="solutionResult"
                 startFn="getLeftBottomCorner"
                 endFn="getLefttMiddleEdge"
-                curveDistX1={2}
+                curveDistX1={20}
                 curveDistY1={2}
-                curveDistX2={2}
-                curveDistY2={2}
+                curveDistX2={20}
+                curveDistY2={1.99}
+                edgeShiftXStart={2}
+                edgeShiftYStart={-10}
               />
+
               <div className="flex justify-center md:justify-around">
                 <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
                   <span
@@ -329,8 +342,8 @@ export default function Solution() {
                   <DashedLine
                     fromId="solutionResult"
                     toId="noOilHeating"
-                    startFn="getRightMiddleEdge"
-                    endFn="getLefttMiddleEdge"
+                    startFn="getMiddleBottomEdge"
+                    endFn="getUpperCenter"
                     curveIndex={2}
                     curveDist={2}
                   />
@@ -343,8 +356,8 @@ export default function Solution() {
                   <DashedLine
                     fromId="noOilHeating"
                     toId="proteinPower"
-                    startFn="getRightMiddleEdge"
-                    endFn="getLefttMiddleEdge"
+                    startFn="getMiddleBottomEdge"
+                    endFn="getUpperCenter"
                     curveIndex={2}
                     curveDist={2}
                   />
@@ -357,18 +370,29 @@ export default function Solution() {
                   <DashedLine
                     fromId="proteinPower"
                     toId="solidityPlant"
-                    startFn="getRightMiddleEdge"
-                    endFn="getLefttMiddleEdge"
+                    startFn="getMiddleBottomEdge"
+                    endFn="getUpperCenter"
                     curveIndex={2}
                     curveDist={2}
                   />
                   <span
                     id="solidityPlant"
-                    className={`w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                    className={`w-full min-w-[300px] md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
                   >
                     To solidity plant oils
                   </span>
                 </div>
+
+                <DashedLine
+                  fromId="solidityPlant"
+                  toId="solutionTable"
+                  startFn="getRightMiddleEdge"
+                  endFn="getUpperCenter"
+                  curveDistX1={1.3}
+                  curveDistY1={1.89999}
+                  curveDistX2={2.8}
+                  curveDistY2={2.06}
+                />
               </div>
             </div>
           )}
