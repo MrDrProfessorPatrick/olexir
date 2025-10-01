@@ -415,7 +415,7 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Exclusively based <br className="hidden md:inline" /> on
@@ -435,7 +435,7 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Naturally saved <br className="hidden md:inline" /> plant oil
@@ -455,7 +455,7 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
+                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
                 <p>
                   Tuneable consistency <br className="hidden md:inline" />{" "}
