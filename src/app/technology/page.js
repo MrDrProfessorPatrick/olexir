@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedNumber from "@/components/AnimatedNumber";
 import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
 import DashedLine from "@/components/DashedLine";
@@ -116,13 +117,13 @@ export default function Solution() {
               <div
                 className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
-                60%
+               <AnimatedNumber value="60"/>
               </div>
               <div
                 className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <p>
-                  Weight is a global burden: 43% overweight + 16% obesity in
+                  Weight is a global burden: <AnimatedNumber value="43" className="inline"/> overweight + <AnimatedNumber value="16" className="inline"/>  obesity in
                   2022
                 </p>
               </div>
@@ -131,7 +132,7 @@ export default function Solution() {
               <div
                 className={`flex-0  text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
-                5%
+                <AnimatedNumber value="5" className="inline"/> 
               </div>
               <div
                 className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
