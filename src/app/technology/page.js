@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
@@ -24,6 +24,21 @@ const inter = Inter({
 
 export default function Solution() {
   const [faqShownArr, setFaqInfo] = useState([]);
+
+  function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkSize = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+      checkSize();
+      window.addEventListener("resize", checkSize);
+      return () => window.removeEventListener("resize", checkSize);
+    }, []);
+
+    return isMobile;
+  }
+
+  const isMobile = useIsMobile();
 
   const FAQList = [
     {
@@ -140,17 +155,17 @@ export default function Solution() {
             <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
               <div className="flex justify-between w-[100%] md:max-w-[600px]">
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Fluidity
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Instability
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[18px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
                 >
                   Non-absorbability
                 </span>
@@ -160,7 +175,10 @@ export default function Solution() {
                   Majority of cosmetics rely on fossil-derived or animal fats,
                   while edible fats are packed with trans and saturated lipids.
                 </p>
-                <p className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white text-justify">
+                <p
+                  id="plantOils"
+                  className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white text-justify"
+                >
                   Plant oils, rich in healthy mono- and polyunsaturated fats,
                   offer a sustainable, bioactive alternative; however, their
                   fluidity and instability drastically limit their applications
@@ -170,104 +188,191 @@ export default function Solution() {
             </div>
           </div>
           {/* Solution */}
-          <div>
-            <DashedLine
-              fromId="fluidity"
-              toId="solutionCurve"
-              startFn="getMiddleBottomEdge"
-              endFn="getUpperCenter"
-              curveDistX1={2}
-              curveDistY1={1.9}
-              curveDistX2={3}
-              curveDistY2={2}
-            />
-            <div
-              id="solutionCurve"
-              className="mt-5 md:mt-35 ml-15 w-1 h-1"
-            ></div>
-            <DashedLine
-              fromId="solutionCurve"
-              toId="solution"
-              startFn="getMiddleBottomEdge"
-              endFn="getUpperCenter"
-              curveDistX1={2}
-              curveDistY1={2}
-              curveDistX2={2}
-              curveDistY2={2}
-            />
+          {!isMobile && (
+            <div className="">
+              <DashedLine
+                fromId="fluidity"
+                toId="solutionCurve"
+                startFn="getMiddleBottomEdge"
+                endFn="getUpperCenter"
+                curveDistX1={2}
+                curveDistY1={1.9}
+                curveDistX2={3}
+                curveDistY2={2}
+              />
+              <div
+                id="solutionCurve"
+                className="mt-5 md:mt-35 ml-15 w-1 h-1"
+              ></div>
+              <DashedLine
+                fromId="solutionCurve"
+                toId="solution"
+                startFn="getMiddleBottomEdge"
+                endFn="getUpperCenter"
+                curveDistX1={2}
+                curveDistY1={2}
+                curveDistX2={2}
+                curveDistY2={2}
+              />
 
-            <div className="pt-5 md:pt-30 pb-15 w-[160px]">
-              <h3
-                id="solution"
-                className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
-              >
-                Solution
-              </h3>
-            </div>
+              <div className="pt-5 md:pt-30 pb-15 w-[160px]">
+                <h3
+                  id="solution"
+                  className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                >
+                  Solution
+                </h3>
+              </div>
 
-            <DashedLine
-              fromId="solution"
-              toId="solutionResult"
-              startFn="getMiddleBottomEdge"
-              endFn="getLefttMiddleEdge"
-              curveDistX1={2}
-              curveDistY1={2}
-              curveDistX2={6}
-              curveDistY2={2}
-            />
-            <div className="flex justify-center md:justify-around">
-              <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
-                <span
-                  id="solutionResult"
-                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
-                >
-                  No toxic solvents
-                </span>
-                <DashedLine
-                  fromId="solutionResult"
-                  toId="noOilHeating"
-                  startFn="getRightMiddleEdge"
-                  endFn="getLefttMiddleEdge"
-                  curveIndex={2}
-                  curveDist={2}
-                />
-                <span
-                  id="noOilHeating"
-                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
-                >
-                  No oil heating
-                </span>
-                <DashedLine
-                  fromId="noOilHeating"
-                  toId="proteinPower"
-                  startFn="getRightMiddleEdge"
-                  endFn="getLefttMiddleEdge"
-                  curveIndex={2}
-                  curveDist={2}
-                />
-                <span
-                  id="proteinPower"
-                  className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
-                >
-                  Just protein power
-                </span>
-                <DashedLine
-                  fromId="proteinPower"
-                  toId="solidityPlant"
-                  startFn="getRightMiddleEdge"
-                  endFn="getLefttMiddleEdge"
-                  curveIndex={2}
-                  curveDist={2}
-                />
-                <span
-                  id="solidityPlant"
-                  className={`w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
-                >
-                  To solidity plant oils
-                </span>
+              <DashedLine
+                fromId="solution"
+                toId="solutionResult"
+                startFn="getMiddleBottomEdge"
+                endFn="getLefttMiddleEdge"
+                curveDistX1={2}
+                curveDistY1={2}
+                curveDistX2={6}
+                curveDistY2={2}
+              />
+              <div className="flex justify-center md:justify-around">
+                <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
+                  <span
+                    id="solutionResult"
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    No toxic solvents
+                  </span>
+                  <DashedLine
+                    fromId="solutionResult"
+                    toId="noOilHeating"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="noOilHeating"
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    No oil heating
+                  </span>
+                  <DashedLine
+                    fromId="noOilHeating"
+                    toId="proteinPower"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="proteinPower"
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    Just protein power
+                  </span>
+                  <DashedLine
+                    fromId="proteinPower"
+                    toId="solidityPlant"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="solidityPlant"
+                    className={`hidden md:block w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                  >
+                    To solidity plant oils
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          )}
+          {isMobile && (
+            <div className="">
+              <DashedLine
+                fromId="plantOils"
+                toId="solution"
+                startFn="getBottomRightEdge"
+                endFn="getRightMiddleEdge"
+                curveDistX1={2}
+                curveDistY1={1.9}
+              />
+
+              <div className="pt-5 md:pt-30 pb-15 w-[160px]">
+                <h3
+                  id="solution"
+                  className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                >
+                  Solution
+                </h3>
+              </div>
+
+              <DashedLine
+                fromId="solution"
+                toId="solutionResult"
+                startFn="getLeftBottomCorner"
+                endFn="getLefttMiddleEdge"
+                curveDistX1={2}
+                curveDistY1={2}
+                curveDistX2={2}
+                curveDistY2={2}
+              />
+              <div className="flex justify-center md:justify-around">
+                <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
+                  <span
+                    id="solutionResult"
+                    className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    No toxic solvents
+                  </span>
+                  <DashedLine
+                    fromId="solutionResult"
+                    toId="noOilHeating"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="noOilHeating"
+                    className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    No oil heating
+                  </span>
+                  <DashedLine
+                    fromId="noOilHeating"
+                    toId="proteinPower"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="proteinPower"
+                    className={`w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                  >
+                    Just protein power
+                  </span>
+                  <DashedLine
+                    fromId="proteinPower"
+                    toId="solidityPlant"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveIndex={2}
+                    curveDist={2}
+                  />
+                  <span
+                    id="solidityPlant"
+                    className={`w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                  >
+                    To solidity plant oils
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div
             id="solutionTable"
             className="flex flex-col md:flex-row w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
@@ -286,7 +391,10 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Exclusively based <br className="hidden md:inline" /> on essential plant proteins</p>
+                <p>
+                  Exclusively based <br className="hidden md:inline" /> on
+                  essential plant proteins
+                </p>
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -303,7 +411,10 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Naturally saved <br className="hidden md:inline" />  plant oil riсhness</p>
+                <p>
+                  Naturally saved <br className="hidden md:inline" /> plant oil
+                  riсhness
+                </p>
               </div>
             </div>
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
@@ -320,7 +431,10 @@ export default function Solution() {
               <div
                 className={`px-10 mt-4 w-full text-[16px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
               >
-                <p>Tuneable consistency <br className="hidden md:inline" /> serving your needs</p>
+                <p>
+                  Tuneable consistency <br className="hidden md:inline" />{" "}
+                  serving your needs
+                </p>
               </div>
             </div>
           </div>

@@ -80,6 +80,17 @@ function getBottomRightEdge(el) {
   };
 }
 
+function getLeftBottomCorner(el) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.left,
+    y: elementCords.top + elementCords.height - container.top,
+  };
+}
+
 const positionFunctions = {
   getCenter,
   getUpperCenter,
@@ -88,6 +99,7 @@ const positionFunctions = {
   getEndUpperRightEdge,
   getMiddleBottomEdge,
   getBottomRightEdge,
+  getLeftBottomCorner,
 };
 
 export default function DashedLine({
