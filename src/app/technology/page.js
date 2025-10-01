@@ -65,7 +65,7 @@ export default function Solution() {
   ];
 
   return (
-    <div className="bg-zinc-900">
+    <div className="bg-[url('/caruselBg.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116 z-20 w-full flex justify-center">
         <h1
@@ -76,7 +76,7 @@ export default function Solution() {
       </div>
       <div id="container">
         <div className="relative w-full px-4 md:px-10">
-          <div className="pt-23 pb-15 w-[160px]">
+          <div className="pt-23 pb-15 w-[160px] ">
             <h3
               id="problem"
               className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
@@ -96,7 +96,7 @@ export default function Solution() {
           />
           <div
             id="problemsTable"
-            className="flex w-[100%] bg-zinc-700 rounded-md"
+            className="flex w-[100%] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
           >
             <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
               <div
@@ -402,7 +402,7 @@ export default function Solution() {
 
           <div
             id="solutionTable"
-            className="flex flex-col md:flex-row w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
+            className="flex flex-col md:flex-row w-[100%] mt-20 py-10 rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
           >
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
