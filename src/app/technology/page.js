@@ -68,7 +68,7 @@ export default function Solution() {
       <BgVideo link={"/solutionVideo.mp4"} />
       <div className="absolute top-116 z-20 w-full flex justify-center">
         <h1
-          className={`text-[24px] md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white ${lato.className}`}
+          className={`text-[24px] px-4 md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white text-center ${lato.className}`}
         >
           World needs efficient, healthy and sustainable fats
         </h1>
@@ -397,6 +397,8 @@ export default function Solution() {
             </div>
           )}
 
+          
+
           <div
             id="solutionTable"
             className="flex flex-col md:flex-row w-[100%] bg-zinc-700 rounded-md mt-20 py-10"
@@ -475,6 +477,7 @@ export default function Solution() {
               </div>
 
               <div
+                id="leaking2Text"
                 className={`mt-3 text-[16px] lg:text-[24px] max-w-[483px] font-light text-white ${lato.className}`}
               >
                 We know how to employ hydrolysed plant proteins and turn liquid
@@ -507,48 +510,131 @@ export default function Solution() {
               </div>
             </div>
           </div>
+
+          {!isMobile && 
+            <>
+              <DashedLine
+                fromId="blueMicroscope"
+                toId="sustainabilityCurve1"
+                startFn="getBottomRightEdge"
+                endFn="getLefttMiddleEdge"
+                curveDistX1={1.8}
+                curveDistY1={1.9}
+                curveDistX2={1.999999}
+                curveDistY2={1.9}
+              />
+
+              <div
+                id="sustainabilityCurve1"
+                className="absolute w-1 h-0 mt-10 md:mt-[22vh] right-[18vw]"
+              ></div>
+
+              <DashedLine
+                fromId="sustainabilityCurve1"
+                toId="sustainabilityCurve2"
+                startFn="getLefttMiddleEdge"
+                endFn="getCenter"
+                curveDistX1={2}
+                curveDistY1={2}
+                curveDistX2={20}
+                curveDistY2={2.0001}
+              />
+
+              <div
+                id="sustainabilityCurve2"
+                className="absolute w-4 h-4 mt-5 md:mt-[42vh] left-[22vw]"
+              ></div>
+
+              <DashedLine
+                fromId="sustainabilityCurve2"
+                toId="sustainability"
+                startFn="getCenter"
+                endFn="getLefttMiddleEdge"
+                curveDistX1={2.2}
+                curveDistY1={2}
+                curveDistX2={2}
+                curveDistY2={2}
+              />
+
+              <div
+                className={`flex h-[20vh] md:h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+              >
+                <div className="flex-[1_16_auto]"></div>
+                <div className="flex self-end flex-[1_0_auto]">
+                  <h3 id="sustainability">Sustainability</h3>
+                </div>
+              </div>
+              <div
+                className={`mt-6 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
+              >
+                Every Olexir oleogel is plant-protein based. To amplify
+                sustainability, we also offer an upcycled feedstock route that
+                recovers proteins from industrial side streams.
+              </div>
+
+              <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
+                <div
+                  id="planProtein"
+                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                >
+                  <span>Plant protein</span>
+                  <span>generate ~90× lower</span>
+                  <span>CO₂eq vs beef per 100 g protein</span>
+                </div>
+                <DashedLine
+                  fromId="planProtein"
+                  toId="secondPlanProtein"
+                  startFn="getRightMiddleEdge"
+                  endFn="getLefttMiddleEdge"
+                  curveDistX1={2}
+                  curveDistY1={2}
+                  curveDistX2={2}
+                  curveDistY2={2}
+                />
+                <div
+                  id="secondPlanProtein"
+                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                >
+                  <span>~10% of global CO₂</span>
+                  <span>comes from</span>
+                  <span>food loss & waste</span>
+                </div>
+                <DashedLine
+                  fromId="secondPlanProtein"
+                  toId="thirdPlanProtein"
+                  startFn="getRightMiddleEdge"
+                  endFn="getLefttMiddleEdge"
+                  curveDistX1={2}
+                  curveDistY1={2}
+                  curveDistX2={2}
+                  curveDistY2={2}
+                />
+                <div
+                  id="thirdPlanProtein"
+                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                >
+                  <span>30–50% protein remains</span>
+                  <span>underutilized in oilseed cakes </span>
+                  <span>~30% lost in tofu production</span>
+                </div>
+              </div>
+            </>
+          }
+
+      {isMobile && 
+        <>
           <DashedLine
-            fromId="blueMicroscope"
-            toId="sustainabilityCurve1"
-            startFn="getBottomRightEdge"
-            endFn="getLefttMiddleEdge"
-            curveDistX1={1.8}
-            curveDistY1={1.9}
-            curveDistX2={1.999999}
-            curveDistY2={1.9}
-          />
-
-          <div
-            id="sustainabilityCurve1"
-            className="absolute w-1 h-1 mt-5 md:mt-40 right-50"
-          ></div>
-
-          <DashedLine
-            fromId="sustainabilityCurve1"
-            toId="sustainabilityCurve2"
-            startFn="getLefttMiddleEdge"
-            endFn="getCenter"
-            curveDistX1={2}
-            curveDistY1={2}
-            curveDistX2={20}
-            curveDistY2={2.011}
-          />
-
-          <div
-            id="sustainabilityCurve2"
-            className="absolute w-2 h-2 mt-5 md:mt-60 left-50 "
-          ></div>
-
-          <DashedLine
-            fromId="sustainabilityCurve2"
+            fromId="leaking2Text"
             toId="sustainability"
-            startFn="getCenter"
-            endFn="getLefttMiddleEdge"
-            curveDistX1={2.8}
+            startFn="getRightMiddleEdge"
+            endFn="getRightMiddleEdge"
+            curveDistX1={1.6}
             curveDistY1={2}
-            curveDistX2={2}
+            curveDistX2={1.1}
             curveDistY2={2}
+            edgeShiftYStart={60}
           />
+
 
           <div
             className={`flex h-[20vh] md:h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
@@ -578,8 +664,8 @@ export default function Solution() {
             <DashedLine
               fromId="planProtein"
               toId="secondPlanProtein"
-              startFn="getRightMiddleEdge"
-              endFn="getLefttMiddleEdge"
+              startFn="getMiddleBottomEdge"
+              endFn="getUpperCenter"
               curveDistX1={2}
               curveDistY1={2}
               curveDistX2={2}
@@ -596,8 +682,8 @@ export default function Solution() {
             <DashedLine
               fromId="secondPlanProtein"
               toId="thirdPlanProtein"
-              startFn="getRightMiddleEdge"
-              endFn="getLefttMiddleEdge"
+              startFn="getMiddleBottomEdge"
+              endFn="getUpperCenter"
               curveDistX1={2}
               curveDistY1={2}
               curveDistX2={2}
@@ -612,6 +698,9 @@ export default function Solution() {
               <span>~30% lost in tofu production</span>
             </div>
           </div>
+        </>
+      }
+
           <div className="flex flex-col md:flex-row mt-20 gap-10 justify-between">
             <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">

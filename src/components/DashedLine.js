@@ -3,36 +3,36 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-function getCenter(el) {
+function getCenter(el, edgeShiftX, edgeShiftY) {
   const r = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: r.left + r.width / 2 - container.left,
-    y: r.top + r.height / 2 - container.top,
+    x: r.left + r.width / 2 - container.left + edgeShiftX,
+    y: r.top + r.height / 2 - container.top + edgeShiftY,
   };
 }
 
-function getUpperCenter(el) {
+function getUpperCenter(el, edgeShiftX, edgeShiftY) {
   const r = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: r.left + r.width / 2,
-    y: r.top - container.top,
+    x: r.left + r.width / 2 + edgeShiftX,
+    y: r.top - container.top + edgeShiftY,
   };
 }
 
-function getLefttMiddleEdge(el) {
+function getLefttMiddleEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.left,
-    y: elementCords.top + elementCords.height / 2 - container.top,
+    x: elementCords.left + edgeShiftX,
+    y: elementCords.top + elementCords.height / 2 - container.top + edgeShiftY,
   };
 }
 
@@ -47,36 +47,36 @@ function getRightMiddleEdge(el, edgeShiftX, edgeShiftY) {
   };
 }
 
-function getEndUpperRightEdge(el) {
+function getEndUpperRightEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.right - elementCords.right * 0.1,
-    y: elementCords.top - container.top,
+    x: elementCords.right - elementCords.right * 0.1 + edgeShiftX,
+    y: elementCords.top - container.top + edgeShiftY,
   };
 }
 
-function getMiddleBottomEdge(el) {
+function getMiddleBottomEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.right - elementCords.width / 2,
-    y: elementCords.bottom - container.top,
+    x: elementCords.right - elementCords.width / 2 + edgeShiftX,
+    y: elementCords.bottom - container.top + edgeShiftY,
   };
 }
 
-function getBottomRightEdge(el) {
+function getBottomRightEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.right - 40, // change to some % value
-    y: elementCords.bottom - container.top,
+    x: elementCords.right - 40 + edgeShiftX, // change to some % value
+    y: elementCords.bottom - container.top + edgeShiftY,
   };
 }
 
@@ -86,7 +86,7 @@ function getLeftBottomCorner(el, edgeShiftX, edgeShiftY) {
     .getElementById("container")
     .getBoundingClientRect();
   return {
-    x: elementCords.left + edgeShiftX,
+    x: elementCords.left + edgeShiftX + edgeShiftX,
     y: elementCords.top + elementCords.height - container.top + edgeShiftY,
   };
 }
