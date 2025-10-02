@@ -39,7 +39,21 @@ export default function Solution() {
     return isMobile;
   }
 
+  function useIsTablet() {
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+      const checkSize = () => setIsTablet(window.innerWidth < 1024); // lg breakpoint
+      checkSize();
+      window.addEventListener("resize", checkSize);
+      return () => window.removeEventListener("resize", checkSize);
+    }, []);
+
+    return isTablet;
+  }
+
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   const FAQList = [
     {
@@ -122,12 +136,12 @@ export default function Solution() {
               <div
                 className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
-                <p>
+                <div>
                   Weight is a global burden:{" "}
                   <AnimatedNumber value="43" className="inline" /> overweight +{" "}
                   <AnimatedNumber value="16" className="inline" /> obesity in
                   2022
-                </p>
+                </div>
               </div>
             </div>
             <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
@@ -573,52 +587,103 @@ export default function Solution() {
                 recovers proteins from industrial side streams.
               </div>
 
-              <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
-                <div
-                  id="planProtein"
-                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
-                >
-                  <span>Plant protein</span>
-                  <span>generate ~90× lower</span>
-                  <span>CO₂eq vs beef per 100 g protein</span>
+              {!isTablet && (
+                <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
+                  <div
+                    id="planProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>Plant protein</span>
+                    <span>generate ~90× lower</span>
+                    <span>CO₂eq vs beef per 100 g protein</span>
+                  </div>
+                  <DashedLine
+                    fromId="planProtein"
+                    toId="secondPlanProtein"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveDistX1={2}
+                    curveDistY1={2}
+                    curveDistX2={2}
+                    curveDistY2={2}
+                  />
+                  <div
+                    id="secondPlanProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>~10% of global CO₂</span>
+                    <span>comes from</span>
+                    <span>food loss & waste</span>
+                  </div>
+                  <DashedLine
+                    fromId="secondPlanProtein"
+                    toId="thirdPlanProtein"
+                    startFn="getRightMiddleEdge"
+                    endFn="getLefttMiddleEdge"
+                    curveDistX1={2}
+                    curveDistY1={2}
+                    curveDistX2={2}
+                    curveDistY2={2}
+                  />
+                  <div
+                    id="thirdPlanProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>30–50% protein remains</span>
+                    <span>underutilized in oilseed cakes </span>
+                    <span>~30% lost in tofu production</span>
+                  </div>
                 </div>
-                <DashedLine
-                  fromId="planProtein"
-                  toId="secondPlanProtein"
-                  startFn="getRightMiddleEdge"
-                  endFn="getLefttMiddleEdge"
-                  curveDistX1={2}
-                  curveDistY1={2}
-                  curveDistX2={2}
-                  curveDistY2={2}
-                />
-                <div
-                  id="secondPlanProtein"
-                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
-                >
-                  <span>~10% of global CO₂</span>
-                  <span>comes from</span>
-                  <span>food loss & waste</span>
+              )}
+
+              {isTablet && (
+                <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
+                  <div
+                    id="planProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>Plant protein</span>
+                    <span>generate ~90× lower</span>
+                    <span>CO₂eq vs beef per 100 g protein</span>
+                  </div>
+                  <DashedLine
+                    fromId="planProtein"
+                    toId="secondPlanProtein"
+                    startFn="getMiddleBottomEdge"
+                    endFn="getUpperCenter"
+                    curveDistX1={2}
+                    curveDistY1={2}
+                    curveDistX2={2}
+                    curveDistY2={2}
+                  />
+                  <div
+                    id="secondPlanProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>~10% of global CO₂</span>
+                    <span>comes from</span>
+                    <span>food loss & waste</span>
+                  </div>
+                  <DashedLine
+                    fromId="secondPlanProtein"
+                    toId="thirdPlanProtein"
+                    startFn="getMiddleBottomEdge"
+                    endFn="getUpperCenter"
+                    curveDistX1={2}
+                    curveDistY1={2}
+                    curveDistX2={2}
+                    curveDistY2={2}
+                  />
+                  <div
+                    id="thirdPlanProtein"
+                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                  >
+                    <span>30–50% protein remains</span>
+                    <span>underutilized in oilseed cakes </span>
+                    <span>~30% lost in tofu production</span>
+                  </div>
                 </div>
-                <DashedLine
-                  fromId="secondPlanProtein"
-                  toId="thirdPlanProtein"
-                  startFn="getRightMiddleEdge"
-                  endFn="getLefttMiddleEdge"
-                  curveDistX1={2}
-                  curveDistY1={2}
-                  curveDistX2={2}
-                  curveDistY2={2}
-                />
-                <div
-                  id="thirdPlanProtein"
-                  className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
-                >
-                  <span>30–50% protein remains</span>
-                  <span>underutilized in oilseed cakes </span>
-                  <span>~30% lost in tofu production</span>
-                </div>
-              </div>
+              )}
             </>
           )}
 
