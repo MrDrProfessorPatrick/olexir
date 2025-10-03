@@ -532,16 +532,16 @@ export default function Solution() {
                 fromId="blueMicroscope"
                 toId="sustainabilityCurve1"
                 startFn="getBottomRightEdge"
-                endFn="getLefttMiddleEdge"
+                endFn="getCenter"
                 curveDistX1={1.8}
                 curveDistY1={1.9}
-                curveDistX2={1.999999}
+                curveDistX2={2}
                 curveDistY2={1.9}
               />
 
               <div
                 id="sustainabilityCurve1"
-                className="absolute w-1 h-0 mt-10 md:mt-[22vh] right-[18vw]"
+                className="absolute w-0 h-0 md:mt-[174px] lg:mt-[10%] xl:mt-[21vh] 2xl:mt-[18vh] right-[18vw]"
               ></div>
 
               <DashedLine
@@ -557,7 +557,7 @@ export default function Solution() {
 
               <div
                 id="sustainabilityCurve2"
-                className="absolute w-4 h-4 mt-5 md:mt-[42vh] left-[22vw]"
+                className="absolute w-0 h-0 mt-5 md:mt-[41vh] left-[22vw]"
               ></div>
 
               <DashedLine
