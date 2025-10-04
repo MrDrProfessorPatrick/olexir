@@ -36,6 +36,17 @@ function getLefttMiddleEdge(el, edgeShiftX, edgeShiftY) {
   };
 }
 
+function getLefttBottomCorner(el, edgeShiftX, edgeShiftY) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.left + edgeShiftX,
+    y: elementCords.top + elementCords.height - container.top + edgeShiftY,
+  };
+}
+
 function getRightMiddleEdge(el, edgeShiftX, edgeShiftY) {
   const elementCords = el.getBoundingClientRect();
   const container = document
@@ -91,6 +102,17 @@ function getLeftBottomCorner(el, edgeShiftX, edgeShiftY) {
   };
 }
 
+function getLeftUpperCorner(el, edgeShiftX, edgeShiftY) {
+  const elementCords = el.getBoundingClientRect();
+  const container = document
+    .getElementById("container")
+    .getBoundingClientRect();
+  return {
+    x: elementCords.left + edgeShiftX + edgeShiftX,
+    y: elementCords.top - container.top + edgeShiftY,
+  };
+}
+
 const positionFunctions = {
   getCenter,
   getUpperCenter,
@@ -100,6 +122,8 @@ const positionFunctions = {
   getMiddleBottomEdge,
   getBottomRightEdge,
   getLeftBottomCorner,
+  getLefttBottomCorner,
+  getLeftUpperCorner,
 };
 
 export default function DashedLine({

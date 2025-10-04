@@ -55,6 +55,8 @@ export default function Solution() {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
 
+  console.log("isMobile", isMobile);
+
   const FAQList = [
     {
       q: "1) What is saturated fat?",
@@ -112,22 +114,24 @@ export default function Solution() {
             id="problemsTable"
             className="flex w-[100%] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
           >
-            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
               <div
                 className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 #1
               </div>
               <div
-                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full `}
               >
-                <p>
+                <p
+                  className={`text-center font-light text-white ${lato.className}`}
+                >
                   Heart attack and stroke, triggered by saturated fats, are the
                   #1 killer in the world
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
+            <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
               <div
                 className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
@@ -144,10 +148,11 @@ export default function Solution() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-10">
+            <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
               <div
                 className={`flex-0  text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
+                <span>&lt;</span>{" "}
                 <AnimatedNumber value="5" className="inline" />
               </div>
               <div
@@ -160,6 +165,30 @@ export default function Solution() {
               </div>
             </div>
           </div>
+          {isMobile ? (
+            <DashedLine
+              fromId="problemsTable"
+              toId="fluidity"
+              startFn="getLefttBottomCorner"
+              endFn="getUpperCenter"
+              curveDistX1={2}
+              curveDistY1={2}
+              curveDistX2={2}
+              curveDistY2={2}
+            />
+          ) : (
+            <DashedLine
+              fromId="problemsTable"
+              toId="fluidity"
+              startFn="getLefttBottomCorner"
+              endFn="getLeftUpperCorner"
+              curveDistX1={10}
+              curveDistY1={2}
+              curveDistX2={10}
+              curveDistY2={2}
+              edgeShiftYEnd={50}
+            />
+          )}
           <div className="flex flex-col items-center md:flex-row pt-20">
             <div id="fluidity" className="relative flex-1">
               <Image
