@@ -165,18 +165,19 @@ export default function Solution() {
               </div>
             </div>
           </div>
-          {isMobile ? (
+          {isMobile && (
             <DashedLine
               fromId="problemsTable"
               toId="fluidity"
               startFn="getLefttBottomCorner"
               endFn="getUpperCenter"
-              curveDistX1={2}
-              curveDistY1={2}
-              curveDistX2={2}
-              curveDistY2={2}
+              curveDistX1={6}
+              curveDistY1={1.8}
+              curveDistX2={2.1}
+              curveDistY2={2.4}
             />
-          ) : (
+          )}
+          {!isMobile && (
             <DashedLine
               fromId="problemsTable"
               toId="fluidity"
