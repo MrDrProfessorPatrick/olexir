@@ -20,7 +20,7 @@ export default function AnimatedNumber({ value, duration, className = "" }) {
 
   return (
     <div ref={ref} className={className}>
-      <motion.span>{rounded}</motion.span>%
+      <motion.span>{rounded}</motion.span>
     </div>
   );
 }

@@ -135,15 +135,15 @@ export default function Solution() {
               <div
                 className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
-                <AnimatedNumber value="60" />
+                <AnimatedNumber value="60" className="inline" />%
               </div>
               <div
                 className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
               >
                 <div>
                   Weight is a global burden:{" "}
-                  <AnimatedNumber value="43" className="inline" /> overweight +{" "}
-                  <AnimatedNumber value="16" className="inline" /> obesity in
+                  <AnimatedNumber value="43" className="inline" />% overweight +{" "}
+                  <AnimatedNumber value="16" className="inline" />% obesity in
                   2022
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Solution() {
                 className={`flex-0  text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
               >
                 <span>&lt;</span>{" "}
-                <AnimatedNumber value="5" className="inline" />
+                <AnimatedNumber value="5" className="inline" />%
               </div>
               <div
                 className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
@@ -626,7 +626,10 @@ export default function Solution() {
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
                     <span>Plant protein</span>
-                    <span>generate ~90× lower</span>
+                    <span>
+                      generate ~<AnimatedNumber value="90" className="inline" />
+                      × lower
+                    </span>
                     <span>CO₂eq vs beef per 100 g protein</span>
                   </div>
                   <DashedLine
@@ -643,7 +646,10 @@ export default function Solution() {
                     id="secondPlanProtein"
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
-                    <span>~10% of global CO₂</span>
+                    <span>
+                      ~<AnimatedNumber value="10" className="inline" />% of
+                      global CO₂
+                    </span>
                     <span>comes from</span>
                     <span>food loss & waste</span>
                   </div>
@@ -661,9 +667,16 @@ export default function Solution() {
                     id="thirdPlanProtein"
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
-                    <span>30–50% protein remains</span>
+                    <span>
+                      <AnimatedNumber value="30" className="inline" />–
+                      <AnimatedNumber value="50" className="inline" />% protein
+                      remains
+                    </span>
                     <span>underutilized in oilseed cakes </span>
-                    <span>~30% lost in tofu production</span>
+                    <span>
+                      ~<AnimatedNumber value="30" className="inline" />% lost in
+                      tofu production
+                    </span>
                   </div>
                 </div>
               )}
@@ -675,7 +688,10 @@ export default function Solution() {
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
                     <span>Plant protein</span>
-                    <span>generate ~90× lower</span>
+                    <span>
+                      generate ~<AnimatedNumber value="90" className="inline" />
+                      × lower
+                    </span>
                     <span>CO₂eq vs beef per 100 g protein</span>
                   </div>
                   <DashedLine
@@ -692,7 +708,10 @@ export default function Solution() {
                     id="secondPlanProtein"
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
-                    <span>~10% of global CO₂</span>
+                    <span>
+                      ~<AnimatedNumber value="10" className="inline" />% of
+                      global CO₂
+                    </span>
                     <span>comes from</span>
                     <span>food loss & waste</span>
                   </div>
@@ -710,9 +729,16 @@ export default function Solution() {
                     id="thirdPlanProtein"
                     className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                   >
-                    <span>30–50% protein remains</span>
+                    <span>
+                      <AnimatedNumber value="30" className="inline" />–
+                      <AnimatedNumber value="50" className="inline" />% protein
+                      remains
+                    </span>
                     <span>underutilized in oilseed cakes </span>
-                    <span>~30% lost in tofu production</span>
+                    <span>
+                      ~<AnimatedNumber value="30" className="inline" />% lost in
+                      tofu production
+                    </span>
                   </div>
                 </div>
               )}
@@ -755,7 +781,10 @@ export default function Solution() {
                   className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                 >
                   <span>Plant protein</span>
-                  <span>generate ~90× lower</span>
+                  <span>
+                    generate ~<AnimatedNumber value="90" className="inline" />×
+                    lower
+                  </span>
                   <span>CO₂eq vs beef per 100 g protein</span>
                 </div>
                 <DashedLine
@@ -772,7 +801,10 @@ export default function Solution() {
                   id="secondPlanProtein"
                   className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                 >
-                  <span>~10% of global CO₂</span>
+                  <span>
+                    ~<AnimatedNumber value="10" className="inline" />% of global
+                    CO₂
+                  </span>
                   <span>comes from</span>
                   <span>food loss & waste</span>
                 </div>
@@ -790,9 +822,16 @@ export default function Solution() {
                   id="thirdPlanProtein"
                   className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                 >
-                  <span>30–50% protein remains</span>
+                  <span>
+                    <AnimatedNumber value="30" className="inline" />–
+                    <AnimatedNumber value="50" className="inline" />% protein
+                    remains
+                  </span>
                   <span>underutilized in oilseed cakes </span>
-                  <span>~30% lost in tofu production</span>
+                  <span>
+                    ~<AnimatedNumber value="30" className="inline" />% lost in
+                    tofu production
+                  </span>
                 </div>
               </div>
             </>
