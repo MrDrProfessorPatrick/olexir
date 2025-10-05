@@ -545,13 +545,15 @@ export default function Solution() {
                 />
               </div>
               <div
-                className={`mt-3 text-[16px] lg:text-[24px] max-w-[751px] font-light text-white ${lato.className}`}
+                className={`flex mt-3 text-[16px] lg:text-[24px] justify-start max-w-[751px] font-light text-white ${lato.className}`}
               >
-                By unlocking the protein oleogelating capacity, we intoduce
-                stability, firmness, and a solid structure to liquid oils,
-                protecting every tiny oily droplet from oxidation and UV to
-                serve the diverse needs of industries that touch every aspect of
-                life.
+                <div className="w-[100%] md:w-[88%]">
+                  By unlocking the protein oleogelating capacity, we intoduce
+                  stability, firmness, and a solid structure to liquid oils,
+                  protecting every tiny oily droplet from oxidation and UV to
+                  serve the diverse needs of industries that touch every aspect
+                  of life.
+                </div>
               </div>
             </div>
           </div>
@@ -571,23 +573,23 @@ export default function Solution() {
 
               <div
                 id="sustainabilityCurve1"
-                className="absolute w-0 h-0 md:mt-[174px] lg:mt-[10%] xl:mt-[21vh] 2xl:mt-[18vh] right-[18vw]"
+                className="absolute w-0 h-0 md:mt-[154px] lg:mt-[10%] xl:mt-[16vh] 2xl:mt-[18vh] right-[30vw]"
               ></div>
 
               <DashedLine
                 fromId="sustainabilityCurve1"
                 toId="sustainabilityCurve2"
                 startFn="getLefttMiddleEdge"
-                endFn="getCenter"
+                endFn="getRightMiddleEdge"
                 curveDistX1={2}
                 curveDistY1={2}
-                curveDistX2={20}
-                curveDistY2={2.0001}
+                curveDistX2={2}
+                curveDistY2={2.01}
               />
 
               <div
                 id="sustainabilityCurve2"
-                className="absolute w-0 h-0 mt-5 md:mt-[41vh] left-[22vw]"
+                className="absolute w-2 h-2 mt-5 md:mt-[22vh] left-[25vw]"
               ></div>
 
               <DashedLine
@@ -595,14 +597,14 @@ export default function Solution() {
                 toId="sustainability"
                 startFn="getCenter"
                 endFn="getLefttMiddleEdge"
-                curveDistX1={2.2}
-                curveDistY1={2}
+                curveDistX1={10}
+                curveDistY1={1.99999}
                 curveDistX2={2}
                 curveDistY2={2}
               />
 
               <div
-                className={`flex h-[20vh] md:h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                className={`flex h-[20vh] md:h-[35vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
               >
                 <div className="flex-[1_16_auto]"></div>
                 <div className="flex self-end flex-[1_0_auto]">
