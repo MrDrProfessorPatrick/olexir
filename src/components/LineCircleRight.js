@@ -2,7 +2,7 @@ export default function LineCircleRight({ top, width }) {
   return (
     <div
       style={{ top: `${top}px` }}
-      className={`hidden md:flex items-center mr-4 left-0 z-1000 `}
+      className={`hidden md:flex items-center mr-4 left-[-40px] absolute z-1000 `}
     >
       <div
         className={`h-[1px] bg-white/65`}
