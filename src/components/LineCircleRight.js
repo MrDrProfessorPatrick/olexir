@@ -1,8 +1,8 @@
-export default function LineCircleRight({ top, width }) {
+export default function LineCircleRight({ top, width, leftEdge }) {
   return (
     <div
-      style={{ top: `${top}px` }}
-      className={`hidden md:flex items-center mr-4 left-[-40px] absolute z-1000 `}
+      style={{ top: `${top}%`, left: leftEdge || '0' }}
+      className={`hidden md:flex items-center mr-4 left-[-40px] absolute z-1000`}
     >
       <div
         className={`h-[1px] bg-white/65`}

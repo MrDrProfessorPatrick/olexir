@@ -841,8 +841,8 @@ export default function Solution() {
           {/* <LineCircleLeft top={310} /> */}
 
           <div className="flex relative flex-col md:flex-row mt-20 gap-10 justify-between">
-            <LineCircleRight top={230} width={30} />
-
+            {!isTablet && <LineCircleRight top={35} width={30} leftEdge={-40} />} 
+            {!isTablet && <LineCircleLeft top={35} width={30} rightEdge={-40} />} 
             <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
                 <Image
