@@ -47,8 +47,8 @@ export default function Bottom() {
           >
             <span>olexir@olexir.ch</span>
           </div>
-          <div className="flex flex-col md:justify-start w-full pt-2">
-            <button className="text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md">
+          <div className="flex flex-col items-center md:items-start w-full pt-2">
+            <button className="max-w-[200px] text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md">
               Let’s Connect 📩
             </button>
           </div>

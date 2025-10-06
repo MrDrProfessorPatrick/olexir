@@ -1,4 +1,3 @@
-// HomeImage1
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { Inter } from "next/font/google";
