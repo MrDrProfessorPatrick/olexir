@@ -156,7 +156,7 @@ export default function CaruselHome() {
       </div>
 
       <div className="flex">
-        <LineCircleRight />
+        <LineCircleRight top={110} />
         <div className="flex items-center justify-center">
           <button onClick={scrollPrev} className="cursor-pointer">
             <ChevronLeft color="white" className="z-10" />
@@ -183,7 +183,7 @@ export default function CaruselHome() {
             <ChevronRight color="white" className="z-1000" />
           </button>
         </div>
-        <LineCircleLeft />
+        <LineCircleLeft top={110} />
       </div>
 
       <div className="flex justify-center gap-2 mt-4">

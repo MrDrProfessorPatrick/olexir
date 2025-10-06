@@ -5,6 +5,8 @@ import AnimatedNumber from "@/components/AnimatedNumber";
 import Image from "next/image";
 import BgVideo from "@/components/BgVideo";
 import DashedLine from "@/components/DashedLine";
+import LineCircleLeft from "@/components/LineCircleLeft";
+import LineCircleRight from "@/components/LineCircleRight";
 import Bottom from "@/components/Bottom";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
@@ -200,31 +202,31 @@ export default function Solution() {
               />
             </div>
             <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
-              <div className="flex justify-between w-[100%] md:max-w-[600px]">
+              <div className="flex justify-between w-[100%] md:max-w-[600px] h-10">
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 pt-1 lg:pt-0 ${inter.className}`}
                 >
                   Fluidity
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 pt-1 lg:pt-0 ${inter.className}`}
                 >
                   Instability
                 </span>
                 <span
-                  className={`border-1 border-solid border-white rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 py-2 ${inter.className}`}
+                  className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-4 pt-1 lg:pt-0 ${inter.className}`}
                 >
                   Non-absorbability
                 </span>
               </div>
               <div>
-                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white text-justify">
+                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white/63 text-justify">
                   Majority of cosmetics rely on fossil-derived or animal fats,
                   while edible fats are packed with trans and saturated lipids.
                 </p>
                 <p
                   id="plantOils"
-                  className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white text-justify"
+                  className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white/63 text-justify"
                 >
                   Plant oils, rich in healthy mono- and polyunsaturated fats,
                   offer a sustainable, bioactive alternative; however, their
@@ -282,10 +284,10 @@ export default function Solution() {
                 curveDistY2={2}
               />
               <div className="flex justify-center md:justify-around">
-                <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
+                <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around h-10">
                   <span
                     id="solutionResult"
-                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white/60 rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-8 py-3 text-center ${lato.className}`}
                   >
                     No toxic solvents
                   </span>
@@ -299,7 +301,7 @@ export default function Solution() {
                   />
                   <span
                     id="noOilHeating"
-                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white/60 rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-8 py-3 text-center ${lato.className}`}
                   >
                     No oil heating
                   </span>
@@ -313,7 +315,7 @@ export default function Solution() {
                   />
                   <span
                     id="proteinPower"
-                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-10 py-4 text-center ${lato.className}`}
+                    className={`hidden md:block w-full md:w-auto border-1 border-solid border-white/60 rounded-full text-[18px] md:text-[14px] lg:text-[20px] text-white md:px-3 lg:px-8 py-3 text-center ${lato.className}`}
                   >
                     Just protein power
                   </span>
@@ -327,7 +329,7 @@ export default function Solution() {
                   />
                   <span
                     id="solidityPlant"
-                    className={`hidden md:block w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
+                    className={`hidden md:block w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-14 py-3 text-center ${lato.className}`}
                   >
                     To solidity plant oils
                   </span>
@@ -446,7 +448,7 @@ export default function Solution() {
 
           <div
             id="solutionTable"
-            className="flex flex-col md:flex-row w-[100%] mt-20 py-10 rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
+            className="flex flex-col md:flex-row w-[100%] mt-20 py-6 rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
           >
             <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
               <div
@@ -836,8 +838,10 @@ export default function Solution() {
               </div>
             </>
           )}
+          {/* <LineCircleLeft top={310} /> */}
 
-          <div className="flex flex-col md:flex-row mt-20 gap-10 justify-between">
+          <div className="flex relative flex-col md:flex-row mt-20 gap-10 justify-between">
+            <LineCircleRight top={3200} width={30} />
             <div className="flex flex-[1_1_0] flex-col items-center">
               <div className="flex relative">
                 <Image
