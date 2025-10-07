@@ -448,68 +448,62 @@ export default function Solution() {
 
           <div
             id="solutionTable"
-            className="flex flex-col md:flex-row w-[100%] mt-20 py-6 rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
+            className="flex flex-col md:flex-row w-full mt-20 rounded-md 
+             gap-[20px] md:gap-0
+             md:bg-white/10 md:backdrop-blur-[2px] 
+             md:before:content-[''] md:before:absolute md:before:inset-0 
+             md:before:rounded-md md:before:border md:before:border-white/20"
           >
-            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
+            {[
+              {
+                img: "/VectorLeave.png",
+                text: (
+                  <>
+                    Exclusively based <br className="hidden md:inline" /> on
+                    essential plant proteins
+                  </>
+                ),
+              },
+              {
+                img: "/VectorDiamond.png",
+                text: (
+                  <>
+                    Naturally saved <br className="hidden md:inline" /> plant
+                    oil richness
+                  </>
+                ),
+              },
+              {
+                img: "/VectorSwitchers.png",
+                text: (
+                  <>
+                    Tuneable consistency <br className="hidden md:inline" />{" "}
+                    serving your needs
+                  </>
+                ),
+              },
+            ].map(({ img, text }, i) => (
               <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
+                key={i}
+                className="flex flex-[1_1_0] flex-col justify-center items-center py-20 
+                 bg-white/10 backdrop-blur-[2px] 
+                 before:content-[''] before:absolute before:inset-0 
+                 before:rounded-md before:border before:border-white/20 
+                 md:bg-transparent md:backdrop-blur-none md:before:content-none"
               >
-                <Image
-                  src="/VectorLeave.png"
-                  width={50}
-                  height={50}
-                  alt="vectorLeave"
-                />
+                <div
+                  className={`text-[100px] font-light text-white ${lato.className}`}
+                >
+                  <Image src={img} width={50} height={50} alt="icon" />
+                </div>
+                <div
+                  className={`px-10 mt-4 w-full text-[22px] sm:text-[22px] md:text-[18px] lg:text-[20px] 
+                    text-center font-light text-white ${lato.className}`}
+                >
+                  <p>{text}</p>
+                </div>
               </div>
-              <div
-                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
-              >
-                <p>
-                  Exclusively based <br className="hidden md:inline" /> on
-                  essential plant proteins
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
-              <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
-              >
-                <Image
-                  src="/VectorDiamond.png"
-                  width={50}
-                  height={50}
-                  alt="vectorDiamond"
-                />
-              </div>
-              <div
-                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
-              >
-                <p>
-                  Naturally saved <br className="hidden md:inline" /> plant oil
-                  riсhness
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-[1_1_0] flex-col justify-center items-center py-20">
-              <div
-                className={`text-[100px] font-light text-white ${lato.className}`}
-              >
-                <Image
-                  src="/VectorSwitchers.png"
-                  width={50}
-                  height={50}
-                  alt="vectorDiamond"
-                />
-              </div>
-              <div
-                className={`px-10 mt-4 w-full text-[16px] sm:text-[22px] md:text-[18px] lg:text-[20px] text-center font-light text-white ${lato.className}`}
-              >
-                <p>
-                  Tuneable consistency <br className="hidden md:inline" />{" "}
-                  serving your needs
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="flex mt-14 gap-5 lg:gap-22">
