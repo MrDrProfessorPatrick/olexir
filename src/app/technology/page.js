@@ -506,45 +506,50 @@ export default function Solution() {
             ))}
           </div>
 
-          <div className="flex mt-14 gap-5 lg:gap-22">
-            <div className="flex flex-3 flex-col items-center">
-              <div className="relative flex justify-start items-start">
+          <div className="flex flex-col md:flex-row mt-14 gap-5 lg:gap-22">
+            {/* LEFT BLOCK */}
+            <div className="flex flex-3 flex-col items-center w-full md:w-auto">
+              <div className="relative flex justify-start items-start w-full md:w-auto">
                 <Image
                   src="/Leacking2.png"
                   width={483}
                   height={505}
                   alt="Leacking2"
+                  className="w-full h-auto md:w-[483px]"
                 />
               </div>
 
               <div
                 id="leaking2Text"
-                className={`mt-3 text-[16px] lg:text-[24px] max-w-[483px] font-light text-white ${lato.className}`}
+                className={`mt-3 text-[16px] lg:text-[24px] w-full md:max-w-[483px] font-light text-white ${lato.className}`}
               >
                 We know how to employ hydrolysed plant proteins and turn liquid
                 oils into stable oleogels at high oil concentrations without the
-                need for heating, toxic solvents, nickel or expensive
+                need for heating, toxic solvents, nickel or expensive
                 cross-linkers.
               </div>
             </div>
 
-            <div className="flex flex-5 flex-col items-center">
+            {/* RIGHT BLOCK */}
+            <div className="flex flex-5 flex-col items-center w-full md:w-auto">
               <div
                 id="blueMicroscope"
-                className="relative flex justify-start items-start"
+                className="relative flex justify-start items-start w-full md:w-auto"
               >
                 <Image
                   src="/blueMicroscope.png"
                   width={751}
                   height={505}
                   alt="blueMicroscope"
+                  className="w-full h-auto md:w-[751px]"
                 />
               </div>
+
               <div
-                className={`flex mt-3 text-[16px] lg:text-[24px] justify-start max-w-[751px] font-light text-white ${lato.className}`}
+                className={`flex mt-3 text-[16px] lg:text-[24px] justify-start w-full max-w-[751px] font-light text-white ${lato.className}`}
               >
-                <div className="w-[100%] md:w-[88%]">
-                  By unlocking the protein oleogelating capacity, we intoduce
+                <div id="blueMicroscopeText" className="w-full md:w-[88%]">
+                  By unlocking the protein oleogelating capacity, we introduce
                   stability, firmness, and a solid structure to liquid oils,
                   protecting every tiny oily droplet from oxidation and UV to
                   serve the diverse needs of industries that touch every aspect
@@ -744,7 +749,7 @@ export default function Solution() {
           {isMobile && (
             <>
               <DashedLine
-                fromId="leaking2Text"
+                fromId="blueMicroscopeText"
                 toId="sustainability"
                 startFn="getRightMiddleEdge"
                 endFn="getRightMiddleEdge"
