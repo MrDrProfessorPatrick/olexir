@@ -114,7 +114,7 @@ export default function Solution() {
           />
           <div
             id="problemsTable"
-            className="flex w-[100%] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
+            className="flex w-[100%] max-h-[337px] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
           >
             <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
               <div
@@ -448,7 +448,9 @@ export default function Solution() {
 
           <div
             id="solutionTable"
-            className="flex flex-col md:flex-row w-full mt-20 rounded-md 
+            className="flex flex-col md:flex-row w-full mt-20 rounded-md
+               min-h-[337px]
+             lg:py-6
              gap-[20px] md:gap-0
              md:bg-white/10 md:backdrop-blur-[2px] 
              md:before:content-[''] md:before:absolute md:before:inset-0 
@@ -485,7 +487,8 @@ export default function Solution() {
             ].map(({ img, text }, i) => (
               <div
                 key={i}
-                className="flex flex-[1_1_0] flex-col justify-center items-center py-20 
+                className="flex flex-[1_1_0] flex-col justify-center items-center py-15
+             
                  bg-white/10 backdrop-blur-[2px] 
                  before:content-[''] before:absolute before:inset-0 
                  before:rounded-md before:border before:border-white/20 
@@ -752,16 +755,17 @@ export default function Solution() {
                 fromId="blueMicroscopeText"
                 toId="sustainability"
                 startFn="getRightMiddleEdge"
-                endFn="getRightMiddleEdge"
-                curveDistX1={1.6}
+                endFn="getUpperCenter"
+                curveDistX1={1.4}
                 curveDistY1={2}
-                curveDistX2={1.1}
+                curveDistX2={3}
                 curveDistY2={2}
-                edgeShiftYStart={60}
+                edgeShiftXStart={-20}
+                edgeShiftYStart={40}
               />
 
               <div
-                className={`flex h-[20vh] md:h-[50vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                className={`flex h-[15vh] md:h-[50vh] text-[32px] text-[#D8AE02] font-semibold ${lato.className}`}
               >
                 <div className="flex-[1_16_auto]"></div>
                 <div className="flex self-end flex-[1_0_auto]">
