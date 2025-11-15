@@ -17,8 +17,3 @@ export default function Home() {
     </div>
   );
 }
-
-// www.reecover.ch // TODO remove
-// https://perfat.com/
-// https://peelpack.ch/
-// https://www.riverkin.com/
