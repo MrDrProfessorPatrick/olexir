@@ -50,7 +50,7 @@ export default function Home() {
     <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
       <main className="w-full h-full">
         <HeroPage />
-        <div className="flex flex-col lg:flex-row w-full pb-40 mt-20">
+        <div className="flex flex-col lg:flex-row w-full pb-40 mt-20 px-10">
           <div className="flex-4">
             <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
               Amplify Oleosensation:
@@ -66,14 +66,18 @@ export default function Home() {
               At <span className="font-bold">Olexir</span>, we harness the power
               of plant proteins to microencapsulate natural oils into next‑gen
               functional oleogels.
-              <br />
+            </p>
+            <br />
+            <p
+              className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
+            >
               Through interface engineering, we employ structured plant protein
               hydrolysates to empower natural oils with boosted bioavailability
               and stability for beauty, food and health.
             </p>
           </div>
         </div>
-        <div className="flex justify-center pb-8">
+        <div className="flex justify-center pb-0">
           <h2
             className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] font-medium text-white ${lato.className}`}
           >

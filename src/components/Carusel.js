@@ -10,7 +10,7 @@ import LineCircleLeft from "./LineCircleLeft";
 
 import BigImage from "./BigImage";
 
-export default function CaruselHome({ images, isBigCarousel }) {
+export default function Carusel({ images, isBigCarousel }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: false,
@@ -72,7 +72,7 @@ export default function CaruselHome({ images, isBigCarousel }) {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-2 lg:pt-2 pb-40 px-0 xs:px-6">
+    <div className="relative pt-1 lg:pt-8 pb-40 px-0 xs:px-6">
       {bigImageSrc && (
         <BigImage
           src={bigImageSrc}
@@ -85,9 +85,11 @@ export default function CaruselHome({ images, isBigCarousel }) {
       )}
 
       <div className="flex items-center justify-center">
-        <LineCircleRight top={25} width={70} />
+        <div className="hidden xl:block">
+          <LineCircleRight top={45} width={30} />
+        </div>
         <div className="flex items-center justify-center">
-          <button onClick={scrollPrev} className="cursor-pointer">
+          <button onClick={scrollPrev} className="cursor-pointer xl:hidden">
             <ChevronLeft color="white" className="z-10" />
           </button>
         </div>
@@ -109,14 +111,16 @@ export default function CaruselHome({ images, isBigCarousel }) {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <button onClick={scrollNext} className="cursor-pointer">
+          <button onClick={scrollNext} className="cursor-pointer xl:hidden">
             <ChevronRight color="white" className="z-1000" />
           </button>
         </div>
-        <LineCircleLeft top={25} width={70} />
+        <div className="hidden xl:block">
+          <LineCircleLeft top={45} width={30} />
+        </div>
       </div>
 
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-4 xl:hidden">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}

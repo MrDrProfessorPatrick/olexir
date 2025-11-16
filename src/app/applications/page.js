@@ -3,7 +3,7 @@ import Image from "next/image";
 import DashedLine from "@/components/DashedLine";
 import BgVideo from "@/components/BgVideo";
 import RoundTabs from "@/components/RoundTabs";
-import CaruselHome from "@/components/CaruselHome";
+import Carusel from "@/components/Carusel";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -117,7 +117,7 @@ export default function Applications() {
         </div>
       </div>
       <BgVideo link="/ApplicationVideo2.mp4" height="534px" />
-      <CaruselHome images={images} isBigCarousel={false} />
+      <Carusel images={images} isBigCarousel={false} />
     </div>
   );
 }
