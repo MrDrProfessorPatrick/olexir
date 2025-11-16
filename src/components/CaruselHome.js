@@ -23,35 +23,7 @@ const inter = Inter({
   weight: ["100", "300", "400", "700", "900"],
 });
 
-const images = [
-  {
-    src: "/CaruselHome1.jpg",
-    index: 0,
-    text: "Tea tree oleogel structured by potato proteins for cosmetic applications",
-  },
-  {
-    src: "/CaruselHome2.png",
-    index: 1,
-    text: "Rapeseed oleogel structured by soy proteins for food applications",
-  },
-  {
-    src: "/CaruselHome3.png",
-    index: 2,
-    text: "Rapeseed oleogel structured by pea proteins for food applications",
-  },
-  {
-    src: "/CaruselHome4.jpg",
-    index: 3,
-    text: "Flaxseed oleogel structured by flaxseed proteins for food applications",
-  },
-  {
-    src: "/CaruselHome5.png",
-    index: 4,
-    text: "MCT oleogel structured by amaranth proteins with colourant for cosmetic applications",
-  },
-];
-
-export default function CaruselHome() {
+export default function CaruselHome({ images }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: false,
@@ -156,7 +128,7 @@ export default function CaruselHome() {
       </div>
 
       <div className="flex">
-        <LineCircleRight top={35} width={70}/>
+        <LineCircleRight top={35} width={70} />
         <div className="flex items-center justify-center">
           <button onClick={scrollPrev} className="cursor-pointer">
             <ChevronLeft color="white" className="z-10" />

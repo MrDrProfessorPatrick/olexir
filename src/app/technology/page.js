@@ -8,6 +8,7 @@ import DashedLine from "@/components/DashedLine";
 import LineCircleLeft from "@/components/LineCircleLeft";
 import LineCircleRight from "@/components/LineCircleRight";
 import Bottom from "@/components/Bottom";
+import { useIsMobile, useIsTablet } from "@/hooks/useIsMobile";
 import { Lato } from "next/font/google";
 import { Inter } from "next/font/google";
 import { FaPlus } from "react-icons/fa6";
@@ -28,36 +29,8 @@ const inter = Inter({
 export default function Solution() {
   const [faqShownArr, setFaqInfo] = useState([]);
 
-  function useIsMobile() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const checkSize = () => setIsMobile(window.innerWidth < 768); // md breakpoint
-      checkSize();
-      window.addEventListener("resize", checkSize);
-      return () => window.removeEventListener("resize", checkSize);
-    }, []);
-
-    return isMobile;
-  }
-
-  function useIsTablet() {
-    const [isTablet, setIsTablet] = useState(false);
-
-    useEffect(() => {
-      const checkSize = () => setIsTablet(window.innerWidth < 1024); // lg breakpoint
-      checkSize();
-      window.addEventListener("resize", checkSize);
-      return () => window.removeEventListener("resize", checkSize);
-    }, []);
-
-    return isTablet;
-  }
-
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
-
-  console.log("isMobile", isMobile);
 
   const FAQList = [
     {

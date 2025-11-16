@@ -1,7 +1,8 @@
 import Image from "next/image";
 
+import DashedLine from "@/components/DashedLine";
 import BgVideo from "@/components/BgVideo";
-import PageInDevelopmentPlaceholder from "@/components/PageInDevelopmentPlaceholder";
+import RoundTabs from "@/components/RoundTabs";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -12,7 +13,10 @@ const lato = Lato({
 
 export default function Applications() {
   return (
-    <div className="bg-[url('/ApplicationBg.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
+    <div
+      id="container"
+      className="bg-[url('/ApplicationBg.png')] bg-repeat-y bg-center bg-[length:100%_auto]"
+    >
       <section className="relative w-full h-[397px] md:h-[496px] lg:h-[696px]">
         <Image
           src="/Application_1_gelAndFlower.png"
@@ -26,7 +30,7 @@ export default function Applications() {
       <section>
         <div className="flex center justify-center pl-8 pr-8 lg:pl-35 lg:pr-35 pt-15 pb-15">
           <p
-            className={`text-white text-[22px] lg:text-[32px] text-center ${lato.variable}`}
+            className={`text-white text-[22px] lg:text-[32px] text-center ${lato.className}`}
           >
             By structuring natural oils into solid, functional and stable forms,
             we provide solutions that are healthier, more sustainable and
@@ -37,14 +41,14 @@ export default function Applications() {
         <div className="flex flex-col md:flex-row gap-5 justify-between pt-17 pb-20 pl-5 pr-5 lg:pl-16 lg:pr-16">
           <div>
             <h1
-              className={`text-white text-[26px] lg:text-[48px] font-medium ${lato.variable}`}
+              className={`text-white text-[26px] lg:text-[48px] font-medium ${lato.className}`}
             >
               COSMETICS
             </h1>
           </div>
           <div>
             <p
-              className={`max-w-[650px] text-white ${lato.variable} text-[16px] lg:text-[24px] text-justify`}
+              className={`max-w-[650px] text-white ${lato.className} text-[16px] lg:text-[24px] text-justify`}
             >
               At Olexir, we transform plant oils into new solid textures using
               the natural structuring power of proteins. Our oleogels create
@@ -55,6 +59,45 @@ export default function Applications() {
         </div>
       </section>
       <BgVideo link="/ApplicationFirstVideo.mp4" height="534px" />
+
+      <div
+        className={`text-white pt-17 pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+      >
+        <h2 className={`${lato.className} text-[32px] font-light`}>
+          Why it matters
+        </h2>
+        <ul
+          className={`${lato.className} list-disc marker:text-[#AB808D] text-[16px] md:text-[24px]`}
+        >
+          <li>
+            <span className="text-[#AB808D]">Luxurious feel</span> – Non-greasy,
+            fast-absorbing and silky smooth on skin.
+          </li>
+          <li>
+            <span className="text-[#AB808D]">Vegan & cruelty-free</span> – 100%
+            plant-based, no silicones, no mineral oils.
+          </li>
+          <li>
+            <span className="text-[#AB808D]">Moisturising & protective</span> –
+            Locks in hydration and enhances the performance of active
+            ingredients.
+          </li>
+          <li>
+            <span className="text-[#AB808D]">Clean label stability</span> –
+            Stabilises sensitive plant oils (rich in PUFAs, antioxidants)
+            against oxidation, prolonging shelf life naturally.
+          </li>
+          <li>
+            <span className="text-[#AB808D]">Future-ready platform</span> –
+            Carrier for a wide range of natural actives (e.g. vitamins,
+            polyphenols), enabling next-generation cosmeceuticals.
+          </li>
+        </ul>
+        <div className="mt-20 mb-16">
+          <RoundTabs />
+        </div>
+      </div>
+      <BgVideo link="/ApplicationVideo2.mp4" height="534px" />
     </div>
   );
 }
