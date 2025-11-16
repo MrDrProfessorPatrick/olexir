@@ -3,6 +3,7 @@ import Image from "next/image";
 import DashedLine from "@/components/DashedLine";
 import BgVideo from "@/components/BgVideo";
 import RoundTabs from "@/components/RoundTabs";
+import CaruselHome from "@/components/CaruselHome";
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -12,6 +13,24 @@ const lato = Lato({
 });
 
 export default function Applications() {
+  const images = [
+    {
+      src: "/ApplicationCarusel1_1.webp",
+      index: 0,
+      text: "",
+    },
+    {
+      src: "/ApplicationCarusel1_2.webp",
+      index: 1,
+      text: "",
+    },
+    {
+      src: "/ApplicationCarusel1_3.webp",
+      index: 2,
+      text: "",
+    },
+  ];
+
   return (
     <div
       id="container"
@@ -98,6 +117,7 @@ export default function Applications() {
         </div>
       </div>
       <BgVideo link="/ApplicationVideo2.mp4" height="534px" />
+      <CaruselHome images={images} isBigCarousel={false} />
     </div>
   );
 }

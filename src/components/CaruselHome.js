@@ -7,23 +7,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import CarouselItem from "./CaruselItem";
 import LineCircleRight from "./LineCircleRight";
 import LineCircleLeft from "./LineCircleLeft";
-import { Lato } from "next/font/google";
-import { Inter } from "next/font/google";
+
 import BigImage from "./BigImage";
 
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-});
-
-export default function CaruselHome({ images }) {
+export default function CaruselHome({ images, isBigCarousel }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: false,
@@ -85,7 +72,7 @@ export default function CaruselHome({ images }) {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-10 lg:pt-40 pb-40 px-1 xs:px-6 2xl:px-34 xl:px-24 lg:px-16 md:px-8 sm:px-4 bg-[url('/caruselBg.png')] bg-cover bg-center">
+    <div className="relative pt-10 lg:pt-40 pb-40 px-0 xs:px-6">
       {bigImageSrc && (
         <BigImage
           src={bigImageSrc}
@@ -96,38 +83,8 @@ export default function CaruselHome({ images }) {
           text={images[bigImageIndex]?.text}
         />
       )}
-      <div className="flex flex-col lg:flex-row w-full pb-40">
-        <div className="flex-4">
-          <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
-            Amplify Oleosensation:
-          </h2>
-          <p className="text-[40px] font-medium text-white">
-            [Feel. Taste. Heal]
-          </p>
-        </div>
-        <div className="flex-3">
-          <p
-            className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
-          >
-            At <span className="font-bold">Olexir</span>, we harness the power
-            of plant proteins to microencapsulate natural oils into next‑gen
-            functional oleogels.
-            <br />
-            Through interface engineering, we employ structured plant protein
-            hydrolysates to empower natural oils with boosted bioavailability
-            and stability for beauty, food and health.
-          </p>
-        </div>
-      </div>
-      <div className="flex justify-center pb-8">
-        <h2
-          className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] font-medium text-white ${lato.className}`}
-        >
-          We turn liquid oils into solid wellness with plant proteins
-        </h2>
-      </div>
 
-      <div className="flex">
+      <div className="flex items-center justify-center">
         <LineCircleRight top={35} width={70} />
         <div className="flex items-center justify-center">
           <button onClick={scrollPrev} className="cursor-pointer">
@@ -145,6 +102,7 @@ export default function CaruselHome({ images }) {
                   setBigImageSrc={setBigImageSrc}
                   imageIndex={imageIndexes[currIndex]}
                   selectImg={selectImg}
+                  isBigCarousel={isBigCarousel}
                 />
               );
             })}

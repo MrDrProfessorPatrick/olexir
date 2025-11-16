@@ -9,22 +9,34 @@ const CarouselItem = React.memo(function CarouselItem({
   setBigImageSrc,
   selectImg,
   imageIndex,
+  isBigCarousel,
 }) {
   function itemClick(index, src) {
     setBigImageSrc(src);
     selectImg(index);
   }
+
+  let itemsQuantity = isBigCarousel
+    ? "flex-[0_0_100%] xl:flex-[0_0_50%] 3xl:flex-[0_0_33.333%]"
+    : "flex-[0_0_100%] md:flex-[0_0_50%] xl:flex-[0_0_33.333%] 3xl:flex-[0_0_33.333%]";
+
+  let cardSize = isBigCarousel
+    ? "w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[500px] xl:w-[500px] xl:h-[500px] 2xl:w-[500px] 2xl:h-[500px]"
+    : "w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[400px] xl:h-[400px] 3xl:w-[500px] 3xl:h-[500px]";
+
   return (
     <motion.div
       key={index}
-      className="flex items-center flex-[0_0_100%] xl:flex-[0_0_50%] 3xl:flex-[0_0_33.333%] justify-center content-center p-0 xs:p-4"
+      className={`flex items-center ${itemsQuantity} justify-center content-center p-0 xs:p-4`}
       onClick={() => itemClick(index, src)}
       layoutId={`expandable-image-${index}`} // animation problem is here
       transition={{
         layout: { duration: 0 },
       }}
     >
-      <div className="relative w-[250px] h-[250px] 2xl:w-[500px] xl:w-[500px] lg:w-[500px] md:w-[500px] 2xl:w-[500px] xl:h-[500px] lg:h-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] cursor-pointer rounded-lg overflow-hidden">
+      <div
+        className={`relative ${cardSize} cursor-pointer rounded-lg overflow-hidden`}
+      >
         {imageIndex === null && (
           <motion.img
             src={src}
