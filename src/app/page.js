@@ -4,6 +4,8 @@ import CaruselHome from "@/components/CaruselHome";
 import Bottom from "@/components/Bottom";
 import { Inter } from "next/font/google";
 import { Lato } from "next/font/google";
+import LineCircleRight from "../components/LineCircleRight";
+import LineCircleLeft from "../components/LineCircleLeft";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,7 +52,7 @@ export default function Home() {
     <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
       <main className="w-full h-full">
         <HeroPage />
-        <div className="flex flex-col lg:flex-row w-full pb-40 mt-20 px-10">
+        <div className="flex flex-col relative lg:flex-row w-full pb-25 mt-20 px-10">
           <div className="flex-4">
             <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
               Amplify Oleosensation:
@@ -76,6 +78,8 @@ export default function Home() {
               and stability for beauty, food and health.
             </p>
           </div>
+          <LineCircleLeft top={90} width={70} />
+          <LineCircleRight top={90} width={70} />
         </div>
         <div className="flex justify-center pb-0">
           <h2
