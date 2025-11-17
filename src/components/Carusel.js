@@ -72,7 +72,7 @@ export default function Carusel({ images, isBigCarousel }) {
   const scrollTo = (index) => emblaApi?.scrollTo(index);
 
   return (
-    <div className="relative pt-1 lg:pt-8 pb-40 px-0 xs:px-6">
+    <div className="relative pt-1 lg:pt-8 pb-10 px-0 xs:px-6">
       {bigImageSrc && (
         <BigImage
           src={bigImageSrc}
