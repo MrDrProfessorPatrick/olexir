@@ -118,6 +118,19 @@ export default function Applications() {
       </div>
       <BgVideo link="/ApplicationVideo2.mp4" height="534px" />
       <Carusel images={images} isBigCarousel={false} />
+      <div id="cosmeticLineContainer">
+        <DashedLine
+          fromId="cosmeticLineContainer"
+          toId="cosmeticLineContainer"
+          startFn="getLefttMiddleEdge"
+          endFn="getRightMiddleEdge"
+          curveDistX1={2}
+          curveDistY1={2}
+          curveDistX2={2}
+          curveDistY2={2}
+          color="#AB808D"
+        />
+      </div>
     </div>
   );
 }

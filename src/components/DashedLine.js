@@ -139,6 +139,7 @@ export default function DashedLine({
   edgeShiftYStart = 0,
   edgeShiftXEnd = 0,
   edgeShiftYEnd = 0,
+  color = "#ffd600",
 }) {
   const pathRef = useRef(null);
   const [d, setD] = useState("");
@@ -211,7 +212,7 @@ export default function DashedLine({
         ref={pathRef}
         d={d}
         fill="none"
-        stroke="#ffd600"
+        stroke={color}
         strokeWidth="1"
         strokeLinecap="round"
         strokeLinejoin="round"
