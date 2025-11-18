@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Lato } from 'next/font/google'
+import Bottom from '@/components/Bottom'
 
 const lato = Lato({
     variable: '--font-lato',
@@ -46,7 +47,7 @@ export default function AboutUs() {
                         value for beauty and food manufacturers.
                     </p>
                     <div
-                        className="flex flex-col lg:flex-row w-full mt-20 rounded-md
+                        className="relative flex flex-col lg:flex-row w-full mt-20 rounded-md
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
@@ -106,7 +107,7 @@ export default function AboutUs() {
                                     "
                             >
                                 <div
-                                    className={`text-[100px] h-[60px] font-light text-white ${lato.className}`}
+                                    className={`relative text-[100px] h-[60px] font-light text-white ${lato.className}`}
                                 >
                                     <Image
                                         src={img}
@@ -136,44 +137,71 @@ export default function AboutUs() {
                             to high-performance plant oils
                         </p>
                     </div>
-                    <div className="py-5 lg:py-15">
+                    <div className="py-5 lg:py-15 pb-30">
                         <h2
                             className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
                         >
                             TEAM
                         </h2>
-                        <div className="flex flex-row justify-center gap-5">
+                        <div className="flex flex-row justify-center gap-5 pb-15">
                             {[
-                                { img: '/Svitlana.webp' },
-                                { img: '/Laura.webp' },
-                                { img: '/Patrick.webp' },
-                                { img: '/Rafaelle.webp' },
-                            ].map(({ img }) => (
+                                {
+                                    img: '/Svitlana.webp',
+                                    name: 'Dr. Svitlana Mykolenko',
+                                    position: 'Founder, CEO',
+                                },
+                                {
+                                    img: '/Laura.webp',
+                                    name: 'Dr. Laura Baraldi',
+                                    position: 'Lipid Formulation Lead',
+                                },
+                                {
+                                    img: '/Patrick.webp',
+                                    name: 'Patrick Ziemer',
+                                    position: 'Marketing Assistant',
+                                },
+                                {
+                                    img: '/Rafaelle.webp',
+                                    name: 'Prof. Raffaele Mezzenga',
+                                    position: 'Scientific Adviser',
+                                },
+                            ].map(({ img, name, position }) => (
                                 <div
                                     key={img}
-                                    className="justify-center items-center py-10
-                                     bg-white/18 backdrop-blur-[2px] 
-                                     before:content-[''] before:absolute before:inset-0 
-                                     before:rounded-lg before:border before:border-white/15"
+                                    className="relative w-[310px] h-[450px] justify-center items-center 
+                                     bg-white/18 backdrop-blur-[50px] rounded-lg
+                                     "
                                 >
-                                    <Image
-                                        src={img}
-                                        width={317}
-                                        height={50}
-                                        alt={img}
-                                    />
+                                    <Image src={img} alt={img} fill={true} />
                                     <div
-                                        className="absolute bottom-[0px] w-full h-[100px]
-                                     bg-black/20 backdrop-blur-[50px] 
-                                     before:content-[''] before:absolute before:inset-0 
-                                     before:rounded-lg before:border before:border-white/20"
-                                    ></div>
+                                        className="absolute bottom-0 left-0 w-full h-[100px] 
+                                        bg-gradient-to-b from-transparent via-gray-800/80 to-gray-900/95
+                                        backdrop-blur-[10px] rounded-lg"
+                                    >
+                                        <div className="px-4 pt-8">
+                                            <div>
+                                                <span
+                                                    className={`font-bold text-[18px] text-white ${lato.className}`}
+                                                >
+                                                    {name}
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span
+                                                    className={`font-medium text-[#D8AE02] ${lato.className}`}
+                                                >
+                                                    {position}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             </div>
+            <Bottom />
         </>
     )
 }
