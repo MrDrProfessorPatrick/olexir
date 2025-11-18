@@ -11,14 +11,25 @@ const lato = Lato({
 export default function AboutUs() {
     return (
         <>
-            <section className="relative w-full h-[397px] md:h-[496px] lg:h-[696px] 2xl:h-[803px]">
+            <section className="relative w-full h-[1200px] lg:h-[496px] lg:h-[696px] 2xl:h-[803px]">
+                {/* Mobile/Tablet Image (hidden on lg and up) */}
+                <Image
+                    src="/TeamHeroSmall.webp"
+                    alt="Svitlana the main scientist of the team"
+                    fill
+                    className="object-cover lg:hidden"
+                    priority
+                    sizes="(max-width: 1023px) 100vw, 0px"
+                />
+
+                {/* Desktop Image (hidden below lg) */}
                 <Image
                     src="/TeamHeroImg.webp"
                     alt="Svitlana the main scientist of the team"
                     fill
-                    className="object-cover"
+                    className="object-cover hidden lg:block"
                     priority
-                    sizes="(max-width: 200px)"
+                    sizes="(min-width: 1024px) 100vw, 0px"
                 />
             </section>
             <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
@@ -143,7 +154,7 @@ export default function AboutUs() {
                         >
                             TEAM
                         </h2>
-                        <div className="flex flex-row justify-center gap-5 pb-15">
+                        <div className="flex flex-col items-center md:flex-row md:justify-center gap-5 pt-5 pb-15">
                             {[
                                 {
                                     img: '/Svitlana.webp',
@@ -168,7 +179,7 @@ export default function AboutUs() {
                             ].map(({ img, name, position }) => (
                                 <div
                                     key={img}
-                                    className="relative w-[310px] h-[450px] justify-center items-center 
+                                    className="relative w-[310px] h-[450px] md:w-[210px] md:h-[280px] xl:w-[310px] xl:h-[450px] justify-center items-center 
                                      bg-white/18 backdrop-blur-[50px] rounded-lg
                                      "
                                 >
@@ -178,17 +189,23 @@ export default function AboutUs() {
                                         bg-gradient-to-b from-transparent via-gray-800/80 to-gray-900/95
                                         backdrop-blur-[10px] rounded-lg"
                                     >
-                                        <div className="px-4 pt-8">
-                                            <div>
+                                        <div className="px-2 lg:px-4 pt-8">
+                                            <div className="flex flex-row justify-between">
                                                 <span
-                                                    className={`font-bold text-[18px] text-white ${lato.className}`}
+                                                    className={`font-bold text-[14px] text-white ${lato.className}`}
                                                 >
                                                     {name}
                                                 </span>
+                                                <Image
+                                                    src={'/linkedinIcon.png'}
+                                                    width={16}
+                                                    height={10}
+                                                    alt={'linkeding'}
+                                                />
                                             </div>
                                             <div>
                                                 <span
-                                                    className={`font-medium text-[#D8AE02] ${lato.className}`}
+                                                    className={`font-medium text-[14px] lg:text-[18px] text-[#D8AE02] ${lato.className}`}
                                                 >
                                                     {position}
                                                 </span>
