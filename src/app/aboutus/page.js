@@ -13,7 +13,7 @@ export default function AboutUs() {
             <section className="relative w-full h-[397px] md:h-[496px] lg:h-[696px] 2xl:h-[803px]">
                 <Image
                     src="/TeamHeroImg.webp"
-                    alt="Svitlana main scientist of the team"
+                    alt="Svitlana the main scientist of the team"
                     fill
                     className="object-cover"
                     priority
@@ -31,7 +31,7 @@ export default function AboutUs() {
                     oleogels — solid-like materials, which unlock new
                     applications in cosmetics, nutrition and health.
                 </p>
-                <div className="px-15">
+                <div className="px-4 lg:px-15">
                     <h1
                         className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
                     >
@@ -46,7 +46,7 @@ export default function AboutUs() {
                         value for beauty and food manufacturers.
                     </p>
                     <div
-                        className="flex flex-col md:flex-row w-full mt-20 rounded-md
+                        className="flex flex-col lg:flex-row w-full mt-20 rounded-md
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
@@ -57,7 +57,9 @@ export default function AboutUs() {
                                 img: '/teamArrowUpIcon.png',
                                 text: (
                                     <>
-                                        Excellence & Innovation{' '}
+                                        <span className="font-bold text-[24px] lg:text-[28px]">
+                                            Excellence & Innovation
+                                        </span>{' '}
                                         <br className="inline" /> Our platform
                                         stabilizes PUFA-rich oils, protects
                                         sensitive bioactives and enhances
@@ -70,7 +72,9 @@ export default function AboutUs() {
                                 img: '/teamHertIcon.png',
                                 text: (
                                     <>
-                                        Sustainability & Responsibility{' '}
+                                        <span className="font-bold text-[24px] lg:text-[28px]">
+                                            Sustainability & Responsibility
+                                        </span>{' '}
                                         <br className="inline" /> Plant-based,
                                         clean-label and affordable solutions
                                         that replace tropical, animal fats and
@@ -82,7 +86,9 @@ export default function AboutUs() {
                                 img: '/teamFlashIcon.png',
                                 text: (
                                     <>
-                                        Impact & Scalability{' '}
+                                        <span className="font-bold text-[24px] lg:text-[28px]">
+                                            Impact & Scalability
+                                        </span>{' '}
                                         <br className="inline" /> Applicable
                                         across cosmetics, food and health with
                                         strong IP protection and industrial
@@ -93,15 +99,14 @@ export default function AboutUs() {
                         ].map(({ img, text }, i) => (
                             <div
                                 key={i}
-                                className="flex flex-[1_1_0] flex-col justify-center items-center py-15
-                                 
+                                className="flex flex-[1_1_0] flex-col justify-center items-center py-10
                                      bg-white/10 backdrop-blur-[2px] 
                                      before:content-[''] before:absolute before:inset-0 
                                      before:rounded-md before:border before:border-white/20 
                                     "
                             >
                                 <div
-                                    className={`text-[100px] font-light text-white ${lato.className}`}
+                                    className={`text-[100px] h-[60px] font-light text-white ${lato.className}`}
                                 >
                                     <Image
                                         src={img}
@@ -111,13 +116,61 @@ export default function AboutUs() {
                                     />
                                 </div>
                                 <div
-                                    className={`px-10 mt-4 w-full text-[22px] sm:text-[22px] md:text-[18px] lg:text-[20px] 
-                                        text-center font-light text-white ${lato.className}`}
+                                    className={`flex px-8 lg:px-5 w-full h-[160px] text-[16px] text-center justify-center font-light text-white ${lato.className}`}
                                 >
                                     <p>{text}</p>
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className="py-5 lg:py-15">
+                        <h2
+                            className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
+                        >
+                            OUR VISION
+                        </h2>
+                        <p
+                            className={`text-white text-[16px] lg:text-[24px] text-center ${lato.className}`}
+                        >
+                            To lead the global shift from fossil and animal fats
+                            to high-performance plant oils
+                        </p>
+                    </div>
+                    <div className="py-5 lg:py-15">
+                        <h2
+                            className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
+                        >
+                            TEAM
+                        </h2>
+                        <div className="flex flex-row justify-center gap-5">
+                            {[
+                                { img: '/Svitlana.webp' },
+                                { img: '/Laura.webp' },
+                                { img: '/Patrick.webp' },
+                                { img: '/Rafaelle.webp' },
+                            ].map(({ img }) => (
+                                <div
+                                    key={img}
+                                    className="justify-center items-center py-10
+                                     bg-white/18 backdrop-blur-[2px] 
+                                     before:content-[''] before:absolute before:inset-0 
+                                     before:rounded-lg before:border before:border-white/15"
+                                >
+                                    <Image
+                                        src={img}
+                                        width={317}
+                                        height={50}
+                                        alt={img}
+                                    />
+                                    <div
+                                        className="absolute bottom-[0px] w-full h-[100px]
+                                     bg-black/20 backdrop-blur-[50px] 
+                                     before:content-[''] before:absolute before:inset-0 
+                                     before:rounded-lg before:border before:border-white/20"
+                                    ></div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
