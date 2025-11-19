@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image'
 import NavBar from './NavBar'
 import { Lato } from 'next/font/google'
 import { Montserrat } from 'next/font/google'
+import { usePopup } from './PopUpProvider'
 
 const lato = Lato({
     variable: '--font-lato',
@@ -16,6 +18,7 @@ const montserrat = Montserrat({
 })
 
 export default function HeroPage() {
+    const { openPopup } = usePopup()
     return (
         <section className="relative w-full h-[1180px] lg:h-[916px]">
             <Image
@@ -40,6 +43,7 @@ export default function HeroPage() {
                             Discover More
                         </button>
                         <button
+                            onClick={openPopup}
                             className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] sm:text-[14px] md:text-[18px] ml-[10px] ${montserrat.className}`}
                         >
                             Partner With Us

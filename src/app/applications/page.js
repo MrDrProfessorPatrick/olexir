@@ -5,7 +5,6 @@ import BgVideo from '@/components/BgVideo'
 import RoundTabs from '@/components/RoundTabs'
 import Carusel from '@/components/Carusel'
 import { Lato } from 'next/font/google'
-import Bottom from '@/components/Bottom'
 
 const lato = Lato({
     variable: '--font-lato',
@@ -369,7 +368,6 @@ export default function Applications() {
                     *These applications are part of ongoing research and
                     collaborations, with results to be shared as they mature.
                 </p>
-                <Bottom />
             </div>
         </div>
     )

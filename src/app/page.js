@@ -1,7 +1,6 @@
 import HeroPage from '@/components/HeroPage'
 import HomePageContent from '@/components/HomePageContent'
 import CaruselHome from '@/components/CaruselHome'
-import Bottom from '@/components/Bottom'
 import { Inter } from 'next/font/google'
 import { Lato } from 'next/font/google'
 import LineCircleRight from '../components/LineCircleRight'
@@ -93,9 +92,7 @@ export default function Home() {
                 <CaruselHome images={images} isBigCarousel={true} />
                 <HomePageContent />
             </main>
-            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-                <Bottom />
-            </footer>
+            <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
         </div>
     )
 }

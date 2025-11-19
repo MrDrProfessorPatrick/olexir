@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Lato } from 'next/font/google'
-import Bottom from '@/components/Bottom'
 
 const lato = Lato({
     variable: '--font-lato',
@@ -160,23 +159,31 @@ export default function AboutUs() {
                                     img: '/Svitlana.webp',
                                     name: 'Dr. Svitlana Mykolenko',
                                     position: 'Founder, CEO',
+                                    linkedin:
+                                        'https://www.linkedin.com/in/svitlana-mykolenko-6b705196/',
                                 },
                                 {
                                     img: '/Laura.webp',
                                     name: 'Dr. Laura Baraldi',
                                     position: 'Lipid Formulation Lead',
+                                    linkedin:
+                                        'https://www.linkedin.com/in/laura-baraldi-06a082171/',
                                 },
                                 {
                                     img: '/Patrick.webp',
                                     name: 'Patrick Ziemer',
                                     position: 'Marketing Assistant',
+                                    linkedin:
+                                        'https://www.linkedin.com/in/patrick-ziemer-540381268/',
                                 },
                                 {
                                     img: '/Rafaelle.webp',
                                     name: 'Prof. Raffaele Mezzenga',
                                     position: 'Scientific Adviser',
+                                    linkedin:
+                                        'https://www.linkedin.com/in/raffaele-mezzenga-8bb5a82b4/',
                                 },
-                            ].map(({ img, name, position }) => (
+                            ].map(({ img, name, position, linkedin }) => (
                                 <div
                                     key={img}
                                     className="relative w-[310px] h-[450px] md:w-[210px] md:h-[280px] xl:w-[310px] xl:h-[450px] justify-center items-center 
@@ -190,19 +197,27 @@ export default function AboutUs() {
                                         backdrop-blur-[10px] rounded-lg"
                                     >
                                         <div className="px-2 lg:px-4 pt-8">
-                                            <div className="flex flex-row justify-between">
-                                                <span
-                                                    className={`font-bold text-[14px] text-white ${lato.className}`}
-                                                >
-                                                    {name}
-                                                </span>
-                                                <Image
-                                                    src={'/linkedinIcon.png'}
-                                                    width={16}
-                                                    height={10}
-                                                    alt={'linkeding'}
-                                                />
-                                            </div>
+                                            <a
+                                                href={linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <div className="flex flex-row justify-between">
+                                                    <span
+                                                        className={`font-bold text-[14px] text-white ${lato.className}`}
+                                                    >
+                                                        {name}
+                                                    </span>
+                                                    <Image
+                                                        src={
+                                                            '/linkedinIcon.png'
+                                                        }
+                                                        width={16}
+                                                        height={10}
+                                                        alt={'linkeding'}
+                                                    />
+                                                </div>
+                                            </a>
                                             <div>
                                                 <span
                                                     className={`font-medium text-[14px] lg:text-[18px] text-[#D8AE02] ${lato.className}`}
@@ -218,7 +233,6 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
-            <Bottom />
         </>
     )
 }

@@ -7,7 +7,6 @@ import BgVideo from '@/components/BgVideo'
 import DashedLine from '@/components/DashedLine'
 import LineCircleLeft from '@/components/LineCircleLeft'
 import LineCircleRight from '@/components/LineCircleRight'
-import Bottom from '@/components/Bottom'
 import { useIsMobile, useIsTablet } from '@/hooks/useIsMobile'
 import { Lato } from 'next/font/google'
 import { Inter } from 'next/font/google'
@@ -1074,7 +1073,6 @@ export default function Solution() {
                     </div>
                 </div>
             </div>
-            <Bottom />
         </div>
     )
 }
