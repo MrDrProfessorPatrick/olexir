@@ -52,7 +52,7 @@ export default function Home() {
         <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
             <main className="w-full h-full">
                 <HeroPage />
-                <div className="flex flex-col relative lg:flex-row w-full pb-25 mt-20 px-10">
+                <div className="flex flex-col relative lg:flex-row w-full pb-25 mt-30 px-4 lg:px-10">
                     <div className="flex-4">
                         <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
                             Amplify Oleosensation:
@@ -83,12 +83,11 @@ export default function Home() {
                     <LineCircleLeft top={90} width={70} />
                     <LineCircleRight top={90} width={70} />
                 </div>
-                <div className="flex justify-center pb-0">
+                <div className="flex justify-center pb-8 lg:pb-0">
                     <h2
-                        className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] font-medium text-white ${lato.className}`}
+                        className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] px-4 text-center font-medium text-white ${lato.className}`}
                     >
-                        We turn liquid oils into solid wellness with plant
-                        proteins
+                        Plant proteins turn liquid oils into solid oleogels
                     </h2>
                 </div>
                 <CaruselHome images={images} isBigCarousel={true} />
