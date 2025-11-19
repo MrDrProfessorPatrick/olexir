@@ -11,6 +11,7 @@ const lato = Lato({
     variable: '--font-lato',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
+    style: ['normal', 'italic'],
 })
 
 export default function Applications() {
@@ -83,7 +84,7 @@ export default function Applications() {
             </section>
             <div className="bg-[url('/ApplicationBg.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
                 <section>
-                    <div className="flex center justify-center pl-8 pr-8 lg:pl-35 lg:pr-35 pt-15 pb-15">
+                    <div className="flex center justify-center pl-4 lg:pl-8 pr-4 lg:pr-8 lg:pl-35 lg:pr-35 pt-15 pb-7 lg:pb-15">
                         <p
                             className={`text-white text-[22px] lg:text-[32px] text-center ${lato.className}`}
                         >
@@ -94,7 +95,7 @@ export default function Applications() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-17 pb-20 pl-5 pr-5 lg:pl-16 lg:pr-16">
+                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-1 lg:pt-17 pb-5 lg:pb-15 pl-5 pr-5 lg:pl-16 lg:pr-16">
                         <div>
                             <h1
                                 className={`text-white text-[26px] lg:text-[48px] font-medium ${lato.className}`}
@@ -118,7 +119,7 @@ export default function Applications() {
                 <BgVideo link="/ApplicationFirstVideo.mp4" height="534px" />
 
                 <div
-                    className={`text-white pt-17 pb-16 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                    className={`text-white pt-8 lg:pt-17 pb-6 lg:pb-16 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
                 >
                     <h2 className={`${lato.className} text-[32px] font-light`}>
                         Why it matters
@@ -163,7 +164,7 @@ export default function Applications() {
                             cosmeceuticals.
                         </li>
                     </ul>
-                    <div className="mt-15">
+                    <div className="mt-5 lg:mt-15">
                         <RoundTabs tabText={firstTabText} lineColor="#AB808D" />
                     </div>
                 </div>
@@ -215,7 +216,7 @@ export default function Applications() {
                 </section>
 
                 <div
-                    className={`text-white pt-17 pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                    className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
                 >
                     <h2 className={`${lato.className} text-[32px] font-light`}>
                         Why it matters
@@ -271,12 +272,12 @@ export default function Applications() {
                         sizes="(max-width: 200px)"
                     />
                 </section>
-                <div className="mt-20 mb-5">
+                <div className="mt-8 lg:mt-20 mb-5">
                     <RoundTabs tabText={secondTabText} lineColor="#D8AE02" />
                 </div>
                 <Carusel images={foodCarusel} isBigCarousel={false} />
                 <p
-                    className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-12`}
+                    className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4`}
                 >
                     To solve the problem for lactose-intolerant, health- and
                     eco-conscious people, we offer O-mega cheese. This is the
@@ -335,7 +336,7 @@ export default function Applications() {
                     />
                 </section>
                 <div
-                    className={`text-white pt-17 pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                    className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
                 >
                     <h2 className={`${lato.className} text-[32px] font-light`}>
                         Why it matters
@@ -363,7 +364,7 @@ export default function Applications() {
                     </ul>
                 </div>
                 <p
-                    className={`text-white ${lato.className} italic text-[16px] lg:text-[24px] pl-10 pb-25 pr-5`}
+                    className={`text-white italic  ${lato.className} text-[16px] lg:text-[24px] pb-12 lg:pb-25 pl:5 lg:pl-10 pr-5`}
                 >
                     *These applications are part of ongoing research and
                     collaborations, with results to be shared as they mature.

@@ -34,7 +34,7 @@ export default function AboutUs() {
             </section>
             <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
                 <p
-                    className={`text-[18px] lg:text-[32px] font-light text-white fong-light text-center leading-8 ${lato.className} pt-13 pb-25 px-14`}
+                    className={`text-[18px] lg:text-[32px] font-light text-white fong-light text-center leading-8 ${lato.className} pt-13 pb-10 lg:pb-25 px-4 lg:px-14`}
                 >
                     Olexir was born in Switzerland, ETH Zurich, 2025, at the
                     intersection of food science, proteomics, material
@@ -58,7 +58,7 @@ export default function AboutUs() {
                         value for beauty and food manufacturers.
                     </p>
                     <div
-                        className="relative flex flex-col lg:flex-row w-full mt-20 rounded-md
+                        className="relative flex flex-col lg:flex-row w-full mt-8 lg:mt-20 rounded-md
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
@@ -148,7 +148,7 @@ export default function AboutUs() {
                             to high-performance plant oils
                         </p>
                     </div>
-                    <div className="py-5 lg:py-15 pb-30">
+                    <div className="py-5 lg:py-15 pb:10 lg:pb-30">
                         <h2
                             className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
                         >
