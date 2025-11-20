@@ -95,7 +95,7 @@ export default function Solution() {
                                 #1
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -113,7 +113,7 @@ export default function Solution() {
                                 %
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -135,7 +135,7 @@ export default function Solution() {
                                 <AnimatedNumber value="5" className="inline" />%
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
