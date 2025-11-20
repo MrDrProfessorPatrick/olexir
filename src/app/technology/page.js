@@ -100,9 +100,8 @@ export default function Solution() {
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
                                 >
-                                    Heart attack and stroke, triggered by
-                                    saturated fats, are the #1 killer in the
-                                    world
+                                    cause of death is heart attack and stroke,
+                                    triggered by trans/saturated fats
                                 </p>
                             </div>
                         </div>
@@ -119,17 +118,12 @@ export default function Solution() {
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
                                 >
-                                    Weight is a global burden:{' '}
-                                    <AnimatedNumber
-                                        value="43"
-                                        className="inline"
-                                    />
-                                    % overweight +{' '}
+                                    population suffering from overweight incl.
                                     <AnimatedNumber
                                         value="16"
                                         className="inline"
                                     />
-                                    % obesity in 2022
+                                    % living with obesity{' '}
                                 </p>
                             </div>
                         </div>
@@ -146,8 +140,8 @@ export default function Solution() {
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
                                 >
-                                    adsorption of lipophilic bioactives, e.g.
-                                    curcumin and CBD, by the human body
+                                    absorption of lipophilic bioactives by human
+                                    body, e.g. curcumin, CBD
                                 </p>
                             </div>
                         </div>
@@ -204,10 +198,10 @@ export default function Solution() {
                                     className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white/63 text-justify"
                                 >
                                     Plant oils, rich in healthy mono- and
-                                    polyunsaturated fats, offer a sustainable,
-                                    bioactive alternative; however, their
-                                    fluidity and instability drastically limit
-                                    their applications in food, cosmetics, and
+                                    polyunsaturated fats, offer a sustainable
+                                    bioactive alternative. However, fluidity and
+                                    instability of oils drastically limit their
+                                    applications in food, cosmetics and
                                     pharmaceuticals.
                                 </p>
                             </div>
@@ -440,7 +434,7 @@ export default function Solution() {
                                     <>
                                         Exclusively based{' '}
                                         <br className="hidden md:inline" /> on
-                                        essential plant proteins
+                                        plant proteins
                                     </>
                                 ),
                             },
@@ -448,7 +442,7 @@ export default function Solution() {
                                 img: '/VectorDiamond.png',
                                 text: (
                                     <>
-                                        Naturally saved{' '}
+                                        Naturally preserved{' '}
                                         <br className="hidden md:inline" />{' '}
                                         plant oil richness
                                     </>
@@ -512,10 +506,12 @@ export default function Solution() {
                                 className={`mt-3 text-[16px] lg:text-[24px] w-full md:max-w-[483px] font-light text-white ${lato.className}`}
                             >
                                 We know how to employ hydrolysed plant proteins
-                                and turn liquid oils into stable oleogels at
-                                high oil concentrations without the need for
-                                heating, toxic solvents, nickel or expensive
-                                cross-linkers.
+                                and turn liquid oils into stable oleogels –
+                                without the need for heating, toxic solvents,
+                                nickel or expensive cross-linkers and with as
+                                high as minimum{' '}
+                                <AnimatedNumber value="96" className="inline" />
+                                % oil loading capacity.
                             </div>
                         </div>
 
@@ -541,13 +537,11 @@ export default function Solution() {
                                     id="blueMicroscopeText"
                                     className="w-full md:w-[88%]"
                                 >
-                                    By unlocking the protein oleogelating
-                                    capacity, we introduce stability, firmness,
-                                    and a solid structure to liquid oils,
-                                    protecting every tiny oily droplet from
-                                    oxidation and UV to serve the diverse needs
-                                    of industries that touch every aspect of
-                                    life.
+                                    We have unlocked the oleogelating capacity
+                                    of proteins and introduced stability,
+                                    firmness and a solid structure to liquid
+                                    oils by protecting every tiny oil droplet
+                                    from oxidation and UV.
                                 </div>
                             </div>
                         </div>
@@ -609,7 +603,7 @@ export default function Solution() {
                             <div
                                 className={`mt-6 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
                             >
-                                Every Olexir oleogel is plant-protein based. To
+                                Every Olexir oleogel is plant protein based. To
                                 amplify sustainability, we also offer an
                                 upcycled feedstock route that recovers proteins
                                 from industrial side streams.
@@ -619,7 +613,7 @@ export default function Solution() {
                                 <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
                                     <div
                                         id="planProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>
@@ -628,11 +622,9 @@ export default function Solution() {
                                                 value="90"
                                                 className="inline"
                                             />
-                                            × lower
+                                            times less
                                         </span>
-                                        <span>
-                                            CO₂eq vs beef per 100 g protein
-                                        </span>
+                                        <span>CO₂eq than beef</span>
                                     </div>
                                     <DashedLine
                                         fromId="planProtein"
@@ -646,7 +638,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>
                                             ~
@@ -671,7 +663,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>
                                             <AnimatedNumber
@@ -683,10 +675,10 @@ export default function Solution() {
                                                 value="50"
                                                 className="inline"
                                             />
-                                            % protein remains
+                                            % of protein remains
                                         </span>
                                         <span>
-                                            underutilized in oilseed cakes{' '}
+                                            underutilized in oilseed cakes;{' '}
                                         </span>
                                         <span>
                                             ~
@@ -694,7 +686,8 @@ export default function Solution() {
                                                 value="30"
                                                 className="inline"
                                             />
-                                            % lost in tofu production
+                                            % of soy protein are lost in <br />{' '}
+                                            tofu production
                                         </span>
                                     </div>
                                 </div>
@@ -934,8 +927,8 @@ export default function Solution() {
                                 <span
                                     className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                                 >
-                                    Field-grown pulses & oilseeds used for our
-                                    plant-protein matrices.
+                                    Field-grown protein sources are used for our
+                                    fully plant-based oleogels.
                                 </span>
                             </div>
                         </div>
@@ -957,8 +950,8 @@ export default function Solution() {
                                 <span
                                     className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                                 >
-                                    Oilseed cakes and other co-products rich in
-                                    proteins that often bypass human use.
+                                    Oilseed cakes and protein-rich by-products
+                                    can be used by our technology.
                                 </span>
                             </div>
                         </div>
@@ -980,8 +973,8 @@ export default function Solution() {
                                 <span
                                     className={`text-[16px] lg:text-[24px] text-white font-light ${lato.className}`}
                                 >
-                                    Refined, food/cosmetic-grade inputs ready
-                                    for the same oleogelation route.
+                                    Upcycled food/cosmetic grade protein
+                                    concentrates are available for oleogelation.
                                 </span>
                             </div>
                         </div>
