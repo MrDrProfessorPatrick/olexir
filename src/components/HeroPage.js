@@ -34,7 +34,7 @@ export default function HeroPage() {
                     <span
                         className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] xs:text-[38px] text-[28px] font-extrabold text-black text-left ${lato.className}  h-[212px]`}
                     >
-                        Versatile platform for lipid engineering
+                        Protein-empowered fat alternatives
                     </span>
                     <div className="relative mt-4">
                         <button
@@ -60,10 +60,10 @@ export default function HeroPage() {
                             </h3>
                             <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                                 <li className="text-center lg:text-left">
-                                    Silky.
+                                    Vegan.
                                 </li>
                                 <li className="text-center lg:text-left">
-                                    Vegan.
+                                    Silky.
                                 </li>
                                 <li className="text-center lg:text-left">
                                     Translucent.
@@ -78,13 +78,13 @@ export default function HeroPage() {
                             </h3>
                             <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                                 <li className="text-center lg:text-left">
-                                    Good fats.
+                                    Sustainable.
+                                </li>
+                                <li className="text-center lg:text-left">
+                                    Nourishing.
                                 </li>
                                 <li className="text-center lg:text-left">
                                     Structured.
-                                </li>
-                                <li className="text-center lg:text-left">
-                                    Sustainable.
                                 </li>
                             </ul>
                         </div>
@@ -96,13 +96,13 @@ export default function HeroPage() {
                             </h3>
                             <ul className="flex flex-col gap-2 lg:gap-0 text-[16px] lg:text-[24px]">
                                 <li className="text-center lg:text-left">
+                                    100% Natural.
+                                </li>
+                                <li className="text-center lg:text-left">
                                     Therapeutic.
                                 </li>
                                 <li className="text-center lg:text-left">
                                     Effective.
-                                </li>
-                                <li className="text-center lg:text-left">
-                                    Natural.
                                 </li>
                             </ul>
                         </div>

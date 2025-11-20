@@ -56,9 +56,9 @@ export default function HomePageContent() {
                     Olexir emerged from ETH Zurich with the support of the ETH
                     Pioneer Fellowship. We combine breakthroughs in food
                     science, material engineering and proteomics with a deep
-                    commitment to sustainability — building a new class of
-                    functional wellness materials that bridge cutting-edge
-                    research with global market potential
+                    commitment to sustainability. By using cutting-edge research
+                    we create a new class of functional wellness materials and
+                    make them available to the global market.
                 </p>
                 <p
                     className={`text-[18px] md:text-[24px font-light text-white px-4 md:px-20 pt-10 ${lato.className}`}

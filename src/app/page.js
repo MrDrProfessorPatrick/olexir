@@ -64,7 +64,7 @@ export default function Home() {
                         <p
                             className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
                         >
-                            At <span className="font-bold">Olexir</span>, we
+                            At <span className="font-bold">Olexir</span> we
                             harness the power of plant proteins to
                             microencapsulate natural oils into next‑gen
                             functional oleogels.
@@ -73,10 +73,9 @@ export default function Home() {
                         <p
                             className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
                         >
-                            Through interface engineering, we employ structured
-                            plant protein hydrolysates to empower natural oils
-                            with boosted bioavailability and stability for
-                            beauty, food and health.
+                            We boost bioavailability and stability of oils for
+                            beauty, food and health – by employing structured
+                            plant protein hydrolysates.
                         </p>
                     </div>
                     <LineCircleLeft top={100} width={70} />
