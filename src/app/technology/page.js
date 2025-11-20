@@ -95,7 +95,7 @@ export default function Solution() {
                                 #1
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -113,7 +113,7 @@ export default function Solution() {
                                 %
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -135,7 +135,7 @@ export default function Solution() {
                                 <AnimatedNumber value="5" className="inline" />%
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -490,7 +490,7 @@ export default function Solution() {
 
                     <div className="flex flex-col md:flex-row mt-14 gap-5 lg:gap-22">
                         {/* LEFT BLOCK */}
-                        <div className="flex flex-3 flex-col items-center w-full md:w-auto">
+                        <div className="flex flex-2 flex-col items-center w-full md:w-auto">
                             <div className="relative flex justify-start items-start w-full md:w-auto">
                                 <Image
                                     src="/Leacking2.png"
@@ -516,7 +516,7 @@ export default function Solution() {
                         </div>
 
                         {/* RIGHT BLOCK */}
-                        <div className="flex flex-5 flex-col items-center w-full md:w-auto">
+                        <div className="flex flex-3 flex-col items-center w-full md:w-auto">
                             <div
                                 id="blueMicroscope"
                                 className="relative flex justify-start items-start w-full md:w-auto"

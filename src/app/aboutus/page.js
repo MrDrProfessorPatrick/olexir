@@ -186,11 +186,11 @@ export default function AboutUs() {
                             ].map(({ img, name, position, linkedin }) => (
                                 <div
                                     key={img}
-                                    className="relative w-[310px] h-[450px] md:w-[210px] md:h-[280px] xl:w-[310px] xl:h-[450px] justify-center items-center 
+                                    className="relative w-[316px] h-[459px] md:w-[210px] md:h-[280px] xl:w-[326px] xl:h-[400px] justify-center items-center 
                                      bg-white/18 backdrop-blur-[50px] rounded-lg
                                      "
                                 >
-                                    <Image src={img} alt={img} fill={true} />
+                                    <Image src={img} alt={img} fill />
                                     <div
                                         className="absolute bottom-0 left-0 w-full h-[100px] 
                                         bg-gradient-to-b from-transparent via-gray-800/80 to-gray-900/95
