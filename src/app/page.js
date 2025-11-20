@@ -79,8 +79,8 @@ export default function Home() {
                             beauty, food and health.
                         </p>
                     </div>
-                    <LineCircleLeft top={90} width={70} />
-                    <LineCircleRight top={90} width={70} />
+                    <LineCircleLeft top={100} width={70} />
+                    <LineCircleRight top={100} width={70} />
                 </div>
                 <div className="flex justify-center pb-8 lg:pb-0">
                     <h2

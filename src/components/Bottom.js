@@ -50,7 +50,7 @@ export default function Bottom() {
                     <div
                         className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
                     >
-                        <span>olexir@olexir.ch</span>
+                        <span>info@olexir.ch</span>
                     </div>
                     <div className="flex flex-col items-center md:items-start w-full pt-2">
                         <button

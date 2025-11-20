@@ -88,14 +88,14 @@ export default function Solution() {
                         id="problemsTable"
                         className="flex w-[100%] max-h-[337px] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
                     >
-                        <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 gap-4">
                             <div
-                                className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
+                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 #1
                             </div>
                             <div
-                                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full `}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px]`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -106,17 +106,19 @@ export default function Solution() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-1 flex-col  justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 gap-4">
                             <div
-                                className={`flex-0 text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
+                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <AnimatedNumber value="60" className="inline" />
                                 %
                             </div>
                             <div
-                                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px]`}
                             >
-                                <div>
+                                <p
+                                    className={`text-center font-light text-white ${lato.className}`}
+                                >
                                     Weight is a global burden:{' '}
                                     <AnimatedNumber
                                         value="43"
@@ -128,38 +130,29 @@ export default function Solution() {
                                         className="inline"
                                     />
                                     % obesity in 2022
-                                </div>
+                                </p>
                             </div>
                         </div>
-                        <div className="flex flex-1 flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 gap-4">
                             <div
-                                className={`flex-0  text-[32px] md:text-[100px] font-light h-full text-white ${lato.className}`}
+                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <span>&lt;</span>{' '}
                                 <AnimatedNumber value="5" className="inline" />%
                             </div>
                             <div
-                                className={`flex-1 px-0 lg:px-10 text-[12px] md:text-[20px] h-full text-center font-light text-white ${lato.className}`}
+                                className={`px-0 lg:px-10 text-[12px] md:text-[20px]`}
                             >
-                                <p>
+                                <p
+                                    className={`text-center font-light text-white ${lato.className}`}
+                                >
                                     adsorption of lipophilic bioactives, e.g.
                                     curcumin and CBD, by the human body
                                 </p>
                             </div>
                         </div>
                     </div>
-                    {isMobile && (
-                        <DashedLine
-                            fromId="problemsTable"
-                            toId="fluidity"
-                            startFn="getLefttBottomCorner"
-                            endFn="getUpperCenter"
-                            curveDistX1={6}
-                            curveDistY1={1.8}
-                            curveDistX2={2.1}
-                            curveDistY2={2.4}
-                        />
-                    )}
+
                     {!isMobile && (
                         <DashedLine
                             fromId="problemsTable"
