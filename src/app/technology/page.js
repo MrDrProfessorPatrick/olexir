@@ -88,14 +88,14 @@ export default function Solution() {
                         id="problemsTable"
                         className="flex w-[100%] max-h-[337px] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
                     >
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
                             <div
-                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 #1
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -106,15 +106,15 @@ export default function Solution() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
                             <div
-                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <AnimatedNumber value="60" className="inline" />
                                 %
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start h-full`}
+                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -133,15 +133,15 @@ export default function Solution() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5">
+                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
                             <div
-                                className={`text-[32px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <span>&lt;</span>{' '}
                                 <AnimatedNumber value="5" className="inline" />%
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-0 lg:px-10 text-[10px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
