@@ -222,7 +222,7 @@ export default function Solution() {
                             />
                             <div
                                 id="solutionCurve"
-                                className="mt-5 md:mt-35 ml-15 w-1 h-1"
+                                className="mt-15 md:mt-35 ml-15 w-1 h-1"
                             ></div>
                             <DashedLine
                                 fromId="solutionCurve"
@@ -556,13 +556,13 @@ export default function Solution() {
                                 endFn="getCenter"
                                 curveDistX1={1.8}
                                 curveDistY1={1.9}
-                                curveDistX2={2}
+                                curveDistX2={1.8}
                                 curveDistY2={1.9}
                             />
 
                             <div
                                 id="sustainabilityCurve1"
-                                className="absolute w-0 h-0 md:mt-[154px] lg:mt-[10%] xl:mt-[16vh] 2xl:mt-[18vh] right-[30vw]"
+                                className="absolute w-0 h-0 md:mt-[110px] lg:mt-[5%] xl:mt-[16vh] 2xl:mt-[22vh] right-[25vw]"
                             ></div>
 
                             <DashedLine
@@ -572,22 +572,22 @@ export default function Solution() {
                                 endFn="getRightMiddleEdge"
                                 curveDistX1={2}
                                 curveDistY1={2}
-                                curveDistX2={2}
-                                curveDistY2={2.01}
+                                curveDistX2={4}
+                                curveDistY2={2.11}
                             />
 
                             <div
                                 id="sustainabilityCurve2"
-                                className="absolute w-2 h-2 mt-5 md:mt-[22vh] left-[25vw]"
+                                className="absolute w-2 h-2 mt-8 md:mt-[20vh] left-[17vw]"
                             ></div>
 
                             <DashedLine
                                 fromId="sustainabilityCurve2"
                                 toId="sustainability"
-                                startFn="getCenter"
+                                startFn="getRightMiddleEdge"
                                 endFn="getLefttMiddleEdge"
-                                curveDistX1={10}
-                                curveDistY1={1.99999}
+                                curveDistX1={6}
+                                curveDistY1={1.9}
                                 curveDistX2={2}
                                 curveDistY2={2}
                             />
