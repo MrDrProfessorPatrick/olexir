@@ -187,11 +187,16 @@ export default function AboutUs() {
                             ].map(({ img, name, position, linkedin }) => (
                                 <div
                                     key={img}
-                                    className="relative w-[316px] h-[459px] md:w-[210px] md:h-[280px] xl:w-[290px] xl:h-[420px] justify-center items-center 
+                                    className="relative aspect-[0.703] justify-center items-center 
                                      bg-white/18 backdrop-blur-[50px] rounded-lg
                                      "
                                 >
-                                    <Image src={img} alt={img} fill />
+                                    <Image
+                                        src={img}
+                                        alt={name}
+                                        width={317}
+                                        height={449}
+                                    />
                                     <div
                                         className="absolute bottom-0 left-0 w-full h-[100px] md:h-[60px] xl:h-[100px]  
                                         bg-gradient-to-b from-transparent via-gray-800/80 to-gray-900/95
@@ -214,7 +219,7 @@ export default function AboutUs() {
                                                             '/linkedinIcon.png'
                                                         }
                                                         width={20}
-                                                        height={4}
+                                                        height={1}
                                                         alt={'linkeding'}
                                                     />
                                                 </div>
