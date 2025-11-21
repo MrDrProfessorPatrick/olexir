@@ -55,7 +55,7 @@ export default function Solution() {
     ]
 
     return (
-        <div className="bg-[url('/caruselBg.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
+        <div className="bg-[url('/СaruselBg500W.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
             <BgVideo link={'/solutionVideo.mp4'} />
             <div className="absolute top-116 z-20 w-full flex justify-center">
                 <h1

@@ -11,7 +11,6 @@ export function usePopup() {
 
 export default function PopupProvider({ children }) {
     const [isOpen, setIsOpen] = useState(false)
-    console.log('isOpen', isOpen)
     return (
         <PopupContext.Provider
             value={{
