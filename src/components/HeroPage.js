@@ -1,7 +1,9 @@
 'use client'
 import Image from 'next/image'
 import NavBar from './NavBar'
+import { useRouter } from 'next/navigation'
 import { Lato } from 'next/font/google'
+
 import { Montserrat } from 'next/font/google'
 import { usePopup } from './PopUpProvider'
 
@@ -19,6 +21,7 @@ const montserrat = Montserrat({
 
 export default function HeroPage() {
     const { openPopup } = usePopup()
+    const router = useRouter()
     return (
         <section className="relative w-full h-[1180px] lg:h-[916px]">
             <Image
@@ -38,6 +41,7 @@ export default function HeroPage() {
                     </span>
                     <div className="relative mt-4">
                         <button
+                            onClick={() => router.push(`/applications`)}
                             className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-black z-100 text-white text-[11px] sm:text-[14px] md:text-[18px] ${montserrat.className}`}
                         >
                             Discover More

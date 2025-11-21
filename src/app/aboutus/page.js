@@ -69,7 +69,7 @@ export default function AboutUs() {
                                 text: (
                                     <>
                                         <span className="font-bold text-[24px] lg:text-[28px]">
-                                            Excellence & Innovation
+                                            Excellence & <br /> Innovation
                                         </span>{' '}
                                         <br className="inline" /> Our platform
                                         stabilizes PUFA-rich oils, protects
@@ -84,7 +84,8 @@ export default function AboutUs() {
                                 text: (
                                     <>
                                         <span className="font-bold text-[24px] lg:text-[28px]">
-                                            Sustainability & Responsibility
+                                            Sustainability & <br />{' '}
+                                            Responsibility
                                         </span>{' '}
                                         <br className="inline" /> Plant-based,
                                         clean-label and affordable solutions
@@ -98,7 +99,7 @@ export default function AboutUs() {
                                 text: (
                                     <>
                                         <span className="font-bold text-[24px] lg:text-[28px]">
-                                            Impact & Scalability
+                                            Impact & <br /> Scalability
                                         </span>{' '}
                                         <br className="inline" /> Applicable
                                         across cosmetics, food and health with
@@ -186,17 +187,17 @@ export default function AboutUs() {
                             ].map(({ img, name, position, linkedin }) => (
                                 <div
                                     key={img}
-                                    className="relative w-[316px] h-[459px] md:w-[210px] md:h-[280px] xl:w-[326px] xl:h-[400px] justify-center items-center 
+                                    className="relative w-[316px] h-[459px] md:w-[210px] md:h-[280px] xl:w-[290px] xl:h-[420px] justify-center items-center 
                                      bg-white/18 backdrop-blur-[50px] rounded-lg
                                      "
                                 >
                                     <Image src={img} alt={img} fill />
                                     <div
-                                        className="absolute bottom-0 left-0 w-full h-[100px] 
+                                        className="absolute bottom-0 left-0 w-full h-[100px] md:h-[60px] xl:h-[100px]  
                                         bg-gradient-to-b from-transparent via-gray-800/80 to-gray-900/95
                                         backdrop-blur-[10px] rounded-lg"
                                     >
-                                        <div className="px-2 lg:px-4 pt-8">
+                                        <div className="px-2 lg:px-4 pt-8 md:pt-2 xl:pt-8">
                                             <a
                                                 href={linkedin}
                                                 target="_blank"
@@ -204,7 +205,7 @@ export default function AboutUs() {
                                             >
                                                 <div className="flex flex-row justify-between">
                                                     <span
-                                                        className={`font-bold text-[14px] text-white ${lato.className}`}
+                                                        className={`font-bold text-[14px] md:text-[12px] lg:text-[14px] text-white ${lato.className}`}
                                                     >
                                                         {name}
                                                     </span>
@@ -212,15 +213,15 @@ export default function AboutUs() {
                                                         src={
                                                             '/linkedinIcon.png'
                                                         }
-                                                        width={16}
-                                                        height={10}
+                                                        width={20}
+                                                        height={4}
                                                         alt={'linkeding'}
                                                     />
                                                 </div>
                                             </a>
                                             <div>
                                                 <span
-                                                    className={`font-medium text-[14px] lg:text-[18px] text-[#D8AE02] ${lato.className}`}
+                                                    className={`font-medium text-[14px] md:text-[12px] lg:text-[14px] text-[#D8AE02] ${lato.className}`}
                                                 >
                                                     {position}
                                                 </span>
