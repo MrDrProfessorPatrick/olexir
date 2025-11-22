@@ -114,7 +114,7 @@ export default function Applications() {
                             </p>
                         </div>
                     </div>
-                    <BgVideo link="/ApplicationFirstVideo.mp4" height="534px" />
+                    <BgVideo link="/ApplicationFirstVideo.mp4" height="600px" />
 
                     <div
                         className={`text-white pt-8 lg:pt-17 pb-6 lg:pb-16 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
