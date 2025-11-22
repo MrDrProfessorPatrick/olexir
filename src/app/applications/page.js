@@ -35,17 +35,17 @@ export default function Applications() {
     const foodCarusel = [
         {
             src: '/foodCarusel1.webp',
-            index: 3,
+            index: 0,
             text: '',
         },
         {
             src: '/foodCarusel2.webp',
-            index: 4,
+            index: 1,
             text: '',
         },
         {
             src: '/foodCarusel3.webp',
-            index: 5,
+            index: 2,
             text: '',
         },
     ]
