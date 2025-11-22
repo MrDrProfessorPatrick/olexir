@@ -562,7 +562,7 @@ export default function Solution() {
 
                             <div
                                 id="sustainabilityCurve1"
-                                className="absolute w-0 h-0 md:mt-[110px] lg:mt-[5%] xl:mt-[16vh] 2xl:mt-[22vh] right-[25vw]"
+                                className="absolute w-0 h-0 md:mt-[18vh] lg:mt-[14vh] xl:mt-[16vh] 2xl:mt-[19vh] right-[30vw]"
                             ></div>
 
                             <DashedLine
@@ -573,12 +573,12 @@ export default function Solution() {
                                 curveDistX1={2}
                                 curveDistY1={2}
                                 curveDistX2={4}
-                                curveDistY2={2.11}
+                                curveDistY2={2.16}
                             />
 
                             <div
                                 id="sustainabilityCurve2"
-                                className="absolute w-2 h-2 mt-8 md:mt-[20vh] left-[17vw]"
+                                className="absolute w-2 h-2 mt-8 md:mt-[20vh] md:left-[11vw] lg:left-[14vw]"
                             ></div>
 
                             <DashedLine
