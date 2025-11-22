@@ -16,7 +16,6 @@ export default function BigImage({
     deSelectImg,
     text,
 }) {
-    console.log('BigImage render', text)
     return (
         <AnimatePresence mode="wait">
             <motion.div
