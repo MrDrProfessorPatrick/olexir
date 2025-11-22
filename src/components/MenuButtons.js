@@ -49,7 +49,11 @@ export default function MenuButtons({ buttons }) {
                                         mass: 0.1,
                                     },
                                 }}
-                                className="text-neutral-100 tracking-wide font-light px-4 block relative linear-mask"
+                                className={`tracking-wide px-4 block relative linear-mask ${
+                                    isActive
+                                        ? 'text-black'
+                                        : 'text-neutral-100 '
+                                }`}
                             >
                                 {button}
                             </motion.span>
