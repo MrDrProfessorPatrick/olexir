@@ -56,7 +56,10 @@ export default function Solution() {
 
     return (
         <div className="bg-[url('/СaruselBg500W.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
-            <BgVideo link={'/solutionVideo.mp4'} />
+            <BgVideo
+                link={'/solutionVideo.mp4'}
+                poster={'/technologyPoster1.webp'}
+            />
             <div className="absolute top-116 z-20 w-full flex justify-center">
                 <h1
                     className={`text-[24px] px-4 md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white text-center ${lato.className}`}

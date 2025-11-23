@@ -1,6 +1,6 @@
 'use client'
 
-export default function BgVideo({ link, height }) {
+export default function BgVideo({ link, height, poster }) {
     return (
         <div className="relative">
             <div
@@ -12,6 +12,9 @@ export default function BgVideo({ link, height }) {
                     autoPlay
                     muted
                     loop
+                    playsInline
+                    preload="auto"
+                    poster={poster}
                     className="absolute w-full h-full object-cover"
                 />
             </div>

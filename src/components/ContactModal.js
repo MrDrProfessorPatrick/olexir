@@ -13,7 +13,6 @@ export default function ContactModal() {
     })
 
     const handleSubmit = () => {
-        console.log('Form submitted:', formData)
         closePopup()
     }
 
