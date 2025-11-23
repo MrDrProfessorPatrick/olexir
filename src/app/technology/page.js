@@ -190,8 +190,8 @@ export default function Solution() {
                                     Non-absorbability
                                 </span>
                             </div>
-                            <div>
-                                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] font-semibold text-white/63 text-justify">
+                            <div className="px-3">
+                                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] text-white/63 text-justify">
                                     Majority of cosmetics rely on fossil-derived
                                     or animal fats, while edible fats are packed
                                     with trans and saturated lipids.
@@ -613,10 +613,10 @@ export default function Solution() {
                             </div>
 
                             {!isTablet && (
-                                <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
+                                <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12 tabular-nums">
                                     <div
                                         id="planProtein"
-                                        className={`flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>
@@ -641,7 +641,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>
                                             ~
@@ -666,7 +666,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
                                     >
                                         <span>
                                             <AnimatedNumber

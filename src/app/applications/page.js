@@ -71,7 +71,7 @@ export default function Applications() {
 
     return (
         <div id="container">
-            <section className="relative w-full h-[397px] md:h-[496px] lg:h-[696px] 2xl:h-[803px]">
+            <section className="relative w-full h-[500px] md:h-[496px] lg:h-[696px] 2xl:h-[803px]">
                 <Image
                     src="/Application_1_gelAndFlower.png"
                     alt="Image showing gel and flower"
