@@ -164,21 +164,21 @@ export default function AboutUs() {
                                         'https://www.linkedin.com/in/svitlana-mykolenko-6b705196/',
                                 },
                                 {
-                                    img: '/Laura.webp',
+                                    img: '/Laura2.webp',
                                     name: 'Dr. Laura Baraldi',
                                     position: 'Lipid Formulation Lead',
                                     linkedin:
                                         'https://www.linkedin.com/in/laura-baraldi-06a082171/',
                                 },
                                 {
-                                    img: '/Patrick.webp',
+                                    img: '/Patrick2.webp',
                                     name: 'Patrick Ziemer',
                                     position: 'Marketing Assistant',
                                     linkedin:
                                         'https://www.linkedin.com/in/patrick-ziemer-540381268/',
                                 },
                                 {
-                                    img: '/Rafaelle.webp',
+                                    img: '/Rafaelle2.webp',
                                     name: 'Prof. Raffaele Mezzenga',
                                     position: 'Scientific Adviser',
                                     linkedin:
