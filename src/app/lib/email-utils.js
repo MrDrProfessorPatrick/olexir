@@ -1,7 +1,31 @@
+const TOKEN_FILE_PATH = path.join(process.cwd(), 'zoho-token.txt')
+
+async function requestWrapper(accessToken, email, subject, text, ACCOUNT_ID) {
+    try {
+        return await axios.post(
+            `https://mail.zoho.eu/api/accounts/${ACCOUNT_ID}/messages`,
+            {
+                fromAddress: 'sales@wooolama.com',
+                toAddress: email,
+                subject,
+                content: text,
+            },
+            {
+                headers: {
+                    Authorization: `Zoho-oauthtoken ${accessToken}`,
+                },
+            }
+        )
+    } catch (error) {
+        console.error('Error in requestWrapper:', error)
+        return false
+    }
+}
+
 const emailSender = async (emails, subject, text, tryCount) => {
     try {
         const { ACCOUNT_ID } = process.env
-        const accessToken = await getZohoAccessTokenDB()
+        const accessToken = await getZohoAccessTokenFile()
 
         if (!accessToken) {
             throw new Error('No access token received')
@@ -30,6 +54,36 @@ const emailSender = async (emails, subject, text, tryCount) => {
     }
 }
 
+async function ensureTokenFile() {
+    try {
+        await fs.access(TOKEN_FILE_PATH)
+    } catch {
+        await fs.writeFile(TOKEN_FILE_PATH, '', 'utf8')
+    }
+}
+
+async function updateZohoAccessTokenDB(access_token) {
+    try {
+        await ensureTokenFile()
+        await fs.writeFile(TOKEN_FILE_PATH, access_token, 'utf8')
+        return true
+    } catch (error) {
+        console.error('Error writing token to file:', error)
+        throw error
+    }
+}
+
+async function getZohoAccessTokenFile() {
+    try {
+        await ensureTokenFile()
+        const token = await fs.readFile(TOKEN_FILE_PATH, 'utf8')
+        return token.trim() || null
+    } catch (error) {
+        console.error('Error reading token from file:', error)
+        throw error
+    }
+}
+
 async function getZohoAccessToken() {
     const response = await axios.post(
         `https://accounts.zoho.eu/oauth/v2/token?refresh_token=${ZOHO_REFRESH_TOKEN}&grant_type=refresh_token&client_id=${ZOHO_CLIENT_ID}&client_secret=${ZOHO_CLIENT_SECRET}`
@@ -42,5 +96,3 @@ async function getZohoAccessToken() {
     if (!tokenData) throw new Error('No access token received')
     await updateZohoAccessTokenDB(tokenData)
 }
-
-async function updateZohoAccessTokenDB(access_token) {}
