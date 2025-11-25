@@ -19,7 +19,7 @@ const geistSans = Geist({
 
 export const metadata = {
     title: 'Olexir',
-    description: 'Olexir protein-empovered fat alternatives',
+    description: 'Olexir protein-empowered fat alternatives',
 }
 
 export default function RootLayout({ children }) {
