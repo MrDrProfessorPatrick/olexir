@@ -24,7 +24,6 @@ export const metadata = {
         title: 'Olexir',
         description: 'Olexir protein-empowered fat alternatives',
         url: 'https://olexir.ch',
-        images: ['/og-image.png'],
     },
 }
 
