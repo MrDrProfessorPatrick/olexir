@@ -6,7 +6,7 @@ export async function POST(request) {
         const body = await request.json()
         const { clientPhone, clientName, clientEmail, clientMessage } = body
 
-        if (!clientPhone || !clientName) {
+        if (!clientEmail || !clientName) {
             return NextResponse.json(
                 { message: 'Missing required fields' },
                 { status: 400 }

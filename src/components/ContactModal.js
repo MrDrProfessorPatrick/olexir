@@ -12,18 +12,54 @@ export default function ContactModal() {
         message: '',
     })
 
+    const [errors, setErrors] = useState({
+        name: false,
+        email: false,
+        emailFormat: false,
+    })
+
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(false)
 
+    const validateEmail = (email) => {
+        // Simple but reliable regex for email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
+
     const handleChange = (e) => {
+        const { name, value } = e.target
+
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            [name]: value,
+        })
+
+        // Remove respective errors when typing
+        setErrors({
+            ...errors,
+            [name]: false,
+            ...(name === 'email' ? { emailFormat: false } : {}),
         })
     }
 
     const handleSubmit = async () => {
+        const newErrors = {}
+
+        if (!formData.name.trim()) newErrors.name = true
+
+        if (!formData.email.trim()) {
+            newErrors.email = true
+        } else if (!validateEmail(formData.email)) {
+            newErrors.emailFormat = true
+        }
+
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors)
+            return // Stop submitting
+        }
+
         setLoading(true)
         setError(null)
         setSuccess(false)
@@ -40,9 +76,7 @@ export default function ContactModal() {
                 }),
             })
 
-            if (!res.ok) {
-                throw new Error('Request failed')
-            }
+            if (!res.ok) throw new Error('Request failed')
 
             setSuccess(true)
             closePopup()
@@ -57,7 +91,7 @@ export default function ContactModal() {
 
     return (
         <div className="absolute bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center z-1000">
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-4">
                 <div
                     className="absolute inset-0 bg-black/40 backdrop-blur-md"
                     onClick={closePopup}
@@ -85,16 +119,37 @@ export default function ContactModal() {
                                     placeholder="Name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800"
+                                    className={`w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800
+                                        ${
+                                            errors.name
+                                                ? 'border-2 border-red-500'
+                                                : ''
+                                        }
+                                    `}
                                 />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800"
-                                />
+
+                                <div className="flex flex-col">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className={`w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800
+                                            ${
+                                                errors.email ||
+                                                errors.emailFormat
+                                                    ? 'border-2 border-red-500'
+                                                    : ''
+                                            }
+                                        `}
+                                    />
+                                    {errors.emailFormat && (
+                                        <p className="text-red-200 text-xs mt-1">
+                                            Invalid email format
+                                        </p>
+                                    )}
+                                </div>
                             </div>
 
                             <input
