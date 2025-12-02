@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend'
 
 export async function POST(request) {
     try {
@@ -11,24 +12,37 @@ export async function POST(request) {
                 { status: 400 }
             )
         }
+        console.log('API_KEY:', process.env.API_KEY)
+        // Initialize MailerSend
+        const mailerSend = new MailerSend({
+            apiKey: process.env.API_KEY,
+        })
 
-        await emailSender(
-            ['zokof11@gmail.com'],
-            'Olexir Contact Form Submission',
-            `
-        <h2>New Contact Request</h2>
-        <p><strong>Name:</strong> ${clientName}</p>
-        <p><strong>Phone:</strong> ${clientPhone}</p>
-        <p><strong>Phone:</strong> ${clientPhone}</p>
+        const sentFrom = new Sender('info@olexir.ch', 'Svitlana Mykolenko')
 
-        ${clientEmail ? `<p><strong>Email:</strong> ${clientEmail}</p>` : ''}
-        ${
-            clientMessage
-                ? `<p><strong>Email:</strong> ${clientMessage}</p>`
-                : ''
-        }
-      `
-        )
+        const recipients = [
+            new Recipient('svitlana.mykolenko24@gmail.com', 'Svitlana'),
+        ]
+
+        const emailHtml = `
+      <h2>New Contact Request</h2>
+      <p><strong>Name:</strong> ${clientName}</p>
+      <p><strong>Phone:</strong> ${clientPhone}</p>
+      ${clientEmail ? `<p><strong>Email:</strong> ${clientEmail}</p>` : ''}
+      ${
+          clientMessage
+              ? `<p><strong>Message:</strong> ${clientMessage}</p>`
+              : ''
+      }
+    `
+
+        const emailParams = new EmailParams()
+            .setFrom(sentFrom)
+            .setTo(recipients)
+            .setSubject('Olexir Contact Form Submission')
+            .setHtml(emailHtml)
+
+        await mailerSend.email.send(emailParams)
 
         return NextResponse.json({
             message: 'Contact request sent successfully',

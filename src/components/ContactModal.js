@@ -12,9 +12,9 @@ export default function ContactModal() {
         message: '',
     })
 
-    const handleSubmit = () => {
-        closePopup()
-    }
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
+    const [success, setSuccess] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -23,45 +23,55 @@ export default function ContactModal() {
         })
     }
 
+    const handleSubmit = async () => {
+        setLoading(true)
+        setError(null)
+        setSuccess(false)
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    clientName: formData.name,
+                    clientEmail: formData.email,
+                    clientPhone: formData.phone,
+                    clientMessage: formData.message,
+                }),
+            })
+
+            if (!res.ok) {
+                throw new Error('Request failed')
+            }
+
+            setSuccess(true)
+            closePopup()
+        } catch (err) {
+            setError('Something went wrong. Please try again.')
+        } finally {
+            setLoading(false)
+        }
+    }
+
     if (!isOpen) return null
 
     return (
-        <div className="absolute  bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center z-1000">
-            {/* Modal Overlay */}
+        <div className="absolute bg-gradient-to-br from-amber-50 to-orange-100 flex items-center justify-center z-1000">
             <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-                {/* Backdrop */}
                 <div
                     className="absolute inset-0 bg-black/40 backdrop-blur-md"
                     onClick={closePopup}
                 />
 
-                {/* Modal Content */}
                 <div className="relative w-full max-w-2xl bg-gradient-to-br from-yellow-700 via-amber-700 to-yellow-800 rounded-2xl shadow-2xl overflow-hidden bg-[url('/ContactModalBG.webp')] bg-cover bg-center">
-                    {/* Pattern */}
-                    <div className="absolute inset-0 opacity-30" />
-
                     <div className="relative p-8 md:p-12">
-                        {/* Close button */}
                         <button
                             onClick={closePopup}
                             className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
                         >
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
+                            ✕
                         </button>
 
-                        {/* Title */}
                         <h2 className="text-4xl font-bold text-white mb-8">
                             Get in Touch
                         </h2>
@@ -75,7 +85,7 @@ export default function ContactModal() {
                                     placeholder="Name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800"
                                 />
                                 <input
                                     type="email"
@@ -83,7 +93,7 @@ export default function ContactModal() {
                                     placeholder="Email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                                    className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800"
                                 />
                             </div>
 
@@ -93,7 +103,7 @@ export default function ContactModal() {
                                 placeholder="Phone Number"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                                className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800"
                             />
 
                             <textarea
@@ -102,17 +112,29 @@ export default function ContactModal() {
                                 value={formData.message}
                                 onChange={handleChange}
                                 rows={6}
-                                className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 resize-none"
+                                className="w-full px-4 py-3 rounded-lg bg-white/95 text-gray-800 resize-none"
                             />
 
                             <div className="flex justify-end">
                                 <button
                                     onClick={handleSubmit}
-                                    className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg"
+                                    disabled={loading}
+                                    className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg disabled:opacity-50"
                                 >
-                                    Partner With Us
+                                    {loading ? 'Sending...' : 'Partner With Us'}
                                 </button>
                             </div>
+
+                            {error && (
+                                <p className="text-red-300 text-sm mt-2">
+                                    {error}
+                                </p>
+                            )}
+                            {success && (
+                                <p className="text-green-300 text-sm mt-2">
+                                    Message sent successfully!
+                                </p>
+                            )}
                         </div>
                     </div>
                 </div>
