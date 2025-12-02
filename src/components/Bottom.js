@@ -30,7 +30,7 @@ export default function Bottom() {
                             sizes="(max-width: 200px)"
                         />
                     </div>
-                    <div className="flex flex-2 items-end hidden md:flex justify-center text-[12px] lg:text-[16px] pb-4">
+                    <div className="flex flex-2 items-end hidden md:flex justify-center text-[12px] lg:text-[14px] pb-4">
                         <div
                             className={`flex flex-row gap-4 ${montserrat.variable}`}
                         >
@@ -43,7 +43,7 @@ export default function Bottom() {
             <div className="flex items-center justify-center md:pl-8">
                 <div className="flex flex-col justify-center items-center ">
                     <div
-                        className={`flex flex-start justify-center text-[16px] lg:text-[24px] font-semibold ${montserrat.variable}`}
+                        className={`flex flex-start justify-center text-[16px] lg:text-[22px] font-semibold ${montserrat.variable}`}
                     >
                         <span>Reach out to collaborate or learn more.</span>
                     </div>
