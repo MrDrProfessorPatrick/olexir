@@ -12,13 +12,12 @@ export async function POST(request) {
                 { status: 400 }
             )
         }
-        console.log('API_KEY:', process.env.API_KEY)
         // Initialize MailerSend
         const mailerSend = new MailerSend({
             apiKey: process.env.API_KEY,
         })
 
-        const sentFrom = new Sender('info@olexir.ch', 'Svitlana Mykolenko')
+        const sentFrom = new Sender('info@olexir.ch', 'OLEXIR CONTACT FORM')
 
         const recipients = [
             new Recipient('svitlana.mykolenko24@gmail.com', 'Svitlana'),
