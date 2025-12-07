@@ -89,16 +89,28 @@ export default function Solution() {
                     />
                     <div
                         id="problemsTable"
-                        className="flex w-[100%] max-h-[337px] rounded-md bg-white/10 backdrop-blur-[2px] before:content-[''] before:absolute before:inset-0 before:rounded-md before:border before:border-white/20"
+                        className="flex flex-col md:flex-row w-full rounded-md
+                        min-h-[337px]
+                        lg:py-6
+                        gap-[20px] md:gap-0
+                        md:bg-white/10 md:backdrop-blur-[2px] 
+                        md:before:content-[''] md:before:absolute md:before:inset-0 
+                        md:before:rounded-md md:before:border md:before:border-white/20"
                     >
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
+                        <div
+                            className="flex flex-[1_1_0] flex-col justify-center items-center py-15
+                                    bg-white/10 backdrop-blur-[2px] 
+                                    before:content-[''] before:absolute before:inset-0 
+                                    before:rounded-md before:border before:border-white/20 
+                                    md:bg-transparent md:backdrop-blur-none md:before:content-none"
+                        >
                             <div
-                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 #1
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 lg:px-10 text-[20px] md:text-[18px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -108,15 +120,21 @@ export default function Solution() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
+                        <div
+                            className="flex flex-[1_1_0] flex-col justify-center items-center py-15
+                                    bg-white/10 backdrop-blur-[2px] 
+                                    before:content-[''] before:absolute before:inset-0 
+                                    before:rounded-md before:border before:border-white/20 
+                                    md:bg-transparent md:backdrop-blur-none md:before:content-none"
+                        >
                             <div
-                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <AnimatedNumber value="60" className="inline" />
                                 %
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 md:px-0 lg:px-10 text-[20px] md:text-[20px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -130,15 +148,21 @@ export default function Solution() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-[1_1_0] flex-col justify-center items-center py-8 lg:py-20 px-2 lg:px-5 h-full">
+                        <div
+                            className="flex flex-[1_1_0] flex-col justify-center items-center py-15
+                                    bg-white/10 backdrop-blur-[2px] 
+                                    before:content-[''] before:absolute before:inset-0 
+                                    before:rounded-md before:border before:border-white/20 
+                                    md:bg-transparent md:backdrop-blur-none md:before:content-none"
+                        >
                             <div
-                                className={`text-[22px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
+                                className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <span>&lt;</span>{' '}
                                 <AnimatedNumber value="5" className="inline" />%
                             </div>
                             <div
-                                className={`px-0 lg:px-10 text-[12px] sm:text-[16px] md:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
+                                className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 md:px-0 lg:px-10 text-[20px] md:text-[20px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
                             >
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
@@ -423,12 +447,12 @@ export default function Solution() {
                     <div
                         id="solutionTable"
                         className="flex flex-col md:flex-row w-full mt-20 rounded-md
-               min-h-[337px]
-             lg:py-6
-             gap-[20px] md:gap-0
-             md:bg-white/10 md:backdrop-blur-[2px] 
-             md:before:content-[''] md:before:absolute md:before:inset-0 
-             md:before:rounded-md md:before:border md:before:border-white/20"
+                        min-h-[337px]
+                        lg:py-6
+                        gap-[20px] md:gap-0
+                        md:bg-white/10 md:backdrop-blur-[2px] 
+                        md:before:content-[''] md:before:absolute md:before:inset-0 
+                        md:before:rounded-md md:before:border md:before:border-white/20"
                     >
                         {[
                             {
@@ -465,11 +489,10 @@ export default function Solution() {
                             <div
                                 key={i}
                                 className="flex flex-[1_1_0] flex-col justify-center items-center py-15
-             
-                 bg-white/10 backdrop-blur-[2px] 
-                 before:content-[''] before:absolute before:inset-0 
-                 before:rounded-md before:border before:border-white/20 
-                 md:bg-transparent md:backdrop-blur-none md:before:content-none"
+                                    bg-white/10 backdrop-blur-[2px] 
+                                    before:content-[''] before:absolute before:inset-0 
+                                    before:rounded-md before:border before:border-white/20 
+                                    md:bg-transparent md:backdrop-blur-none md:before:content-none"
                             >
                                 <div
                                     className={`text-[100px] font-light text-white ${lato.className}`}
