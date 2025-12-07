@@ -20,10 +20,31 @@ const geistSans = Geist({
 export const metadata = {
     title: 'Olexir',
     description: 'Olexir protein-empowered fat alternatives',
+
     openGraph: {
         title: 'Olexir',
         description: 'Olexir protein-empowered fat alternatives',
         url: 'https://olexir.ch',
+        type: 'website',
+        images: [
+            {
+                url: 'https://olexir.ch/GraphPreview.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Olexir preview',
+            },
+        ],
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Olexir',
+        description: 'Olexir protein-empowered fat alternatives',
+        images: ['https://olexir.ch/GraphPreview.jpg'],
+    },
+
+    icons: {
+        icon: '/favicon.ico',
     },
 }
 
