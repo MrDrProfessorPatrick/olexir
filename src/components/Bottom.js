@@ -45,15 +45,17 @@ export default function Bottom() {
                     <div
                         className={`flex flex-start justify-center text-[16px] lg:text-[22px] font-semibold ${montserrat.variable}`}
                     >
-                        <span>
-                            Reach out to collaborate{' '}
-                            <br className="hidden md:block" /> or learn more.
-                        </span>
+                        <span>Reach out to collaborate or learn more.</span>
                     </div>
                     <div
                         className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
                     ></div>
                     <div className="flex flex-col items-center md:items-start w-full pt-2">
+                        <div
+                            className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
+                        >
+                            <span>info@olexir.ch</span>
+                        </div>
                         <button
                             onClick={openPopup}
                             className="max-w-[200px] text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md"
