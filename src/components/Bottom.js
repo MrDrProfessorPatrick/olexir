@@ -34,7 +34,9 @@ export default function Bottom() {
                         <div
                             className={`flex flex-row gap-4 ${montserrat.variable}`}
                         >
-                            <span>Terms & Conditions</span>
+                            <Link href="/termsandconditions">
+                                Terms & Conditions
+                            </Link>
                             <Link href="/privacypolicy">Privacy Policy</Link>
                         </div>
                     </div>
@@ -49,13 +51,10 @@ export default function Bottom() {
                     </div>
                     <div
                         className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
-                    ></div>
+                    >
+                        <span>info@olexir.ch</span>
+                    </div>
                     <div className="flex flex-col items-center md:items-start w-full pt-2">
-                        <div
-                            className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
-                        >
-                            <span>info@olexir.ch</span>
-                        </div>
                         <button
                             onClick={openPopup}
                             className="max-w-[200px] text-[16px] text-white px-3 py-1 font-semibold bg-black rounded-md"
@@ -81,7 +80,9 @@ export default function Bottom() {
                         />
                     </div>
                     <div className="flex items-center justify-between gap-4 pb-2">
-                        <span>Terms & Conditions</span>
+                        <Link href="/termsandconditions">
+                            Terms & Conditions
+                        </Link>
                     </div>
                     <div>
                         <Link href="/privacypolicy">Privacy Policy</Link>
