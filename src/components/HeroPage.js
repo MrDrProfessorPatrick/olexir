@@ -1,8 +1,7 @@
 'use client'
 import Image from 'next/image'
-import NavBar from './NavBar'
-import { useRouter } from 'next/navigation'
 import { Lato } from 'next/font/google'
+import Link from 'next/link'
 
 import { Montserrat } from 'next/font/google'
 import { usePopup } from './PopUpProvider'
@@ -21,7 +20,6 @@ const montserrat = Montserrat({
 
 export default function HeroPage() {
     const { openPopup } = usePopup()
-    const router = useRouter()
     return (
         <section className="relative w-full h-[1180px] lg:h-[916px]">
             <Image
@@ -34,18 +32,26 @@ export default function HeroPage() {
             />
             <div className="absolute inset-0 mt-[201px]">
                 <div className={`relative max-w-[1200px] pl-[5%]`}>
-                    <span
-                        className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] xs:text-[38px] text-[28px] font-extrabold text-black text-left ${lato.className}  h-[212px]`}
+                    <h1
+                        className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] xs:text-[38px] text-[28px] font-extrabold text-black text-left ${lato.className} `}
                     >
                         Protein-empowered fat alternatives
-                    </span>
+                    </h1>
                     <div className="relative mt-4">
-                        <button
-                            onClick={() => router.push(`/applications`)}
-                            className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-black z-100 text-white text-[11px] sm:text-[14px] md:text-[18px] ${montserrat.className}`}
+                        <Link
+                            href="/applications"
+                            className={`inline-flex items-center justify-center
+                                        w-[100px] h-[40px]
+                                        xs:w-[150px] xs:h-[49px]
+                                        sm:w-[179px] sm:h-[59px]
+                                        rounded-xl
+                                        bg-black
+                                        text-white
+                                        text-[11px] sm:text-[14px] md:text-[18px]
+                                        ${montserrat.className}`}
                         >
                             Discover More
-                        </button>
+                        </Link>
                         <button
                             onClick={openPopup}
                             className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] sm:text-[14px] md:text-[18px] ml-[10px] ${montserrat.className}`}
