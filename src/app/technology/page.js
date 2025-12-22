@@ -329,7 +329,7 @@ export default function Solution() {
                                         id="solidityPlant"
                                         className={`hidden md:block w-full md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-14 py-3 text-center ${lato.className}`}
                                     >
-                                        To solidity plant oils
+                                        To solidify plant oils
                                     </span>
                                 </div>
                                 <DashedLine
@@ -426,7 +426,7 @@ export default function Solution() {
                                         id="solidityPlant"
                                         className={`w-full min-w-[300px] md:w-auto rounded-full text-[18px] md:text-[20px] lg:text-[20px] bg-[#D8AE02] px-10 py-4 text-center ${lato.className}`}
                                     >
-                                        To solidity plant oils
+                                        To solidify plant oils
                                     </span>
                                 </div>
 
@@ -479,7 +479,7 @@ export default function Solution() {
                                 img: '/VectorSwitchers.png',
                                 text: (
                                     <>
-                                        Tuneable consistency{' '}
+                                        Tunable consistency{' '}
                                         <br className="hidden md:inline" />{' '}
                                         serving your needs
                                     </>
