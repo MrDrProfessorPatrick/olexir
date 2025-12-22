@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Lato } from 'next/font/google'
+import Link from 'next/link'
 
 const lato = Lato({
     variable: '--font-lato',
@@ -35,11 +36,19 @@ export default function AboutUs() {
                 <p
                     className={`text-[18px] lg:text-[32px] font-light text-white fong-light text-center leading-8 ${lato.className} pt-13 pb-10 lg:pb-25 px-4 lg:px-14`}
                 >
-                    Olexir was born in Switzerland, ETH Zurich, 2025, at the
-                    intersection of food science, proteomics, material
-                    engineering and sustainability. We use patented
-                    protein-based encapsulation to structure liquid oils into
-                    oleogels — solid-like materials, which unlock new
+                    Olexir was born in Switzerland,{' '}
+                    <Link
+                        href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                    >
+                        ETH
+                    </Link>{' '}
+                    Zurich, 2025, at the intersection of food science,
+                    proteomics, material engineering and sustainability. We use
+                    patented protein-based encapsulation to structure liquid
+                    oils into oleogels — solid-like materials, which unlock new
                     applications in cosmetics, nutrition and health.
                 </p>
                 <div className="px-4 lg:px-15">

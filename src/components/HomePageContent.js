@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Montserrat } from 'next/font/google'
 import { Inter } from 'next/font/google'
 import { Lato } from 'next/font/google'
@@ -53,12 +54,21 @@ export default function HomePageContent() {
                 <p
                     className={`text-[18px] md:text-[24px] text-white ${montserrat.className} px-4 md:px-20`}
                 >
-                    Olexir emerged from ETH Zurich with the support of the ETH
-                    Pioneer Fellowship. We combine breakthroughs in food
-                    science, material engineering and proteomics with a deep
-                    commitment to sustainability. By using cutting-edge research
-                    we create a new class of functional wellness materials and
-                    make them available to the global market.
+                    Olexir emerged from{' '}
+                    <Link
+                        href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                    >
+                        ETH
+                    </Link>{' '}
+                    Zurich with the support of the ETH Pioneer Fellowship. We
+                    combine breakthroughs in food science, material engineering
+                    and proteomics with a deep commitment to sustainability. By
+                    using cutting-edge research we create a new class of
+                    functional wellness materials and make them available to the
+                    global market.
                 </p>
                 <p
                     className={`text-[18px] md:text-[24px font-light text-white px-4 md:px-20 pt-10 ${lato.className}`}

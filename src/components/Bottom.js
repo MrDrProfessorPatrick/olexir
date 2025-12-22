@@ -92,15 +92,21 @@ export default function Bottom() {
                     className={`flex flex-col h-full justify-between md:items-end text-[16px] pr-8 md:pb-5 pl-6 ${montserrat.variable}`}
                 >
                     <div className="flex flex-3 items-center justify-center md:pt-16 hidden md:block">
-                        <Image
-                            src="/ethZurih.png"
-                            alt="ETH Zurih logo"
-                            width={200}
-                            height={200}
-                            className="relative"
-                            priority
-                            sizes="(max-width: 200px)"
-                        />
+                        <Link
+                            href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src="/ethZurih.png"
+                                alt="ETH Zurich logo"
+                                width={200}
+                                height={200}
+                                className="relative cursor-pointer"
+                                priority
+                                sizes="(max-width: 200px)"
+                            />
+                        </Link>
                     </div>
                     <div className="flex flex-1 items-end">
                         <span>© 2025 by Olexir</span>
