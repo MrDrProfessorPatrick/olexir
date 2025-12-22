@@ -55,7 +55,7 @@ export default function Solution() {
     ]
 
     return (
-        <div className="bg-[url('/СaruselBg500W.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
+        <div>
             <BgVideo
                 link={'/solutionVideo.mp4'}
                 poster={'/technologyPoster1.webp'}
@@ -68,7 +68,7 @@ export default function Solution() {
                 </h1>
             </div>
             <div id="container">
-                <div className="relative w-full px-4 md:px-10">
+                <div className="relative w-full px-4 md:px-10 bg-[url('/technologyBG.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
                     <div className="pt-23 pb-15 w-[160px] ">
                         <h3
                             id="problem"

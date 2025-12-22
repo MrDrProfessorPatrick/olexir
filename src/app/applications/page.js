@@ -82,7 +82,7 @@ export default function Applications() {
                 />
             </section>
             <div>
-                <section className="bg-[url('/ApplicationCosmeticsBG.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
+                <section className="bg-[url('/ApplicationCosmeticsBGV2.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
                     <div className="flex center justify-center pl-4 lg:pl-8 pr-4 lg:pr-8 lg:pl-35 lg:pr-35 pt-15 pb-7 lg:pb-15">
                         <p
                             className={`text-white text-[22px] lg:text-[32px] text-center ${lato.className}`}

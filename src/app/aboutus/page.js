@@ -31,7 +31,7 @@ export default function AboutUs() {
                     sizes="(min-width: 1024px) 100vw, 0px"
                 />
             </section>
-            <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
+            <div className="bg-[url('/CaruselBG500V2.png')] bg-cover bg-center">
                 <p
                     className={`text-[18px] lg:text-[32px] font-light text-white fong-light text-center leading-8 ${lato.className} pt-13 pb-10 lg:pb-25 px-4 lg:px-14`}
                 >
