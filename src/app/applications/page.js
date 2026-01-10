@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 
 import DashedLine from '@/components/DashedLine'
 import BgVideo from '@/components/BgVideo'
@@ -71,6 +72,70 @@ export default function Applications() {
 
     return (
         <div id="container">
+            <Script
+                id="applications-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@graph': [
+                            {
+                                '@type': 'WebPage',
+                                '@id': 'https://olexir.ch/applications',
+                                name: 'Applications of Protein-Structured Oleogels',
+                                description:
+                                    'Overview of cosmetic, food, and wellness applications enabled by Olexir’s protein-structured oleogel technology.',
+                                isPartOf: {
+                                    '@type': 'WebSite',
+                                    name: 'Olexir',
+                                    url: 'https://olexir.ch',
+                                },
+                                about: [
+                                    {
+                                        '@type': 'Thing',
+                                        name: 'Cosmetic Oleogels',
+                                    },
+                                    {
+                                        '@type': 'Thing',
+                                        name: 'Food Oleogels',
+                                    },
+                                    {
+                                        '@type': 'Thing',
+                                        name: 'Wellness & Nutraceutical Oleogels',
+                                    },
+                                ],
+                            },
+                            {
+                                '@type': 'DefinedTermSet',
+                                name: 'Oleogel Applications',
+                                description:
+                                    'Application domains enabled by plant-protein structured oleogels developed by Olexir.',
+                                hasDefinedTerm: [
+                                    {
+                                        '@type': 'DefinedTerm',
+                                        name: 'Cosmetics',
+                                        description:
+                                            'Oleogels for skincare creams, gels, serums, sunscreens, hair and scalp treatments with clean-label, non-greasy performance.',
+                                    },
+                                    {
+                                        '@type': 'DefinedTerm',
+                                        name: 'Food',
+                                        description:
+                                            'Oleogels for plant-based foods, functional nutrition and omega-3 enriched products replacing saturated and hydrogenated fats.',
+                                    },
+                                    {
+                                        '@type': 'DefinedTerm',
+                                        name: 'Wellness & Health',
+                                        description:
+                                            'Future applications of oleogels as stable carriers for bioactives in nutraceuticals, supplements and transdermal systems.',
+                                    },
+                                ],
+                            },
+                        ],
+                    }),
+                }}
+            />
+
             <section className="relative w-full h-[500px] md:h-[496px] lg:h-[696px] 2xl:h-[803px]">
                 <Image
                     src="/Application_1_gelAndFlower.png"

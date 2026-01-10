@@ -1,5 +1,6 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import Script from 'next/script'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import Image from 'next/image'
@@ -56,6 +57,94 @@ export default function Solution() {
 
     return (
         <div>
+            <Script
+                id="technology-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@graph': [
+                            {
+                                '@type': 'TechArticle',
+                                headline:
+                                    'Protein-Structured Oleogels for Healthy and Sustainable Fats',
+                                description:
+                                    'Olexir technology transforms liquid plant oils into stable oleogels using hydrolysed plant proteins, without heating, toxic solvents, or hydrogenation.',
+                                author: {
+                                    '@type': 'Organization',
+                                    name: 'Olexir',
+                                },
+                                publisher: {
+                                    '@type': 'Organization',
+                                    name: 'Olexir',
+                                    url: 'https://olexir.ch',
+                                    logo: {
+                                        '@type': 'ImageObject',
+                                        url: 'https://olexir.ch/OlexirLogoBlackDiomondUnderI2.png',
+                                    },
+                                },
+                                mainEntityOfPage: {
+                                    '@type': 'WebPage',
+                                    '@id': 'https://olexir.ch/technology',
+                                },
+                                about: [
+                                    'Oleogels',
+                                    'Plant Proteins',
+                                    'Saturated Fat Alternatives',
+                                    'Sustainable Food Technology',
+                                    'Cosmetic Ingredients',
+                                ],
+                            },
+                            {
+                                '@type': 'FAQPage',
+                                mainEntity: [
+                                    {
+                                        '@type': 'Question',
+                                        name: 'What is saturated fat?',
+                                        acceptedAnswer: {
+                                            '@type': 'Answer',
+                                            text: 'Saturated fats are fatty acids with no double bonds. They are typically solid at room temperature and their intake is linked to elevated LDL cholesterol and cardiovascular diseases.',
+                                        },
+                                    },
+                                    {
+                                        '@type': 'Question',
+                                        name: 'Why do we need polyunsaturated fats (PUFAs)?',
+                                        acceptedAnswer: {
+                                            '@type': 'Answer',
+                                            text: 'PUFAs include essential fatty acids such as LA and ALA that the human body cannot synthesize and must obtain from food.',
+                                        },
+                                    },
+                                    {
+                                        '@type': 'Question',
+                                        name: 'What are protein hydrolysates?',
+                                        acceptedAnswer: {
+                                            '@type': 'Answer',
+                                            text: 'Protein hydrolysates are proteins partially broken down into peptides and amino acids, offering high solubility and interfacial activity for oleogel structuring.',
+                                        },
+                                    },
+                                    {
+                                        '@type': 'Question',
+                                        name: 'What is an oleogel?',
+                                        acceptedAnswer: {
+                                            '@type': 'Answer',
+                                            text: 'An oleogel is a material where liquid oil is immobilized within a microscopic three-dimensional network, giving it solid-like behavior while retaining high oil content.',
+                                        },
+                                    },
+                                    {
+                                        '@type': 'Question',
+                                        name: 'What advantages does Olexir technology offer over conventional structuring?',
+                                        acceptedAnswer: {
+                                            '@type': 'Answer',
+                                            text: 'Olexir oleogels avoid hydrogenation, trans fats, waxes, silicones, mineral oils, heating, and toxic solvents while providing high oil loading and tunable firmness.',
+                                        },
+                                    },
+                                ],
+                            },
+                        ],
+                    }),
+                }}
+            />
+
             <BgVideo
                 link={'/solutionVideo.mp4'}
                 poster={'/technologyPoster1.webp'}

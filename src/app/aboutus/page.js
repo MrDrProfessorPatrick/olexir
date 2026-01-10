@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Script from 'next/script'
 import { Lato } from 'next/font/google'
 import Link from 'next/link'
 
@@ -12,6 +13,81 @@ export default function AboutUs() {
     return (
         <>
             <section className="relative w-full h-[1200px] lg:h-[496px] lg:h-[696px] 2xl:h-[803px]">
+                <Script
+                    id="about-schema"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@graph': [
+                                {
+                                    '@type': 'AboutPage',
+                                    '@id': 'https://olexir.ch/about',
+                                    name: 'About Olexir',
+                                    url: 'https://olexir.ch/about',
+                                    description:
+                                        'Learn about Olexir, a Switzerland-born deep-tech startup developing protein-structured oleogels for food, cosmetics, and health applications.',
+                                    isPartOf: {
+                                        '@type': 'WebSite',
+                                        name: 'Olexir',
+                                        url: 'https://olexir.ch',
+                                    },
+                                    about: {
+                                        '@type': 'Organization',
+                                        name: 'Olexir',
+                                    },
+                                },
+                                {
+                                    '@type': 'Organization',
+                                    '@id': 'https://olexir.ch/#organization',
+                                    name: 'Olexir',
+                                    foundingLocation: {
+                                        '@type': 'Place',
+                                        name: 'Zurich, Switzerland',
+                                    },
+                                    foundingDate: '2025',
+                                    knowsAbout: [
+                                        'Oleogels',
+                                        'Protein Encapsulation',
+                                        'Plant-Based Oils',
+                                        'Sustainable Fat Alternatives',
+                                        'Food & Cosmetic Innovation',
+                                    ],
+                                    mission:
+                                        'Transform fluid lipids into high-performance, sustainable solid materials for beauty and food manufacturers.',
+                                    vision: 'To lead the global shift from fossil and animal fats to high-performance plant oils.',
+                                    member: [
+                                        {
+                                            '@type': 'Person',
+                                            name: 'Dr. Svitlana Mykolenko',
+                                            jobTitle: 'Founder & CEO',
+                                            sameAs: 'https://www.linkedin.com/in/svitlana-mykolenko-6b705196/',
+                                        },
+                                        {
+                                            '@type': 'Person',
+                                            name: 'Dr. Laura Baraldi',
+                                            jobTitle: 'Lipid Formulation Lead',
+                                            sameAs: 'https://www.linkedin.com/in/laura-baraldi-06a082171/',
+                                        },
+                                        {
+                                            '@type': 'Person',
+                                            name: 'Patrick Ziemer',
+                                            jobTitle: 'Marketing Assistant',
+                                            sameAs: 'https://www.linkedin.com/in/patrick-ziemer-540381268/',
+                                        },
+                                        {
+                                            '@type': 'Person',
+                                            name: 'Prof. Raffaele Mezzenga',
+                                            jobTitle: 'Scientific Adviser',
+                                            sameAs: 'https://www.linkedin.com/in/raffaele-mezzenga-8bb5a82b4/',
+                                        },
+                                    ],
+                                },
+                            ],
+                        }),
+                    }}
+                />
+
                 {/* Mobile/Tablet Image (hidden on lg and up) */}
                 <Image
                     src="/TeamHeroSmall.webp"

@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import { Geist } from 'next/font/google'
 import NavBar from '../components/NavBar'
 import Bottom from '@/components/Bottom'
@@ -54,6 +55,22 @@ export default function RootLayout({ children }) {
             <body
                 className={`${geistSans.variable} ${lato.variable} antialiased`}
             >
+                <Script
+                    id="organization-schema"
+                    type="application/ld+json"
+                    strategy="beforeInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'Organization',
+                            name: 'Olexir',
+                            url: 'https://olexir.ch',
+                            description:
+                                'Olexir develops protein-empowered fat alternatives and structured oleogels for food, cosmetic, and health applications.',
+                            logo: 'https://olexir.ch/OlexirLogoBlackDiomondUnderI2.png',
+                        }),
+                    }}
+                />
                 <PopupProvider>
                     <NavBar />
                     {children}
