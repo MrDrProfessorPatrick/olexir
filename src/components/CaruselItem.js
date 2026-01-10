@@ -23,7 +23,6 @@ const CarouselItem = React.memo(function CarouselItem({
     let cardSize = isBigCarousel
         ? 'w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[500px] lg:h-[500px] xl:w-[500px] xl:h-[500px] 2xl:w-[500px] 2xl:h-[500px]'
         : 'w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[380px] xl:h-[380px] 3xl:w-[500px] 3xl:h-[500px]'
-
     return (
         <motion.div
             key={src}

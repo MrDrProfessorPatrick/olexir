@@ -69,15 +69,21 @@ export default function Bottom() {
                     className={`flex md:hidden flex-col items-center justify-center ${montserrat.variable}`}
                 >
                     <div className="flex flex-3 items-center justify-center block md:hidden pt-5 pb-5">
-                        <Image
-                            src="/ethZurih.png"
-                            alt="ETH Zurih logo"
-                            width={200}
-                            height={200}
-                            className="relative"
-                            priority
-                            sizes="(max-width: 200px)"
-                        />
+                        <Link
+                            href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src="/ethZurih.png"
+                                alt="ETH Zurich logo"
+                                width={200}
+                                height={200}
+                                className="relative cursor-pointer"
+                                priority
+                                sizes="(max-width: 200px)"
+                            />
+                        </Link>
                     </div>
                     <div className="flex items-center justify-between gap-4 pb-2">
                         <Link href="/termsandconditions">

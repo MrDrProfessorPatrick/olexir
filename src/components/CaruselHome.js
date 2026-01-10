@@ -21,13 +21,9 @@ export default function CaruselHome({ images, isBigCarousel }) {
     const [scrollSnaps, setScrollSnaps] = useState([])
 
     const [bigImageSrc, setBigImageSrc] = useState('')
-    const [imageIndexes, setImageIndexes] = useState([
-        null,
-        null,
-        null,
-        null,
-        null,
-    ])
+    const [imageIndexes, setImageIndexes] = useState(
+        new Array(images.length).fill(null)
+    )
     const [bigImageIndex, setBigImageIndex] = useState(null)
 
     useEffect(() => {
@@ -39,15 +35,18 @@ export default function CaruselHome({ images, isBigCarousel }) {
         }
     }, [imageIndexes])
 
-    const selectImg = useCallback((currIndex) => {
-        const selected = images.find((img) => img.index === currIndex)
-        if (selected) {
-            setImageIndexes((prev) =>
-                prev.map((val, i) => (i === currIndex ? currIndex : val))
-            )
-            setBigImageIndex(selected.index)
-        }
-    }, [])
+    const selectImg = useCallback(
+        (currIndex) => {
+            const selected = images.find((img) => img.index === currIndex)
+            if (selected) {
+                setImageIndexes((prev) =>
+                    prev.map((val, i) => (i === currIndex ? currIndex : val))
+                )
+                setBigImageIndex(selected.index)
+            }
+        },
+        [images]
+    )
 
     const deSelectImg = useCallback(() => {
         setImageIndexes((prev) =>

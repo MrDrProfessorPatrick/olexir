@@ -32,6 +32,7 @@ export default function HomePageContent() {
                     fill
                     className="object-cover sm:hidden"
                     priority
+                    sizes="(max-width: 200px)"
                 />
                 <Image
                     src="/HomeImage1.png"
@@ -42,7 +43,7 @@ export default function HomePageContent() {
                     sizes="(max-width: 200px)"
                 />
             </div>
-            <div className="bg-[url('/caruselBg.png')] bg-cover bg-center">
+            <div className="bg-cover bg-center">
                 <div className="flex items-start pl-5 md:pl-20 pt-26 lg:pt-36 pb-10">
                     <span
                         className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
