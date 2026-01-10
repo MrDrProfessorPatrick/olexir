@@ -53,7 +53,7 @@ export default function BigImage({
                 </motion.div>
                 {text && (
                     <motion.div
-                        className="bg-stone-900 w-[300px] sm:w-[400px] md:w-[600px] p-6 rounded-b-xl"
+                        className="bg-[#261929] w-[300px] sm:w-[400px] md:w-[600px] p-6 rounded-b-xl"
                         initial={{
                             opacity: 0,
                             scaleY: 0,
