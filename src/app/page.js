@@ -56,7 +56,7 @@ export default function Home() {
         <div className="">
             <main className="w-full h-full">
                 <HeroPage />
-                <div className="bg-[url('/technologyBG.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
+                <div className="">
                     <div className="flex flex-col relative lg:flex-row w-full pb-25 pt-30 px-4 lg:px-10">
                         <div className="flex-4">
                             <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
