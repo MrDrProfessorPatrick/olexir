@@ -17,17 +17,18 @@ const lato = Lato({
 export default function Applications() {
     const cosmeticCarusel = [
         {
-            src: '/ApplicationCarusel1_1.webp',
+            src: '/ApplicationCarusel1_3.webp',
             index: 0,
             text: '',
         },
+
         {
             src: '/ApplicationCarusel1_2.webp',
             index: 1,
             text: '',
         },
         {
-            src: '/ApplicationCarusel1_3.webp',
+            src: '/ApplicationCarusel1_1.webp',
             index: 2,
             text: '',
         },
@@ -35,7 +36,7 @@ export default function Applications() {
 
     const foodCarusel = [
         {
-            src: '/foodCarusel1.webp',
+            src: '/foodCarusel3.webp',
             index: 0,
             text: '',
         },
@@ -45,7 +46,7 @@ export default function Applications() {
             text: '',
         },
         {
-            src: '/foodCarusel3.webp',
+            src: '/foodCarusel1.webp',
             index: 2,
             text: '',
         },

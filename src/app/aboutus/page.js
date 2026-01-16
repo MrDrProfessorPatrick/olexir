@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Script from 'next/script'
+
 import { Lato } from 'next/font/google'
 import Link from 'next/link'
 
@@ -108,7 +109,7 @@ export default function AboutUs() {
                     sizes="(min-width: 1024px) 100vw, 0px"
                 />
             </section>
-            <div className="">
+            <div id="container" className="">
                 <p
                     className={`text-[18px] lg:text-[32px] font-light text-white fong-light text-center leading-8 ${lato.className} pt-13 pb-10 lg:pb-25 px-4 lg:px-14`}
                 >
@@ -233,6 +234,107 @@ export default function AboutUs() {
                             to high-performance plant oils
                         </p>
                     </div>
+                    <>
+                        <h2
+                            className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
+                        >
+                            B2B BUSINESS MODEL
+                        </h2>
+                        {/* mobile */}
+                        <div className="flex flex-col gap-4 justify-center items-center mt-12 tabular-nums lg:hidden">
+                            <div
+                                id="planProtein"
+                                className={`w-full flex flex-col items-center justify-center border-1 border-solid border-white rounded-4xl text-[14px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Co-paid formulation
+                                </h3>
+                                <span>Paid co-development</span>
+                                <span>of partner-specific</span>
+                                <span>formulations, license +</span>
+                                <span>supply</span>
+                            </div>
+
+                            <div
+                                id="secondPlanProtein"
+                                className={`w-full flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-4xl text-[14px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Licensing
+                                </h3>
+                                <span>License Olexir oleogel</span>
+                                <span>IP to manufacturers</span>
+                                <span>(upfront fee + royalty)</span>
+                            </div>
+
+                            <div
+                                id="thirdPlanProtein"
+                                className={`w-full flex flex-col text-center items-center border-1 border-solid border-white rounded-4xl text-[14px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Oleogel sales (CMO)
+                                </h3>
+                                <span> Sell oleogel batch </span>
+                                <span>produced by contract</span>
+                                <span>
+                                    manufacturer (per-kg <br /> margin)
+                                </span>
+                            </div>
+                        </div>
+                        {/* tablet and desktop */}
+                        <div className="flex-row gap-8 lg:justify-around mt-12 hidden lg:flex tabular-nums">
+                            <div
+                                id="planProtein"
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Co-paid formulation
+                                </h3>
+                                <span>Paid co-development</span>
+                                <span>of partner-specific</span>
+                                <span>formulations, license +</span>
+                                <span>supply</span>
+                            </div>
+
+                            <div
+                                id="secondPlanProtein"
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Licensing
+                                </h3>
+                                <span>License Olexir oleogel</span>
+                                <span>IP to manufacturers</span>
+                                <span>(upfront fee + royalty)</span>
+                            </div>
+
+                            <div
+                                id="thirdPlanProtein"
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                            >
+                                <h3
+                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                >
+                                    Oleogel sales (CMO)
+                                </h3>
+                                <span> Sell oleogel batch </span>
+                                <span>produced by contract</span>
+                                <span>
+                                    manufacturer (per-kg <br /> margin)
+                                </span>
+                            </div>
+                        </div>
+                    </>
                     <div className="py-5 lg:py-15 pb:10 lg:pb-30">
                         <h2
                             className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}

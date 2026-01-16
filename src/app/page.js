@@ -21,33 +21,38 @@ const lato = Lato({
 export default function Home() {
     const images = [
         {
-            src: '/ProteinNanofibrils.webp',
+            src: '/Leacking2.png',
             index: 0,
+            text: '',
+        },
+        {
+            src: '/ProteinNanofibrils.webp',
+            index: 1,
             text: 'Functionalised plant protein nanofibrils',
         },
         {
             src: '/CaruselHome1.webp',
-            index: 1,
+            index: 2,
             text: 'Tea tree oleogel structured by potato proteins for cosmetic applications',
         },
         {
             src: '/CaruselHome2.webp',
-            index: 2,
+            index: 3,
             text: 'Rapeseed oleogel structured by soy proteins for food applications',
         },
         {
             src: '/CaruselHome3.webp',
-            index: 3,
+            index: 4,
             text: 'Rapeseed oleogel structured by pea proteins for food applications',
         },
         {
             src: '/CaruselHome5.webp',
-            index: 4,
+            index: 5,
             text: 'MCT oleogel structured by amaranth proteins with colourant for cosmetic applications',
         },
         {
             src: '/CaruselHome4.jpg',
-            index: 5,
+            index: 6,
             text: 'Flaxseed oleogel structured by flaxseed proteins for food applications',
         },
     ]
