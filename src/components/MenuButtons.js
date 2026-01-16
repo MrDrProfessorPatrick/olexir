@@ -28,7 +28,7 @@ export default function MenuButtons({ buttons }) {
                             type="button"
                             key={button}
                             className={`px-2 lg:px-6 py-2 rounded-xl relative cursor-pointer z-[1000] ${
-                                isActive ? 'bg-[#D8AE02]' : 'bg-black'
+                                isActive ? 'bg-[#D8AE02]' : 'bg-[#231428]'
                             }`}
                         >
                             <motion.span

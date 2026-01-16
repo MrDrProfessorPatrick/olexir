@@ -45,7 +45,7 @@ export default function HeroPage() {
                                         xs:w-[150px] xs:h-[49px]
                                         sm:w-[179px] sm:h-[59px]
                                         rounded-xl
-                                        bg-black
+                                        bg-[#231428]
                                         text-white
                                         text-[11px] sm:text-[14px] md:text-[18px]
                                         ${montserrat.className}`}

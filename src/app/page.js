@@ -21,14 +21,14 @@ const lato = Lato({
 export default function Home() {
     const images = [
         {
-            src: '/Leacking2.png',
+            src: '/ProteinNanofibrils.webp',
             index: 0,
-            text: '',
+            text: 'Functionalised plant protein nanofibrils',
         },
         {
-            src: '/ProteinNanofibrils.webp',
+            src: '/BlueMicroscope.PNG',
             index: 1,
-            text: 'Functionalised plant protein nanofibrils',
+            text: 'Microstructure of plant proteins templated oleogel',
         },
         {
             src: '/CaruselHome1.webp',

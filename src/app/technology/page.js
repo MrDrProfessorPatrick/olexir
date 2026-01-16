@@ -1115,8 +1115,8 @@ export default function Solution() {
                                             isExpanded
                                                 ? 'bg-[#4f430f]'
                                                 : !isLast
-                                                ? 'border-b border-white pb-5 rounded-none'
-                                                : ''
+                                                  ? 'border-b border-white pb-5 rounded-none'
+                                                  : ''
                                         }`}
                                         key={faqObj.q}
                                         layout

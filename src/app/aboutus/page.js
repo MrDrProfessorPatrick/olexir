@@ -291,10 +291,10 @@ export default function AboutUs() {
                         <div className="flex-row gap-8 lg:justify-around mt-12 hidden lg:flex tabular-nums">
                             <div
                                 id="planProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[14px] text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Co-paid formulation
                                 </h3>
@@ -309,7 +309,7 @@ export default function AboutUs() {
                                 className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[14px] text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Licensing
                                 </h3>
@@ -323,7 +323,7 @@ export default function AboutUs() {
                                 className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[14px] text-[18px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[14px] text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Oleogel sales (CMO)
                                 </h3>
