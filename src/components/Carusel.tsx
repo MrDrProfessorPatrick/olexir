@@ -10,7 +10,12 @@ import LineCircleLeft from './LineCircleLeft'
 
 import BigImage from './BigImage'
 
-export default function Carusel({ images, isBigCarousel }) {
+interface CaruselProps {
+    images: { src: string; index: number; text?: string }[]
+    isBigCarousel?: boolean
+}
+
+export default function Carusel({ images, isBigCarousel } : CaruselProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
             loop: false,
@@ -20,17 +25,17 @@ export default function Carusel({ images, isBigCarousel }) {
     )
 
     const [selectedIndex, setSelectedIndex] = useState(0)
-    const [scrollSnaps, setScrollSnaps] = useState([])
+    const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
     const [bigImageSrc, setBigImageSrc] = useState('')
-    const [imageIndexes, setImageIndexes] = useState([
+    const [imageIndexes, setImageIndexes] = useState<(number | null)[]>([
         null,
         null,
         null,
         null,
         null,
     ])
-    const [bigImageIndex, setBigImageIndex] = useState(null)
+    const [bigImageIndex, setBigImageIndex] = useState<(number | null)>(null)
 
     useEffect(() => {
         for (let index of imageIndexes) {
@@ -41,7 +46,7 @@ export default function Carusel({ images, isBigCarousel }) {
         }
     }, [imageIndexes])
 
-    const selectImg = useCallback((currIndex) => {
+    const selectImg = useCallback((currIndex : number) => {
         const selected = images.find((img) => img.index === currIndex)
         if (selected) {
             setImageIndexes((prev) =>
@@ -71,7 +76,7 @@ export default function Carusel({ images, isBigCarousel }) {
 
     const scrollPrev = () => emblaApi?.scrollPrev()
     const scrollNext = () => emblaApi?.scrollNext()
-    const scrollTo = (index) => emblaApi?.scrollTo(index)
+    const scrollTo = (index : number) => emblaApi?.scrollTo(index)
 
     return (
         <div className="relative pt-4 lg:pt-8 pb-10 px-0 xs:px-6">

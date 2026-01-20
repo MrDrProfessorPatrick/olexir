@@ -3,6 +3,15 @@ import React from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
+interface CarouselItemProps {
+    src: string
+    index: number
+    setBigImageSrc: (src: string) => void
+    selectImg: (currIndex: number) => void
+    imageIndex: number | null
+    isBigCarousel?: boolean
+}
+
 const CarouselItem = React.memo(function CarouselItem({
     src,
     index,
@@ -10,7 +19,7 @@ const CarouselItem = React.memo(function CarouselItem({
     selectImg,
     imageIndex,
     isBigCarousel,
-}) {
+} : CarouselItemProps) {
     function itemClick(index, src) {
         setBigImageSrc(src)
         selectImg(index)
