@@ -15,7 +15,10 @@ interface CaruselProps {
     isBigCarousel?: boolean
 }
 
-export default function Carusel({ images, isBigCarousel } : CaruselProps) {
+export default function Carusel({
+    images,
+    isBigCarousel = false,
+}: CaruselProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
             loop: false,
@@ -35,7 +38,9 @@ export default function Carusel({ images, isBigCarousel } : CaruselProps) {
         null,
         null,
     ])
-    const [bigImageIndex, setBigImageIndex] = useState<(number | null)>(null)
+    const [bigImageIndex, setBigImageIndex] = useState<number | null>(null)
+    let bigImageText =
+        bigImageIndex != null ? images[bigImageIndex]?.text || '' : ''
 
     useEffect(() => {
         for (let index of imageIndexes) {
@@ -46,7 +51,7 @@ export default function Carusel({ images, isBigCarousel } : CaruselProps) {
         }
     }, [imageIndexes])
 
-    const selectImg = useCallback((currIndex : number) => {
+    const selectImg = useCallback((currIndex: number) => {
         const selected = images.find((img) => img.index === currIndex)
         if (selected) {
             setImageIndexes((prev) =>
@@ -76,7 +81,7 @@ export default function Carusel({ images, isBigCarousel } : CaruselProps) {
 
     const scrollPrev = () => emblaApi?.scrollPrev()
     const scrollNext = () => emblaApi?.scrollNext()
-    const scrollTo = (index : number) => emblaApi?.scrollTo(index)
+    const scrollTo = (index: number) => emblaApi?.scrollTo(index)
 
     return (
         <div className="relative pt-4 lg:pt-8 pb-10 px-0 xs:px-6">
@@ -87,7 +92,7 @@ export default function Carusel({ images, isBigCarousel } : CaruselProps) {
                     setBigImageSrc={setBigImageSrc}
                     bigImageIndex={bigImageIndex}
                     deSelectImg={deSelectImg}
-                    text={images[bigImageIndex]?.text}
+                    text={bigImageText}
                 />
             )}
 
@@ -112,7 +117,9 @@ export default function Carusel({ images, isBigCarousel } : CaruselProps) {
                                     src={imgObj.src}
                                     index={currIndex}
                                     setBigImageSrc={setBigImageSrc}
-                                    imageIndex={imageIndexes[imgObj.index]}
+                                    imageIndex={
+                                        imageIndexes[imgObj.index] ?? null
+                                    }
                                     selectImg={selectImg}
                                     isBigCarousel={isBigCarousel}
                                 />
