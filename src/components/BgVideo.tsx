@@ -1,6 +1,12 @@
 'use client'
 
-export default function BgVideo({ link, height, poster }) {
+interface BgVideoProps {
+    link: string
+    height?: string
+    poster?: string
+}
+
+export default function BgVideo({ link, height, poster }: BgVideoProps) {
     return (
         <div className="relative">
             <div
