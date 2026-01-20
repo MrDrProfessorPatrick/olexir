@@ -8,6 +8,15 @@ const montserrat = Montserrat({
     weight: ['100', '300', '400', '700', '900'],
 })
 
+interface BigImageProps {
+    src: string
+    alt: string
+    setBigImageSrc: (src: string) => void
+    bigImageIndex: number | null
+    deSelectImg: () => void
+    text?: string
+}
+
 export default function BigImage({
     src,
     alt,
@@ -15,13 +24,13 @@ export default function BigImage({
     bigImageIndex,
     deSelectImg,
     text,
-}) {
+} : BigImageProps) {
     return (
         <AnimatePresence mode="wait">
             <motion.div
                 onClick={() => {
                     setBigImageSrc('')
-                    deSelectImg(bigImageIndex)
+                    deSelectImg()
                 }}
                 style={{
                     position: 'fixed',
