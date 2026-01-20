@@ -2,9 +2,19 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-export default function AnimatedNumber({ value, duration, className = '' }) {
+interface AnimatedNumberProps {
+    value: number
+    duration?: number
+    className?: string
+}
+
+export default function AnimatedNumber({
+    value,
+    duration,
+    className = '',
+}: AnimatedNumberProps) {
     const { ref, inView } = useInView({ triggerOnce: false })
-    const [finalValue] = useState(+value)
+    const [finalValue] = useState(value)
     const count = useMotionValue(0)
     const rounded = useTransform(count, (latest) => Math.round(latest))
     const [mounted, setMounted] = useState(false)

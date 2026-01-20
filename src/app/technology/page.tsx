@@ -219,7 +219,7 @@ export default function Solution() {
                             <div
                                 className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
-                                <AnimatedNumber value="60" className="inline" />
+                                <AnimatedNumber value={60} className="inline" />
                                 %
                             </div>
                             <div
@@ -230,7 +230,7 @@ export default function Solution() {
                                 >
                                     population suffering from overweight incl.
                                     <AnimatedNumber
-                                        value="16"
+                                        value={16}
                                         className="inline"
                                     />
                                     % living with obesity{' '}
@@ -248,7 +248,7 @@ export default function Solution() {
                                 className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
                                 <span>&lt;</span>{' '}
-                                <AnimatedNumber value="5" className="inline" />%
+                                <AnimatedNumber value={5} className="inline" />%
                             </div>
                             <div
                                 className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 md:px-0 lg:px-10 text-[20px] md:text-[20px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
