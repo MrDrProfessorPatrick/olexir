@@ -19,8 +19,8 @@ const CarouselItem = React.memo(function CarouselItem({
     selectImg,
     imageIndex,
     isBigCarousel,
-} : CarouselItemProps) {
-    function itemClick(index, src) {
+}: CarouselItemProps) {
+    function itemClick(index: number, src: string) {
         setBigImageSrc(src)
         selectImg(index)
     }
