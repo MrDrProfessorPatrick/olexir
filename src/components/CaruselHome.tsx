@@ -8,7 +8,15 @@ import CarouselItem from './CaruselItem'
 
 import BigImage from './BigImage'
 
-export default function CaruselHome({ images, isBigCarousel }) {
+interface CaruselHomeProps {
+    images: { src: string; index: number; text?: string }[]
+    isBigCarousel?: boolean
+}
+
+export default function CaruselHome({
+    images,
+    isBigCarousel = false,
+}: CaruselHomeProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
             loop: false,
@@ -18,13 +26,13 @@ export default function CaruselHome({ images, isBigCarousel }) {
     )
 
     const [selectedIndex, setSelectedIndex] = useState(0)
-    const [scrollSnaps, setScrollSnaps] = useState([])
+    const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
 
     const [bigImageSrc, setBigImageSrc] = useState('')
     const [imageIndexes, setImageIndexes] = useState(
         new Array(images.length).fill(null)
     )
-    const [bigImageIndex, setBigImageIndex] = useState(null)
+    const [bigImageIndex, setBigImageIndex] = useState<number | null>(null)
 
     useEffect(() => {
         for (let index of imageIndexes) {
@@ -36,7 +44,7 @@ export default function CaruselHome({ images, isBigCarousel }) {
     }, [imageIndexes])
 
     const selectImg = useCallback(
-        (currIndex) => {
+        (currIndex: number) => {
             const selected = images.find((img) => img.index === currIndex)
             if (selected) {
                 setImageIndexes((prev) =>
@@ -68,7 +76,9 @@ export default function CaruselHome({ images, isBigCarousel }) {
 
     const scrollPrev = () => emblaApi?.scrollPrev()
     const scrollNext = () => emblaApi?.scrollNext()
-    const scrollTo = (index) => emblaApi?.scrollTo(index)
+    const scrollTo = (index: number) => emblaApi?.scrollTo(index)
+    let bigImageText =
+        bigImageIndex != null ? images[bigImageIndex]?.text || '' : ''
 
     return (
         <div className="relative pt-2 lg:pt-2 pb-20 px-0 xs:px-6">
@@ -79,7 +89,7 @@ export default function CaruselHome({ images, isBigCarousel }) {
                     setBigImageSrc={setBigImageSrc}
                     bigImageIndex={bigImageIndex}
                     deSelectImg={deSelectImg}
-                    text={images[bigImageIndex]?.text}
+                    text={bigImageText}
                 />
             )}
 
