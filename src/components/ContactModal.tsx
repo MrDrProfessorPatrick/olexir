@@ -2,6 +2,12 @@
 import { useState } from 'react'
 import { usePopup } from './PopUpProvider'
 
+type FormErrors = {
+    name?: boolean
+    email?: boolean
+    emailFormat?: boolean
+}
+
 export default function ContactModal() {
     const { isOpen, closePopup } = usePopup()
 
@@ -12,23 +18,27 @@ export default function ContactModal() {
         message: '',
     })
 
-    const [errors, setErrors] = useState({
+    const [errors, setErrors] = useState<FormErrors>({
         name: false,
         email: false,
         emailFormat: false,
     })
 
     const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState<string>('')
     const [success, setSuccess] = useState(false)
 
-    const validateEmail = (email) => {
+    const validateEmail = (email: string) => {
         // Simple but reliable regex for email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         return emailRegex.test(email)
     }
 
-    const handleChange = (e) => {
+    const handleChange = (
+        e: React.ChangeEvent<
+            HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+        >
+    ): void => {
         const { name, value } = e.target
 
         setFormData({
@@ -45,7 +55,7 @@ export default function ContactModal() {
     }
 
     const handleSubmit = async () => {
-        const newErrors = {}
+        const newErrors: FormErrors = {}
 
         if (!formData.name.trim()) newErrors.name = true
 
@@ -61,7 +71,7 @@ export default function ContactModal() {
         }
 
         setLoading(true)
-        setError(null)
+        setError('')
         setSuccess(false)
 
         try {

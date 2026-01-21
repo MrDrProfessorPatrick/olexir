@@ -1,7 +1,17 @@
 'use client'
 import { createContext, useState, useContext } from 'react'
 
-const PopupContext = createContext(null)
+interface PopupProviderProps {
+    children: React.ReactNode
+}
+
+type PopupContextType = {
+    isOpen: boolean
+    openPopup: () => void
+    closePopup: () => void
+}
+
+const PopupContext = createContext<PopupContextType | undefined>(undefined)
 
 export function usePopup() {
     const ctx = useContext(PopupContext)
@@ -9,7 +19,7 @@ export function usePopup() {
     return ctx
 }
 
-export default function PopupProvider({ children }) {
+export default function PopupProvider({ children }: PopupProviderProps) {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <PopupContext.Provider
