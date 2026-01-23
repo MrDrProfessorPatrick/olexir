@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function TypewriterText({ text, delay = 0.03, className = "" }) {
+interface TypewriterTextProps {
+  text: string, 
+  delay: number, 
+  className : string,
+}
+
+export default function TypewriterText({ text, delay = 0.03, className = "" } : TypewriterTextProps) {
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {

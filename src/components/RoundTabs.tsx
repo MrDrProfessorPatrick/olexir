@@ -10,7 +10,17 @@ const lato = Lato({
     weight: ['100', '300', '400', '700', '900'],
 })
 
-export default function RoundTabs({ tabText, lineColor }) {
+type TabTextItem = {
+  text: string
+  id: string
+}
+
+interface RoundTabs {
+    tabText: TabTextItem[],
+    lineColor: string,
+}
+
+export default function RoundTabs({ tabText, lineColor } : RoundTabs) {
     const isMobile = useIsMobile()
 
     const [hydrated, setHydrated] = useState(false)
@@ -20,7 +30,9 @@ export default function RoundTabs({ tabText, lineColor }) {
         <div className="flex justify-center md:justify-around">
             <div className="flex flex-col w-full sm:w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
                 {tabText &&
-                    tabText.map((textObj, i) => (
+                    tabText.map((textObj, i) => {
+                    const nextTab = tabText[i + 1]
+                    return (
                         <>
                             <span
                                 id={textObj.id}
@@ -28,10 +40,10 @@ export default function RoundTabs({ tabText, lineColor }) {
                             >
                                 {textObj.text}
                             </span>
-                            {hydrated && i !== tabText.length - 1 && (
-                                <DashedLine
+                            {hydrated && i !== tabText.length - 1 && nextTab && (
+                               <DashedLine
                                     fromId={textObj.id}
-                                    toId={tabText[i + 1].id}
+                                    toId={nextTab.id}
                                     startFn={
                                         isMobile
                                             ? 'getMiddleBottomEdge'
@@ -42,13 +54,12 @@ export default function RoundTabs({ tabText, lineColor }) {
                                             ? 'getUpperCenter'
                                             : 'getLefttMiddleEdge'
                                     }
-                                    curveIndex={2}
-                                    curveDist={2}
+                                    curveDistX1={2}
                                     color={lineColor}
                                 />
                             )}
                         </>
-                    ))}
+                        )})}
             </div>
         </div>
     )
