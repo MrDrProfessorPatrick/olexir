@@ -2,8 +2,8 @@ import HeroPage from '@/components/HeroPage'
 import HomePageContent from '@/components/HomePageContent'
 import CaruselHome from '@/components/CaruselHome'
 import { Lato } from 'next/font/google'
-import LineCircleRight from '../components/LineCircleRight'
-import LineCircleLeft from '../components/LineCircleLeft'
+import LineCircleRight from '../../components/LineCircleRight'
+import LineCircleLeft from '../../components/LineCircleLeft'
 
 const lato = Lato({
     variable: '--font-lato',
