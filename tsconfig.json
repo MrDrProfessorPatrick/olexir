@@ -59,7 +59,7 @@
         ".next/types/**/*.ts",
         "**/*.ts",
         "**/*.tsx",
-        "src/app/applications/page.jsx"
+        "src/app/(site)/applications/page.jsx"
     ],
     "exclude": ["node_modules"]
 }

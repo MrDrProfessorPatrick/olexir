@@ -3,8 +3,8 @@ import HomePageContent from '@/components/HomePageContent'
 import CaruselHome from '@/components/CaruselHome'
 import { Inter } from 'next/font/google'
 import { Lato } from 'next/font/google'
-import LineCircleRight from '../components/LineCircleRight'
-import LineCircleLeft from '../components/LineCircleLeft'
+import LineCircleRight from '../../components/LineCircleRight'
+import LineCircleLeft from '../../components/LineCircleLeft'
 
 const inter = Inter({
     variable: '--font-inter',
