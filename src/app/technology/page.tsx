@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Script from 'next/script'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import AnimatedNumber from '@/components/AnimatedNumber'
 import Image from 'next/image'
 import BgVideo from '@/components/BgVideo'
@@ -383,8 +383,6 @@ export default function Solution() {
                                         toId="noOilHeating"
                                         startFn="getRightMiddleEdge"
                                         endFn="getLefttMiddleEdge"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="noOilHeating"
@@ -397,8 +395,6 @@ export default function Solution() {
                                         toId="proteinPower"
                                         startFn="getRightMiddleEdge"
                                         endFn="getLefttMiddleEdge"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="proteinPower"
@@ -411,8 +407,6 @@ export default function Solution() {
                                         toId="solidityPlant"
                                         startFn="getRightMiddleEdge"
                                         endFn="getLefttMiddleEdge"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="solidityPlant"
@@ -480,8 +474,6 @@ export default function Solution() {
                                         toId="noOilHeating"
                                         startFn="getMiddleBottomEdge"
                                         endFn="getUpperCenter"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="noOilHeating"
@@ -494,8 +486,6 @@ export default function Solution() {
                                         toId="proteinPower"
                                         startFn="getMiddleBottomEdge"
                                         endFn="getUpperCenter"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="proteinPower"
@@ -508,8 +498,6 @@ export default function Solution() {
                                         toId="solidityPlant"
                                         startFn="getMiddleBottomEdge"
                                         endFn="getUpperCenter"
-                                        curveIndex={2}
-                                        curveDist={2}
                                     />
                                     <span
                                         id="solidityPlant"
@@ -625,7 +613,7 @@ export default function Solution() {
                                 without the need for heating, toxic solvents,
                                 nickel or expensive cross-linkers and with as
                                 high as minimum{' '}
-                                <AnimatedNumber value="96" className="inline" />
+                                <AnimatedNumber value={96} className="inline" />
                                 % oil loading capacity.
                             </div>
                         </div>
@@ -734,7 +722,7 @@ export default function Solution() {
                                         <span>
                                             generate ~
                                             <AnimatedNumber
-                                                value="90"
+                                                value={90}
                                                 className="inline"
                                             />
                                             times less
@@ -758,7 +746,7 @@ export default function Solution() {
                                         <span>
                                             ~
                                             <AnimatedNumber
-                                                value="10"
+                                                value={10}
                                                 className="inline"
                                             />
                                             % of global CO₂
@@ -782,12 +770,12 @@ export default function Solution() {
                                     >
                                         <span>
                                             <AnimatedNumber
-                                                value="30"
+                                                value={30}
                                                 className="inline"
                                             />
                                             –
                                             <AnimatedNumber
-                                                value="50"
+                                                value={50}
                                                 className="inline"
                                             />
                                             % of protein remains
@@ -798,7 +786,7 @@ export default function Solution() {
                                         <span>
                                             ~
                                             <AnimatedNumber
-                                                value="30"
+                                                value={30}
                                                 className="inline"
                                             />
                                             % of soy protein are lost in <br />{' '}
@@ -818,7 +806,7 @@ export default function Solution() {
                                         <span>
                                             generate ~
                                             <AnimatedNumber
-                                                value="90"
+                                                value={90}
                                                 className="inline"
                                             />
                                             × lower
@@ -844,7 +832,7 @@ export default function Solution() {
                                         <span>
                                             ~
                                             <AnimatedNumber
-                                                value="10"
+                                                value={10}
                                                 className="inline"
                                             />
                                             % of global CO₂
@@ -868,12 +856,12 @@ export default function Solution() {
                                     >
                                         <span>
                                             <AnimatedNumber
-                                                value="30"
+                                                value={30}
                                                 className="inline"
                                             />
                                             –
                                             <AnimatedNumber
-                                                value="50"
+                                                value={50}
                                                 className="inline"
                                             />
                                             % protein remains
@@ -884,7 +872,7 @@ export default function Solution() {
                                         <span>
                                             ~
                                             <AnimatedNumber
-                                                value="30"
+                                                value={30}
                                                 className="inline"
                                             />
                                             % lost in tofu production
@@ -936,7 +924,7 @@ export default function Solution() {
                                     <span>
                                         generate ~
                                         <AnimatedNumber
-                                            value="90"
+                                            value={90}
                                             className="inline"
                                         />
                                         × lower
@@ -960,7 +948,7 @@ export default function Solution() {
                                     <span>
                                         ~
                                         <AnimatedNumber
-                                            value="10"
+                                            value={10}
                                             className="inline"
                                         />
                                         % of global CO₂
@@ -984,12 +972,12 @@ export default function Solution() {
                                 >
                                     <span>
                                         <AnimatedNumber
-                                            value="30"
+                                            value={30}
                                             className="inline"
                                         />
                                         –
                                         <AnimatedNumber
-                                            value="50"
+                                            value={50}
                                             className="inline"
                                         />
                                         % protein remains
@@ -998,7 +986,7 @@ export default function Solution() {
                                     <span>
                                         ~
                                         <AnimatedNumber
-                                            value="30"
+                                            value={30}
                                             className="inline"
                                         />
                                         % lost in tofu production
@@ -1014,14 +1002,14 @@ export default function Solution() {
                             <LineCircleRight
                                 top={30}
                                 width={30}
-                                leftEdge={-40}
+                                leftEdge='-40'
                             />
                         )}
                         {!isTablet && (
                             <LineCircleLeft
                                 top={30}
                                 width={30}
-                                rightEdge={-40}
+                                rightEdge='-40'
                             />
                         )}
                         <div className="flex flex-[1_1_0] flex-col items-center">

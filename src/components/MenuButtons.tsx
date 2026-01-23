@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-export default function MenuButtons({ buttons }) {
+interface MenuButtonsProps {
+    buttons: string[]
+}
+
+export default function MenuButtons({ buttons } : MenuButtonsProps ) {
     const path = usePathname()
 
     // Better way to determine active button
@@ -19,7 +23,7 @@ export default function MenuButtons({ buttons }) {
 
     return (
         <div className="absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-6 pb-4 pt-4 flex flex-row items-center">
-            {buttons.map((button) => {
+            {buttons.map((button : string) => {
                 const isActive = activeButton === button
                 const href = `/${button.replace(/\s+/g, '').toLowerCase()}`
                 return (

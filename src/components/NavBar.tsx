@@ -53,12 +53,14 @@ export default function NavBar() {
                                     key={button}
                                     href={href}
                                     onClick={() => {
-                                        document.getElementById(
+                                        const menuToggle = document.getElementById(
                                             'menu-toggle'
-                                        ).checked = false
-                                        document.body.classList.remove(
-                                            'overflow-hidden'
-                                        )
+                                        ) as HTMLInputElement | null
+
+                                        if (!menuToggle) return
+
+                                        menuToggle.checked = false
+                                        document.body.classList.remove('overflow-hidden')
                                     }}
                                     className="block p-4 text-white text-4xl font-semibold border-b border-gray-700 hover:bg-gray-700 text-center"
                                 >
