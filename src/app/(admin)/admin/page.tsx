@@ -5,7 +5,6 @@ export default function AdminPage() {
         <div className="min-h-screen bg-black flex items-center justify-center">
             <SignedOut>
                 <SignIn
-                    afterSignInUrl="/admin"
                     appearance={{
                         variables: {
                             colorBackground: '#ffffff',
