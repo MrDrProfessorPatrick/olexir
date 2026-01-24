@@ -29,12 +29,35 @@ model PostBlock {
   type      BlockType
   text      String?
   imageUrl  String?
+  carusel   Carousel?
   order     Int
 
   createdAt DateTime @default(now())
 }
 
+model Carousel {
+  id        String         @id @default(uuid())
+  blockId  String         @unique
+  block    PostBlock      @relation(fields: [blockId], references: [id], onDelete: Cascade)
+
+  items     CarouselItem[]
+}
+
+model CarouselItem {
+  id          String   @id @default(uuid())
+  carouselId String
+  carousel   Carousel @relation(fields: [carouselId], references: [id], onDelete: Cascade)
+
+  src        String
+  index      Int
+  text       String?
+
+  createdAt DateTime @default(now())
+}
+
+
 enum BlockType {
   TEXT
   IMAGE
+  CARUSEL
 }
