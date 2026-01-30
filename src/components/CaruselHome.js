@@ -90,7 +90,7 @@ export default function CaruselHome({ images, isBigCarousel }) {
                     </button>
                 </div>
                 <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex">
+                    <div className="flex w-[100%] lg:w-[800px] xl:w-[1200px] 2xl:w-[1300px] 3xl:w-[1608px]">
                         {images.map((imgObj, currIndex) => {
                             return (
                                 <CarouselItem
