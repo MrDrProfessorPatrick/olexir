@@ -8,7 +8,7 @@ export default function NavBar() {
 
     return (
         <div className="absolute w-full h-[100px]">
-            <div className="absolute inset-0 flex items-center justify-center z-10 w-[180px] h-[60px] xs:w-[220px] xs:h-[70px] ml-[5%] mt-[2%] z-1000">
+            <div className="absolute inset-0 flex items-center justify-center z-10 w-[180px] h-[60px] xs:w-[180px] xs:h-[60px] lg:w-[220px] lg:h-[70px] ml-[5%] mt-[2%] z-1000">
                 <Link
                     href="/"
                     className="absolute inset-0 z-20"

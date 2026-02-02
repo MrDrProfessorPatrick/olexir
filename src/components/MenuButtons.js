@@ -1,13 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function MenuButtons({ buttons }) {
     const path = usePathname()
 
-    // Better way to determine active button
     const getActiveButton = () => {
         if (path === '/technology') return 'Technology'
         if (path === '/applications') return 'Applications'
