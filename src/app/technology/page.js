@@ -286,19 +286,19 @@ export default function Solution() {
                             />
                         </div>
                         <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
-                            <div className="flex justify-between w-[100%] md:max-w-[600px] h-10">
+                            <div className="flex justify-between md:justify-start md:gap-[30px] h-10">
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-3 md:pt-1 pt-2 lg:pt-0 ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
                                 >
                                     Fluidity
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-3 md:pt-1 pt-2 lg:pt-0 ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
                                 >
                                     Instability
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[20px] lg:text-[24px] text-white px-3 md:pt-1 pt-2 lg:pt-0 ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
                                 >
                                     Non-absorbability
                                 </span>

@@ -174,7 +174,7 @@ export default function ContactModal() {
                                 <button
                                     onClick={handleSubmit}
                                     disabled={loading}
-                                    className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg disabled:opacity-50"
+                                    className="w-full px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors shadow-lg disabled:opacity-50 cursor-pointer"
                                 >
                                     {loading ? 'Sending...' : 'Partner With Us'}
                                 </button>

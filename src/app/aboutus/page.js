@@ -143,7 +143,7 @@ export default function AboutUs() {
                         value for beauty and food manufacturers.
                     </p>
                     <div
-                        className="relative flex flex-col lg:flex-row w-full mt-8 lg:mt-20 rounded-md
+                        className="relative flex flex-col lg:flex-row w-full mt-2 lg:mt-0 rounded-md
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
@@ -241,7 +241,7 @@ export default function AboutUs() {
                             B2B BUSINESS MODEL
                         </h2>
                         {/* mobile */}
-                        <div className="flex flex-col gap-4 justify-center items-center mt-12 tabular-nums lg:hidden">
+                        <div className="flex flex-col gap-4 justify-center items-center mt-2 tabular-nums lg:hidden">
                             <div
                                 id="planProtein"
                                 className={`w-full flex flex-col items-center justify-center border-1 border-solid border-white rounded-4xl text-[14px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
@@ -288,7 +288,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                         {/* tablet and desktop */}
-                        <div className="flex-row gap-8 lg:justify-around mt-12 hidden lg:flex tabular-nums">
+                        <div className="flex-row gap-8 lg:justify-around mt-2 hidden lg:flex tabular-nums">
                             <div
                                 id="planProtein"
                                 className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}

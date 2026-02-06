@@ -77,9 +77,9 @@ export default function HomePageContent() {
                     — DR SVITLANA MYKOLENKO
                 </p>
                 <div className="flex justify-end pr-0 pt-14 md:pr-30 pb-10">
-                    <div className="hidden md:block pr-5 pb-20 pt-50">
+                    <div className="hidden md:block pr-20 pb-20 pt-10">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0]  font-semibold text-white ${montserrat.className}`}
                         >
                             ”
                         </span>
