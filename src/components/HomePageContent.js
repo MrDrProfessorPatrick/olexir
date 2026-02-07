@@ -1,17 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Montserrat } from 'next/font/google'
-import { Inter } from 'next/font/google'
 import { Lato } from 'next/font/google'
 
 const montserrat = Montserrat({
     variable: '--font-montserrat',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
-
-const inter = Inter({
-    variable: '--font-inter',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })

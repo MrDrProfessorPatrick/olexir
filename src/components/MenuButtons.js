@@ -25,12 +25,12 @@ export default function MenuButtons({ buttons }) {
                         <button
                             type="button"
                             key={button}
-                            className={`px-2 lg:px-6 py-2 rounded-xl relative cursor-pointer z-[1000] ${
+                            className={`px-2 lg:px-6 py-2 lg:py-4 rounded-xl relative cursor-pointer z-[1000] ${
                                 isActive ? 'bg-[#D8AE02]' : 'bg-[#231428]'
                             }`}
                         >
                             <span
-                                className={`tracking-wide px-4 block relative linear-mask ${
+                                className={`tracking-wide px-4 block relative linear-mask lg:text-xl ${
                                     isActive
                                         ? 'text-black'
                                         : 'text-neutral-100 '

@@ -89,8 +89,8 @@ export default function Home() {
                                 structured plant protein hydrolysates.
                             </p>
                         </div>
-                        <LineCircleLeft top={100} width={70} />
-                        <LineCircleRight top={100} width={70} />
+                        <LineCircleLeft top={106} width={70} />
+                        <LineCircleRight top={106} width={70} />
                     </div>
                     <div className="flex justify-center pb-8 lg:pb-0">
                         <h2
