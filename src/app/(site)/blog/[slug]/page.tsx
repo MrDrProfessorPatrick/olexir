@@ -1,5 +1,5 @@
 import { auth } from '@clerk/nextjs/server'
-import AddPostButton from '../../../components/AddPostButton'
+import BlogEditor from '../../../../components/BlogEditor'
 
 export default async function Blog() {
     const { userId } = await auth()
@@ -7,7 +7,7 @@ export default async function Blog() {
     return (
         <>
             <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-                {userId && <AddPostButton />}
+                {userId && <BlogEditor />}
                 <div className="flex">BLOG CONTENT</div>
             </div>
         </>
