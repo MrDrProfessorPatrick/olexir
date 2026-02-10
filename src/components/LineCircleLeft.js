@@ -1,6 +1,5 @@
 export default function LineCircleLeft({ top, width, rightEdge }) {
     const topValue = typeof top === 'object' ? top : { base: top }
-    console.log('topValue:', topValue)
     return (
         <div
             style={{

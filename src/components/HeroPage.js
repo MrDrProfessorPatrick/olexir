@@ -33,7 +33,7 @@ export default function HeroPage() {
             <div className="absolute inset-0 mt-[201px]">
                 <div className={`relative max-w-[1200px] pl-[5%]`}>
                     <h1
-                        className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] xs:text-[38px] text-[28px] font-extrabold text-black text-left ${lato.className} `}
+                        className={`2xl:text-[87px] xl:text-[87px] lg:text-[67px] md:text-[57px] sm:text-[47px] xs:text-[38px] text-[28px] font-bold text-black text-left ${lato.className} `}
                     >
                         Protein-empowered fat alternatives
                     </h1>

@@ -10,18 +10,11 @@ import LineCircleLeft from '@/components/LineCircleLeft'
 import LineCircleRight from '@/components/LineCircleRight'
 import { useIsMobile, useIsTablet } from '@/hooks/useIsMobile'
 import { Lato } from 'next/font/google'
-import { Inter } from 'next/font/google'
 import { FaPlus } from 'react-icons/fa6'
 import { FaMinus } from 'react-icons/fa6'
 
 const lato = Lato({
     variable: '--font-lato',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
-
-const inter = Inter({
-    variable: '--font-inter',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })
@@ -288,17 +281,17 @@ export default function Solution() {
                         <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
                             <div className="flex justify-between md:justify-start md:gap-[30px] h-10">
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Fluidity
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Instability
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${inter.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Non-absorbability
                                 </span>
@@ -728,7 +721,7 @@ export default function Solution() {
                                 <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12 tabular-nums">
                                     <div
                                         id="planProtein"
-                                        className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${inter.className}`}
+                                        className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>
@@ -753,7 +746,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             ~
@@ -778,7 +771,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             <AnimatedNumber
@@ -812,7 +805,7 @@ export default function Solution() {
                                 <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
                                     <div
                                         id="planProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>
@@ -839,7 +832,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             ~
@@ -864,7 +857,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             <AnimatedNumber
@@ -930,7 +923,7 @@ export default function Solution() {
                             <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
                                 <div
                                     id="planProtein"
-                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                 >
                                     <span>Plant protein</span>
                                     <span>
@@ -955,7 +948,7 @@ export default function Solution() {
                                 />
                                 <div
                                     id="secondPlanProtein"
-                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                 >
                                     <span>
                                         ~
@@ -980,7 +973,7 @@ export default function Solution() {
                                 />
                                 <div
                                     id="thirdPlanProtein"
-                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${inter.className}`}
+                                    className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                 >
                                     <span>
                                         <AnimatedNumber
