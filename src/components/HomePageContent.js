@@ -39,7 +39,7 @@ export default function HomePageContent() {
             {/* Додаємо flex-col для мобільних, flex-row для десктопа та адаптивний gap */}
             <div className="flex flex-col lg:flex-row px-6 lg:px-18 items-center justify-center gap-[137px]">
                 <div className="flex-1 max-w-[800px]">
-                    <div className="flex items-start pt-10 lg:pt-36 pb-10">
+                    <div className="flex items-start pt-10 lg:pt-36 pb-10 2xl:absolute 2xl:left-40 2xl:pt-28">
                         <span
                             className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
                         >
@@ -48,7 +48,7 @@ export default function HomePageContent() {
                     </div>
 
                     <p
-                        className={`text-[18px] md:text-[24px] text-white ${montserrat.className}`}
+                        className={`text-[18px] md:text-[24px] text-white ${montserrat.className} 2xl:pt-40`}
                     >
                         Olexir emerged from{' '}
                         <Link
