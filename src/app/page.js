@@ -100,7 +100,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-center pb-8 lg:pb-0">
                         <h2
-                            className={`text-[18px] sm:text-[28px] lg:text-[32px] xl:text-[40px] px-4 text-center font-medium text-white ${lato.className}`}
+                            className={`text-[18px] md:text-[28px] lg:text-[32px] xl:text-[40px] px-4 text-center font-medium text-white ${lato.className}`}
                         >
                             Plant proteins turn liquid oils into solid oleogels
                         </h2>

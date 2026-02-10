@@ -36,19 +36,18 @@ export default function HomePageContent() {
                     sizes="(max-width: 200px)"
                 />
             </div>
-            {/* Додаємо flex-col для мобільних, flex-row для десктопа та адаптивний gap */}
-            <div className="flex flex-col md:flex-row px-12 lg:px-18 items-left justify-center gap-[0px] sm:gap-[60px] lg:gap-[137px]">
+            <div className="flex flex-col md:flex-row px-12 lg:px-18 items-left justify-center gap-[0px] md:gap-[60px] lg:gap-[137px]">
                 <div className="flex-1 max-w-[800px]">
-                    <div className="flex items-start pt-20 lg:pt-36 pb-10 2xl:absolute 2xl:left-[6%] 2xl:pt-28">
+                    <div className="flex items-start pt-20 lg:pt-36 pb-10 absolute left-[2%] md:relative md:left-0 2xl:absolute  2xl:left-[6%] 2xl:pt-28">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
                         >
                             “
                         </span>
                     </div>
 
                     <p
-                        className={`text-[18px] lg:text-[24px] text-white ${montserrat.className} 2xl:pt-40`}
+                        className={`text-[18px] lg:text-[24px] text-white ${montserrat.className} pt-30 md:pt-0 2xl:pt-40`}
                     >
                         Olexir emerged from{' '}
                         <Link
@@ -72,18 +71,16 @@ export default function HomePageContent() {
                         — DR SVITLANA MYKOLENKO
                     </p>
 
-                    {/* Права лапка */}
-                    <div className="lg:flex justify-end pl-100 lg:pt-14 lg:pb-10">
+                    <div className="absolute right-[10px] mt-[80px] md:mt-0 md:relative md:flex md:justify-end md:pt-14 md:pb-10">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
                         >
                             ”
                         </span>
                     </div>
                 </div>
 
-                {/* Контейнер для фото (flex-shrink-0 запобігає стисканню картинки) */}
-                <div className="relative justify-left shrink-0 w-[235px] h-[257px] lg:w-[357px] lg:h-[394px] xl:w-[404px] xl:h-[442px] mt-10 lg:mt-26">
+                <div className="relative justify-left shrink-0 w-[235px] h-[257px] lg:w-[357px] lg:h-[394px] xl:w-[404px] xl:h-[442px] mt-10 md:mt-26 lg:mt-16">
                     <Image
                         src="/svitlanaHomePage.png"
                         alt="svitlana scientist"
