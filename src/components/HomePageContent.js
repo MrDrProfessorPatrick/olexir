@@ -37,9 +37,9 @@ export default function HomePageContent() {
                 />
             </div>
             {/* Додаємо flex-col для мобільних, flex-row для десктопа та адаптивний gap */}
-            <div className="flex flex-col lg:flex-row px-6 lg:px-18 items-center justify-center gap-[137px]">
+            <div className="flex flex-col md:flex-row px-12 lg:px-18 items-left justify-center gap-[0px] sm:gap-[60px] lg:gap-[137px]">
                 <div className="flex-1 max-w-[800px]">
-                    <div className="flex items-start pt-10 lg:pt-36 pb-10 2xl:absolute 2xl:left-40 2xl:pt-28">
+                    <div className="flex items-start pt-20 lg:pt-36 pb-10 2xl:absolute 2xl:left-[6%] 2xl:pt-28">
                         <span
                             className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
                         >
@@ -48,7 +48,7 @@ export default function HomePageContent() {
                     </div>
 
                     <p
-                        className={`text-[18px] md:text-[24px] text-white ${montserrat.className} 2xl:pt-40`}
+                        className={`text-[18px] lg:text-[24px] text-white ${montserrat.className} 2xl:pt-40`}
                     >
                         Olexir emerged from{' '}
                         <Link
@@ -73,7 +73,7 @@ export default function HomePageContent() {
                     </p>
 
                     {/* Права лапка */}
-                    <div className="hidden lg:flex justify-end pt-14 pb-10">
+                    <div className="lg:flex justify-end pl-100 lg:pt-14 lg:pb-10">
                         <span
                             className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
                         >
@@ -83,7 +83,7 @@ export default function HomePageContent() {
                 </div>
 
                 {/* Контейнер для фото (flex-shrink-0 запобігає стисканню картинки) */}
-                <div className="relative shrink-0 w-[222px] h-[254px] lg:w-[342px] lg:h-[374px] mt-10 lg:mt-26">
+                <div className="relative justify-left shrink-0 w-[235px] h-[257px] lg:w-[357px] lg:h-[394px] xl:w-[404px] xl:h-[442px] mt-10 lg:mt-26">
                     <Image
                         src="/svitlanaHomePage.png"
                         alt="svitlana scientist"
