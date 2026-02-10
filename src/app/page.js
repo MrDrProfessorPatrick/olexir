@@ -1,16 +1,9 @@
 import HeroPage from '@/components/HeroPage'
 import HomePageContent from '@/components/HomePageContent'
 import CaruselHome from '@/components/CaruselHome'
-import { Inter } from 'next/font/google'
 import { Lato } from 'next/font/google'
 import LineCircleRight from '../components/LineCircleRight'
 import LineCircleLeft from '../components/LineCircleLeft'
-
-const inter = Inter({
-    variable: '--font-inter',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
 
 const lato = Lato({
     variable: '--font-lato',
@@ -73,7 +66,7 @@ export default function Home() {
                         </div>
                         <div className="flex-3">
                             <p
-                                className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
+                                className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${lato.className}`}
                             >
                                 At <span className="font-bold">Olexir</span> we
                                 harness the power of plant proteins to
@@ -82,7 +75,7 @@ export default function Home() {
                             </p>
                             <br />
                             <p
-                                className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${inter.className}`}
+                                className={`text-[18px] lg:text-[24px] font-normal text-white mt-10 lg:mt-0 ${lato.className}`}
                             >
                                 We boost bioavailability and stability of oils
                                 for beauty, food and health – by employing
