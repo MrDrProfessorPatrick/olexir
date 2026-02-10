@@ -36,63 +36,61 @@ export default function HomePageContent() {
                     sizes="(max-width: 200px)"
                 />
             </div>
-            <div className="bg-cover bg-center">
-                <div className="flex items-start pl-5 md:pl-20 pt-26 lg:pt-36 pb-10">
-                    <span
-                        className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
-                    >
-                        “
-                    </span>
-                </div>
-
-                <p
-                    className={`text-[18px] md:text-[24px] text-white ${montserrat.className} px-4 md:px-20`}
-                >
-                    Olexir emerged from{' '}
-                    <Link
-                        href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                    >
-                        ETH
-                    </Link>{' '}
-                    Zurich with the support of the ETH Pioneer Fellowship. We
-                    combine breakthroughs in food science, material engineering
-                    and proteomics with a deep commitment to sustainability. By
-                    using cutting-edge research we create a new class of
-                    functional wellness materials and make them available to the
-                    global market.
-                </p>
-                <p
-                    className={`text-[18px] md:text-[24px font-light text-white px-4 md:px-20 pt-10 ${lato.className}`}
-                >
-                    — DR SVITLANA MYKOLENKO
-                </p>
-                <div className="flex justify-end pr-0 pt-14 md:pr-30 pb-10">
-                    <div className="hidden md:block pr-20 pb-20 pt-10">
+            {/* Додаємо flex-col для мобільних, flex-row для десктопа та адаптивний gap */}
+            <div className="flex flex-col lg:flex-row px-6 lg:px-18 items-center justify-center gap-[137px]">
+                <div className="flex-1 max-w-[800px]">
+                    <div className="flex items-start pt-10 lg:pt-36 pb-10">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0]  font-semibold text-white ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
                         >
-                            ”
+                            “
                         </span>
                     </div>
-                    <div className="relative w-[222px] h-[254px] lg:w-[342px] lg:h-[374px]">
-                        <Image
-                            src="/svitlanaHomePage.png"
-                            alt="svitlana scientist"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
-                    <div className="block md:hidden pr-2 md:pr-5 pb-20 pt-15">
+
+                    <p
+                        className={`text-[18px] md:text-[24px] text-white ${montserrat.className}`}
+                    >
+                        Olexir emerged from{' '}
+                        <Link
+                            href="https://entrepreneurship.ethz.ch..."
+                            target="_blank"
+                            className="underline hover:opacity-80"
+                        >
+                            ETH
+                        </Link>{' '}
+                        Zurich with the support of the ETH Pioneer Fellowship.
+                        We combine breakthroughs in food science, material
+                        engineering and proteomics with a deep commitment to
+                        sustainability. By using cutting-edge research we create
+                        a new class of functional wellness materials and make
+                        them available to the global market.
+                    </p>
+
+                    <p
+                        className={`text-[18px] md:text-[24px] font-light text-white pt-10 ${lato.className}`}
+                    >
+                        — DR SVITLANA MYKOLENKO
+                    </p>
+
+                    {/* Права лапка */}
+                    <div className="hidden lg:flex justify-end pt-14 pb-10">
                         <span
                             className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white ${montserrat.className}`}
                         >
                             ”
                         </span>
                     </div>
+                </div>
+
+                {/* Контейнер для фото (flex-shrink-0 запобігає стисканню картинки) */}
+                <div className="relative shrink-0 w-[222px] h-[254px] lg:w-[342px] lg:h-[374px] mt-10 lg:mt-26">
+                    <Image
+                        src="/svitlanaHomePage.png"
+                        alt="svitlana scientist"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
                 </div>
             </div>
         </div>
