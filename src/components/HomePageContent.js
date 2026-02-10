@@ -36,9 +36,9 @@ export default function HomePageContent() {
                     sizes="(max-width: 200px)"
                 />
             </div>
-            <div className="flex flex-col md:flex-row px-12 lg:px-18 items-left justify-center gap-[0px] md:gap-[60px] lg:gap-[137px]">
+            <div className="flex flex-col md:flex-row pl-12 pr-8 pb-10 lg:px-18 items-left justify-center gap-[0px] md:gap-[60px] lg:gap-[137px]">
                 <div className="flex-1 max-w-[800px]">
-                    <div className="flex items-start pt-20 lg:pt-36 pb-10 absolute left-[2%] md:relative md:left-0 2xl:absolute  2xl:left-[6%] 2xl:pt-28">
+                    <div className="flex items-start pt-20 lg:pt-36 pb-10 absolute left-[3%] md:relative md:left-0 2xl:absolute 2xl:ml-[7vw] 2xl:pt-28">
                         <span
                             className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
                         >
@@ -47,7 +47,7 @@ export default function HomePageContent() {
                     </div>
 
                     <p
-                        className={`text-[18px] lg:text-[24px] text-white ${montserrat.className} pt-30 md:pt-0 2xl:pt-40`}
+                        className={`text-[18px] lg:text-[24px] lg:leading-[49.5px] text-white ${montserrat.className} pt-30 md:pt-0 2xl:pt-40`}
                     >
                         Olexir emerged from{' '}
                         <Link
@@ -66,7 +66,7 @@ export default function HomePageContent() {
                     </p>
 
                     <p
-                        className={`text-[18px] md:text-[24px] font-light text-white pt-10 ${lato.className}`}
+                        className={`text-[18px] md:text-[24px] font-light text-white pt-10 opacity-80 ${lato.className}`}
                     >
                         — DR SVITLANA MYKOLENKO
                     </p>
