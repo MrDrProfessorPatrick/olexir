@@ -29,6 +29,7 @@ model PostBlock {
   type      BlockType
   text      String?
   imageUrl  String?
+  videoUrl  String?
   carusel   Carousel?
   order     Int
 
