@@ -22,40 +22,48 @@ model Post {
 }
 
 model PostBlock {
-  id        String   @id @default(uuid())
-  postId    String
-  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  id     String @id @default(uuid())
+  postId String
+  post   Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   type      BlockType
-  text      String?
-  imageUrl  String?
-  videoUrl  String?
-  carusel   Carousel?
-  order     Int
+  contents  PostBlockContent[]
+  createdAt DateTime           @default(now())
+}
 
-  createdAt DateTime @default(now())
+model PostBlockContent {
+  id      String    @id @default(uuid())
+  blockId String
+  block   PostBlock @relation(fields: [blockId], references: [id], onDelete: Cascade)
+
+  type       BlockType // Enum: TEXT, IMAGE, VIDEO
+  text       String?
+  imageUrl   String?
+  videoUrl   String?
+  order      Int
+  carousel   Carousel? @relation(fields: [carouselId], references: [id])
+  carouselId String?
 }
 
 model Carousel {
-  id        String         @id @default(uuid())
-  blockId  String         @unique
-  block    PostBlock      @relation(fields: [blockId], references: [id], onDelete: Cascade)
+  id      String @id @default(uuid())
+  blockId String @unique
 
-  items     CarouselItem[]
+  items             CarouselItem[]
+  postBlockContents PostBlockContent[]
 }
 
 model CarouselItem {
-  id          String   @id @default(uuid())
+  id         String   @id @default(uuid())
   carouselId String
   carousel   Carousel @relation(fields: [carouselId], references: [id], onDelete: Cascade)
 
-  src        String
-  index      Int
-  text       String?
+  src   String
+  index Int
+  text  String?
 
   createdAt DateTime @default(now())
 }
-
 
 enum BlockType {
   TEXT
