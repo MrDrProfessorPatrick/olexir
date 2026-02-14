@@ -3,17 +3,10 @@ import Image from 'next/image'
 import { Lato } from 'next/font/google'
 import Link from 'next/link'
 
-import { Montserrat } from 'next/font/google'
 import { usePopup } from './PopUpProvider'
 
 const lato = Lato({
     variable: '--font-lato',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
-
-const montserrat = Montserrat({
-    variable: '--font-montserrat',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })
@@ -48,13 +41,13 @@ export default function HeroPage() {
                                         bg-[#231428]
                                         text-white
                                         text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px]
-                                        ${montserrat.className}`}
+                                        ${lato.className}`}
                         >
                             Discover More
                         </Link>
                         <button
                             onClick={openPopup}
-                            className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] ml-[10px] ${montserrat.className}`}
+                            className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] ml-[10px] ${lato.className}`}
                         >
                             Partner With Us
                         </button>

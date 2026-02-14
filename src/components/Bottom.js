@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Montserrat } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import { usePopup } from './PopUpProvider'
 
-const montserrat = Montserrat({
-    variable: '--font-montserrat',
+const lato = Lato({
+    variable: '--font-lato',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })
@@ -16,7 +16,7 @@ export default function Bottom() {
         <div
             className={`grid md:grid-rows-none md:grid-cols-[1fr_1.5fr_1fr] 
               md:justify-center bg-[#D8AE02] w-full h-[550px] md:h-[268px] 
-               ${montserrat.variable}`}
+               ${lato.className}`}
         >
             <div className="flex items-center justify-center md:justify-start md:ml-16 ">
                 <div className="flex flex-col justify-center items-center h-full md:pt-10">
@@ -32,7 +32,7 @@ export default function Bottom() {
                     </div>
                     <div className="flex flex-2 items-end hidden md:flex justify-center text-[12px] lg:text-[14px] pb-4">
                         <div
-                            className={`flex flex-row gap-4 ${montserrat.variable}`}
+                            className={`flex flex-row gap-4 ${lato.className}`}
                         >
                             <Link href="/termsandconditions">
                                 Terms & Conditions
@@ -44,13 +44,15 @@ export default function Bottom() {
             </div>
             <div className="flex items-center justify-center md:pl-8">
                 <div className="flex flex-col justify-center items-center ">
-                    <div
-                        className={`flex flex-start justify-center text-[16px] lg:text-[22px] font-semibold ${montserrat.variable}`}
-                    >
-                        <span>Reach out to collaborate or learn more.</span>
+                    <div className={`flex flex-start justify-center `}>
+                        <span
+                            className={`text-[16px] lg:text-[22px] font-semibold ${lato.className}`}
+                        >
+                            Reach out to collaborate or learn more.
+                        </span>
                     </div>
                     <div
-                        className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${montserrat.variable}`}
+                        className={`flex justify-center md:justify-start w-full text-[24px] font-semibold pt-2 ${lato.className}`}
                     >
                         <span>info@olexir.ch</span>
                     </div>
@@ -66,7 +68,7 @@ export default function Bottom() {
             </div>
             <div className="flex flex-4 flex-col justify-around md:justify-center w-full">
                 <div
-                    className={`flex md:hidden flex-col items-center justify-center ${montserrat.variable}`}
+                    className={`flex md:hidden flex-col items-center justify-center ${lato.className}`}
                 >
                     <div className="flex flex-3 items-center justify-center block md:hidden pt-5 pb-5">
                         <Link
@@ -95,7 +97,7 @@ export default function Bottom() {
                     </div>
                 </div>
                 <div
-                    className={`flex flex-col h-full justify-between md:items-end text-[16px] pr-8 md:pb-5 pl-6 ${montserrat.variable}`}
+                    className={`flex flex-col h-full justify-between md:items-end text-[16px] pr-8 md:pb-5 pl-6 ${lato.className}`}
                 >
                     <div className="flex flex-3 items-center justify-center md:pt-16 hidden md:block">
                         <Link

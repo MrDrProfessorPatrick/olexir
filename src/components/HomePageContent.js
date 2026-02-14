@@ -1,13 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Montserrat } from 'next/font/google'
 import { Lato } from 'next/font/google'
-
-const montserrat = Montserrat({
-    variable: '--font-montserrat',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
 
 const lato = Lato({
     variable: '--font-lato',
@@ -40,14 +33,14 @@ export default function HomePageContent() {
                 <div className="flex-1 max-w-[800px]">
                     <div className="flex items-start pt-20 lg:pt-36 pb-10 absolute left-[3%] md:relative md:left-0 2xl:absolute 2xl:ml-[7vw] 2xl:pt-28">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${lato.className}`}
                         >
                             “
                         </span>
                     </div>
 
                     <p
-                        className={`text-[18px] lg:text-[24px] lg:leading-[49.5px] text-white ${montserrat.className} pt-30 md:pt-0 2xl:pt-40`}
+                        className={`text-[18px] lg:text-[24px] lg:leading-[49.5px] text-white ${lato.className} pt-30 md:pt-0 2xl:pt-40`}
                     >
                         Olexir emerged from{' '}
                         <Link
@@ -73,7 +66,7 @@ export default function HomePageContent() {
 
                     <div className="absolute right-[10px] mt-[80px] md:mt-0 md:relative md:flex md:justify-end md:pt-14 md:pb-10">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${lato.className}`}
                         >
                             ”
                         </span>

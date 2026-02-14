@@ -1,9 +1,9 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Montserrat } from 'next/font/google'
+import { Lato } from 'next/font/google'
 
-const montserrat = Montserrat({
-    variable: '--font-montserrat',
+const lato = Lato({
+    variable: '--font-lato',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })
@@ -67,7 +67,7 @@ export default function BigImage({
                             delay: 0.4,
                         }}
                     >
-                        <span className={`${montserrat.className} text-white`}>
+                        <span className={`${lato.className} text-white`}>
                             {text}
                         </span>
                     </motion.div>
