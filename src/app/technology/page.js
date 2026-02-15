@@ -1106,7 +1106,7 @@ export default function Solution() {
                                     <motion.div
                                         className={`flex flex-col px-7 py-7 rounded-md ${
                                             isExpanded
-                                                ? 'bg-[#4f430f]'
+                                                ? 'bg-[#E3EFFF]/25 backdrop-blur-md border-1 border-solid border-[#E1E4ED] mb-2'
                                                 : !isLast
                                                   ? 'border-b border-white pb-5 rounded-none'
                                                   : ''
