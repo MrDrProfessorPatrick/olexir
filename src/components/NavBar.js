@@ -43,28 +43,30 @@ export default function NavBar() {
                     />
                 </label>
                 <div className="sidebar">
-                    {buttons.map((button) => {
-                        let href = `/${button
-                            .replace(/\s+/g, '')
-                            .toLowerCase()}`
-                        return (
-                            <Link
-                                key={button}
-                                href={href}
-                                onClick={() => {
-                                    document.getElementById(
-                                        'menu-toggle'
-                                    ).checked = false
-                                    document.body.classList.remove(
-                                        'overflow-hidden'
-                                    )
-                                }}
-                                className="block p-4 text-white text-4xl font-semibold border-b border-gray-700 hover:bg-gray-700 text-center"
-                            >
-                                <span className="text-2xl">{button}</span>
-                            </Link>
-                        )
-                    })}
+                    <div className="w-full h-full pt-60 backdrop-blur-md bg-black/30">
+                        {buttons.map((button) => {
+                            let href = `/${button
+                                .replace(/\s+/g, '')
+                                .toLowerCase()}`
+                            return (
+                                <Link
+                                    key={button}
+                                    href={href}
+                                    onClick={() => {
+                                        document.getElementById(
+                                            'menu-toggle'
+                                        ).checked = false
+                                        document.body.classList.remove(
+                                            'overflow-hidden'
+                                        )
+                                    }}
+                                    className="block p-4 text-white text-4xl font-semibold hover:bg-gray-700 text-center"
+                                >
+                                    <span className="text-2xl">{button}</span>
+                                </Link>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
 

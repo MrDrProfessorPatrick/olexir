@@ -279,24 +279,24 @@ export default function Solution() {
                             />
                         </div>
                         <div className="flex flex-2 flex-col pt-15 md:pt-0 pl-0 md:pl-8 lg:pl-25">
-                            <div className="flex justify-between md:justify-start md:gap-[30px] h-10">
+                            <div className="flex xs:pl-5 justify-start gap-[8px] md:justify-start md:gap-[30px] h-10">
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[12px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Fluidity
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[12px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Instability
                                 </span>
                                 <span
-                                    className={`border-1 border-solid border-white/60 rounded-full text-[10px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-3 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
+                                    className={`border-1 border-solid border-white/60 rounded-full text-[12px] xs:text-[14px] md:text-[16px] lg:text-[24px] text-white px-1 md:pt-[5px] pt-2 lg:pt-0 font-light ${lato.className}`}
                                 >
                                     Non-absorbability
                                 </span>
                             </div>
-                            <div className="px-3">
+                            <div className="px-5">
                                 <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] text-white/63 text-justify">
                                     Majority of cosmetics rely on fossil-derived
                                     or animal fats, while edible fats are packed
@@ -611,7 +611,7 @@ export default function Solution() {
 
                             <div
                                 id="leaking2Text"
-                                className={`mt-3 text-[16px] lg:text-[24px] w-full md:max-w-[483px] font-light text-white ${lato.className}`}
+                                className={`mt-3 px-5 text-[16px] lg:text-[24px] w-full md:max-w-[483px] font-light text-white ${lato.className}`}
                             >
                                 We know how to employ hydrolysed plant proteins
                                 and turn liquid oils into stable oleogels –
@@ -643,7 +643,7 @@ export default function Solution() {
                             >
                                 <div
                                     id="blueMicroscopeText"
-                                    className="w-full md:w-[88%]"
+                                    className="w-full px-5 md:w-[88%]"
                                 >
                                     We have unlocked the oleogelating capacity
                                     of proteins and introduced stability,
@@ -709,7 +709,7 @@ export default function Solution() {
                                 </div>
                             </div>
                             <div
-                                className={`mt-6 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
+                                className={`mt-6 px-5 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
                             >
                                 Every Olexir oleogel is plant protein based. To
                                 amplify sustainability, we also offer an
@@ -912,7 +912,7 @@ export default function Solution() {
                                 </div>
                             </div>
                             <div
-                                className={`mt-6 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
+                                className={`mt-6 px-5 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
                             >
                                 Every Olexir oleogel is plant-protein based. To
                                 amplify sustainability, we also offer an

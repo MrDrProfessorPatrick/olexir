@@ -203,12 +203,14 @@ body {
     rotate: 45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / -2);
+    /* background-color: var(--backgroundburger); // to make it white when checked */
 }
 
 .hamburger-menu:has(input:checked)::after {
     rotate: -45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / 2);
+    /* background-color: var(--backgroundburger);  // to make it white when checked  */
 }
 
 .hamburger-menu input:checked {
@@ -221,7 +223,6 @@ body {
     flex-direction: column;
     /* overflow: hidden; */
     inset: 0;
-    padding-top: 25vh;
     justify-content: start;
     align-items: center;
     position: fixed;
@@ -231,9 +232,9 @@ body {
     transition: translate var(--animation-timing);
     translate: 100%;
     /* background-color: rgb(214, 141, 4); */
-    background-color: rgba(255, 255, 255, 0.2);
+    /* background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
     z-index: 998;
 }
 
