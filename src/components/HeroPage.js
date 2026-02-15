@@ -47,7 +47,7 @@ export default function HeroPage() {
                         </Link>
                         <button
                             onClick={openPopup}
-                            className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-100 text-black text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] ml-[10px] ${lato.className}`}
+                            className={`w-[100px] h-[40px] xs:w-[150px] xs:h-[49px] sm:w-[179px] sm:h-[59px] rounded-xl relative cursor-pointer bg-[#D8AE02] z-10 text-black text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] ml-[10px] ${lato.className}`}
                         >
                             Partner With Us
                         </button>
@@ -56,7 +56,7 @@ export default function HeroPage() {
                 <div
                     className={`flex flex-col items-center lg:flex-row lg:justify-center mt-18 gap-4 lg:gap-14 mx-6 xs:md:mx-3  lg:mx-5  ${lato.className}`}
                 >
-                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-white/20  z-10 rounded-2xl">
                         <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8 h-inherit">
                             <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                                 Cosmetic
@@ -74,7 +74,7 @@ export default function HeroPage() {
                             </ul>
                         </div>
                     </div>
-                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-white/20 z-10 rounded-2xl">
                         <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
                             <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                                 Food
@@ -92,7 +92,7 @@ export default function HeroPage() {
                             </ul>
                         </div>
                     </div>
-                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-transparent z-10 rounded-2xl">
+                    <div className="h-[192px] lg:h-[232px] w-full xs:max-w-[343px] md:max-w-[420px] 2xl:max-w-[560px] backdrop-blur-md bg-white/20 z-10 rounded-2xl">
                         <div className="flex flex-col gap-4 lg:gap-0 pt-6 lg:pl-8">
                             <h3 className="text-[24px] lg:text-[40px] text-center font-bold lg:text-left">
                                 Health
