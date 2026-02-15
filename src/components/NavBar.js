@@ -7,7 +7,7 @@ export default function NavBar() {
     const buttons = ['Technology', 'Applications', 'About Us']
 
     return (
-        <div className="absolute w-full h-[100px] backdrop-blur-xs bg-white/20 z-50 ">
+        <div className="absolute w-full h-[100px] bg-white/20 z-50 ">
             <div className="absolute inset-0 flex items-center justify-center z-10 w-[180px] h-[60px] xs:w-[180px] xs:h-[60px] lg:w-[220px] lg:h-[70px] ml-[5%] mt-4 z-1000">
                 <Link
                     href="/"
@@ -43,30 +43,28 @@ export default function NavBar() {
                     />
                 </label>
                 <div className="sidebar">
-                    <div className="">
-                        {buttons.map((button) => {
-                            let href = `/${button
-                                .replace(/\s+/g, '')
-                                .toLowerCase()}`
-                            return (
-                                <Link
-                                    key={button}
-                                    href={href}
-                                    onClick={() => {
-                                        document.getElementById(
-                                            'menu-toggle'
-                                        ).checked = false
-                                        document.body.classList.remove(
-                                            'overflow-hidden'
-                                        )
-                                    }}
-                                    className="block p-4 text-white text-4xl font-semibold border-b border-gray-700 hover:bg-gray-700 text-center"
-                                >
-                                    <span className="text-2xl">{button}</span>
-                                </Link>
-                            )
-                        })}
-                    </div>
+                    {buttons.map((button) => {
+                        let href = `/${button
+                            .replace(/\s+/g, '')
+                            .toLowerCase()}`
+                        return (
+                            <Link
+                                key={button}
+                                href={href}
+                                onClick={() => {
+                                    document.getElementById(
+                                        'menu-toggle'
+                                    ).checked = false
+                                    document.body.classList.remove(
+                                        'overflow-hidden'
+                                    )
+                                }}
+                                className="block p-4 text-white text-4xl font-semibold border-b border-gray-700 hover:bg-gray-700 text-center"
+                            >
+                                <span className="text-2xl">{button}</span>
+                            </Link>
+                        )
+                    })}
                 </div>
             </div>
 

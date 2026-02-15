@@ -219,7 +219,7 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     inset: 0;
     padding-top: 25vh;
     justify-content: start;
@@ -231,7 +231,10 @@ body {
     transition: translate var(--animation-timing);
     translate: 100%;
     /* background-color: rgb(214, 141, 4); */
-    background-color: #d8ae02;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 998;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {
