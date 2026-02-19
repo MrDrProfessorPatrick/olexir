@@ -1,19 +1,22 @@
+// components/AddPostButton.tsx
 'use client'
+
+import { useState } from 'react'
+import { FormToAddPost } from '../components/FormToAddPost' // Імпортуйте вашу форму
+
 export default function AddPostButton() {
+    const [isFormShown, setIsFormShown] = useState(false)
+
     return (
-        <div className="mb-10">
+        <div className="flex flex-col items-center">
             <button
-                onClick={() => console.log('Add Post clicked')}
-                title="Create New Form"
-                className="cursor-pointer group relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl active:scale-95"
+                onClick={() => setIsFormShown(!isFormShown)}
+                className="bg-blue-500 px-4 py-2 rounded mb-4"
             >
-                <span className="text-3xl font-bold transition-transform duration-300 group-hover:rotate-90">
-                    +
-                </span>
-                <span className="text-white-500 absolute bottom-[1rem] left-[1rem] w-[350px] text-xs text-[22px] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Click to add New Form
-                </span>
+                {isFormShown ? 'Скасувати' : 'Додати новий пост'}
             </button>
+
+            {isFormShown && <FormToAddPost />}
         </div>
     )
 }
