@@ -9,7 +9,7 @@ export default async function Blog() {
     return (
         <>
             <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-                {userId && <AddPostButton />}
+                {true && <AddPostButton />}
                 <div className="flex">BLOG CONTENT</div>
             </div>
         </>
