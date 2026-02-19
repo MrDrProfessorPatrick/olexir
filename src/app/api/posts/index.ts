@@ -1,27 +1,44 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+// app/api/posts/route.ts
+import { NextResponse } from 'next/server'
+import { getAuth } from '@clerk/nextjs/server'
+import { NextRequest } from 'next/server'
 import prisma from '../../lib/prisma'
 
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
-) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ message: 'Method Not Allowed' })
-    }
-
-    const { title, imgUrl } = req.body
-
+export async function POST(req: NextRequest) {
     try {
+        const { userId } = getAuth(req)
+        
+        if (!userId) {
+            return NextResponse.json(
+                { error: 'Unauthorized' }, 
+                { status: 401 }
+            )
+        }
+
+        const body = await req.json()
+        const { title, imageFile } = body
+
+        if (!title) {
+            return NextResponse.json(
+                { error: 'Title is required' }, 
+                { status: 400 }
+            )
+        }
+
         const post = await prisma.post.create({
             data: {
-                title,
-                imgUrl,
-                // blocks не вказуємо, тому масив буде порожнім за замовчуванням
+                title: title,
+                imgUrl: imageFile,
             },
         })
 
-        return res.status(201).json(post)
+        return NextResponse.json(post, { status: 201 })
+
     } catch (error) {
-        return res.status(500).json({ error: 'Failed to create post' })
+        console.error('API Error:', error)
+        return NextResponse.json(
+            { error: 'Internal Server Error' }, 
+            { status: 500 }
+        )
     }
 }
