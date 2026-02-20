@@ -16,7 +16,7 @@ export default function MenuButtons({ buttons }) {
     const activeButton = getActiveButton()
 
     return (
-        <div className="glass absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-5 pb-3 pt-3 items-center">
+        <div className="glass absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-5 lg:mr-12 pb-3 pt-3 items-center shadow-xl/30">
             {buttons.map((button) => {
                 const isActive = activeButton === button
                 const href = `/${button.replace(/\s+/g, '').toLowerCase()}`
@@ -29,7 +29,9 @@ export default function MenuButtons({ buttons }) {
                         >
                             <span
                                 className={`tracking-wide px-4 block relative linear-mask lg:text-xl font-bold ${
-                                    isActive ? 'text-neutral-100' : 'text-black'
+                                    isActive
+                                        ? 'text-white [text-shadow:_0_6px_10px_rgba(255,220,0,1)]'
+                                        : 'text-white'
                                 }`}
                             >
                                 {button}
