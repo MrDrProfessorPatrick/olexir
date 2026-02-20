@@ -269,6 +269,41 @@ body {
     pointer-events: none;
 }
 
+.glassButton {
+    position: relative;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.glassButton::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding: 1px; /* border thickness */
+    border-radius: inherit;
+    background: linear-gradient(
+        to right,
+        rgb(233, 233, 233) 0%,
+        #c9c9c9 20%,
+        #8d8d8d 40%
+    );
+
+    /* magic cut-out */
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+
+
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
 }

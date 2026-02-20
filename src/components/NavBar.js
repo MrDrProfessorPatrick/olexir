@@ -68,7 +68,7 @@ export default function NavBar() {
                             />
                         </Link>
                     </div>
-                    <div className=" w-full h-full pt-60 backdrop-blur-md bg-black/30">
+                    <div className="w-full h-full pt-60 backdrop-blur-md bg-black/30">
                         {buttons.map((button) => {
                             let href = `/${button
                                 .replace(/\s+/g, '')
@@ -85,7 +85,7 @@ export default function NavBar() {
                                             'overflow-hidden'
                                         )
                                     }}
-                                    className="block p-4 text-white text-4xl font-semibold hover:bg-gray-700 text-center"
+                                    className="glassButton block w-[200px] mx-auto text-white text-4xl mt-5 font-semibold text-center"
                                 >
                                     <span className="text-2xl">{button}</span>
                                 </Link>
