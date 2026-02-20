@@ -16,7 +16,7 @@ export default function MenuButtons({ buttons }) {
     const activeButton = getActiveButton()
 
     return (
-        <div className="absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-5 pb-4 pt-4 flex flex-row items-center">
+        <div className="glass absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-5 pb-3 pt-3 items-center">
             {buttons.map((button) => {
                 const isActive = activeButton === button
                 const href = `/${button.replace(/\s+/g, '').toLowerCase()}`
@@ -35,7 +35,7 @@ export default function MenuButtons({ buttons }) {
                                 {button}
                             </span>
 
-                            <span className="pointer-events-none block absolute inset-0 rounded-xl p-px linear-overlay" />
+                            <span className="pointer-events-none block absolute inset-0 p-px linear-overlay" />
                         </button>
                     </Link>
                 )
