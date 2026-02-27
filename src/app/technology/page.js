@@ -297,14 +297,16 @@ export default function Solution() {
                                 </span>
                             </div>
                             <div className="px-5">
-                                <p className="pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] text-white/63 text-justify">
+                                <p
+                                    className={`pb-10 pt-10 text-[18px] md:text-[20px] lg:text-[24px] text-white/63 text-justify ${lato.className}`}
+                                >
                                     Majority of cosmetics rely on fossil-derived
                                     or animal fats, while edible fats are packed
                                     with trans and saturated lipids.
                                 </p>
                                 <p
                                     id="plantOils"
-                                    className="text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white/63 text-justify"
+                                    className={`text-[18px] md:text-[20px] lg:text-[24px] font-normal text-white/63 text-justify ${lato.className}`}
                                 >
                                     Plant oils, rich in healthy mono- and
                                     polyunsaturated fats, offer a sustainable
