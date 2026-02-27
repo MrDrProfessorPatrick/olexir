@@ -14,7 +14,9 @@ const lato = Lato({
 export default function HeroPage() {
     const { openPopup } = usePopup()
     return (
-        <section className="relative w-full h-[1180px] lg:h-[916px]">
+        <section
+            className={`relative w-full h-[1180px] lg:h-[916px] ${lato.className}`}
+        >
             <Image
                 src="/OlexirPresentation.png"
                 alt="Background with yellow oleogel"

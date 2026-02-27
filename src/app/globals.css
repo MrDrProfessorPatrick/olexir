@@ -12,11 +12,12 @@
 :root {
     --background: #231428;
     --foreground: #000000;
-    --bar-width: 40px;
-    --bar-height: 6px;
-    --hamburger-gap: 6px;
-    --foregroundburger: #333;
+    --bar-width: 35px;
+    --bar-height: 4px;
+    --hamburger-gap: 5px;
+    --foregroundburger: #161616;
     --backgroundburger: white;
+    --hamburger-margin-top: 8px;
     --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
@@ -168,7 +169,7 @@ body {
     gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: var(--hamburger-margin);
+    top: var(--hamburger-margin-top);
     right: var(--hamburger-margin);
     z-index: 999;
     cursor: pointer;
@@ -231,10 +232,6 @@ body {
     top: 0;
     transition: translate var(--animation-timing);
     translate: 100%;
-    /* background-color: rgb(214, 141, 4); */
-    /* background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); */
     z-index: 800;
 }
 
@@ -259,28 +256,27 @@ body {
         #8d8d8d 40%
     );
 
-    /* magic cut-out */
     -webkit-mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-
     pointer-events: none;
 }
 
 .glassButton {
     position: relative;
-
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     background: rgba(0, 0, 0, 0.3);
     border-radius: 16px;
+    padding-bottom: 10px;
 }
 
 .glassButton::before {
     content: '';
     position: absolute;
+    top: 0;
     left: 0;
     width: 200px;
     height: 100%;
@@ -302,7 +298,6 @@ body {
 
     pointer-events: none;
 }
-
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;

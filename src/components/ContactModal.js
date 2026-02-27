@@ -101,7 +101,7 @@ export default function ContactModal() {
                     <div className="relative p-8 md:p-12">
                         <button
                             onClick={closePopup}
-                            className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
+                            className="absolute text-[26px] top-6 right-6 text-white/80 hover:text-white transition-colors"
                         >
                             ✕
                         </button>

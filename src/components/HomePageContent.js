@@ -1,9 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Lato } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
 const lato = Lato({
     variable: '--font-lato',
+    subsets: ['latin'],
+    weight: ['100', '300', '400', '700', '900'],
+})
+
+const montserrat = Montserrat({
+    variable: '--font-montserrat',
     subsets: ['latin'],
     weight: ['100', '300', '400', '700', '900'],
 })
@@ -33,7 +40,7 @@ export default function HomePageContent() {
                 <div className="flex-1 max-w-[800px]">
                     <div className="flex items-start pt-20 lg:pt-36 pb-10 absolute left-[3%] md:relative md:left-0 2xl:absolute 2xl:ml-[7vw] 2xl:pt-28">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${lato.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
                         >
                             “
                         </span>
@@ -44,7 +51,7 @@ export default function HomePageContent() {
                     >
                         Olexir emerged from{' '}
                         <Link
-                            href="https://entrepreneurship.ethz.ch..."
+                            href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
                             target="_blank"
                             className="underline hover:opacity-80"
                         >
@@ -66,7 +73,7 @@ export default function HomePageContent() {
 
                     <div className="absolute right-[10px] mt-[80px] md:mt-0 md:relative md:flex md:justify-end md:pt-14 md:pb-10">
                         <span
-                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${lato.className}`}
+                            className={`text-[98px] lg:text-[142px] leading-[0] font-semibold text-white opacity-50 ${montserrat.className}`}
                         >
                             ”
                         </span>
