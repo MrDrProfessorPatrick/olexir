@@ -1,7 +1,9 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import MenuButtons from './MenuButtons'
+
 import { Lato } from 'next/font/google'
 
 const lato = Lato({
@@ -12,20 +14,23 @@ const lato = Lato({
 
 export default function NavBar() {
     const buttons = ['Technology', 'Applications', 'About Us']
-
+    const path = usePathname()
+    const burgerColor =
+        path === '/technology' || path === '/applications' ? 'white' : 'black'
+    console.log('path', path)
     return (
         <>
             <div
-                className={`absolute w-full h-[100px] backdrop-blur-xs  bg-black/20 z-50 ${lato.className}`}
+                className={`absolute w-full h-[100px] backdrop-blur-xs bg-black/20 z-50 ${lato.className}`}
             >
-                <div className="absolute  inset-0 flex items-center justify-center z-10  w-[120px] h-[40px] xs:w-[120px] xs:h-[40px] md:w-[220px] md:h-[70px] ml-[5%] mt-6 md:mt-4 z-1000">
+                <div className="absolute inset-0 flex z-10 w-[120px] h-[40px] xs:w-[120px] xs:h-[40px] md:w-[220px] md:h-[70px] ml-[5%] mt-7 md:mt-4 z-1000">
                     <Link
                         href="/"
                         className="absolute inset-0 z-20"
                         aria-label="Home"
                     >
                         <Image
-                            src="/OlexirLogoBlackDiomondUnderI2.png"
+                            src={`/OlexirLogoWhiteBlue.png`}
                             alt="logo"
                             fill
                             className="object-cover"
@@ -36,7 +41,7 @@ export default function NavBar() {
                 </div>
 
                 {/* Desktop (≥640px) */}
-                <div className="hidden md:block">
+                <div className="hidden w-full h-full md:flex items-center">
                     <MenuButtons
                         buttons={['Technology', 'Applications', 'About Us']}
                     />
@@ -69,7 +74,7 @@ export default function NavBar() {
                             aria-label="Home"
                         >
                             <Image
-                                src="/OlexirLogoBlackDiomondUnderI2.png"
+                                src={`/OlexirLogoWhiteBlue.png`}
                                 alt="logo"
                                 fill
                                 className="object-cover"

@@ -24,7 +24,7 @@ export default function MenuButtons({ buttons }) {
 
     return (
         <div
-            className={`glass absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 mt-5 lg:mr-12 pb-3 pt-3 items-center shadow-xl/30 ${lato.className}`}
+            className={`glass absolute flex gap-10 right-1 2xl:right-10 xl:right-10 lg:right-10 md:right-10 sm:gap-2 sm:right-1 lg:mr-12 pb-3 pt-3 items-center shadow-xl/30 ${lato.className}`}
         >
             {buttons.map((button) => {
                 const isActive = activeButton === button
