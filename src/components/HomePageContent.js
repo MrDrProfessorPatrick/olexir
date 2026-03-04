@@ -49,16 +49,15 @@ export default function HomePageContent() {
                     <p
                         className={`text-[18px] lg:text-[24px] lg:leading-[49.5px] text-white ${lato.className} pt-30 md:pt-0 2xl:pt-40`}
                     >
-                        Olexir emerged from{' '}
+                        Olexir emerged from ETH Zurich with the support of the{' '}
                         <Link
                             href="https://entrepreneurship.ethz.ch/startups-spinoffs/find-offers-programs-space-grants-for-entrepreneurs/pioneer-fellowship/current-fellows/20241/olexir.html"
                             target="_blank"
                             className="underline hover:opacity-80"
                         >
-                            ETH
+                            ETH Pioneer Fellowship
                         </Link>{' '}
-                        Zurich with the support of the ETH Pioneer Fellowship.
-                        We combine breakthroughs in food science, material
+                        . We combine breakthroughs in food science, material
                         engineering and proteomics with a deep commitment to
                         sustainability. By using cutting-edge research we create
                         a new class of functional wellness materials and make
