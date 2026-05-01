@@ -238,7 +238,7 @@ export default function AboutUs() {
                         <h2
                             className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
                         >
-                            B2B BUSINESS MODEL
+                            B2B REVENUE MODEL
                         </h2>
                         {/* mobile */}
                         <div className="flex flex-col gap-4 justify-center items-center mt-2 tabular-nums lg:hidden">
@@ -288,53 +288,53 @@ export default function AboutUs() {
                             </div>
                         </div>
                         {/* tablet and desktop */}
-                        <div className="flex-row gap-8 lg:justify-around mt-2 hidden lg:flex tabular-nums">
+                        <div className="flex-row gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums 2xl:w-[1400px] 2xl:m-auto">
                             <div
                                 id="planProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[28px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-2 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Co-paid formulation
+                                    Oil Rheology Modifier
                                 </h3>
-                                <span>Paid co-development</span>
-                                <span>of partner-specific</span>
-                                <span>formulations, license +</span>
-                                <span>supply</span>
+                                <span>Protein-based</span>
+                                <span>silicone-free</span>
+                                <span>structuring ingredient</span>
+                                <br />
+                                <span>Ingredient sales +</span>
+                                <span>technical support</span>
                             </div>
 
                             <div
                                 id="secondPlanProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[28px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Licensing
+                                    Oleogel Premix
                                 </h3>
-                                <span>License Olexir oleogel</span>
-                                <span>IP to manufacturers</span>
-                                <span>(upfront fee + royalty)</span>
+                                <span>Ready-to-use</span>
+                                <span>structured oil base</span>
+                                <br />
+                                <span>Per-kg premix sales</span>
                             </div>
 
                             <div
                                 id="thirdPlanProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[28px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Oleogel sales (CMO)
+                                    Custom Oleogels
                                 </h3>
-                                <span>
-                                    Sell oleogel batch
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span>
-                                <span>produced by contract</span>
-                                <span>
-                                    manufacturer (per-kg <br /> margin)
-                                </span>
+                                <span>Partner-specific oils</span>
+                                <span>actives, and textures</span>
+                                <br />
+                                <span>Paid development +</span>
+                                <span>recurring supply</span>
                             </div>
                         </div>
                     </>
