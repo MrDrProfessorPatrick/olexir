@@ -247,14 +247,25 @@ export default function AboutUs() {
                                 className={`w-full flex flex-col items-center justify-center border-1 border-solid border-white rounded-4xl text-[14px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`font-bold text-[24px] lg:text-[28px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Co-paid formulation
+                                    Oil Rheology Modifier
                                 </h3>
-                                <span>Paid co-development</span>
-                                <span>of partner-specific</span>
-                                <span>formulations, license +</span>
-                                <span>supply</span>
+                                <span className="font-light">
+                                    Protein-based
+                                </span>
+                                <span className="font-light">
+                                    silicone-free
+                                </span>
+                                <span className="font-light">
+                                    structuring ingredient
+                                </span>
+                                <span className="font-light">
+                                    Ingredient sales +
+                                </span>
+                                <span className="font-light">
+                                    technical support
+                                </span>
                             </div>
 
                             <div
@@ -264,11 +275,15 @@ export default function AboutUs() {
                                 <h3
                                     className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Licensing
+                                    Oleogel Premix
                                 </h3>
-                                <span>License Olexir oleogel</span>
-                                <span>IP to manufacturers</span>
-                                <span>(upfront fee + royalty)</span>
+                                <span className="font-light">Ready-to-use</span>
+                                <span className="font-light">
+                                    structured oil base
+                                </span>
+                                <span className="font-light">
+                                    Per-kg premix sales
+                                </span>
                             </div>
 
                             <div
@@ -278,23 +293,30 @@ export default function AboutUs() {
                                 <h3
                                     className={`text-[14px] text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
-                                    Oleogel sales (CMO)
+                                    Custom Oleogels
                                 </h3>
-                                <span> Sell oleogel batch </span>
-                                <span>produced by contract</span>
-                                <span>
-                                    manufacturer (per-kg <br /> margin)
+                                <span className="font-light">
+                                    Partner-specific oils
+                                </span>
+                                <span className="font-light">
+                                    actives, and textures
+                                </span>
+                                <span className="font-light">
+                                    Paid development +
+                                </span>
+                                <span className="font-light">
+                                    recurring supply
                                 </span>
                             </div>
                         </div>
                         {/* tablet and desktop */}
-                        <div className="flex-row gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums 2xl:w-[1400px] 2xl:m-auto">
+                        <div className="flex-row  pt-5 gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums 2xl:w-[1400px] 2xl:m-auto">
                             <div
                                 id="planProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-4 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-2 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`font-bold text-[22px] text-white xl:text-[30px] text-white px-1 lg:px-1 xl:px-2 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Oil Rheology Modifier
                                 </h3>
@@ -308,31 +330,35 @@ export default function AboutUs() {
 
                             <div
                                 id="secondPlanProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-4 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`font-bold text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Oleogel Premix
                                 </h3>
                                 <span>Ready-to-use</span>
                                 <span>structured oil base</span>
                                 <br />
+                                <br />
+
                                 <span>Per-kg premix sales</span>
                             </div>
 
                             <div
                                 id="thirdPlanProtein"
-                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-6 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
+                                className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-4 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
                             >
                                 <h3
-                                    className={`text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                    className={`font-bold text-[24px] xl:text-[30px] text-white px-1 lg:px-1 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                 >
                                     Custom Oleogels
                                 </h3>
                                 <span>Partner-specific oils</span>
                                 <span>actives, and textures</span>
                                 <br />
+                                <br />
+
                                 <span>Paid development +</span>
                                 <span>recurring supply</span>
                             </div>
