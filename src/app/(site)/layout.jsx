@@ -4,7 +4,6 @@ import Bottom from '@/components/Bottom'
 import { Lato } from 'next/font/google'
 import PopupProvider from '@/components/PopUpProvider'
 import ContactModal from '@/components/ContactModal'
-import '../globals.css'
 
 const lato = Lato({
     variable: '--font-lato',

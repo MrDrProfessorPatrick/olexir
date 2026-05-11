@@ -2,7 +2,7 @@ import { SignedIn, SignedOut, SignIn } from '@clerk/nextjs'
 
 export default function AdminPage() {
     return (
-        <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center">
             <SignedOut>
                 <SignIn
                     appearance={{
