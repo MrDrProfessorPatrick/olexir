@@ -1,16 +1,20 @@
 // components/FormToAddPost.tsx
-"use client"
+'use client'
 
 import { useState } from 'react'
 
-export function FormToAddPost() {
+type FormToAddPostProps = {
+    setIsFormShown: (value: boolean | ((prev: boolean) => boolean)) => void
+}
+
+export function FormToAddPost({ setIsFormShown }: FormToAddPostProps) {
     const [title, setTitle] = useState('')
     const [file, setFile] = useState<File | null>(null)
     const [loading, setLoading] = useState(false)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        if (!file || !title) return alert("Заповніть усі поля")
+        if (!file || !title) return alert('Заповніть усі поля')
 
         setLoading(true)
 
@@ -22,12 +26,12 @@ export function FormToAddPost() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     title: title,
-                    imageFile: imageUrl
+                    imageFile: imageUrl,
                 }),
             })
 
             if (response.ok) {
-                alert("Пост створено!")
+                alert('Пост створено!')
                 setTitle('')
                 setFile(null)
                 window.location.reload()
@@ -37,14 +41,25 @@ export function FormToAddPost() {
             }
         } catch (err) {
             console.error(err)
-            alert("Помилка при створенні поста")
+            alert('Помилка при створенні поста')
         } finally {
             setLoading(false)
         }
     }
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gray-900 p-6 rounded-lg border border-gray-700 w-full max-w-md">
+        <form
+            onSubmit={handleSubmit}
+            className="bg-gray-900 p-6 rounded-lg border border-gray-700 w-full max-w-md"
+        >
+            <button
+                onClick={() => {
+                    setIsFormShown(false)
+                }}
+                className="bg-[red] rounded-sm pt-1 pb-1 pl-2 pr-2 ml-80 cursor-pointer"
+            >
+                X
+            </button>
             <div className="mb-4">
                 <label className="block mb-2 text-sm">Заголовок</label>
                 <input
@@ -80,5 +95,5 @@ export function FormToAddPost() {
 }
 
 async function uploadImageToAzure(file: File): Promise<string> {
-    return "http://localhost:3000/mockedimage.jpg" 
+    return 'http://localhost:3000/mockedimage.jpg'
 }

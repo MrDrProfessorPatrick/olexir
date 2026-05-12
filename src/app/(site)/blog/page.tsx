@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import { auth } from '@clerk/nextjs/server'
 import AddPostButton from '../../../components/AddPostButton'
 
