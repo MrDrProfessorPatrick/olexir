@@ -40,7 +40,6 @@ model PostBlock {
 
 model Carousel {
   id      String @id @default(uuid())
-  blockId String @unique
   items      CarouselItem[]
   postBlocks PostBlock[]
 }

@@ -33,7 +33,7 @@ export type PostBlockMinAggregateOutputType = {
   text: string | null
   imageUrl: string | null
   videoUrl: string | null
-  carouelId: string | null
+  carouselId: string | null
   createdAt: Date | null
 }
 
@@ -46,7 +46,7 @@ export type PostBlockMaxAggregateOutputType = {
   text: string | null
   imageUrl: string | null
   videoUrl: string | null
-  carouelId: string | null
+  carouselId: string | null
   createdAt: Date | null
 }
 
@@ -59,7 +59,7 @@ export type PostBlockCountAggregateOutputType = {
   text: number
   imageUrl: number
   videoUrl: number
-  carouelId: number
+  carouselId: number
   createdAt: number
   _all: number
 }
@@ -74,7 +74,7 @@ export type PostBlockMinAggregateInputType = {
   text?: true
   imageUrl?: true
   videoUrl?: true
-  carouelId?: true
+  carouselId?: true
   createdAt?: true
 }
 
@@ -87,7 +87,7 @@ export type PostBlockMaxAggregateInputType = {
   text?: true
   imageUrl?: true
   videoUrl?: true
-  carouelId?: true
+  carouselId?: true
   createdAt?: true
 }
 
@@ -100,7 +100,7 @@ export type PostBlockCountAggregateInputType = {
   text?: true
   imageUrl?: true
   videoUrl?: true
-  carouelId?: true
+  carouselId?: true
   createdAt?: true
   _all?: true
 }
@@ -186,7 +186,7 @@ export type PostBlockGroupByOutputType = {
   text: string | null
   imageUrl: string | null
   videoUrl: string | null
-  carouelId: string | null
+  carouselId: string | null
   createdAt: Date
   _count: PostBlockCountAggregateOutputType | null
   _min: PostBlockMinAggregateOutputType | null
@@ -220,10 +220,10 @@ export type PostBlockWhereInput = {
   text?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   imageUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   videoUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
-  carouelId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
+  carouselId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   createdAt?: Prisma.DateTimeFilter<"PostBlock"> | Date | string
   post?: Prisma.XOR<Prisma.PostScalarRelationFilter, Prisma.PostWhereInput>
-  carouel?: Prisma.XOR<Prisma.CarouselNullableScalarRelationFilter, Prisma.CarouselWhereInput> | null
+  carousel?: Prisma.XOR<Prisma.CarouselNullableScalarRelationFilter, Prisma.CarouselWhereInput> | null
 }
 
 export type PostBlockOrderByWithRelationInput = {
@@ -235,10 +235,10 @@ export type PostBlockOrderByWithRelationInput = {
   text?: Prisma.SortOrderInput | Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   videoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  carouelId?: Prisma.SortOrderInput | Prisma.SortOrder
+  carouselId?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   post?: Prisma.PostOrderByWithRelationInput
-  carouel?: Prisma.CarouselOrderByWithRelationInput
+  carousel?: Prisma.CarouselOrderByWithRelationInput
 }
 
 export type PostBlockWhereUniqueInput = Prisma.AtLeast<{
@@ -253,10 +253,10 @@ export type PostBlockWhereUniqueInput = Prisma.AtLeast<{
   text?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   imageUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   videoUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
-  carouelId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
+  carouselId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   createdAt?: Prisma.DateTimeFilter<"PostBlock"> | Date | string
   post?: Prisma.XOR<Prisma.PostScalarRelationFilter, Prisma.PostWhereInput>
-  carouel?: Prisma.XOR<Prisma.CarouselNullableScalarRelationFilter, Prisma.CarouselWhereInput> | null
+  carousel?: Prisma.XOR<Prisma.CarouselNullableScalarRelationFilter, Prisma.CarouselWhereInput> | null
 }, "id">
 
 export type PostBlockOrderByWithAggregationInput = {
@@ -268,7 +268,7 @@ export type PostBlockOrderByWithAggregationInput = {
   text?: Prisma.SortOrderInput | Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   videoUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  carouelId?: Prisma.SortOrderInput | Prisma.SortOrder
+  carouselId?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   _count?: Prisma.PostBlockCountOrderByAggregateInput
   _max?: Prisma.PostBlockMaxOrderByAggregateInput
@@ -287,7 +287,7 @@ export type PostBlockScalarWhereWithAggregatesInput = {
   text?: Prisma.StringNullableWithAggregatesFilter<"PostBlock"> | string | null
   imageUrl?: Prisma.StringNullableWithAggregatesFilter<"PostBlock"> | string | null
   videoUrl?: Prisma.StringNullableWithAggregatesFilter<"PostBlock"> | string | null
-  carouelId?: Prisma.StringNullableWithAggregatesFilter<"PostBlock"> | string | null
+  carouselId?: Prisma.StringNullableWithAggregatesFilter<"PostBlock"> | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"PostBlock"> | Date | string
 }
 
@@ -301,7 +301,7 @@ export type PostBlockCreateInput = {
   videoUrl?: string | null
   createdAt?: Date | string
   post: Prisma.PostCreateNestedOneWithoutBlocksInput
-  carouel?: Prisma.CarouselCreateNestedOneWithoutPostBlocksInput
+  carousel?: Prisma.CarouselCreateNestedOneWithoutPostBlocksInput
 }
 
 export type PostBlockUncheckedCreateInput = {
@@ -313,7 +313,7 @@ export type PostBlockUncheckedCreateInput = {
   text?: string | null
   imageUrl?: string | null
   videoUrl?: string | null
-  carouelId?: string | null
+  carouselId?: string | null
   createdAt?: Date | string
 }
 
@@ -327,7 +327,7 @@ export type PostBlockUpdateInput = {
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   post?: Prisma.PostUpdateOneRequiredWithoutBlocksNestedInput
-  carouel?: Prisma.CarouselUpdateOneWithoutPostBlocksNestedInput
+  carousel?: Prisma.CarouselUpdateOneWithoutPostBlocksNestedInput
 }
 
 export type PostBlockUncheckedUpdateInput = {
@@ -339,7 +339,7 @@ export type PostBlockUncheckedUpdateInput = {
   text?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  carouelId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  carouselId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -352,7 +352,7 @@ export type PostBlockCreateManyInput = {
   text?: string | null
   imageUrl?: string | null
   videoUrl?: string | null
-  carouelId?: string | null
+  carouselId?: string | null
   createdAt?: Date | string
 }
 
@@ -376,7 +376,7 @@ export type PostBlockUncheckedUpdateManyInput = {
   text?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  carouelId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  carouselId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -399,7 +399,7 @@ export type PostBlockCountOrderByAggregateInput = {
   text?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   videoUrl?: Prisma.SortOrder
-  carouelId?: Prisma.SortOrder
+  carouselId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -412,7 +412,7 @@ export type PostBlockMaxOrderByAggregateInput = {
   text?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   videoUrl?: Prisma.SortOrder
-  carouelId?: Prisma.SortOrder
+  carouselId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -425,7 +425,7 @@ export type PostBlockMinOrderByAggregateInput = {
   text?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
   videoUrl?: Prisma.SortOrder
-  carouelId?: Prisma.SortOrder
+  carouselId?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
 }
 
@@ -475,45 +475,45 @@ export type EnumBlockTypeFieldUpdateOperationsInput = {
   set?: $Enums.BlockType
 }
 
-export type PostBlockCreateNestedManyWithoutCarouelInput = {
-  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput> | Prisma.PostBlockCreateWithoutCarouelInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouelInput[]
-  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouelInput | Prisma.PostBlockCreateOrConnectWithoutCarouelInput[]
-  createMany?: Prisma.PostBlockCreateManyCarouelInputEnvelope
+export type PostBlockCreateNestedManyWithoutCarouselInput = {
+  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput> | Prisma.PostBlockCreateWithoutCarouselInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouselInput[]
+  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouselInput | Prisma.PostBlockCreateOrConnectWithoutCarouselInput[]
+  createMany?: Prisma.PostBlockCreateManyCarouselInputEnvelope
   connect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
 }
 
-export type PostBlockUncheckedCreateNestedManyWithoutCarouelInput = {
-  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput> | Prisma.PostBlockCreateWithoutCarouelInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouelInput[]
-  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouelInput | Prisma.PostBlockCreateOrConnectWithoutCarouelInput[]
-  createMany?: Prisma.PostBlockCreateManyCarouelInputEnvelope
+export type PostBlockUncheckedCreateNestedManyWithoutCarouselInput = {
+  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput> | Prisma.PostBlockCreateWithoutCarouselInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouselInput[]
+  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouselInput | Prisma.PostBlockCreateOrConnectWithoutCarouselInput[]
+  createMany?: Prisma.PostBlockCreateManyCarouselInputEnvelope
   connect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
 }
 
-export type PostBlockUpdateManyWithoutCarouelNestedInput = {
-  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput> | Prisma.PostBlockCreateWithoutCarouelInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouelInput[]
-  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouelInput | Prisma.PostBlockCreateOrConnectWithoutCarouelInput[]
-  upsert?: Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouelInput | Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouelInput[]
-  createMany?: Prisma.PostBlockCreateManyCarouelInputEnvelope
+export type PostBlockUpdateManyWithoutCarouselNestedInput = {
+  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput> | Prisma.PostBlockCreateWithoutCarouselInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouselInput[]
+  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouselInput | Prisma.PostBlockCreateOrConnectWithoutCarouselInput[]
+  upsert?: Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouselInput | Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouselInput[]
+  createMany?: Prisma.PostBlockCreateManyCarouselInputEnvelope
   set?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   disconnect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   delete?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   connect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
-  update?: Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouelInput | Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouelInput[]
-  updateMany?: Prisma.PostBlockUpdateManyWithWhereWithoutCarouelInput | Prisma.PostBlockUpdateManyWithWhereWithoutCarouelInput[]
+  update?: Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouselInput | Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouselInput[]
+  updateMany?: Prisma.PostBlockUpdateManyWithWhereWithoutCarouselInput | Prisma.PostBlockUpdateManyWithWhereWithoutCarouselInput[]
   deleteMany?: Prisma.PostBlockScalarWhereInput | Prisma.PostBlockScalarWhereInput[]
 }
 
-export type PostBlockUncheckedUpdateManyWithoutCarouelNestedInput = {
-  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput> | Prisma.PostBlockCreateWithoutCarouelInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouelInput[]
-  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouelInput | Prisma.PostBlockCreateOrConnectWithoutCarouelInput[]
-  upsert?: Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouelInput | Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouelInput[]
-  createMany?: Prisma.PostBlockCreateManyCarouelInputEnvelope
+export type PostBlockUncheckedUpdateManyWithoutCarouselNestedInput = {
+  create?: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput> | Prisma.PostBlockCreateWithoutCarouselInput[] | Prisma.PostBlockUncheckedCreateWithoutCarouselInput[]
+  connectOrCreate?: Prisma.PostBlockCreateOrConnectWithoutCarouselInput | Prisma.PostBlockCreateOrConnectWithoutCarouselInput[]
+  upsert?: Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouselInput | Prisma.PostBlockUpsertWithWhereUniqueWithoutCarouselInput[]
+  createMany?: Prisma.PostBlockCreateManyCarouselInputEnvelope
   set?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   disconnect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   delete?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
   connect?: Prisma.PostBlockWhereUniqueInput | Prisma.PostBlockWhereUniqueInput[]
-  update?: Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouelInput | Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouelInput[]
-  updateMany?: Prisma.PostBlockUpdateManyWithWhereWithoutCarouelInput | Prisma.PostBlockUpdateManyWithWhereWithoutCarouelInput[]
+  update?: Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouselInput | Prisma.PostBlockUpdateWithWhereUniqueWithoutCarouselInput[]
+  updateMany?: Prisma.PostBlockUpdateManyWithWhereWithoutCarouselInput | Prisma.PostBlockUpdateManyWithWhereWithoutCarouselInput[]
   deleteMany?: Prisma.PostBlockScalarWhereInput | Prisma.PostBlockScalarWhereInput[]
 }
 
@@ -526,7 +526,7 @@ export type PostBlockCreateWithoutPostInput = {
   imageUrl?: string | null
   videoUrl?: string | null
   createdAt?: Date | string
-  carouel?: Prisma.CarouselCreateNestedOneWithoutPostBlocksInput
+  carousel?: Prisma.CarouselCreateNestedOneWithoutPostBlocksInput
 }
 
 export type PostBlockUncheckedCreateWithoutPostInput = {
@@ -537,7 +537,7 @@ export type PostBlockUncheckedCreateWithoutPostInput = {
   text?: string | null
   imageUrl?: string | null
   videoUrl?: string | null
-  carouelId?: string | null
+  carouselId?: string | null
   createdAt?: Date | string
 }
 
@@ -579,11 +579,11 @@ export type PostBlockScalarWhereInput = {
   text?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   imageUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   videoUrl?: Prisma.StringNullableFilter<"PostBlock"> | string | null
-  carouelId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
+  carouselId?: Prisma.StringNullableFilter<"PostBlock"> | string | null
   createdAt?: Prisma.DateTimeFilter<"PostBlock"> | Date | string
 }
 
-export type PostBlockCreateWithoutCarouelInput = {
+export type PostBlockCreateWithoutCarouselInput = {
   id?: string
   type: $Enums.BlockType
   title?: string | null
@@ -595,7 +595,7 @@ export type PostBlockCreateWithoutCarouelInput = {
   post: Prisma.PostCreateNestedOneWithoutBlocksInput
 }
 
-export type PostBlockUncheckedCreateWithoutCarouelInput = {
+export type PostBlockUncheckedCreateWithoutCarouselInput = {
   id?: string
   postId: string
   type: $Enums.BlockType
@@ -607,30 +607,30 @@ export type PostBlockUncheckedCreateWithoutCarouelInput = {
   createdAt?: Date | string
 }
 
-export type PostBlockCreateOrConnectWithoutCarouelInput = {
+export type PostBlockCreateOrConnectWithoutCarouselInput = {
   where: Prisma.PostBlockWhereUniqueInput
-  create: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput>
+  create: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput>
 }
 
-export type PostBlockCreateManyCarouelInputEnvelope = {
-  data: Prisma.PostBlockCreateManyCarouelInput | Prisma.PostBlockCreateManyCarouelInput[]
+export type PostBlockCreateManyCarouselInputEnvelope = {
+  data: Prisma.PostBlockCreateManyCarouselInput | Prisma.PostBlockCreateManyCarouselInput[]
   skipDuplicates?: boolean
 }
 
-export type PostBlockUpsertWithWhereUniqueWithoutCarouelInput = {
+export type PostBlockUpsertWithWhereUniqueWithoutCarouselInput = {
   where: Prisma.PostBlockWhereUniqueInput
-  update: Prisma.XOR<Prisma.PostBlockUpdateWithoutCarouelInput, Prisma.PostBlockUncheckedUpdateWithoutCarouelInput>
-  create: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouelInput, Prisma.PostBlockUncheckedCreateWithoutCarouelInput>
+  update: Prisma.XOR<Prisma.PostBlockUpdateWithoutCarouselInput, Prisma.PostBlockUncheckedUpdateWithoutCarouselInput>
+  create: Prisma.XOR<Prisma.PostBlockCreateWithoutCarouselInput, Prisma.PostBlockUncheckedCreateWithoutCarouselInput>
 }
 
-export type PostBlockUpdateWithWhereUniqueWithoutCarouelInput = {
+export type PostBlockUpdateWithWhereUniqueWithoutCarouselInput = {
   where: Prisma.PostBlockWhereUniqueInput
-  data: Prisma.XOR<Prisma.PostBlockUpdateWithoutCarouelInput, Prisma.PostBlockUncheckedUpdateWithoutCarouelInput>
+  data: Prisma.XOR<Prisma.PostBlockUpdateWithoutCarouselInput, Prisma.PostBlockUncheckedUpdateWithoutCarouselInput>
 }
 
-export type PostBlockUpdateManyWithWhereWithoutCarouelInput = {
+export type PostBlockUpdateManyWithWhereWithoutCarouselInput = {
   where: Prisma.PostBlockScalarWhereInput
-  data: Prisma.XOR<Prisma.PostBlockUpdateManyMutationInput, Prisma.PostBlockUncheckedUpdateManyWithoutCarouelInput>
+  data: Prisma.XOR<Prisma.PostBlockUpdateManyMutationInput, Prisma.PostBlockUncheckedUpdateManyWithoutCarouselInput>
 }
 
 export type PostBlockCreateManyPostInput = {
@@ -641,7 +641,7 @@ export type PostBlockCreateManyPostInput = {
   text?: string | null
   imageUrl?: string | null
   videoUrl?: string | null
-  carouelId?: string | null
+  carouselId?: string | null
   createdAt?: Date | string
 }
 
@@ -654,7 +654,7 @@ export type PostBlockUpdateWithoutPostInput = {
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  carouel?: Prisma.CarouselUpdateOneWithoutPostBlocksNestedInput
+  carousel?: Prisma.CarouselUpdateOneWithoutPostBlocksNestedInput
 }
 
 export type PostBlockUncheckedUpdateWithoutPostInput = {
@@ -665,7 +665,7 @@ export type PostBlockUncheckedUpdateWithoutPostInput = {
   text?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  carouelId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  carouselId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
@@ -677,11 +677,11 @@ export type PostBlockUncheckedUpdateManyWithoutPostInput = {
   text?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   videoUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  carouelId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  carouselId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PostBlockCreateManyCarouelInput = {
+export type PostBlockCreateManyCarouselInput = {
   id?: string
   postId: string
   type: $Enums.BlockType
@@ -693,7 +693,7 @@ export type PostBlockCreateManyCarouelInput = {
   createdAt?: Date | string
 }
 
-export type PostBlockUpdateWithoutCarouelInput = {
+export type PostBlockUpdateWithoutCarouselInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumBlockTypeFieldUpdateOperationsInput | $Enums.BlockType
   title?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -705,7 +705,7 @@ export type PostBlockUpdateWithoutCarouelInput = {
   post?: Prisma.PostUpdateOneRequiredWithoutBlocksNestedInput
 }
 
-export type PostBlockUncheckedUpdateWithoutCarouelInput = {
+export type PostBlockUncheckedUpdateWithoutCarouselInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   postId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumBlockTypeFieldUpdateOperationsInput | $Enums.BlockType
@@ -717,7 +717,7 @@ export type PostBlockUncheckedUpdateWithoutCarouelInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type PostBlockUncheckedUpdateManyWithoutCarouelInput = {
+export type PostBlockUncheckedUpdateManyWithoutCarouselInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   postId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumBlockTypeFieldUpdateOperationsInput | $Enums.BlockType
@@ -740,10 +740,10 @@ export type PostBlockSelect<ExtArgs extends runtime.Types.Extensions.InternalArg
   text?: boolean
   imageUrl?: boolean
   videoUrl?: boolean
-  carouelId?: boolean
+  carouselId?: boolean
   createdAt?: boolean
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }, ExtArgs["result"]["postBlock"]>
 
 export type PostBlockSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -755,10 +755,10 @@ export type PostBlockSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Ext
   text?: boolean
   imageUrl?: boolean
   videoUrl?: boolean
-  carouelId?: boolean
+  carouselId?: boolean
   createdAt?: boolean
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }, ExtArgs["result"]["postBlock"]>
 
 export type PostBlockSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -770,10 +770,10 @@ export type PostBlockSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Ext
   text?: boolean
   imageUrl?: boolean
   videoUrl?: boolean
-  carouelId?: boolean
+  carouselId?: boolean
   createdAt?: boolean
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }, ExtArgs["result"]["postBlock"]>
 
 export type PostBlockSelectScalar = {
@@ -785,29 +785,29 @@ export type PostBlockSelectScalar = {
   text?: boolean
   imageUrl?: boolean
   videoUrl?: boolean
-  carouelId?: boolean
+  carouselId?: boolean
   createdAt?: boolean
 }
 
-export type PostBlockOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "postId" | "type" | "title" | "className" | "text" | "imageUrl" | "videoUrl" | "carouelId" | "createdAt", ExtArgs["result"]["postBlock"]>
+export type PostBlockOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "postId" | "type" | "title" | "className" | "text" | "imageUrl" | "videoUrl" | "carouselId" | "createdAt", ExtArgs["result"]["postBlock"]>
 export type PostBlockInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }
 export type PostBlockIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }
 export type PostBlockIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   post?: boolean | Prisma.PostDefaultArgs<ExtArgs>
-  carouel?: boolean | Prisma.PostBlock$carouelArgs<ExtArgs>
+  carousel?: boolean | Prisma.PostBlock$carouselArgs<ExtArgs>
 }
 
 export type $PostBlockPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "PostBlock"
   objects: {
     post: Prisma.$PostPayload<ExtArgs>
-    carouel: Prisma.$CarouselPayload<ExtArgs> | null
+    carousel: Prisma.$CarouselPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -818,7 +818,7 @@ export type $PostBlockPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     text: string | null
     imageUrl: string | null
     videoUrl: string | null
-    carouelId: string | null
+    carouselId: string | null
     createdAt: Date
   }, ExtArgs["result"]["postBlock"]>
   composites: {}
@@ -1215,7 +1215,7 @@ readonly fields: PostBlockFieldRefs;
 export interface Prisma__PostBlockClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   post<T extends Prisma.PostDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PostDefaultArgs<ExtArgs>>): Prisma.Prisma__PostClient<runtime.Types.Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-  carouel<T extends Prisma.PostBlock$carouelArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PostBlock$carouelArgs<ExtArgs>>): Prisma.Prisma__CarouselClient<runtime.Types.Result.GetResult<Prisma.$CarouselPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  carousel<T extends Prisma.PostBlock$carouselArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.PostBlock$carouselArgs<ExtArgs>>): Prisma.Prisma__CarouselClient<runtime.Types.Result.GetResult<Prisma.$CarouselPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1253,7 +1253,7 @@ export interface PostBlockFieldRefs {
   readonly text: Prisma.FieldRef<"PostBlock", 'String'>
   readonly imageUrl: Prisma.FieldRef<"PostBlock", 'String'>
   readonly videoUrl: Prisma.FieldRef<"PostBlock", 'String'>
-  readonly carouelId: Prisma.FieldRef<"PostBlock", 'String'>
+  readonly carouselId: Prisma.FieldRef<"PostBlock", 'String'>
   readonly createdAt: Prisma.FieldRef<"PostBlock", 'DateTime'>
 }
     
@@ -1651,9 +1651,9 @@ export type PostBlockDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Int
 }
 
 /**
- * PostBlock.carouel
+ * PostBlock.carousel
  */
-export type PostBlock$carouelArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type PostBlock$carouselArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
    * Select specific fields to fetch from the Carousel
    */
