@@ -1,6 +1,6 @@
+import 'dotenv/config'
 import { PrismaClient, Prisma, BlockType } from '../src/generated/prisma/client'
 import { PrismaPg } from '@prisma/adapter-pg'
-import 'dotenv/config'
 
 const adapter = new PrismaPg({
     connectionString: process.env.DATABASE_URL,
@@ -25,32 +25,6 @@ const postData: Prisma.PostCreateInput[] = [
                     type: BlockType.IMAGE,
                     imageUrl: '/images/hero.jpg',
                     className: 'w-full',
-                },
-                {
-                    type: BlockType.CARUSEL,
-                    carousel: {
-                        create: {
-                            items: {
-                                create: [
-                                    {
-                                        src: '/images/slide1.jpg',
-                                        index: 0,
-                                        text: 'Slide 1',
-                                    },
-                                    {
-                                        src: '/images/slide2.jpg',
-                                        index: 1,
-                                        text: 'Slide 2',
-                                    },
-                                    {
-                                        src: '/images/slide3.jpg',
-                                        index: 2,
-                                        text: 'Slide 3',
-                                    },
-                                ],
-                            },
-                        },
-                    },
                 },
             ],
         },
