@@ -139,36 +139,26 @@ export default function Solution() {
             />
 
             <BgVideo
-                link={'/solutionVideo.mp4'}
-                poster={'/technologyPoster1.webp'}
+                link={'/Olexir_shot.mp4'}
+                poster={'/technologyPoster2.webp'}
             />
             <div className="absolute top-116 z-20 w-full flex justify-center">
                 <h1
-                    className={`text-[24px] px-4 md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-white text-center ${lato.className}`}
-                >
-                    The world needs healthy, efficient and sustainable fats
-                </h1>
+                    className={`text-[24px] px-4 pt-8 md:text-[32px] lg:text-[44px] xl:text-[56px] font-bold text-center text-white  ${lato.className}`}
+                ></h1>
             </div>
             <div id="container">
                 <div className="relative w-full px-4 md:px-10">
-                    <div className="pt-23 pb-15 w-[160px] ">
-                        <h3
+                    <div className="pt-23 pb-15 text-center">
+                        <h2
                             id="problem"
-                            className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                            className={`text-[40px] md:text-[50px] lg:text-[60px] text-[#ffffff] font-semibold ${lato.className}`}
                         >
-                            Problem
-                        </h3>
+                            The world needs healthy, efficient and sustainable
+                            fats
+                        </h2>
                     </div>
-                    <DashedLine
-                        fromId="problem"
-                        toId="problemsTable"
-                        startFn="getRightMiddleEdge"
-                        endFn="getEndUpperRightEdge"
-                        curveDistX1={2.1}
-                        curveDistY1={2.4}
-                        curveDistX2={1.2}
-                        curveDistY2={2}
-                    />
+
                     <div
                         id="problemsTable"
                         className="flex flex-col md:flex-row w-full rounded-md
@@ -212,7 +202,7 @@ export default function Solution() {
                             <div
                                 className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                             >
-                                <AnimatedNumber value="60" className="inline" />
+                                <AnimatedNumber value="50" className="inline" />
                                 %
                             </div>
                             <div
@@ -221,12 +211,8 @@ export default function Solution() {
                                 <p
                                     className={`text-center font-light text-white ${lato.className}`}
                                 >
-                                    population suffering from overweight incl.
-                                    <AnimatedNumber
-                                        value="16"
-                                        className="inline"
-                                    />
-                                    % living with obesity{' '}
+                                    worry about greasiness when using beauty
+                                    oils as #1 texture concern
                                 </p>
                             </div>
                         </div>
@@ -256,7 +242,7 @@ export default function Solution() {
                         </div>
                     </div>
 
-                    {!isMobile && (
+                    {/* {!isMobile && (
                         <DashedLine
                             fromId="problemsTable"
                             toId="fluidity"
@@ -268,7 +254,7 @@ export default function Solution() {
                             curveDistY2={2}
                             edgeShiftYEnd={50}
                         />
-                    )}
+                    )} */}
                     <div className="flex flex-col items-center md:flex-row pt-20">
                         <div id="fluidity" className="relative flex-1">
                             <Image
@@ -321,7 +307,7 @@ export default function Solution() {
                     {/* Solution */}
                     {!isMobile && (
                         <div className="">
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="fluidity"
                                 toId="solutionCurve"
                                 startFn="getMiddleBottomEdge"
@@ -330,12 +316,12 @@ export default function Solution() {
                                 curveDistY1={1.9}
                                 curveDistX2={3}
                                 curveDistY2={2}
-                            />
-                            <div
+                            /> */}
+                            {/* <div
                                 id="solutionCurve"
                                 className="mt-15 md:mt-35 ml-15 w-1 h-1"
-                            ></div>
-                            <DashedLine
+                            ></div> */}
+                            {/* <DashedLine
                                 fromId="solutionCurve"
                                 toId="solution"
                                 startFn="getMiddleBottomEdge"
@@ -344,18 +330,18 @@ export default function Solution() {
                                 curveDistY1={2}
                                 curveDistX2={2}
                                 curveDistY2={2}
-                            />
+                            /> */}
 
-                            <div className="pt-5 md:pt-30 pb-15 w-[160px]">
+                            <div className="pt-20 pb-15">
                                 <h3
                                     id="solution"
-                                    className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                                    className={`text-[60px] text-[#ffffff] text-center font-semibold ${lato.className}`}
                                 >
                                     Solution
                                 </h3>
                             </div>
 
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="solution"
                                 toId="solutionResult"
                                 startFn="getMiddleBottomEdge"
@@ -364,7 +350,7 @@ export default function Solution() {
                                 curveDistY1={2}
                                 curveDistX2={6}
                                 curveDistY2={2}
-                            />
+                            /> */}
                             <div className="flex justify-center md:justify-around">
                                 <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around h-10">
                                     <span
@@ -416,7 +402,7 @@ export default function Solution() {
                                         To solidify plant oils
                                     </span>
                                 </div>
-                                <DashedLine
+                                {/* <DashedLine
                                     fromId="solidityPlant"
                                     toId="solutionTable"
                                     startFn="getRightMiddleEdge"
@@ -425,31 +411,31 @@ export default function Solution() {
                                     curveDistY1={2.101}
                                     curveDistX2={1.9}
                                     edgeShiftYEnd={-130}
-                                />
+                                /> */}
                             </div>
                         </div>
                     )}
                     {isMobile && (
                         <div className="">
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="plantOils"
                                 toId="solution"
                                 startFn="getBottomRightEdge"
                                 endFn="getRightMiddleEdge"
                                 curveDistX1={2}
                                 curveDistY1={1.9}
-                            />
+                            /> */}
 
-                            <div className="pt-5 md:pt-30 pb-15 w-[160px]">
+                            <div className="pt-5 md:pt-30 pb-5">
                                 <h3
                                     id="solution"
-                                    className={`text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                                    className={`text-[40px] md:text-[50px] lg:text-[60px] text-[#ffffff] text-center font-semibold ${lato.className}`}
                                 >
                                     Solution
                                 </h3>
                             </div>
 
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="solution"
                                 toId="solutionResult"
                                 startFn="getLeftBottomCorner"
@@ -460,7 +446,7 @@ export default function Solution() {
                                 curveDistY2={1.99}
                                 edgeShiftXStart={2}
                                 edgeShiftYStart={-10}
-                            />
+                            /> */}
 
                             <div className="flex justify-center md:justify-around">
                                 <div className="flex flex-col w-[65%] md:w-full md:flex-row items-center gap-10 md:gap-0 justify-around">
@@ -514,7 +500,7 @@ export default function Solution() {
                                     </span>
                                 </div>
 
-                                <DashedLine
+                                {/* <DashedLine
                                     fromId="solidityPlant"
                                     toId="solutionTable"
                                     startFn="getRightMiddleEdge"
@@ -523,7 +509,7 @@ export default function Solution() {
                                     curveDistY1={1.89999}
                                     curveDistX2={2.8}
                                     curveDistY2={2.06}
-                                />
+                                /> */}
                             </div>
                         </div>
                     )}
@@ -615,13 +601,10 @@ export default function Solution() {
                                 id="leaking2Text"
                                 className={`mt-3 px-5 text-[16px] lg:text-[24px] w-full md:max-w-[483px] font-light text-white ${lato.className}`}
                             >
-                                We know how to employ hydrolysed plant proteins
-                                and turn liquid oils into stable oleogels –
-                                without the need for heating, toxic solvents,
-                                nickel or expensive cross-linkers and with as
-                                high as minimum{' '}
-                                <AnimatedNumber value="96" className="inline" />
-                                % oil loading capacity.
+                                We have unlocked the oleogelating capacity of
+                                proteins and introduced stability, firmness and
+                                a solid structure to liquid oils by protecting
+                                from oxidation and UV.
                             </div>
                         </div>
 
@@ -647,11 +630,16 @@ export default function Solution() {
                                     id="blueMicroscopeText"
                                     className="w-full px-5 md:w-[88%]"
                                 >
-                                    We have unlocked the oleogelating capacity
-                                    of proteins and introduced stability,
-                                    firmness and a solid structure to liquid
-                                    oils by protecting every tiny oil droplet
-                                    from oxidation and UV.
+                                    We know how to employ hydrolysed plant
+                                    proteins and turn liquid oils into stable
+                                    oleogels – without the need for heating,
+                                    toxic solvents, nickel or expensive
+                                    cross-linkers and with as high as minimum{' '}
+                                    <AnimatedNumber
+                                        value="96"
+                                        className="inline"
+                                    />
+                                    % oil loading capacity.
                                 </div>
                             </div>
                         </div>
@@ -659,7 +647,7 @@ export default function Solution() {
 
                     {!isMobile && (
                         <>
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="blueMicroscope"
                                 toId="sustainabilityCurve1"
                                 startFn="getBottomRightEdge"
@@ -673,9 +661,9 @@ export default function Solution() {
                             <div
                                 id="sustainabilityCurve1"
                                 className="absolute w-0 h-0 md:mt-[18vh] lg:mt-[14vh] xl:mt-[16vh] 2xl:mt-[19vh] right-[30vw]"
-                            ></div>
+                            ></div> */}
 
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="sustainabilityCurve1"
                                 toId="sustainabilityCurve2"
                                 startFn="getLefttMiddleEdge"
@@ -700,18 +688,23 @@ export default function Solution() {
                                 curveDistY1={1.9}
                                 curveDistX2={2}
                                 curveDistY2={2}
-                            />
+                            /> */}
 
                             <div
-                                className={`flex h-[20vh] md:h-[35vh] text-[40px] text-[#D8AE02] font-semibold ${lato.className}`}
+                                className={`flex pt-10 pb-12 text-[#ffffff] font-semibold ${lato.className}`}
                             >
                                 <div className="flex-[1_16_auto]"></div>
                                 <div className="flex self-end flex-[1_0_auto]">
-                                    <h3 id="sustainability">Sustainability</h3>
+                                    <h3
+                                        id="sustainability"
+                                        className="text-[40px] md:text-[50px] lg:text-[60px]"
+                                    >
+                                        Sustainability
+                                    </h3>
                                 </div>
                             </div>
                             <div
-                                className={`mt-6 px-5 md:mt-16 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
+                                className={`px-5 text-[18px] md:text-[20px] lg:text-[24px] w-full font-light text-white ${lato.className}`}
                             >
                                 Every Olexir oleogel is plant protein based. To
                                 amplify sustainability, we also offer an
@@ -723,7 +716,7 @@ export default function Solution() {
                                 <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12 tabular-nums">
                                     <div
                                         id="planProtein"
-                                        className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                        className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>
@@ -748,7 +741,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                        className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             ~
@@ -773,7 +766,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                        className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>
                                             <AnimatedNumber
@@ -892,7 +885,7 @@ export default function Solution() {
 
                     {isMobile && (
                         <>
-                            <DashedLine
+                            {/* <DashedLine
                                 fromId="blueMicroscopeText"
                                 toId="sustainability"
                                 startFn="getRightMiddleEdge"
@@ -903,10 +896,10 @@ export default function Solution() {
                                 curveDistY2={2}
                                 edgeShiftXStart={-20}
                                 edgeShiftYStart={40}
-                            />
+                            /> */}
 
                             <div
-                                className={`flex h-[15vh] md:h-[50vh] text-[32px] text-[#D8AE02] font-semibold ${lato.className}`}
+                                className={`flex h-[15vh] md:h-[50vh] text-[32px] text-[#ffffff] font-semibold ${lato.className}`}
                             >
                                 <div className="flex-[1_16_auto]"></div>
                                 <div className="flex self-end flex-[1_0_auto]">
