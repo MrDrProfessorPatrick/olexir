@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Script from 'next/script'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedNumber from '@/components/AnimatedNumber'
@@ -24,6 +24,22 @@ export default function Solution() {
 
     const isMobile = useIsMobile()
     const isTablet = useIsTablet()
+
+    const containerRef = useRef(null)
+    const [leftOffset, setLeftOffset] = useState(0)
+
+    useEffect(() => {
+        function updateOffset() {
+            if (containerRef.current) {
+                setLeftOffset(containerRef.current.getBoundingClientRect().left)
+            }
+        }
+        updateOffset()
+        window.addEventListener('resize', updateOffset)
+        return () => {
+            window.removeEventListener('resize', updateOffset)
+        }
+    }, [])
 
     const FAQList = [
         {
@@ -149,7 +165,10 @@ export default function Solution() {
             </div>
             <div id="container" className="">
                 <div className="2xl:w-[1440px] mx-auto">
-                    <div className="relative w-full px-4 md:px-10">
+                    <div
+                        ref={containerRef}
+                        className="relative w-full px-4 md:px-10"
+                    >
                         <div className="pt-23 pb-15 text-center">
                             <h2
                                 id="problem"
@@ -882,20 +901,19 @@ export default function Solution() {
                         )}
                         {/* <LineCircleLeft top={310} /> */}
 
-                        <div className="flex relative flex-col md:flex-row mt-20 gap-10 justify-between ">
-                            {/* 2xl:w-[1440px] 2xl:mx-auto */}
+                        <div className="flex flex-col md:flex-row mt-20 gap-10 justify-between">
                             {!isTablet && (
                                 <LineCircleRight
-                                    top={30}
                                     width={30}
-                                    leftEdge={-40}
+                                    leftEdge={-leftOffset}
+                                    top={74}
                                 />
                             )}
                             {!isTablet && (
                                 <LineCircleLeft
-                                    top={30}
                                     width={30}
-                                    rightEdge={-40}
+                                    rightEdge={-leftOffset}
+                                    top={74}
                                 />
                             )}
                             <div className="flex flex-[1_1_0] flex-col items-center">
