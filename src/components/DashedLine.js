@@ -3,121 +3,111 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
-function getCenter(el, edgeShiftX, edgeShiftY) {
+function getCenter(el, edgeShiftX, edgeShiftY, containerRect) {
     const r = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: r.left + r.width / 2 - container.left + edgeShiftX,
-        y: r.top + r.height / 2 - container.top + edgeShiftY,
+        x: r.left + r.width / 2 - containerRect.left + edgeShiftX,
+        y: r.top + r.height / 2 - containerRect.top + edgeShiftY,
     }
 }
 
-function getUpperCenter(el, edgeShiftX, edgeShiftY) {
+function getUpperCenter(el, edgeShiftX, edgeShiftY, containerRect) {
     const r = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: r.left + r.width / 2 + edgeShiftX,
-        y: r.top - container.top + edgeShiftY,
+        x: r.left + r.width / 2 - containerRect.left + edgeShiftX,
+        y: r.top - containerRect.top + edgeShiftY,
     }
 }
 
-function getLefttMiddleEdge(el, edgeShiftX, edgeShiftY) {
+function getLefttMiddleEdge(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.left + edgeShiftX,
+        x: elementCords.left - containerRect.left + edgeShiftX,
         y:
             elementCords.top +
             elementCords.height / 2 -
-            container.top +
+            containerRect.top +
             edgeShiftY,
     }
 }
 
-function getLefttBottomCorner(el, edgeShiftX, edgeShiftY) {
+function getLefttBottomCorner(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.left + edgeShiftX,
-        y: elementCords.top + elementCords.height - container.top + edgeShiftY,
-    }
-}
-
-function getRightMiddleEdge(el, edgeShiftX, edgeShiftY) {
-    const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
-    return {
-        x: elementCords.left + elementCords.width + edgeShiftX,
+        x: elementCords.left - containerRect.left + edgeShiftX,
         y:
             elementCords.top +
-            elementCords.height / 2 -
-            container.top +
+            elementCords.height -
+            containerRect.top +
             edgeShiftY,
     }
 }
 
-function getEndUpperRightEdge(el, edgeShiftX, edgeShiftY) {
+function getRightMiddleEdge(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.right - elementCords.right * 0.1 + edgeShiftX,
-        y: elementCords.top - container.top + edgeShiftY,
+        x:
+            elementCords.left +
+            elementCords.width -
+            containerRect.left +
+            edgeShiftX,
+        y:
+            elementCords.top +
+            elementCords.height / 2 -
+            containerRect.top +
+            edgeShiftY,
     }
 }
 
-function getMiddleBottomEdge(el, edgeShiftX, edgeShiftY) {
+function getEndUpperRightEdge(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.right - elementCords.width / 2 + edgeShiftX,
-        y: elementCords.bottom - container.top + edgeShiftY,
+        x:
+            elementCords.right -
+            elementCords.right * 0.1 -
+            containerRect.left +
+            edgeShiftX,
+        y: elementCords.top - containerRect.top + edgeShiftY,
     }
 }
 
-function getBottomRightEdge(el, edgeShiftX, edgeShiftY) {
+function getMiddleBottomEdge(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.right - 40 + edgeShiftX, // change to some % value
-        y: elementCords.bottom - container.top + edgeShiftY,
+        x:
+            elementCords.right -
+            elementCords.width / 2 -
+            containerRect.left +
+            edgeShiftX,
+        y: elementCords.bottom - containerRect.top + edgeShiftY,
     }
 }
 
-function getLeftBottomCorner(el, edgeShiftX, edgeShiftY) {
+function getBottomRightEdge(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.left + edgeShiftX + edgeShiftX,
-        y: elementCords.top + elementCords.height - container.top + edgeShiftY,
+        x: elementCords.right - 40 - containerRect.left + edgeShiftX,
+        y: elementCords.bottom - containerRect.top + edgeShiftY,
     }
 }
 
-function getLeftUpperCorner(el, edgeShiftX, edgeShiftY) {
+function getLeftBottomCorner(el, edgeShiftX, edgeShiftY, containerRect) {
     const elementCords = el.getBoundingClientRect()
-    const container = document
-        .getElementById('container')
-        .getBoundingClientRect()
     return {
-        x: elementCords.left + edgeShiftX + edgeShiftX,
-        y: elementCords.top - container.top + edgeShiftY,
+        x: elementCords.left - containerRect.left + edgeShiftX + edgeShiftX,
+        y:
+            elementCords.top +
+            elementCords.height -
+            containerRect.top +
+            edgeShiftY,
+    }
+}
+
+function getLeftUpperCorner(el, edgeShiftX, edgeShiftY, containerRect) {
+    const elementCords = el.getBoundingClientRect()
+    return {
+        x: elementCords.left - containerRect.left + edgeShiftX + edgeShiftX,
+        y: elementCords.top - containerRect.top + edgeShiftY,
     }
 }
 
@@ -150,32 +140,36 @@ export default function DashedLine({
     color = '#ffd600',
 }) {
     const pathRef = useRef(null)
+    const svgRef = useRef(null)
     const [d, setD] = useState('')
 
     useEffect(() => {
         function update() {
             const fromEl = document.getElementById(fromId)
             const toEl = document.getElementById(toId)
-            if (!fromEl || !toEl) return
+            const svgEl = svgRef.current
+            if (!fromEl || !toEl || !svgEl) return
+
+            const svgRect = svgEl.getBoundingClientRect()
+            const containerRect = { left: svgRect.left, top: svgRect.top }
 
             const a = positionFunctions[startFn](
                 fromEl,
                 edgeShiftXStart,
-                edgeShiftYStart
+                edgeShiftYStart,
+                containerRect
             )
             const b = positionFunctions[endFn](
                 toEl,
                 edgeShiftXEnd,
-                edgeShiftYEnd
+                edgeShiftYEnd,
+                containerRect
             )
 
-            const dx = Math.abs(b.x - a.x)
-            const dy = Math.abs(b.y - a.y)
-
-            const cx1 = (a.x + b.x) / curveDistX1 // this is middle of the line if is diviede by 2 (curveDist)
+            const cx1 = (a.x + b.x) / curveDistX1
             const cy1 = (a.y + b.y) / curveDistY1
 
-            const cx2 = (a.x + b.x) / curveDistX2 // this is middle of the line if is diviede by 2 (curveDist)
+            const cx2 = (a.x + b.x) / curveDistX2
             const cy2 = (a.y + b.y) / curveDistY2
 
             setD(`M ${a.x} ${a.y} C ${cx1} ${cy1} ${cx2} ${cy2} ${b.x} ${b.y}`)
@@ -187,10 +181,24 @@ export default function DashedLine({
             window.removeEventListener('resize', update)
             window.removeEventListener('scroll', update)
         }
-    }, [fromId, toId])
+    }, [
+        fromId,
+        toId,
+        startFn,
+        endFn,
+        curveDistX1,
+        curveDistY1,
+        curveDistX2,
+        curveDistY2,
+        edgeShiftXStart,
+        edgeShiftYStart,
+        edgeShiftXEnd,
+        edgeShiftYEnd,
+    ])
 
     return (
         <svg
+            ref={svgRef}
             className="absolute inset-0 pointer-events-none overflow-visible"
             xmlns="http://www.w3.org/2000/svg"
         >

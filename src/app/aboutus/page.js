@@ -13,7 +13,7 @@ const lato = Lato({
 export default function AboutUs() {
     return (
         <>
-            <section className="relative w-full h-[1200px] lg:h-[496px] lg:h-[696px] 2xl:h-[803px]">
+            <section className="relative w-full h-[1200px] lg:h-[496px] lg:h-[696px] 2xl:h-[803px] ">
                 <Script
                     id="about-schema"
                     type="application/ld+json"
@@ -147,6 +147,7 @@ export default function AboutUs() {
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
+                                  2xl:w-[1440px] 2xl:m-auto
                                 "
                     >
                         {[
