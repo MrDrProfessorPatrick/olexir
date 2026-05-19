@@ -9,6 +9,7 @@ import DashedLine from '@/components/DashedLine'
 import LineCircleLeft from '@/components/LineCircleLeft'
 import LineCircleRight from '@/components/LineCircleRight'
 import { useIsMobile, useIsTablet } from '@/hooks/useIsMobile'
+import { useSetLeftOffset } from '@/hooks/useSetLeftOffset'
 import { Lato } from 'next/font/google'
 import { FaPlus } from 'react-icons/fa6'
 import { FaMinus } from 'react-icons/fa6'
@@ -20,26 +21,12 @@ const lato = Lato({
 })
 
 export default function Solution() {
+    const containerRef = useRef(null)
     const [faqShownArr, setFaqInfo] = useState([])
 
     const isMobile = useIsMobile()
     const isTablet = useIsTablet()
-
-    const containerRef = useRef(null)
-    const [leftOffset, setLeftOffset] = useState(0)
-
-    useEffect(() => {
-        function updateOffset() {
-            if (containerRef.current) {
-                setLeftOffset(containerRef.current.getBoundingClientRect().left)
-            }
-        }
-        updateOffset()
-        window.addEventListener('resize', updateOffset)
-        return () => {
-            window.removeEventListener('resize', updateOffset)
-        }
-    }, [])
+    const leftOffset = useSetLeftOffset(containerRef)
 
     const FAQList = [
         {

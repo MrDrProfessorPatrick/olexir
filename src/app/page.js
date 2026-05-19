@@ -1,7 +1,10 @@
+'use client'
+import { useRef } from 'react'
 import HeroPage from '@/components/HeroPage'
 import HomePageContent from '@/components/HomePageContent'
 import CaruselHome from '@/components/CaruselHome'
 import { Lato } from 'next/font/google'
+import { useSetLeftOffset } from '@/hooks/useSetLeftOffset'
 import LineCircleRight from '../components/LineCircleRight'
 import LineCircleLeft from '../components/LineCircleLeft'
 
@@ -12,6 +15,10 @@ const lato = Lato({
 })
 
 export default function Home() {
+    const containerRef = useRef(null)
+
+    const leftOffset = useSetLeftOffset(containerRef)
+
     const images = [
         {
             src: '/ProteinNanofibrils.webp',
@@ -55,8 +62,11 @@ export default function Home() {
             <main className="w-full h-full">
                 <HeroPage />
                 <div className="">
-                    <div className="flex flex-col relative lg:flex-row w-full pb-25 pt-30 px-4 lg:px-10">
-                        <div className="flex-4">
+                    <div
+                        ref={containerRef}
+                        className="flex flex-col relative lg:flex-row w-full pb-25 pt-30 px-4 lg:px-10 2xl:w-[1440px] mx-auto"
+                    >
+                        <div className="flex-4 ">
                             <h2 className="text-[40px] lg:text-[60px] font-medium text-white">
                                 Amplify Oleosensation:
                             </h2>
@@ -85,10 +95,12 @@ export default function Home() {
                         <LineCircleLeft
                             top={{ base: 90, xs: 85, md: 104, lg: 104 }}
                             width={70}
+                            rightEdge={-leftOffset}
                         />
                         <LineCircleRight
                             top={{ base: 90, xs: 85, md: 104, lg: 104 }}
                             width={70}
+                            leftEdge={-leftOffset}
                         />
                     </div>
                     <div className="flex justify-center pb-8 lg:pb-0">
