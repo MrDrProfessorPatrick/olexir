@@ -584,7 +584,7 @@ export default function Solution() {
                                     <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12 tabular-nums">
                                         <div
                                             id="planProtein"
-                                            className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
+                                            className={`w-90 flex flex-col items-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-1 py-4 ${lato.className}`}
                                         >
                                             <span>Plant protein</span>
                                             <span>
@@ -604,7 +604,7 @@ export default function Solution() {
                                         />
                                         <div
                                             id="secondPlanProtein"
-                                            className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                            className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>~ 10 % of global CO₂</span>
                                             <span>comes from</span>
@@ -622,7 +622,7 @@ export default function Solution() {
                                         />
                                         <div
                                             id="thirdPlanProtein"
-                                            className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                            className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>
                                                 30 – 50 % of protein remains
@@ -643,7 +643,7 @@ export default function Solution() {
                                     <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
                                         <div
                                             id="planProtein"
-                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>Plant protein</span>
                                             <span>generate ~ 90 × lower</span>
@@ -663,7 +663,7 @@ export default function Solution() {
                                         />
                                         <div
                                             id="secondPlanProtein"
-                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>~ 10 % of global CO₂</span>
                                             <span>comes from</span>
@@ -681,7 +681,7 @@ export default function Solution() {
                                         />
                                         <div
                                             id="thirdPlanProtein"
-                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                            className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>
                                                 30 – 50 % protein remains
@@ -723,7 +723,7 @@ export default function Solution() {
                                 <div className="flex flex-col gap-18 md:gap-14 lg:flex-row justify-around mt-12">
                                     <div
                                         id="planProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>Plant protein</span>
                                         <span>generate ~ 90 × lower</span>
@@ -743,7 +743,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="secondPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>~ 10 % of global CO₂</span>
                                         <span>comes from</span>
@@ -761,7 +761,7 @@ export default function Solution() {
                                     />
                                     <div
                                         id="thirdPlanProtein"
-                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
+                                        className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[18px] xl:text-[22px] 2xl:text-[26px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>30 – 50 % protein remains</span>
                                         <span>
