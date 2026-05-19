@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from 'react'
 import Script from 'next/script'
 import { motion, AnimatePresence } from 'framer-motion'
-import AnimatedNumber from '@/components/AnimatedNumber'
 import Image from 'next/image'
 import BgVideo from '@/components/BgVideo'
 import DashedLine from '@/components/DashedLine'
@@ -210,11 +209,7 @@ export default function Solution() {
                                 <div
                                     className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                                 >
-                                    <AnimatedNumber
-                                        value="50"
-                                        className="inline"
-                                    />
-                                    %
+                                    50 %
                                 </div>
                                 <div
                                     className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 md:px-0 lg:px-10 text-[20px] md:text-[20px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
@@ -237,12 +232,7 @@ export default function Solution() {
                                 <div
                                     className={`text-[100px] md:text-[100px] font-light text-white leading-none ${lato.className}`}
                                 >
-                                    <span>&lt;</span>{' '}
-                                    <AnimatedNumber
-                                        value="5"
-                                        className="inline"
-                                    />
-                                    %
+                                    <span>&lt;</span> 5 %
                                 </div>
                                 <div
                                     className={`px-3 xs:px-15 sm:px-40 md:px-0 mt-4 md:px-0 lg:px-10 text-[20px] md:text-[20px] lg:text-[20px] min-h-[60px] md:min-h-[80px] flex items-start`}
@@ -560,12 +550,7 @@ export default function Solution() {
                                         stable oleogels – without the need for
                                         heating, toxic solvents, nickel or
                                         expensive cross-linkers and with as high
-                                        as minimum{' '}
-                                        <AnimatedNumber
-                                            value="96"
-                                            className="inline"
-                                        />
-                                        % oil loading capacity.
+                                        as minimum 96 % oil loading capacity.
                                     </div>
                                 </div>
                             </div>
@@ -603,12 +588,7 @@ export default function Solution() {
                                         >
                                             <span>Plant protein</span>
                                             <span>
-                                                generate ~
-                                                <AnimatedNumber
-                                                    value="90"
-                                                    className="inline"
-                                                />
-                                                times less
+                                                generate ~ 90 times less
                                             </span>
                                             <span>CO₂eq than beef</span>
                                         </div>
@@ -626,14 +606,7 @@ export default function Solution() {
                                             id="secondPlanProtein"
                                             className={`w-80 flex flex-col items-center text-center justify-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
-                                            <span>
-                                                ~
-                                                <AnimatedNumber
-                                                    value="10"
-                                                    className="inline"
-                                                />
-                                                % of global CO₂
-                                            </span>
+                                            <span>~ 10 % of global CO₂</span>
                                             <span>comes from</span>
                                             <span>food loss & waste</span>
                                         </div>
@@ -652,29 +625,15 @@ export default function Solution() {
                                             className={`w-100 flex flex-col text-center items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[16px] lg:text-[16px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>
-                                                <AnimatedNumber
-                                                    value="30"
-                                                    className="inline"
-                                                />
-                                                –
-                                                <AnimatedNumber
-                                                    value="50"
-                                                    className="inline"
-                                                />
-                                                % of protein remains
+                                                30 – 50 % of protein remains
                                             </span>
                                             <span>
                                                 underutilized in oilseed
                                                 cakes;{' '}
                                             </span>
                                             <span>
-                                                ~
-                                                <AnimatedNumber
-                                                    value="30"
-                                                    className="inline"
-                                                />
-                                                % of soy protein are lost in{' '}
-                                                <br /> tofu production
+                                                ~ 30 % of soy protein are lost
+                                                in <br /> tofu production
                                             </span>
                                         </div>
                                     </div>
@@ -687,14 +646,7 @@ export default function Solution() {
                                             className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>Plant protein</span>
-                                            <span>
-                                                generate ~
-                                                <AnimatedNumber
-                                                    value="90"
-                                                    className="inline"
-                                                />
-                                                × lower
-                                            </span>
+                                            <span>generate ~ 90 × lower</span>
                                             <span>
                                                 CO₂eq vs beef per 100 g protein
                                             </span>
@@ -713,14 +665,7 @@ export default function Solution() {
                                             id="secondPlanProtein"
                                             className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
-                                            <span>
-                                                ~
-                                                <AnimatedNumber
-                                                    value="10"
-                                                    className="inline"
-                                                />
-                                                % of global CO₂
-                                            </span>
+                                            <span>~ 10 % of global CO₂</span>
                                             <span>comes from</span>
                                             <span>food loss & waste</span>
                                         </div>
@@ -739,28 +684,14 @@ export default function Solution() {
                                             className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                         >
                                             <span>
-                                                <AnimatedNumber
-                                                    value="30"
-                                                    className="inline"
-                                                />
-                                                –
-                                                <AnimatedNumber
-                                                    value="50"
-                                                    className="inline"
-                                                />
-                                                % protein remains
+                                                30 – 50 % protein remains
                                             </span>
                                             <span>
                                                 underutilized in oilseed
                                                 cakes{' '}
                                             </span>
                                             <span>
-                                                ~
-                                                <AnimatedNumber
-                                                    value="30"
-                                                    className="inline"
-                                                />
-                                                % lost in tofu production
+                                                ~ 30 % lost in tofu production
                                             </span>
                                         </div>
                                     </div>
@@ -770,19 +701,6 @@ export default function Solution() {
 
                         {isMobile && (
                             <>
-                                {/* <DashedLine
-                                fromId="blueMicroscopeText"
-                                toId="sustainability"
-                                startFn="getRightMiddleEdge"
-                                endFn="getUpperCenter"
-                                curveDistX1={1.4}
-                                curveDistY1={2}
-                                curveDistX2={3}
-                                curveDistY2={2}
-                                edgeShiftXStart={-20}
-                                edgeShiftYStart={40}
-                            /> */}
-
                                 <div
                                     className={`flex h-[15vh] md:h-[50vh] text-[32px] text-[#ffffff] font-semibold ${lato.className}`}
                                 >
@@ -808,14 +726,7 @@ export default function Solution() {
                                         className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
                                         <span>Plant protein</span>
-                                        <span>
-                                            generate ~
-                                            <AnimatedNumber
-                                                value="90"
-                                                className="inline"
-                                            />
-                                            × lower
-                                        </span>
+                                        <span>generate ~ 90 × lower</span>
                                         <span>
                                             CO₂eq vs beef per 100 g protein
                                         </span>
@@ -834,14 +745,7 @@ export default function Solution() {
                                         id="secondPlanProtein"
                                         className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
-                                        <span>
-                                            ~
-                                            <AnimatedNumber
-                                                value="10"
-                                                className="inline"
-                                            />
-                                            % of global CO₂
-                                        </span>
+                                        <span>~ 10 % of global CO₂</span>
                                         <span>comes from</span>
                                         <span>food loss & waste</span>
                                     </div>
@@ -859,34 +763,17 @@ export default function Solution() {
                                         id="thirdPlanProtein"
                                         className={`flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[16px] xl:text-[20px] 2xl:text-[24px] text-white px-1 lg:px-6 xl:px-8 2xl:px-12 py-4 ${lato.className}`}
                                     >
-                                        <span>
-                                            <AnimatedNumber
-                                                value="30"
-                                                className="inline"
-                                            />
-                                            –
-                                            <AnimatedNumber
-                                                value="50"
-                                                className="inline"
-                                            />
-                                            % protein remains
-                                        </span>
+                                        <span>30 – 50 % protein remains</span>
                                         <span>
                                             underutilized in oilseed cakes{' '}
                                         </span>
                                         <span>
-                                            ~
-                                            <AnimatedNumber
-                                                value="30"
-                                                className="inline"
-                                            />
-                                            % lost in tofu production
+                                            ~ 30 % lost in tofu production
                                         </span>
                                     </div>
                                 </div>
                             </>
                         )}
-                        {/* <LineCircleLeft top={310} /> */}
 
                         <div className="flex flex-col md:flex-row mt-20 gap-10 justify-between">
                             {!isTablet && (
