@@ -147,7 +147,6 @@ export default function AboutUs() {
                                   min-h-[337px]
                                   lg:py-6
                                   gap-[20px]
-                                  2xl:w-[1440px] 2xl:m-auto
                                 "
                     >
                         {[
@@ -319,7 +318,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                         {/* tablet and desktop */}
-                        <div className="flex-row  pt-5 gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums 2xl:w-[1400px] 2xl:m-auto">
+                        <div className="flex-row  pt-5 gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums">
                             <div
                                 id="planProtein"
                                 className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-4 xl:px-4 2xl:px-12 py-4 ${lato.className}`}

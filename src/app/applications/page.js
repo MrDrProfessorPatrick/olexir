@@ -235,7 +235,7 @@ export default function Applications() {
                                 next-generation cosmeceuticals.
                             </li>
                         </ul>
-                        <div className="mt-5 lg:mt-15">
+                        <div className="mt-5">
                             <RoundTabs
                                 tabText={firstTabText}
                                 lineColor="#AB808D"
@@ -355,7 +355,7 @@ export default function Applications() {
                             sizes="(max-width: 200px)"
                         />
                     </section>
-                    <div className="mt-8 lg:mt-20 mb-5">
+                    <div className="pt-14 lg:pt-18 pb-10 2xl:w-[1440px] 2xl:m-auto">
                         <RoundTabs
                             tabText={secondTabText}
                             lineColor="#D8AE02"
@@ -363,7 +363,7 @@ export default function Applications() {
                     </div>
                     <Carusel images={foodCarusel} isBigCarousel={false} />
                     <p
-                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4 2xl:w-[1440px] 2xl:m-auto`}
+                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4  2xl:w-[1440px] 2xl:m-auto`}
                     >
                         To solve the problem for lactose-intolerant, health- and
                         eco-conscious people, we offer O-mega cheese. This is
@@ -412,7 +412,7 @@ export default function Applications() {
                             </p>
                         </div>
                     </div>
-                    <div className="mb-5 mb-8 lg:mb-15">
+                    <div className="pt-14 lg:pt-18 pb-16 2xl:w-[1440px] 2xl:m-auto">
                         <RoundTabs
                             tabText={wellnessTabText}
                             lineColor="#679BE8"
