@@ -363,7 +363,7 @@ export default function Applications() {
                     </div>
                     <Carusel images={foodCarusel} isBigCarousel={false} />
                     <p
-                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4`}
+                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4 2xl:w-[1440px] 2xl:m-auto`}
                     >
                         To solve the problem for lactose-intolerant, health- and
                         eco-conscious people, we offer O-mega cheese. This is
