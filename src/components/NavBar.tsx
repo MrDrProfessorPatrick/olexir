@@ -23,19 +23,20 @@ export default function NavBar() {
             <div
                 className={`absolute w-full h-[100px] backdrop-blur-xs bg-black/20 z-50 ${lato.className}`}
             >
-                <div className="absolute inset-0 flex z-10 w-[120px] h-[40px] xs:w-[120px] xs:h-[40px] md:w-[220px] md:h-[70px] ml-[5%] mt-7 md:mt-4 z-1000">
+                {/* Контейнер логотипа тепер центрований по вертикалі за допомогою top-1/2 та -translate-y-1/2 */}
+                <div className="absolute top-1/2 -translate-y-1/2 left-0 flex z-10 w-[180px] md:w-[224px] lg:w-[264px] aspect-[264/58] ml-[5%] z-1000">
                     <Link
                         href="/"
-                        className="absolute inset-0 z-20"
+                        className="relative w-full h-full block"
                         aria-label="Home"
                     >
                         <Image
-                            src={`/OlexirLogoWhiteBlue.png`}
+                            src="/OLEXIR.png" // OlexirLogoWhiteBlue.png
                             alt="logo"
+                            className="object-contain"
                             fill
-                            className="object-cover"
                             priority
-                            sizes="(max-width: 200px)"
+                            sizes="(max-width: 768px) 180px, 264px"
                         />
                     </Link>
                 </div>
@@ -67,19 +68,19 @@ export default function NavBar() {
                 </label>
 
                 <div className="sidebar">
-                    <div className="absolute inset-0 flex items-center justify-center z-10 w-[120px] h-[40px] xs:w-[120px] xs:h-[40px] lg:w-[220px] lg:h-[70px] ml-[5%] mt-7 z-1000">
+                    <div className="absolute inset-0 flex items-center justify-center z-10 w-[180px] md:w-[224px] lg:w-[264px] aspect-[264/58] ml-[5%] mt-7 z-1000">
                         <Link
                             href="/"
                             className="absolute inset-0 z-20"
                             aria-label="Home"
                         >
                             <Image
-                                src={`/OlexirLogoWhiteBlue.png`}
+                                src="/OLEXIR.png" // OlexirLogoWhiteBlue.png
                                 alt="logo"
+                                className="object-contain"
                                 fill
-                                className="object-cover"
                                 priority
-                                sizes="(max-width: 200px)"
+                                sizes="(max-width: 768px) 180px, 264px"
                             />
                         </Link>
                     </div>

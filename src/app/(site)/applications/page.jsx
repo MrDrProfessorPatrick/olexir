@@ -149,7 +149,7 @@ export default function Applications() {
             </section>
             <div>
                 <section className="bg-[url('/ApplicationCosmeticsBGV2.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
-                    <div className="flex center justify-center pl-4 lg:pl-8 pr-4 lg:pr-8 lg:pl-35 lg:pr-35 pt-15 pb-7 lg:pb-15">
+                    <div className="flex center justify-center pl-4 lg:pl-8 pr-4 lg:pr-8 lg:pl-35 lg:pr-35 pt-15 pb-7 lg:pb-15 2xl:w-[1440px] 2xl:m-auto">
                         <p
                             className={`text-white text-[22px] lg:text-[32px] text-center ${lato.className}`}
                         >
@@ -160,7 +160,7 @@ export default function Applications() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-1 lg:pt-17 pb-5 lg:pb-15 pl-5 pr-5 lg:pl-16 lg:pr-16">
+                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-1 lg:pt-17 pb-5 lg:pb-15 pl-5 pr-5 lg:pl-16 lg:pr-16 2xl:w-[1440px] 2xl:m-auto">
                         <div>
                             <h1
                                 className={`text-white text-[26px] lg:text-[48px] font-medium ${lato.className}`}
@@ -170,7 +170,7 @@ export default function Applications() {
                         </div>
                         <div>
                             <p
-                                className={`max-w-[730px] text-white ${lato.className} text-[16px] lg:text-[24px] text-justify`}
+                                className={`max-w-[730px] text-white ${lato.className} text-[16px] lg:text-[24px] text-justify `}
                             >
                                 At Olexir, we transform plant oils into new
                                 solid textures using the natural structuring
@@ -187,7 +187,7 @@ export default function Applications() {
                     />
 
                     <div
-                        className={`text-white pt-8 lg:pt-17 pb-6 lg:pb-16 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                        className={`text-white pt-8 lg:pt-17 pb-6 lg:pb-16 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className} 2xl:w-[1440px] 2xl:m-auto`}
                     >
                         <h2
                             className={`${lato.className} text-[32px] font-light`}
@@ -195,7 +195,7 @@ export default function Applications() {
                             Why it matters
                         </h2>
                         <ul
-                            className={`${lato.className} list-disc marker:text-[#AB808D] text-[16px] md:text-[24px]`}
+                            className={`${lato.className} list-disc marker:text-[#AB808D] text-[16px] md:text-[24px] `}
                         >
                             <li>
                                 <span className="text-[#AB808D]">
@@ -235,7 +235,7 @@ export default function Applications() {
                                 next-generation cosmeceuticals.
                             </li>
                         </ul>
-                        <div className="mt-5 lg:mt-15">
+                        <div className="mt-5">
                             <RoundTabs
                                 tabText={firstTabText}
                                 lineColor="#AB808D"
@@ -263,7 +263,7 @@ export default function Applications() {
                     </div>
                 </section>
                 <section className="bg-[url('/ApplicationFoodBG.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
-                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-17 pb-20 pl-5 pr-5 lg:pl-16 lg:pr-16">
+                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-17 pb-20 pl-5 pr-5 lg:pl-16 lg:pr-16 2xl:w-[1440px] 2xl:m-auto">
                         <div>
                             <h1
                                 className={`text-white text-[26px] lg:text-[48px] font-medium ${lato.className}`}
@@ -297,7 +297,7 @@ export default function Applications() {
                     </section>
 
                     <div
-                        className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                        className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className} 2xl:w-[1440px] 2xl:m-auto`}
                     >
                         <h2
                             className={`${lato.className} text-[32px] font-light`}
@@ -355,7 +355,7 @@ export default function Applications() {
                             sizes="(max-width: 200px)"
                         />
                     </section>
-                    <div className="mt-8 lg:mt-20 mb-5">
+                    <div className="pt-14 lg:pt-18 pb-10 2xl:w-[1440px] 2xl:m-auto">
                         <RoundTabs
                             tabText={secondTabText}
                             lineColor="#D8AE02"
@@ -363,7 +363,7 @@ export default function Applications() {
                     </div>
                     <Carusel images={foodCarusel} isBigCarousel={false} />
                     <p
-                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4`}
+                        className={`text-white ${lato.className} text-[16px] lg:text-[24px] text-center pb-10 px-2 xs:px-4  2xl:w-[1440px] 2xl:m-auto`}
                     >
                         To solve the problem for lactose-intolerant, health- and
                         eco-conscious people, we offer O-mega cheese. This is
@@ -388,7 +388,7 @@ export default function Applications() {
                     </div>
                 </section>
                 <section className="bg-[url('/ApplicationHealthBG.png')] bg-repeat-y bg-center bg-[length:100%_auto]">
-                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-8 lg:pt-30 pb-8 lg:pb-15 pl-5 pr-5 lg:pl-16 lg:pr-16">
+                    <div className="flex flex-col md:flex-row gap-5 justify-between pt-8 lg:pt-30 pb-8 lg:pb-15 pl-5 pr-5 lg:pl-16 lg:pr-16 2xl:w-[1440px] 2xl:m-auto">
                         <div>
                             <h1
                                 className={`text-white font-light text-[22px] lg:text-[30px] xl:text-[48px] font-medium ${lato.className}`}
@@ -412,7 +412,7 @@ export default function Applications() {
                             </p>
                         </div>
                     </div>
-                    <div className="mb-5 mb-8 lg:mb-15">
+                    <div className="pt-14 lg:pt-18 pb-16 2xl:w-[1440px] 2xl:m-auto">
                         <RoundTabs
                             tabText={wellnessTabText}
                             lineColor="#679BE8"
@@ -429,7 +429,7 @@ export default function Applications() {
                         />
                     </section>
                     <div
-                        className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className}`}
+                        className={`text-white pt-8 lg:pt-17 pb-8 lg:pb-20 pl-10 pr-5 lg:pl-16 lg:pr-16 ${lato.className} 2xl:w-[1440px] 2xl:m-auto 2xl:w-[1440px] 2xl:m-auto`}
                     >
                         <h2
                             className={`${lato.className} text-[32px] font-light`}
@@ -461,7 +461,7 @@ export default function Applications() {
                         </ul>
                     </div>
                     <p
-                        className={`text-white italic  ${lato.className} text-[16px] lg:text-[24px] pb-12 pl-5 lg:pb-25 lg:pl-10 pr-5`}
+                        className={`text-white italic  ${lato.className} text-[16px] lg:text-[24px] pb-12 pl-5 lg:pb-25 lg:pl-10 pr-5 2xl:w-[1440px] 2xl:m-auto`}
                     >
                         *These applications are part of ongoing research and
                         collaborations, with results to be shared as they

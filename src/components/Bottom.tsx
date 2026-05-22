@@ -18,18 +18,19 @@ export default function Bottom() {
               md:justify-center bg-[#D8AE02] w-full h-[550px] md:h-[268px] 
                ${lato.className}`}
         >
-            <div className="flex items-center justify-center md:justify-start md:ml-16 ">
-                <div className="flex flex-col justify-center items-center h-full md:pt-10">
-                    <div className="relative w-[220px] h-[70px] ">
+            <div className="flex items-center justify-center md:center">
+                <div className="flex flex-col justify-center items-center h-full md:pt-21">
+                    <div className="relative w-[180px] md:w-[200px] lg:w-[264px] aspect-[264/58]">
                         <Image
-                            src="/OlexirLogoBlackDiomondUnderI2.png"
+                            src="/OLEXIRAUBERGIN.png"
                             alt="logo"
+                            className="object-contain"
                             fill
-                            className="object-cover"
                             priority
-                            sizes="(max-width: 200px)"
+                            sizes="(max-width: 768px) 180px, 264px"
                         />
                     </div>
+
                     <div className="flex flex-2 items-end hidden md:flex justify-center text-[12px] lg:text-[14px] pb-4">
                         <div
                             className={`flex flex-row gap-4 ${lato.className}`}
