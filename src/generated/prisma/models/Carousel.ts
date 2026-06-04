@@ -130,7 +130,7 @@ export type CarouselGroupByOutputType = {
   _max: CarouselMaxAggregateOutputType | null
 }
 
-type GetCarouselGroupByPayload<T extends CarouselGroupByArgs> = Prisma.PrismaPromise<
+export type GetCarouselGroupByPayload<T extends CarouselGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<CarouselGroupByOutputType, T['by']> &
       {
@@ -309,11 +309,19 @@ export type CarouselUncheckedUpdateWithoutPostBlocksInput = {
 
 export type CarouselCreateWithoutItemsInput = {
   id?: string
+<<<<<<< HEAD
+=======
+  blockId: string
+>>>>>>> e128be0 (Post schema changed)
   postBlocks?: Prisma.PostBlockCreateNestedManyWithoutCarouselInput
 }
 
 export type CarouselUncheckedCreateWithoutItemsInput = {
   id?: string
+<<<<<<< HEAD
+=======
+  blockId: string
+>>>>>>> e128be0 (Post schema changed)
   postBlocks?: Prisma.PostBlockUncheckedCreateNestedManyWithoutCarouselInput
 }
 
@@ -335,11 +343,19 @@ export type CarouselUpdateToOneWithWhereWithoutItemsInput = {
 
 export type CarouselUpdateWithoutItemsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+<<<<<<< HEAD
+=======
+  blockId?: Prisma.StringFieldUpdateOperationsInput | string
+>>>>>>> e128be0 (Post schema changed)
   postBlocks?: Prisma.PostBlockUpdateManyWithoutCarouselNestedInput
 }
 
 export type CarouselUncheckedUpdateWithoutItemsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
+<<<<<<< HEAD
+=======
+  blockId?: Prisma.StringFieldUpdateOperationsInput | string
+>>>>>>> e128be0 (Post schema changed)
   postBlocks?: Prisma.PostBlockUncheckedUpdateManyWithoutCarouselNestedInput
 }
 
@@ -1041,6 +1057,11 @@ export type CarouselFindManyArgs<ExtArgs extends runtime.Types.Extensions.Intern
    * Skip the first `n` Carousels.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of Carousels.
+   */
   distinct?: Prisma.CarouselScalarFieldEnum | Prisma.CarouselScalarFieldEnum[]
 }
 

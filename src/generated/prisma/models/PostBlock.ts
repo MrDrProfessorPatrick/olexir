@@ -193,7 +193,7 @@ export type PostBlockGroupByOutputType = {
   _max: PostBlockMaxAggregateOutputType | null
 }
 
-type GetPostBlockGroupByPayload<T extends PostBlockGroupByArgs> = Prisma.PrismaPromise<
+export type GetPostBlockGroupByPayload<T extends PostBlockGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<PostBlockGroupByOutputType, T['by']> &
       {
@@ -1451,6 +1451,11 @@ export type PostBlockFindManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
    * Skip the first `n` PostBlocks.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of PostBlocks.
+   */
   distinct?: Prisma.PostBlockScalarFieldEnum | Prisma.PostBlockScalarFieldEnum[]
 }
 

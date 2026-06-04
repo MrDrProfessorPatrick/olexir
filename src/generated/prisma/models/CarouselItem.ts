@@ -199,7 +199,7 @@ export type CarouselItemGroupByOutputType = {
   _max: CarouselItemMaxAggregateOutputType | null
 }
 
-type GetCarouselItemGroupByPayload<T extends CarouselItemGroupByArgs> = Prisma.PrismaPromise<
+export type GetCarouselItemGroupByPayload<T extends CarouselItemGroupByArgs> = Prisma.PrismaPromise<
   Array<
     Prisma.PickEnumerable<CarouselItemGroupByOutputType, T['by']> &
       {
@@ -1209,6 +1209,11 @@ export type CarouselItemFindManyArgs<ExtArgs extends runtime.Types.Extensions.In
    * Skip the first `n` CarouselItems.
    */
   skip?: number
+  /**
+   * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+   * 
+   * Filter by unique combinations of CarouselItems.
+   */
   distinct?: Prisma.CarouselItemScalarFieldEnum | Prisma.CarouselItemScalarFieldEnum[]
 }
 
