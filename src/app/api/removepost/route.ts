@@ -13,19 +13,18 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { title, imageFile } = body
+        const { id } = body
 
-        if (!title) {
+        if (!id) {
             return NextResponse.json(
-                { error: 'Title is required' },
+                { error: 'ID of the post not found' },
                 { status: 400 }
             )
         }
 
-        const post = await prisma.post.create({
-            data: {
-                title: title,
-                imgUrl: imageFile,
+        const post = await prisma.post.delete({
+            where: {
+                id: id,
             },
         })
 

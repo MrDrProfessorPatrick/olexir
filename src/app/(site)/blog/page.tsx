@@ -1,6 +1,7 @@
 import { auth } from '@clerk/nextjs/server'
 import prisma from '../../lib/prisma'
 
+import BlogCard from '@/components/blogCard/BlogCard'
 import AddPostButton from '../../../components/AddPostButton'
 
 export default async function Blog() {
@@ -11,8 +12,18 @@ export default async function Blog() {
     return (
         <>
             <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
+                <div className="flex">
+                    {posts &&
+                        posts.map(({ slug, imgUrl, title }) => (
+                            <BlogCard
+                                key={slug}
+                                slug={slug}
+                                imgUrl={imgUrl}
+                                title={title}
+                            />
+                        ))}
+                </div>
                 {true && <AddPostButton />}
-                <div className="flex">BLOG CONTENT</div>
             </div>
         </>
     )

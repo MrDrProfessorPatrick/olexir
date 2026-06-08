@@ -14,6 +14,7 @@ const postData: Prisma.PostCreateInput[] = [
     {
         title: 'Getting Started with Olexir',
         imgUrl: '/images/getting-started.jpg',
+        slug: 'slug 1',
         blocks: {
             create: [
                 {
@@ -32,6 +33,7 @@ const postData: Prisma.PostCreateInput[] = [
     {
         title: 'Advanced Features',
         imgUrl: '/images/advanced.jpg',
+        slug: 'slug 2',
         blocks: {
             create: [
                 {

@@ -745,6 +745,7 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 export const PostScalarFieldEnum = {
   id: 'id',
   title: 'title',
+  slug: 'slug',
   imgUrl: 'imgUrl',
   createdAt: 'createdAt'
 } as const
