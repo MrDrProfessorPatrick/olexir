@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { getAuth } from '@clerk/nextjs/server'
 import { NextRequest } from 'next/server'
 import prisma from '../../lib/prisma'
+import { slugify } from '@/app/lib/slugify'
 
 export async function POST(req: NextRequest) {
     try {
@@ -22,10 +23,30 @@ export async function POST(req: NextRequest) {
             )
         }
 
+        const baseSlug = slugify(title)
+
+        let uniqueSlug = baseSlug
+        let isUnique = false
+        let counter = 1
+
+        while (!isUnique) {
+            const existingPost = await prisma.post.findUnique({
+                where: { slug: uniqueSlug },
+            })
+
+            if (!existingPost) {
+                isUnique = true
+            } else {
+                uniqueSlug = `${baseSlug}-${counter}`
+                counter++
+            }
+        }
+
         const post = await prisma.post.create({
             data: {
                 title: title,
                 imgUrl: imageFile,
+                slug: uniqueSlug,
             },
         })
 

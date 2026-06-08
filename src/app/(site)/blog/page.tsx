@@ -23,8 +23,8 @@ export default async function Blog() {
                             />
                         ))}
                 </div>
-                {true && <AddPostButton />}
             </div>
+            {true && <AddPostButton />}
         </>
     )
 }
