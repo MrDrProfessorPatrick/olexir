@@ -95,5 +95,5 @@ export function FormToAddPost({ setIsFormShown }: FormToAddPostProps) {
 }
 
 async function uploadImageToAzure(file: File): Promise<string> {
-    return 'http://localhost:3000/mockedimage.jpg'
+    return 'http://localhost:3000/ContactModalBG.webp'
 }
