@@ -21,7 +21,7 @@ export function FormToAddPost({ setIsFormShown }: FormToAddPostProps) {
         try {
             const imageUrl = await uploadImageToAzure(file)
 
-            const response = await fetch('/api/posts', {
+            const response = await fetch('/api/addposts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
