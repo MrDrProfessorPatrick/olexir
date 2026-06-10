@@ -5,26 +5,34 @@ import BlogCard from '@/components/blogCard/BlogCard'
 import AddPostButton from '../../../components/AddPostButton'
 
 export default async function Blog() {
-    const { userId } = await auth()
+    const authObj = await auth()
+    const { userId } = authObj
     console.log('User ID:', userId)
     const posts = await prisma.post.findMany()
     console.log('posts', posts)
     return (
         <>
-            <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-                <div className="flex">
-                    {posts &&
-                        posts.map(({ slug, imgUrl, title }) => (
-                            <BlogCard
-                                key={slug}
-                                slug={slug}
-                                imgUrl={imgUrl}
-                                title={title}
-                            />
-                        ))}
+            {true && (
+                <div className="pt-30">
+                    <AddPostButton />
+                </div>
+            )}
+            <div className="min-h-[1200px] 2xl:w-[1240px] mx-auto pb-20">
+                <div className="text-white items-center pt-30 px-4">
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        {posts &&
+                            posts.map(({ slug, imgUrl, title, createdAt }) => (
+                                <BlogCard
+                                    key={slug}
+                                    slug={slug}
+                                    imgUrl={imgUrl}
+                                    title={title}
+                                    createdAt={createdAt}
+                                />
+                            ))}
+                    </div>
                 </div>
             </div>
-            {true && <AddPostButton />}
         </>
     )
 }

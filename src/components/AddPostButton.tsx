@@ -11,7 +11,7 @@ export default function AddPostButton() {
             {!isFormShown && (
                 <button
                     onClick={() => setIsFormShown(!isFormShown)}
-                    className="bg-blue-500 px-4 py-2 rounded mb-4"
+                    className="bg-blue-500 px-4 py-2 rounded mb-4 cursor-pointer"
                 >
                     Додати Пост
                 </button>

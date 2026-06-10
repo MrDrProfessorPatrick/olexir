@@ -17,7 +17,6 @@ export default function NavBar() {
     const path = usePathname()
     const burgerColor =
         path === '/technology' || path === '/applications' ? 'white' : 'black'
-    console.log('path', path)
     return (
         <>
             <div
@@ -94,14 +93,17 @@ export default function NavBar() {
                                     key={button}
                                     href={href}
                                     onClick={() => {
-                                        const menuToggle = document.getElementById(
-                                            'menu-toggle'
-                                        ) as HTMLInputElement | null
+                                        const menuToggle =
+                                            document.getElementById(
+                                                'menu-toggle'
+                                            ) as HTMLInputElement | null
 
                                         if (!menuToggle) return
 
                                         menuToggle.checked = false
-                                        document.body.classList.remove('overflow-hidden')
+                                        document.body.classList.remove(
+                                            'overflow-hidden'
+                                        )
                                     }}
                                     className={`block w-[200px] mx-auto text-white mt-5 pb-6 font-extrabold text-center  ${
                                         index === buttons.length - 1
