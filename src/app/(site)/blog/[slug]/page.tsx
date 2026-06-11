@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import { auth } from '@clerk/nextjs/server'
 import prisma from '../../../lib/prisma'
-import BlogEditor from '../../../../components/BlogEditor'
-import type { StrictPostBlock } from '../../../../components/BlogEditor'
+import BlogEditor from '../../../../components/BlogEditor/BlogEditor'
+import type { StrictPostBlock } from '../../../../components/BlogEditor/BlogEditor'
 
 interface BlogPageProps {
     params: Promise<{ slug: string }>

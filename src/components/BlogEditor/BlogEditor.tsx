@@ -2,7 +2,7 @@
 import {
     type PostBlock as PrismaPostBlock,
     BlockType,
-} from '../generated/prisma/client'
+} from '../../generated/prisma/client'
 import { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
@@ -53,6 +53,7 @@ export interface BlogEditorProps {
 
 export default function BlogEditor({ blocks }: BlogEditorProps) {
     const [blockShown, setBlockShown] = useState(false)
+    const [textBlock, setTextBlock] = useState<TextBlock | null>(null)
 
     return (
         <div className="w-[60%]">
@@ -80,6 +81,7 @@ export default function BlogEditor({ blocks }: BlogEditorProps) {
 
             {/* Blocks */}
             <div className="space-y-8">
+                <input type="text" />
                 <textarea
                     key={block.id}
                     value={block.text}
