@@ -1,34 +1,61 @@
 'use client'
-
+import {
+    type PostBlock as PrismaPostBlock,
+    BlockType,
+} from '../generated/prisma/client'
 import { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-type Block =
-    | { id: string; type: 'TEXT'; text: string }
-    | { id: string; type: 'IMAGE'; imageUrl: string; caption?: string }
+// type TextBlock = { id: string; type: 'TEXT'; title: string; text: string }
+// type ImageBlock = {
+//     id: string
+//     type: 'IMAGE'
+//     title: string
+//     text: string
+//     imageUrl: string
+//     caption?: string
+// }
+// type VideoBlock = {
+//     id: string
+//     type: 'VIDEO'
+//     title: string
+//     text: string
+//     imageUrl: string
+//     caption?: string
+// }
+// type CaruselBlock = {
+//     id: string
+//     title: string
+//     text: string
+//     type: 'CARUSEL'
+// }
 
-export default function BlogEditor() {
-    const [blocks, setBlocks] = useState<Block[]>([])
+interface TextBlock extends Omit<PrismaPostBlock, 'type' | 'text'> {
+    type: typeof BlockType.TEXT
+    text: string
+}
 
-    const addTextBlock = () => {
-        setBlocks((prev) => [...prev, { id: uuid(), type: 'TEXT', text: '' }])
-    }
+interface ImageBlock extends Omit<PrismaPostBlock, 'type' | 'imageUrl'> {
+    type: typeof BlockType.IMAGE
+    imageUrl: string
+}
 
-    const addImageBlock = () => {
-        setBlocks((prev) => [
-            ...prev,
-            { id: uuid(), type: 'IMAGE', imageUrl: '', caption: '' },
-        ])
-    }
+interface VideoBlock extends Omit<PrismaPostBlock, 'type' | 'videoUrl'> {
+    type: typeof BlockType.VIDEO
+    videoUrl: string
+}
 
-    const updateBlock = (id: string, data: Partial<Block>) => {
-        setBlocks((prev) =>
-            prev.map((b) => (b.id === id ? { ...b, ...data } : b))
-        )
-    }
+export type StrictPostBlock = TextBlock | ImageBlock | VideoBlock
+
+export interface BlogEditorProps {
+    blocks: StrictPostBlock[]
+}
+
+export default function BlogEditor({ blocks }: BlogEditorProps) {
+    const [blockShown, setBlockShown] = useState(false)
 
     return (
-        <div className="space-y-6">
+        <div className="w-[60%]">
             {/* Toolbar */}
             <div className="flex gap-4">
                 <button
@@ -43,54 +70,27 @@ export default function BlogEditor() {
                 >
                     + Image
                 </button>
+                <button
+                    onClick={addImageBlock}
+                    className="px-4 py-2 bg-white text-black"
+                >
+                    + Video
+                </button>
             </div>
 
             {/* Blocks */}
             <div className="space-y-8">
-                {blocks.map((block) => {
-                    if (block.type === 'TEXT') {
-                        return (
-                            <textarea
-                                key={block.id}
-                                value={block.text}
-                                onChange={(e) =>
-                                    updateBlock(block.id, {
-                                        text: e.target.value,
-                                    })
-                                }
-                                placeholder="Write text..."
-                                className="w-full p-4 bg-zinc-900 text-white resize-none"
-                            />
-                        )
+                <textarea
+                    key={block.id}
+                    value={block.text}
+                    onChange={(e) =>
+                        updateBlock(block.id, {
+                            text: e.target.value,
+                        })
                     }
-
-                    if (block.type === 'IMAGE') {
-                        return (
-                            <div key={block.id} className="space-y-2">
-                                <input
-                                    value={block.imageUrl}
-                                    onChange={(e) =>
-                                        updateBlock(block.id, {
-                                            imageUrl: e.target.value,
-                                        })
-                                    }
-                                    placeholder="Image URL"
-                                    className="w-full p-2 bg-zinc-900 text-white"
-                                />
-                                <input
-                                    value={block.caption}
-                                    onChange={(e) =>
-                                        updateBlock(block.id, {
-                                            caption: e.target.value,
-                                        })
-                                    }
-                                    placeholder="Caption (optional)"
-                                    className="w-full p-2 bg-zinc-900 text-white"
-                                />
-                            </div>
-                        )
-                    }
-                })}
+                    placeholder="Write text..."
+                    className="w-full p-4 bg-zinc-900 text-white resize-none"
+                />
             </div>
         </div>
     )

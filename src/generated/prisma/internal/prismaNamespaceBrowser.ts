@@ -101,8 +101,7 @@ export type PostBlockScalarFieldEnum = (typeof PostBlockScalarFieldEnum)[keyof t
 
 
 export const CarouselScalarFieldEnum = {
-  id: 'id',
-  blockId: 'blockId'
+  id: 'id'
 } as const
 
 export type CarouselScalarFieldEnum = (typeof CarouselScalarFieldEnum)[keyof typeof CarouselScalarFieldEnum]
