@@ -23,8 +23,7 @@ export default function BlogCard({
     return (
         <div className="h-full rounded-2xl overflow-hidden">
             <Link
-                href={slug}
-                target="_blank"
+                href={`/blog/${slug}`}
                 rel="noopener noreferrer"
                 className="flex h-full flex-col overflow-hidden"
             >

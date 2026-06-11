@@ -34,16 +34,15 @@ model PostBlock {
   text      String?
   imageUrl  String?
   videoUrl  String?
-  carousel   Carousel? @relation(fields: [carouselId], references: [id], onDelete: Cascade)
-  carouselId String?
+  carousel  Carousel? @relation(fields: [carouselId], references: [id], onDelete: Cascade)
+  carouselId String? @unique
   createdAt DateTime  @default(now())
 }
 
 model Carousel {
   id      String @id @default(uuid())
-  blockId String @unique // some problem with blockId
   items      CarouselItem[]
-  postBlocks PostBlock[]
+  postBlock PostBlock?
 }
 
 model CarouselItem {
