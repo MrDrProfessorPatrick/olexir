@@ -19,13 +19,16 @@ export default async function Blog({ params }: BlogPageProps) {
     if (!post) {
         notFound()
     }
-    console.log('post', post)
-
+    const postid = post.id
+    console.log('POST', post)
     return (
         <>
             <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
                 {true && (
-                    <BlogEditor blocks={post.blocks as StrictPostBlock[]} />
+                    <BlogEditor
+                        postid={postid}
+                        blocks={post.blocks as StrictPostBlock[]}
+                    />
                 )}
                 <div className="flex">BLOG CONTENT</div>
             </div>
