@@ -89,7 +89,7 @@ export default function TextForm({
                         }))
                     }}
                     placeholder="Write text..."
-                    className="w-full p-2 text-black resize-none bg-[#BFC6C4] resize-y"
+                    className="w-full p-2 text-black bg-[#BFC6C4] resize-y"
                 />
             </div>
             <button
