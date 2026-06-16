@@ -8,14 +8,14 @@ interface TextFormChangeProps {
     postBlockId: string
     title?: string | null
     text?: string | null
-    setBlockShown: Dispatch<SetStateAction<BlockShown | null>>
+    setCustomizeBlock: Dispatch<SetStateAction<string>>
 }
 
 export default function TextFormChange({
     postBlockId,
     title,
     text,
-    setBlockShown,
+    setCustomizeBlock,
 }: TextFormChangeProps) {
     const [loading, setLoading] = useState(false)
     const [textState, setTextState] = useState({
@@ -62,7 +62,7 @@ export default function TextFormChange({
         >
             <button
                 onClick={() => {
-                    setBlockShown(null)
+                    setCustomizeBlock('')
                 }}
                 className="absolute bg-[red] rounded-sm pt-1 pb-1 pl-2 pr-2 right-1 cursor-pointer"
             >

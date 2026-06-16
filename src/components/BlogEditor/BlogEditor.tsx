@@ -1,14 +1,15 @@
 'use client'
 
 import Image from 'next/image'
-import { v4 as uuid } from 'uuid'
 import { useState } from 'react'
+import { RefreshCw } from 'lucide-react'
 
 import {
     type PostBlock as PrismaPostBlock,
     BlockType,
 } from '../../generated/prisma/client'
 import TextForm from './Forms/TextForm'
+import TextFormChange from './Forms/TextFormChange'
 import ImageForm from './Forms/ImageForm'
 
 export interface BlogEditorProps {
@@ -19,7 +20,7 @@ export interface BlogEditorProps {
 export type BlockShown = 'text' | 'image' | 'video' | 'carusel'
 
 export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
-    const [blockShown, setBlockShown] = useState<BlockShown | null>(null)
+    const [addBlockShown, setAddBlockShown] = useState<BlockShown | null>(null)
     const [customizeBlock, setCustomizeBlock] = useState<string>('')
 
     return (
@@ -29,23 +30,23 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                 blocks.map((block) => {
                     if (block.type === 'TEXT') {
                         return block.id === customizeBlock ? (
-                            <TextForm
-                                postId={block.id}
+                            <TextFormChange
+                                postBlockId={block.id}
                                 title={block.title}
                                 text={block.text}
-                                setBlockShown={setBlockShown}
+                                setCustomizeBlock={setCustomizeBlock}
                             />
                         ) : (
-                            <div>
+                            <div className="relative">
                                 <h2 className="text-[30px]">{block.title}</h2>
                                 <div>{block.text}</div>
                                 <button
-                                    className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded cursor-pointer"
+                                    className="absolute right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                                     onClick={() => {
                                         setCustomizeBlock(block.id)
                                     }}
                                 >
-                                    Customize
+                                    <RefreshCw />
                                 </button>
                             </div>
                         )
@@ -89,7 +90,7 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                 <div className="flex gap-2">
                     <button
                         onClick={() => {
-                            setBlockShown('text')
+                            setAddBlockShown('text')
                         }}
                         className="px-4 py-2 bg-white text-black"
                     >
@@ -97,7 +98,7 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                     </button>
                     <button
                         onClick={() => {
-                            setBlockShown('image')
+                            setAddBlockShown('image')
                         }}
                         className="px-4 py-2 bg-white text-black"
                     >
@@ -111,11 +112,17 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                     </button>
                 </div>
 
-                {blockShown === 'text' && (
-                    <TextForm postId={postId} setBlockShown={setBlockShown} />
+                {addBlockShown === 'text' && (
+                    <TextForm
+                        postId={postId}
+                        setAddBlockShown={setAddBlockShown}
+                    />
                 )}
-                {blockShown === 'image' && (
-                    <ImageForm postId={postId} setBlockShown={setBlockShown} />
+                {addBlockShown === 'image' && (
+                    <ImageForm
+                        postId={postId}
+                        setAddBlockShown={setAddBlockShown}
+                    />
                 )}
             </div>
         </div>

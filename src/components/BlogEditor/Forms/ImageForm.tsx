@@ -8,14 +8,14 @@ interface ImageFormProps {
     postId: string
     title?: string
     text?: string
-    setBlockShown: Dispatch<SetStateAction<BlockShown | null>>
+    setAddBlockShown: Dispatch<SetStateAction<BlockShown | null>>
 }
 
 export default function ImageForm({
     postId,
     title,
     text,
-    setBlockShown,
+    setAddBlockShown,
 }: ImageFormProps) {
     const [loading, setLoading] = useState(false)
     const [image, setImage] = useState<File | null>(null)
@@ -65,7 +65,7 @@ export default function ImageForm({
         >
             <button
                 onClick={() => {
-                    setBlockShown(null)
+                    setAddBlockShown(null)
                 }}
                 className="absolute bg-[red] rounded-sm pt-1 pb-1 pl-2 pr-2 right-1 cursor-pointer"
             >
