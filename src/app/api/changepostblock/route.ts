@@ -5,7 +5,6 @@ import type { BlockType } from '@/generated/prisma/enums'
 
 export async function POST(req: NextRequest) {
     try {
-        // const { userId } = getAuth(req)
         const userId = true
 
         if (!userId) {
@@ -13,11 +12,11 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { postId, title, text, type } = body
+        const { id, title, text, type } = body
 
-        if (!title || !text || !type) {
+        if (!id) {
             return NextResponse.json(
-                { error: 'Title text and type is required' },
+                { error: 'Block ID is required' },
                 { status: 400 }
             )
         }
@@ -29,17 +28,18 @@ export async function POST(req: NextRequest) {
         if (type === 'video') blockType = 'VIDEO'
         if (type === 'carusel') blockType = 'CARUSEL'
 
-        const newBlock = await prisma.postBlock.create({
+        const updatedBlock = await prisma.postBlock.update({
+            where: { id },
             data: {
-                postId: postId,
                 type: blockType,
-                title: title,
-                text: text,
+                ...(title !== undefined && { title }),
+                ...(text !== undefined && { text }),
             },
         })
-        return NextResponse.json(newBlock, { status: 201 })
+
+        return NextResponse.json(updatedBlock, { status: 200 })
     } catch (error) {
-        console.error('API Error in addpostblock:', error)
+        console.error('API Error in changepostblock:', error)
         return NextResponse.json(
             { error: 'Internal Server Error' },
             { status: 500 }

@@ -4,19 +4,19 @@ import { useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 import type { BlockShown } from '../BlogEditor'
 
-interface TextFormProps {
-    postId: string
+interface TextFormChangeProps {
+    postBlockId: string
     title?: string | null
     text?: string | null
     setBlockShown: Dispatch<SetStateAction<BlockShown | null>>
 }
 
-export default function TextForm({
-    postId,
+export default function TextFormChange({
+    postBlockId,
     title,
     text,
     setBlockShown,
-}: TextFormProps) {
+}: TextFormChangeProps) {
     const [loading, setLoading] = useState(false)
     const [textState, setTextState] = useState({
         title: title || '',
@@ -28,11 +28,11 @@ export default function TextForm({
         setLoading(true)
 
         try {
-            const response = await fetch('/api/addpostblock', {
+            const response = await fetch('/api/changepostblock', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    postId: postId,
+                    id: postBlockId,
                     title: textState.title,
                     text: textState.text,
                     type: 'text',
@@ -40,7 +40,7 @@ export default function TextForm({
             })
 
             if (response.ok) {
-                alert('Пост створено!')
+                alert('Блок змінено!')
                 setTextState({ title: '', text: '' })
                 window.location.reload()
             } else {
@@ -49,7 +49,7 @@ export default function TextForm({
             }
         } catch (err) {
             console.error(err)
-            alert('Помилка при створенні поста')
+            alert('Помилка при зміні блоку')
         } finally {
             setLoading(false)
         }
@@ -75,7 +75,7 @@ export default function TextForm({
                         className="p-2 bg-[#BFC6C4] h-[40px] text-black"
                         id="text"
                         type="text"
-                        value={title || ''}
+                        value={textState.title}
                         onChange={(e) => {
                             setTextState((prev) => ({
                                 title: e.target.value,
@@ -85,7 +85,7 @@ export default function TextForm({
                     />
                 </div>
                 <textarea
-                    value={text || ''}
+                    value={textState.text}
                     onChange={(e) => {
                         setTextState((prev) => ({
                             title: prev.title,
@@ -98,9 +98,10 @@ export default function TextForm({
             </div>
             <button
                 type="submit"
+                disabled={loading}
                 className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 cursor-pointer"
             >
-                Add text block
+                Change text block
             </button>
         </form>
     )

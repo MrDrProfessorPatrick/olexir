@@ -4,44 +4,47 @@ import { useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 import type { BlockShown } from '../BlogEditor'
 
-interface TextFormProps {
+interface ImageFormProps {
     postId: string
-    title?: string | null
-    text?: string | null
+    title?: string
+    text?: string
     setBlockShown: Dispatch<SetStateAction<BlockShown | null>>
 }
 
-export default function TextForm({
+export default function ImageForm({
     postId,
     title,
     text,
     setBlockShown,
-}: TextFormProps) {
+}: ImageFormProps) {
     const [loading, setLoading] = useState(false)
-    const [textState, setTextState] = useState({
-        title: title || '',
-        text: text || '',
-    })
+    const [image, setImage] = useState<File | null>(null)
+    const [formState, setFormState] = useState({ title: '', text: '' })
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+        if (!image) return alert('Додайте зображення')
         setLoading(true)
 
         try {
+            const imageUrl = await uploadImageToAzure(image)
+
             const response = await fetch('/api/addpostblock', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    postId: postId,
-                    title: textState.title,
-                    text: textState.text,
-                    type: 'text',
+                    postid: postId,
+                    title: formState.title,
+                    text: formState.text,
+                    imageUrl: imageUrl,
+                    type: 'image',
                 }),
             })
 
             if (response.ok) {
-                alert('Пост створено!')
-                setTextState({ title: '', text: '' })
+                alert('Пост з картинкою створено!')
+                setFormState({ title: '', text: '' })
+                setImage(null)
                 window.location.reload()
             } else {
                 const error = await response.json()
@@ -70,25 +73,34 @@ export default function TextForm({
             </button>
             <div className="grid gap-4 mt-4">
                 <div className="flex flex-col">
-                    <label htmlFor="text">Enter title:</label>
+                    <label htmlFor="title">Enter title:</label>
                     <input
                         className="p-2 bg-[#BFC6C4] h-[40px] text-black"
-                        id="text"
+                        id="title"
                         type="text"
-                        value={title || ''}
                         onChange={(e) => {
-                            setTextState((prev) => ({
+                            setFormState((prev) => ({
+                                ...prev,
                                 title: e.target.value,
-                                text: prev.text,
                             }))
                         }}
                     />
                 </div>
+                <div className="flex flex-col">
+                    <label htmlFor="image">Enter image:</label>
+                    <input
+                        className="p-2 bg-[#BFC6C4] text-black"
+                        id="image"
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => setImage(e.target.files?.[0] || null)}
+                    />
+                </div>
                 <textarea
-                    value={text || ''}
+                    value={text}
                     onChange={(e) => {
-                        setTextState((prev) => ({
-                            title: prev.title,
+                        setFormState((prev) => ({
+                            ...prev,
                             text: e.target.value,
                         }))
                     }}
@@ -100,8 +112,12 @@ export default function TextForm({
                 type="submit"
                 className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 cursor-pointer"
             >
-                Add text block
+                Add image block
             </button>
         </form>
     )
+}
+
+async function uploadImageToAzure(file: File): Promise<string> {
+    return '/ContactModalBG.webp'
 }

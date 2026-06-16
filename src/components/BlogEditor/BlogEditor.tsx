@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { v4 as uuid } from 'uuid'
 import { useState } from 'react'
 
@@ -8,15 +9,16 @@ import {
     BlockType,
 } from '../../generated/prisma/client'
 import TextForm from './Forms/TextForm'
+import ImageForm from './Forms/ImageForm'
 
 export interface BlogEditorProps {
-    postid: string
+    postId: string
     blocks: PrismaPostBlock[]
 }
 
 export type BlockShown = 'text' | 'image' | 'video' | 'carusel'
 
-export default function BlogEditor({ postid, blocks }: BlogEditorProps) {
+export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
     const [blockShown, setBlockShown] = useState<BlockShown | null>(null)
     const [customizeBlock, setCustomizeBlock] = useState<string>('')
 
@@ -27,22 +29,58 @@ export default function BlogEditor({ postid, blocks }: BlogEditorProps) {
                 blocks.map((block) => {
                     if (block.type === 'TEXT') {
                         return block.id === customizeBlock ? (
+                            <TextForm
+                                postId={block.id}
+                                title={block.title}
+                                text={block.text}
+                                setBlockShown={setBlockShown}
+                            />
+                        ) : (
+                            <div>
+                                <h2 className="text-[30px]">{block.title}</h2>
+                                <div>{block.text}</div>
+                                <button
+                                    className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded cursor-pointer"
+                                    onClick={() => {
+                                        setCustomizeBlock(block.id)
+                                    }}
+                                >
+                                    Customize
+                                </button>
+                            </div>
+                        )
+                    }
+                    if (block.type === 'IMAGE') {
+                        return block.id === customizeBlock ? (
                             <div key={block.id} className="space-y-1">
                                 <textarea
                                     className="w-full bg-zinc-900 text-white resize-none"
                                     value={block.title || ''}
                                 />
+                                <Image
+                                    className="object-cover"
+                                    src={block.imageUrl || ''}
+                                    alt="Blog post title image"
+                                    fill
+                                />
                                 <textarea
                                     value={block.text || ''}
                                     onChange={(e) => {}}
                                     placeholder="Write text..."
-                                    className="w-full p-4 bg-zinc-900 text-white resize-y"
+                                    className="w-full bg-zinc-900 text-white resize-none"
                                 />
                             </div>
                         ) : (
                             <div>
                                 <h2 className="text-[30px]">{block.title}</h2>
-                                <div>{block.text}</div>
+                                <div className="relative">
+                                    <Image
+                                        className="object-cover"
+                                        src={block.imageUrl || ''}
+                                        alt="Blog post title image"
+                                        fill
+                                    />
+                                </div>
                             </div>
                         )
                     }
@@ -58,7 +96,9 @@ export default function BlogEditor({ postid, blocks }: BlogEditorProps) {
                         + Text
                     </button>
                     <button
-                        onClick={() => {}}
+                        onClick={() => {
+                            setBlockShown('image')
+                        }}
                         className="px-4 py-2 bg-white text-black"
                     >
                         + Image
@@ -72,7 +112,10 @@ export default function BlogEditor({ postid, blocks }: BlogEditorProps) {
                 </div>
 
                 {blockShown === 'text' && (
-                    <TextForm postid={postid} setBlockShown={setBlockShown} />
+                    <TextForm postId={postId} setBlockShown={setBlockShown} />
+                )}
+                {blockShown === 'image' && (
+                    <ImageForm postId={postId} setBlockShown={setBlockShown} />
                 )}
             </div>
         </div>
