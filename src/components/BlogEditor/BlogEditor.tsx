@@ -105,10 +105,13 @@ export default function BlogEditor({
                                 <h2 className="text-[30px]">{block.title}</h2>
                                 {block.videoUrl && (
                                     <iframe
-                                        className="w-full aspect-video"
+                                        width="640"
+                                        height="360"
                                         src={block.videoUrl}
-                                        title="Video"
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
+                                        style={{ border: 'none' }}
                                     />
                                 )}
                                 <button

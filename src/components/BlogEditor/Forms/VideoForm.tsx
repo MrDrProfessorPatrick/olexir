@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import type { Dispatch, SetStateAction } from 'react'
 import type { BlockShown } from '../BlogEditor'
+import getYouTubeEmbedUrl from '../../../app/lib/getYouTubeEmbedUrl'
 
 interface VideoFormProps {
     postId: string
@@ -91,11 +92,13 @@ export default function VideoForm({
                         className="p-2 bg-[#BFC6C4] h-[40px] text-black"
                         id="videoUrl"
                         type="text"
-                        placeholder="https://youtube.com/..."
+                        placeholder="Add video link here..."
                         onChange={(e) => {
+                            let link = getYouTubeEmbedUrl(e.target.value)
+                            console.log('link', link)
                             setFormState((prev) => ({
                                 ...prev,
-                                videoUrl: e.target.value,
+                                videoUrl: link,
                             }))
                         }}
                     />

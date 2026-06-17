@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 import type { Dispatch, SetStateAction } from 'react'
-import type { BlockShown } from '../BlogEditor'
+import getYouTubeEmbedUrl from '../../../app/lib/getYouTubeEmbedUrl'
 
 interface VideoFormChangeProps {
     postBlockId: string
@@ -20,7 +20,11 @@ export default function VideoFormChange({
     setCustomizeBlock,
 }: VideoFormChangeProps) {
     const [loading, setLoading] = useState(false)
-    const [formState, setFormState] = useState({
+    const [formState, setFormState] = useState<{
+        title: string
+        text: string
+        videoUrl: string
+    }>({
         title: title || '',
         text: text || '',
         videoUrl: videoUrl || '',
@@ -97,9 +101,12 @@ export default function VideoFormChange({
                         placeholder="add link to the video"
                         value={formState.videoUrl}
                         onChange={(e) => {
+                            console.log('VIDEO CHANGE')
+                            let link = getYouTubeEmbedUrl(e.target.value)
+                            console.log('link', link)
                             setFormState((prev) => ({
                                 ...prev,
-                                videoUrl: e.target.value,
+                                videoUrl: link,
                             }))
                         }}
                     />
