@@ -12,6 +12,8 @@ import TextForm from './Forms/TextForm'
 import TextFormChange from './Forms/TextFormChange'
 import ImageForm from './Forms/ImageForm'
 import ImageFormChange from './Forms/ImageFormChange'
+import VideoForm from './Forms/VideoForm'
+import VideoFormChange from './Forms/VideoFormChange'
 
 export interface BlogEditorProps {
     postTitle: string
@@ -89,6 +91,37 @@ export default function BlogEditor({
                             </div>
                         )
                     }
+                    if (block.type === 'VIDEO') {
+                        return block.id === customizeBlock ? (
+                            <VideoFormChange
+                                postBlockId={block.id}
+                                title={block.title}
+                                text={block.text}
+                                videoUrl={block.videoUrl}
+                                setCustomizeBlock={setCustomizeBlock}
+                            />
+                        ) : (
+                            <div className="relative flex flex-col max-w-full">
+                                <h2 className="text-[30px]">{block.title}</h2>
+                                {block.videoUrl && (
+                                    <iframe
+                                        className="w-full aspect-video"
+                                        src={block.videoUrl}
+                                        title="Video"
+                                        allowFullScreen
+                                    />
+                                )}
+                                <button
+                                    className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                                    onClick={() => {
+                                        setCustomizeBlock(block.id)
+                                    }}
+                                >
+                                    <RefreshCw />
+                                </button>
+                            </div>
+                        )
+                    }
                 })}
             <div className="flex flex-col gap-4 mt-8">
                 <div className="flex gap-2">
@@ -109,7 +142,9 @@ export default function BlogEditor({
                         Add Image
                     </button>
                     <button
-                        onClick={() => {}}
+                        onClick={() => {
+                            setAddBlockShown('video')
+                        }}
                         className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                     >
                         Add Video
@@ -125,6 +160,13 @@ export default function BlogEditor({
                 )}
                 {addBlockShown === 'image' && (
                     <ImageForm
+                        postId={postId}
+                        blocksLength={blocks.length || 0}
+                        setAddBlockShown={setAddBlockShown}
+                    />
+                )}
+                {addBlockShown === 'video' && (
+                    <VideoForm
                         postId={postId}
                         blocksLength={blocks.length || 0}
                         setAddBlockShown={setAddBlockShown}

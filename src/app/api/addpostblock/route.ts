@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { postId, title, text, blocksLength, imageUrl, type } = body
+        const { postId, title, text, blocksLength, imageUrl, videoUrl, type } = body
 
         if (!title || !text || !type) {
             return NextResponse.json(
@@ -36,6 +36,7 @@ export async function POST(req: NextRequest) {
                 title: title,
                 text: text,
                 imageUrl: imageUrl || null,
+                videoUrl: videoUrl || null,
                 position: blocksLength + 1,
             },
         })

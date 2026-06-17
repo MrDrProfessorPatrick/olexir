@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { id, title, text, type, imageUrl } = body
+        const { id, title, text, type, imageUrl, videoUrl } = body
 
         if (!id) {
             return NextResponse.json(
@@ -35,6 +35,7 @@ export async function POST(req: NextRequest) {
                 ...(title !== undefined && { title }),
                 ...(text !== undefined && { text }),
                 ...(imageUrl !== undefined && { imageUrl }),
+                ...(videoUrl !== undefined && { videoUrl }),
             },
         })
 
