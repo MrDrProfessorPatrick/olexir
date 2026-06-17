@@ -31,7 +31,7 @@ export default function ImageForm({
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    postid: postId,
+                    postId: postId,
                     title: formState.title,
                     text: formState.text,
                     imageUrl: imageUrl,
@@ -96,7 +96,6 @@ export default function ImageForm({
                     />
                 </div>
                 <textarea
-                    value={text}
                     onChange={(e) => {
                         setFormState((prev) => ({
                             ...prev,

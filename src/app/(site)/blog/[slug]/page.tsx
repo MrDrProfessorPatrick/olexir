@@ -26,18 +26,18 @@ export default async function Blog({ params }: BlogPageProps) {
         notFound()
     }
     const postId = post.id
+    const postTitle = post.title || ''
     console.log('POST', post)
     return (
-        <>
-            <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-                {true && (
-                    <BlogEditor
-                        postId={postId}
-                        blocks={post.blocks as PrismaPostBlock[]}
-                    />
-                )}
-                <div className="flex">BLOG CONTENT</div>
-            </div>
-        </>
+        <div className="relative text-white flex flex-col items-center justify-center pt-26">
+            {true && (
+                <BlogEditor
+                    postTitle={postTitle}
+                    postId={postId}
+                    blocks={post.blocks as PrismaPostBlock[]}
+                />
+            )}
+            <div className="flex">BLOG CONTENT</div>
+        </div>
     )
 }

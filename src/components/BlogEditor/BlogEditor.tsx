@@ -13,18 +13,24 @@ import TextFormChange from './Forms/TextFormChange'
 import ImageForm from './Forms/ImageForm'
 
 export interface BlogEditorProps {
+    postTitle: string
     postId: string
     blocks: PrismaPostBlock[]
 }
 
 export type BlockShown = 'text' | 'image' | 'video' | 'carusel'
 
-export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
+export default function BlogEditor({
+    postTitle,
+    postId,
+    blocks,
+}: BlogEditorProps) {
     const [addBlockShown, setAddBlockShown] = useState<BlockShown | null>(null)
     const [customizeBlock, setCustomizeBlock] = useState<string>('')
 
     return (
         <div className="w-[60%]">
+            <h1 className="text-[36px] text-center">{postTitle}</h1>
             {/* Blocks */}
             {blocks &&
                 blocks.map((block) => {
@@ -72,16 +78,16 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                                 />
                             </div>
                         ) : (
-                            <div>
+                            <div className="flex flex-col max-w-full">
                                 <h2 className="text-[30px]">{block.title}</h2>
-                                <div className="relative">
-                                    <Image
-                                        className="object-cover"
-                                        src={block.imageUrl || ''}
-                                        alt="Blog post title image"
-                                        fill
-                                    />
-                                </div>
+                                <Image
+                                    className="w-full h-auto object-contain"
+                                    src={block.imageUrl || ''}
+                                    alt="Blog post title image"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                />
                             </div>
                         )
                     }
