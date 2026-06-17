@@ -11,6 +11,7 @@ import {
 import TextForm from './Forms/TextForm'
 import TextFormChange from './Forms/TextFormChange'
 import ImageForm from './Forms/ImageForm'
+import ImageFormChange from './Forms/ImageFormChange'
 
 export interface BlogEditorProps {
     postTitle: string
@@ -59,26 +60,15 @@ export default function BlogEditor({
                     }
                     if (block.type === 'IMAGE') {
                         return block.id === customizeBlock ? (
-                            <div key={block.id} className="space-y-1">
-                                <textarea
-                                    className="w-full bg-zinc-900 text-white resize-none"
-                                    value={block.title || ''}
-                                />
-                                <Image
-                                    className="object-cover"
-                                    src={block.imageUrl || ''}
-                                    alt="Blog post title image"
-                                    fill
-                                />
-                                <textarea
-                                    value={block.text || ''}
-                                    onChange={(e) => {}}
-                                    placeholder="Write text..."
-                                    className="w-full bg-zinc-900 text-white resize-none"
-                                />
-                            </div>
+                            <ImageFormChange
+                                postBlockId={block.id}
+                                title={block.title}
+                                text={block.text}
+                                imageUrl={block.imageUrl}
+                                setCustomizeBlock={setCustomizeBlock}
+                            />
                         ) : (
-                            <div className="flex flex-col max-w-full">
+                            <div className="relative flex flex-col max-w-full">
                                 <h2 className="text-[30px]">{block.title}</h2>
                                 <Image
                                     className="w-full h-auto object-contain"
@@ -88,6 +78,14 @@ export default function BlogEditor({
                                     height={0}
                                     sizes="100vw"
                                 />
+                                <button
+                                    className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                                    onClick={() => {
+                                        setCustomizeBlock(block.id)
+                                    }}
+                                >
+                                    <RefreshCw />
+                                </button>
                             </div>
                         )
                     }

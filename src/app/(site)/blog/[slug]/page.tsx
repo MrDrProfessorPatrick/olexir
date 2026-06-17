@@ -27,7 +27,7 @@ export default async function Blog({ params }: BlogPageProps) {
     }
     const postId = post.id
     const postTitle = post.title || ''
-    console.log('POST', post)
+
     return (
         <div className="relative text-white flex flex-col items-center justify-center pt-26">
             {true && (
