@@ -115,13 +115,14 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                 {addBlockShown === 'text' && (
                     <TextForm
                         postId={postId}
-                        setAddBlockShown={setAddBlockShown}
                         blocksLength={blocks.length || 0}
+                        setAddBlockShown={setAddBlockShown}
                     />
                 )}
                 {addBlockShown === 'image' && (
                     <ImageForm
                         postId={postId}
+                        blocksLength={blocks.length || 0}
                         setAddBlockShown={setAddBlockShown}
                     />
                 )}

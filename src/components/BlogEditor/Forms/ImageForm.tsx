@@ -6,15 +6,13 @@ import type { BlockShown } from '../BlogEditor'
 
 interface ImageFormProps {
     postId: string
-    title?: string
-    text?: string
+    blocksLength: number
     setAddBlockShown: Dispatch<SetStateAction<BlockShown | null>>
 }
 
 export default function ImageForm({
     postId,
-    title,
-    text,
+    blocksLength,
     setAddBlockShown,
 }: ImageFormProps) {
     const [loading, setLoading] = useState(false)
@@ -37,6 +35,7 @@ export default function ImageForm({
                     title: formState.title,
                     text: formState.text,
                     imageUrl: imageUrl,
+                    blocksLength: blocksLength,
                     type: 'image',
                 }),
             })
