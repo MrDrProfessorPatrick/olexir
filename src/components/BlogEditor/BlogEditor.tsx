@@ -92,23 +92,23 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                         onClick={() => {
                             setAddBlockShown('text')
                         }}
-                        className="px-4 py-2 bg-white text-black"
+                        className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                     >
-                        + Text
+                        Add Text Block
                     </button>
                     <button
                         onClick={() => {
                             setAddBlockShown('image')
                         }}
-                        className="px-4 py-2 bg-white text-black"
+                        className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                     >
-                        + Image
+                        Add Image
                     </button>
                     <button
                         onClick={() => {}}
-                        className="px-4 py-2 bg-white text-black"
+                        className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                     >
-                        + Video
+                        Add Video
                     </button>
                 </div>
 
@@ -116,6 +116,7 @@ export default function BlogEditor({ postId, blocks }: BlogEditorProps) {
                     <TextForm
                         postId={postId}
                         setAddBlockShown={setAddBlockShown}
+                        blocksLength={blocks.length || 0}
                     />
                 )}
                 {addBlockShown === 'image' && (

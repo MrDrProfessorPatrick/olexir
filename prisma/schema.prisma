@@ -36,6 +36,7 @@ model PostBlock {
   videoUrl  String?
   carousel  Carousel? @relation(fields: [carouselId], references: [id], onDelete: Cascade)
   carouselId String? @unique
+  position   Int
   createdAt DateTime  @default(now())
 }
 

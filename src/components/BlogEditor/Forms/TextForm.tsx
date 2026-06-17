@@ -6,21 +6,19 @@ import type { BlockShown } from '../BlogEditor'
 
 interface TextFormProps {
     postId: string
-    title?: string | null
-    text?: string | null
+    blocksLength: number
     setAddBlockShown: Dispatch<SetStateAction<BlockShown | null>>
 }
 
 export default function TextForm({
     postId,
-    title,
-    text,
+    blocksLength,
     setAddBlockShown,
 }: TextFormProps) {
     const [loading, setLoading] = useState(false)
     const [textState, setTextState] = useState({
-        title: title || '',
-        text: text || '',
+        title: '',
+        text: '',
     })
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -35,6 +33,7 @@ export default function TextForm({
                     postId: postId,
                     title: textState.title,
                     text: textState.text,
+                    blocksLength: blocksLength,
                     type: 'text',
                 }),
             })
@@ -75,8 +74,9 @@ export default function TextForm({
                         className="p-2 bg-[#BFC6C4] h-[40px] text-black"
                         id="text"
                         type="text"
-                        value={title || ''}
+                        value={textState.title}
                         onChange={(e) => {
+                            console.log('e.target.value', e.target.value)
                             setTextState((prev) => ({
                                 title: e.target.value,
                                 text: prev.text,
@@ -85,7 +85,7 @@ export default function TextForm({
                     />
                 </div>
                 <textarea
-                    value={text || ''}
+                    value={textState.text}
                     onChange={(e) => {
                         setTextState((prev) => ({
                             title: prev.title,

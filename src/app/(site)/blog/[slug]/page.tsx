@@ -13,7 +13,13 @@ export default async function Blog({ params }: BlogPageProps) {
     const { slug } = await params
     const post = await prisma.post.findUnique({
         where: { slug: slug },
-        include: { blocks: true },
+        include: {
+            blocks: {
+                orderBy: {
+                    position: 'asc',
+                },
+            },
+        },
     })
 
     if (!post) {

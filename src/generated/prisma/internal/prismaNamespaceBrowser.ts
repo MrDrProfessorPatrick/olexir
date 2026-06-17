@@ -94,6 +94,7 @@ export const PostBlockScalarFieldEnum = {
   imageUrl: 'imageUrl',
   videoUrl: 'videoUrl',
   carouselId: 'carouselId',
+  position: 'position',
   createdAt: 'createdAt'
 } as const
 
