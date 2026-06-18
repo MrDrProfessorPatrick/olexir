@@ -2,12 +2,12 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import { RefreshCw } from 'lucide-react'
 
 import {
     type PostBlock as PrismaPostBlock,
     BlockType,
 } from '../../generated/prisma/client'
+import { PostBlockPanel } from './Forms/PostBlockPanel'
 import TextForm from './Forms/TextForm'
 import TextFormChange from './Forms/TextFormChange'
 import ImageForm from './Forms/ImageForm'
@@ -49,14 +49,12 @@ export default function BlogEditor({
                             <div className="relative">
                                 <h2 className="text-[30px]">{block.title}</h2>
                                 <div>{block.text}</div>
-                                <button
-                                    className="absolute right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
-                                    onClick={() => {
-                                        setCustomizeBlock(block.id)
-                                    }}
-                                >
-                                    <RefreshCw />
-                                </button>
+                                <div className="absolute right-0 top-0">
+                                    <PostBlockPanel
+                                        blockId={block.id}
+                                        setCustomizeBlock={setCustomizeBlock}
+                                    />
+                                </div>
                             </div>
                         )
                     }
@@ -84,14 +82,10 @@ export default function BlogEditor({
                                     <figcaption>{block.text}</figcaption>
                                 </figcaption>
 
-                                <button
-                                    className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
-                                    onClick={() => {
-                                        setCustomizeBlock(block.id)
-                                    }}
-                                >
-                                    <RefreshCw />
-                                </button>
+                                <PostBlockPanel
+                                    blockId={block.id}
+                                    setCustomizeBlock={setCustomizeBlock}
+                                />
                             </div>
                         )
                     }
@@ -119,14 +113,10 @@ export default function BlogEditor({
                                         <figcaption>{block.text}</figcaption>
                                     </figure>
                                 )}
-                                <button
-                                    className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
-                                    onClick={() => {
-                                        setCustomizeBlock(block.id)
-                                    }}
-                                >
-                                    <RefreshCw />
-                                </button>
+                                <PostBlockPanel
+                                    blockId={block.id}
+                                    setCustomizeBlock={setCustomizeBlock}
+                                />
                             </div>
                         )
                     }

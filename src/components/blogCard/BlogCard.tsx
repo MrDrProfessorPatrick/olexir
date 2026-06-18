@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { Trash2 } from 'lucide-react'
 
 interface BlogCardProps {
     slug: string
@@ -21,7 +24,13 @@ export default function BlogCard({
     })
     const createdAtSrt = formatter.format(createdAt)
     return (
-        <div className="h-full rounded-2xl overflow-hidden">
+        <div className="relative h-full rounded-2xl overflow-hidden">
+            <button
+                className="absolute z-1000 right-2 top-1 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                onClick={() => {}}
+            >
+                <Trash2 />
+            </button>
             <Link
                 href={`/blog/${slug}`}
                 rel="noopener noreferrer"
