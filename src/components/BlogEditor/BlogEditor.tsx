@@ -72,14 +72,18 @@ export default function BlogEditor({
                         ) : (
                             <div className="relative flex flex-col max-w-full">
                                 <h2 className="text-[30px]">{block.title}</h2>
-                                <Image
-                                    className="w-full h-auto object-contain"
-                                    src={block.imageUrl || ''}
-                                    alt="Blog post title image"
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                />
+                                <figcaption>
+                                    <Image
+                                        className="w-full h-auto object-contain"
+                                        src={block.imageUrl || ''}
+                                        alt="Blog post title image"
+                                        width={0}
+                                        height={0}
+                                        sizes="100vw"
+                                    />
+                                    <figcaption>{block.text}</figcaption>
+                                </figcaption>
+
                                 <button
                                     className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                                     onClick={() => {
@@ -101,18 +105,19 @@ export default function BlogEditor({
                                 setCustomizeBlock={setCustomizeBlock}
                             />
                         ) : (
-                            <div className="relative flex flex-col max-w-full">
+                            <div className="relative flex flex-col items-center justify-center max-w-full">
                                 <h2 className="text-[30px]">{block.title}</h2>
                                 {block.videoUrl && (
-                                    <iframe
-                                        width="640"
-                                        height="360"
-                                        src={block.videoUrl}
-                                        title="YouTube video player"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        style={{ border: 'none' }}
-                                    />
+                                    <figure className="w-full">
+                                        <iframe
+                                            className="w-full aspect-video"
+                                            src={block.videoUrl}
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        />
+                                        <figcaption>{block.text}</figcaption>
+                                    </figure>
                                 )}
                                 <button
                                     className="absolute z-1000 right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
