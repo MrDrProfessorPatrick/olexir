@@ -1,20 +1,7 @@
-import { Geist } from 'next/font/google'
 import NavBar from '../../components/NavBar'
 import Bottom from '@/components/Bottom'
-import { Lato } from 'next/font/google'
 import PopupProvider from '@/components/PopUpProvider'
 import ContactModal from '@/components/ContactModal'
-
-const lato = Lato({
-    variable: '--font-lato',
-    subsets: ['latin'],
-    weight: ['100', '300', '400', '700', '900'],
-})
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-})
 
 export const metadata = {
     title: 'Olexir',

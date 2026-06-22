@@ -2,9 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Trash2 } from 'lucide-react'
+import { PostBlockPanel } from '../BlogEditor/Forms/PostBlockPanel'
 
 interface BlogCardProps {
+    postId: string
     slug: string
     title: string
     imgUrl: string
@@ -12,6 +13,7 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({
+    postId,
     slug,
     title,
     imgUrl,
@@ -23,14 +25,26 @@ export default function BlogCard({
         year: 'numeric',
     })
     const createdAtSrt = formatter.format(createdAt)
+    async function handleDeletePost(id: string) {
+        const response = await fetch('/api/removepost', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                id: id,
+            }),
+        })
+
+        if (response.ok) {
+            alert(`Deleted entity with ${id}!`)
+            window.location.reload()
+        } else {
+            const error = await response.json()
+            throw new Error(error.message)
+        }
+    }
     return (
         <div className="relative h-full rounded-2xl overflow-hidden">
-            <button
-                className="absolute z-1000 right-2 top-1 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
-                onClick={() => {}}
-            >
-                <Trash2 />
-            </button>
+            <PostBlockPanel blockId={postId} />
             <Link
                 href={`/blog/${slug}`}
                 rel="noopener noreferrer"

@@ -10,6 +10,7 @@ export default async function Blog() {
     console.log('User ID:', userId)
     const posts = await prisma.post.findMany()
     console.log('posts', posts)
+
     return (
         <>
             {true && (
@@ -21,15 +22,18 @@ export default async function Blog() {
                 <div className="text-white items-center pt-30 px-4">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {posts &&
-                            posts.map(({ slug, imgUrl, title, createdAt }) => (
-                                <BlogCard
-                                    key={slug}
-                                    slug={slug}
-                                    imgUrl={imgUrl}
-                                    title={title}
-                                    createdAt={createdAt}
-                                />
-                            ))}
+                            posts.map(
+                                ({ slug, imgUrl, title, createdAt, id }) => (
+                                    <BlogCard
+                                        postId={id}
+                                        key={slug}
+                                        slug={slug}
+                                        imgUrl={imgUrl}
+                                        title={title}
+                                        createdAt={createdAt}
+                                    />
+                                )
+                            )}
                     </div>
                 </div>
             </div>
