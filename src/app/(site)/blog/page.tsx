@@ -25,6 +25,7 @@ export default async function Blog() {
                             posts.map(
                                 ({ slug, imgUrl, title, createdAt, id }) => (
                                     <BlogCard
+                                        userId={userId}
                                         postId={id}
                                         key={slug}
                                         slug={slug}

@@ -1,10 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PostBlockPanel } from '../BlogEditor/Forms/PostBlockPanel'
 
 interface BlogCardProps {
+    userId: string | null
     postId: string
     slug: string
     title: string
@@ -13,6 +15,7 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({
+    userId,
     postId,
     slug,
     title,
@@ -25,6 +28,8 @@ export default function BlogCard({
         year: 'numeric',
     })
     const createdAtSrt = formatter.format(createdAt)
+    const [customizedPost, setCustomizePost] = useState<string>('')
+
     async function handleDeletePost(id: string) {
         const response = await fetch('/api/removepost', {
             method: 'POST',
@@ -44,7 +49,12 @@ export default function BlogCard({
     }
     return (
         <div className="relative h-full rounded-2xl overflow-hidden">
-            <PostBlockPanel blockId={postId} />
+            {userId && (
+                <PostBlockPanel
+                    setCustomizeBlock={setCustomizePost}
+                    blockId={postId}
+                />
+            )}
             <Link
                 href={`/blog/${slug}`}
                 rel="noopener noreferrer"
