@@ -47,6 +47,7 @@ export default function BlogCard({
             throw new Error(error.message)
         }
     }
+
     return (
         <div className="relative h-full rounded-2xl overflow-hidden">
             {userId && (
