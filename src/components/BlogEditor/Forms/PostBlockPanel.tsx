@@ -32,7 +32,10 @@ export function PostBlockPanel({
             <button
                 className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                 onClick={() => {
-                    setCustomizeBlock(blockId)
+                    setCustomizeBlock((oldBlockId) => {
+                        if (oldBlockId) return ''
+                        return blockId
+                    })
                 }}
             >
                 <RefreshCw />

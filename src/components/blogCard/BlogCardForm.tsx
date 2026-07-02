@@ -12,20 +12,20 @@ export function BlogCardForm({
     const [file, setFile] = useState<File | null>(null)
     const [loading, setLoading] = useState(false)
 
-    async function uploadImageToAzure(file: File): Promise<string> {
+    async function uploadImageToAzure(file: File | null): Promise<string> {
         return '/ContactModalBG.webp'
     }
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        if (!file || !title) return alert('Заповніть усі поля')
+        if (!title) return alert('Введіть заголовок поста')
 
         const imgUrl = await uploadImageToAzure(file)
         const response = await fetch('/api/changepost', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                postId: postId,
+                id: postId,
                 title: changedTitle,
                 imageFile: imgUrl,
             }),
@@ -49,7 +49,7 @@ export function BlogCardForm({
         >
             <input
                 type="text"
-                value={title}
+                value={changedTitle}
                 onChange={(e) => setTitle(e.target.value)}
                 className="p-2 rounded bg-white"
             />
