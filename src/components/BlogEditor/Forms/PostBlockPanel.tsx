@@ -4,14 +4,17 @@ import { RefreshCw, Trash2 } from 'lucide-react'
 interface PostBlockPanelProps {
     blockId: string
     setCustomizeBlock: Dispatch<SetStateAction<string>>
+    entity: 'post' | 'postblock'
 }
 
 export function PostBlockPanel({
     blockId,
     setCustomizeBlock,
+    entity,
 }: PostBlockPanelProps) {
     async function handleDelete(blockId: string) {
-        const response = await fetch('/api/removepostblock', {
+        const operation = entity === 'post' ? 'removepost' : 'removepostblock'
+        const response = await fetch(`/api/${operation}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -19,7 +22,7 @@ export function PostBlockPanel({
             }),
         })
         if (response.ok) {
-            alert(`Deleted entity with ${blockId}!`)
+            alert(`Блок з id ${blockId} було видалено!`)
             window.location.reload()
         } else {
             const error = await response.json()

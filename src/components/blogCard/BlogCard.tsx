@@ -55,6 +55,7 @@ export default function BlogCard({
                 <PostBlockPanel
                     setCustomizeBlock={setCustomizePost}
                     blockId={postId}
+                    entity="post"
                 />
             )}
             {userId && customizedPost ? (

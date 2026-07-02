@@ -53,6 +53,7 @@ export default function BlogEditor({
                                     <PostBlockPanel
                                         blockId={block.id}
                                         setCustomizeBlock={setCustomizeBlock}
+                                        entity="postblock"
                                     />
                                 </div>
                             </div>
@@ -85,6 +86,7 @@ export default function BlogEditor({
                                 <PostBlockPanel
                                     blockId={block.id}
                                     setCustomizeBlock={setCustomizeBlock}
+                                    entity="postblock"
                                 />
                             </div>
                         )
@@ -116,6 +118,7 @@ export default function BlogEditor({
                                 <PostBlockPanel
                                     blockId={block.id}
                                     setCustomizeBlock={setCustomizeBlock}
+                                    entity="postblock"
                                 />
                             </div>
                         )
