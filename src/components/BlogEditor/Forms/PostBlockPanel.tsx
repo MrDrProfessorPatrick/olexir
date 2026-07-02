@@ -28,7 +28,7 @@ export function PostBlockPanel({
     }
 
     return (
-        <div className="absolute right-0 top-0">
+        <div className="absolute z-1000 right-5 top-5">
             <button
                 className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                 onClick={() => {

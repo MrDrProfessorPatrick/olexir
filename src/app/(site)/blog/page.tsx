@@ -6,7 +6,8 @@ import AddPostButton from '../../../components/AddPostButton'
 
 export default async function Blog() {
     const authObj = await auth()
-    const { userId } = authObj
+    // const { userId } = authObj
+    const userId = 'USER_ID'
     console.log('User ID:', userId)
     const posts = await prisma.post.findMany()
     console.log('posts', posts)

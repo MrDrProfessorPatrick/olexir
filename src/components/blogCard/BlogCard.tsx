@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PostBlockPanel } from '../BlogEditor/Forms/PostBlockPanel'
+import { BlogCardForm } from './BlogCardForm'
 
 interface BlogCardProps {
     userId: string | null
@@ -56,26 +57,32 @@ export default function BlogCard({
                     blockId={postId}
                 />
             )}
-            <Link
-                href={`/blog/${slug}`}
-                rel="noopener noreferrer"
-                className="flex h-full flex-col overflow-hidden"
-            >
-                <div className="flex flex-col aspect-[1/1] w-full">
-                    <div className="relative w-[100%] h-[100%]">
-                        <Image
-                            className="object-cover"
-                            src={imgUrl}
-                            alt="Blog post title image"
-                            fill
-                        />
+            {userId && customizedPost ? (
+                <BlogCardForm postId={postId} title={title} />
+            ) : (
+                <Link
+                    href={`/blog/${slug}`}
+                    rel="noopener noreferrer"
+                    className="flex h-full flex-col overflow-hidden"
+                >
+                    <div className="flex flex-col aspect-[1/1] w-full">
+                        <div className="relative w-[100%] h-[100%]">
+                            <Image
+                                className="object-cover"
+                                src={imgUrl}
+                                alt="Blog post title image"
+                                fill
+                            />
+                        </div>
+                        <div className="flex flex-col justify-center px-4 py-6 bg-[#443199]">
+                            <h2 className="text-2xl">{title}</h2>
+                            <div className="flex justify-end">
+                                {createdAtSrt}
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex flex-col justify-center px-4 py-6 bg-[#443199]">
-                        <h2 className="text-2xl">{title}</h2>
-                        <div className="flex justify-end">{createdAtSrt}</div>
-                    </div>
-                </div>
-            </Link>
+                </Link>
+            )}
         </div>
     )
 }
