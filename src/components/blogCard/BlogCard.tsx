@@ -31,24 +31,6 @@ export default function BlogCard({
     const createdAtSrt = formatter.format(createdAt)
     const [customizedPost, setCustomizePost] = useState<string>('')
 
-    async function handleDeletePost(id: string) {
-        const response = await fetch('/api/removepost', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                id: id,
-            }),
-        })
-
-        if (response.ok) {
-            alert(`Deleted entity with ${id}!`)
-            window.location.reload()
-        } else {
-            const error = await response.json()
-            throw new Error(error.message)
-        }
-    }
-
     return (
         <div className="relative h-full rounded-2xl overflow-hidden">
             {userId && (
