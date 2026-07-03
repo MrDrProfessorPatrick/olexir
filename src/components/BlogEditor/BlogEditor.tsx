@@ -32,7 +32,7 @@ export default function BlogEditor({
     const [customizeBlock, setCustomizeBlock] = useState<string>('')
 
     return (
-        <div className="w-[60%]">
+        <div className="min-h-[1200px] w-[60%]">
             <h1 className="text-[36px] text-center">{postTitle}</h1>
             {/* Blocks */}
             {blocks &&

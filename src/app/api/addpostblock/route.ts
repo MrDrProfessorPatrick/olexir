@@ -13,11 +13,12 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { postId, title, text, blocksLength, imageUrl, videoUrl, type } = body
+        const { postId, title, text, blocksLength, imageUrl, videoUrl, type } =
+            body
 
-        if (!title || !text || !type) {
+        if ((!title && !text) || !type) {
             return NextResponse.json(
-                { error: 'Title text and type is required' },
+                { error: 'Title or text and type is required' },
                 { status: 400 }
             )
         }

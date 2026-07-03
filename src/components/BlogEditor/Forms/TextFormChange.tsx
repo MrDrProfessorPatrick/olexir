@@ -2,7 +2,6 @@
 import { useState } from 'react'
 
 import type { Dispatch, SetStateAction } from 'react'
-import type { BlockShown } from '../BlogEditor'
 
 interface TextFormChangeProps {
     postBlockId: string
