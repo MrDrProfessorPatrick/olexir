@@ -14,6 +14,8 @@ export function PostBlockPanel({
 }: PostBlockPanelProps) {
     async function handleDelete(blockId: string) {
         const operation = entity === 'post' ? 'removepost' : 'removepostblock'
+        const confirmed = confirm('Do you confirm deletion?')
+        if (!confirmed) return
         const response = await fetch(`/api/${operation}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
