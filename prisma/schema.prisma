@@ -21,7 +21,7 @@ model Post {
   imgUrl    String
   blocks    PostBlock[]
   createdAt DateTime    @default(now())
-  isHidden Boolean @default(false)
+  isHidden Boolean @default(true)
 }
 
 model PostBlock {

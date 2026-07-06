@@ -47,6 +47,7 @@ export async function POST(req: NextRequest) {
                 title: title,
                 imgUrl: imageFile,
                 slug: uniqueSlug,
+                isHidden: true,
             },
         })
 

@@ -32,6 +32,7 @@ export default function BlogCard({
     })
     const createdAtSrt = formatter.format(createdAt)
     const [customizedPost, setCustomizePost] = useState<string>('')
+    console.log('isHidden BlogCard', isHidden)
 
     return (
         <div
@@ -42,6 +43,7 @@ export default function BlogCard({
                     setCustomizeBlock={setCustomizePost}
                     blockId={postId}
                     entity="post"
+                    isHidden={isHidden}
                 />
             )}
             {userId && customizedPost ? (

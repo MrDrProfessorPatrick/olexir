@@ -24,7 +24,14 @@ export default async function Blog() {
                     <div className="grid lg:grid-cols-2 gap-16">
                         {posts &&
                             posts.map(
-                                ({ slug, imgUrl, title, createdAt, id }) => (
+                                ({
+                                    slug,
+                                    imgUrl,
+                                    title,
+                                    createdAt,
+                                    isHidden,
+                                    id,
+                                }) => (
                                     <BlogCard
                                         userId={userId}
                                         postId={id}
@@ -33,6 +40,7 @@ export default async function Blog() {
                                         imgUrl={imgUrl}
                                         title={title}
                                         createdAt={createdAt}
+                                        isHidden={isHidden}
                                     />
                                 )
                             )}
