@@ -46,16 +46,20 @@ export default function BlogEditor({
                                 setCustomizeBlock={setCustomizeBlock}
                             />
                         ) : (
-                            <div className="relative">
-                                <h2 className="text-[30px]">{block.title}</h2>
-                                <div>{block.text}</div>
-                                <div className="absolute right-0 top-0">
+                            <div className="relative py-4">
+                                <div className="flex">
+                                    <div>
+                                        <h2 className="text-[30px]">
+                                            {block.title}
+                                        </h2>
+                                    </div>
                                     <PostBlockPanel
                                         blockId={block.id}
                                         setCustomizeBlock={setCustomizeBlock}
                                         entity="postblock"
                                     />
                                 </div>
+                                <div>{block.text}</div>
                             </div>
                         )
                     }
@@ -69,8 +73,20 @@ export default function BlogEditor({
                                 setCustomizeBlock={setCustomizeBlock}
                             />
                         ) : (
-                            <div className="relative flex flex-col max-w-full">
-                                <h2 className="text-[30px]">{block.title}</h2>
+                            <div className="relative flex flex-col max-w-full py-4">
+                                <div className="flex">
+                                    <div>
+                                        <h2 className="text-[30px]">
+                                            {block.title}
+                                        </h2>
+                                    </div>
+
+                                    <PostBlockPanel
+                                        blockId={block.id}
+                                        setCustomizeBlock={setCustomizeBlock}
+                                        entity="postblock"
+                                    />
+                                </div>
                                 <figcaption>
                                     <Image
                                         className="w-full h-auto object-contain"
@@ -82,12 +98,6 @@ export default function BlogEditor({
                                     />
                                     <figcaption>{block.text}</figcaption>
                                 </figcaption>
-
-                                <PostBlockPanel
-                                    blockId={block.id}
-                                    setCustomizeBlock={setCustomizeBlock}
-                                    entity="postblock"
-                                />
                             </div>
                         )
                     }
@@ -101,8 +111,18 @@ export default function BlogEditor({
                                 setCustomizeBlock={setCustomizeBlock}
                             />
                         ) : (
-                            <div className="relative flex flex-col items-center justify-center max-w-full">
-                                <h2 className="text-[30px]">{block.title}</h2>
+                            <div className="relative flex flex-col items-center justify-center max-w-full py-4">
+                                <div className="flex">
+                                    <h2 className="text-[30px]">
+                                        {block.title}
+                                    </h2>
+                                    <PostBlockPanel
+                                        blockId={block.id}
+                                        setCustomizeBlock={setCustomizeBlock}
+                                        entity="postblock"
+                                    />
+                                </div>
+
                                 {block.videoUrl && (
                                     <figure className="w-full">
                                         <iframe
@@ -115,11 +135,6 @@ export default function BlogEditor({
                                         <figcaption>{block.text}</figcaption>
                                     </figure>
                                 )}
-                                <PostBlockPanel
-                                    blockId={block.id}
-                                    setCustomizeBlock={setCustomizeBlock}
-                                    entity="postblock"
-                                />
                             </div>
                         )
                     }

@@ -32,7 +32,9 @@ export default function BlogCard({
     const [customizedPost, setCustomizePost] = useState<string>('')
 
     return (
-        <div className="relative h-full rounded-2xl overflow-hidden">
+        <div
+            className={`${userId && customizedPost ? 'border-1 border-solid' : ''} relative min-h-[560px] rounded-2xl overflow-hidden`}
+        >
             {userId && (
                 <PostBlockPanel
                     setCustomizeBlock={setCustomizePost}

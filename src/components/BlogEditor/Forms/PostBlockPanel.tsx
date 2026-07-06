@@ -33,9 +33,9 @@ export function PostBlockPanel({
     }
 
     return (
-        <div className="absolute flex z-1000 right-5 top-5">
+        <div className="absolute right-0 z-1 flex">
             <button
-                className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-1 px-1 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                 onClick={() => {
                     setCustomizeBlock((oldBlockId) => {
                         if (oldBlockId) return ''
@@ -46,7 +46,7 @@ export function PostBlockPanel({
                 <RefreshCw />
             </button>
             <button
-                className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                className="right-0 top-0 bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-1 px-1 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                 onClick={() => {
                     handleDelete(blockId)
                 }}

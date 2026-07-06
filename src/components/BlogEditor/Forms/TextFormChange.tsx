@@ -57,7 +57,7 @@ export default function TextFormChange({
     return (
         <form
             onSubmit={handleSubmit}
-            className="border border-white relative py-4 px-2 rounded-xl"
+            className="border bg-black border-white relative py-4 px-2 rounded-xl z-2"
         >
             <button
                 onClick={() => {

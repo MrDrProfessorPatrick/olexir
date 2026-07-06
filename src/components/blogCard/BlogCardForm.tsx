@@ -45,7 +45,7 @@ export function BlogCardForm({
             onSubmit={(e) => {
                 handleSubmit(e)
             }}
-            className="mt-18 flex flex-col gap-2 text-black"
+            className="flex flex-col pt-18 p-2 gap-2 text-black h-full overflow-hidden"
         >
             <input
                 type="text"
@@ -68,7 +68,7 @@ export function BlogCardForm({
             </label>
             <button
                 type="submit"
-                className="bg-green-600 text-white py-1 rounded"
+                className="mt-auto bg-green-600 text-white py-1 rounded"
             >
                 Зберегти зміни
             </button>
