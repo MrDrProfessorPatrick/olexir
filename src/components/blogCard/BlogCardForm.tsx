@@ -4,13 +4,18 @@ import { useState } from 'react'
 export function BlogCardForm({
     postId,
     title,
-    createdAtSrt,
+    createdAt,
 }: {
     postId: string
     title: string
-    createdAtSrt: string
+    createdAt: Date
 }) {
     const [changedTitle, setTitle] = useState(title)
+    const [changedDate, setChangedDate] = useState(
+        new Date(createdAt.getTime() - createdAt.getTimezoneOffset() * 60000)
+            .toISOString()
+            .slice(0, 16)
+    )
     const [file, setFile] = useState<File | null>(null)
     const [loading, setLoading] = useState(false)
 
@@ -30,6 +35,7 @@ export function BlogCardForm({
                 id: postId,
                 title: changedTitle,
                 imageFile: imgUrl,
+                createdAt: changedDate,
             }),
         })
 
@@ -53,6 +59,12 @@ export function BlogCardForm({
                 type="text"
                 value={changedTitle}
                 onChange={(e) => setTitle(e.target.value)}
+                className="p-2 rounded bg-white"
+            />
+            <input
+                type="datetime-local"
+                value={changedDate}
+                onChange={(e) => setChangedDate(e.target.value)}
                 className="p-2 rounded bg-white"
             />
             <input

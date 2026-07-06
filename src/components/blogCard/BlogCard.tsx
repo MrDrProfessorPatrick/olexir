@@ -52,7 +52,7 @@ export default function BlogCard({
                 <BlogCardForm
                     postId={postId}
                     title={title}
-                    createdAtSrt={createdAtSrt}
+                    createdAt={createdAt}
                 />
             ) : (
                 <Link

@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
         }
 
         const body = await req.json()
-        const { id, title, imageFile } = body
+        const { id, title, imageFile, createdAt } = body
 
         if (!id) {
             return NextResponse.json(
@@ -66,6 +66,7 @@ export async function POST(req: NextRequest) {
                 title: title,
                 ...(imageFile !== '' && { imgUrl: imageFile }),
                 slug: uniqueSlug,
+                ...(createdAt && { createdAt: new Date(createdAt) }),
             },
         })
 
