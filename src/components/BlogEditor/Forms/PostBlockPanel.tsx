@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
-import { RefreshCw, Trash2 } from 'lucide-react'
+import { RefreshCw, Trash2, Eye, EyeOff } from 'lucide-react'
 
 interface PostBlockPanelProps {
     blockId: string
@@ -33,7 +33,13 @@ export function PostBlockPanel({
     }
 
     return (
-        <div className="absolute right-0 z-1 flex">
+        <div className="absolute right-2 top-2 z-1 flex">
+            <button
+                className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-1 px-1 border border-pink-500 hover:border-transparent rounded cursor-pointer"
+                onClick={() => {}}
+            >
+                <Eye />
+            </button>
             <button
                 className="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-1 px-1 border border-pink-500 hover:border-transparent rounded cursor-pointer"
                 onClick={() => {

@@ -13,6 +13,7 @@ interface BlogCardProps {
     title: string
     imgUrl: string
     createdAt: Date
+    isHidden: Boolean
 }
 
 export default function BlogCard({
@@ -22,6 +23,7 @@ export default function BlogCard({
     title,
     imgUrl,
     createdAt,
+    isHidden,
 }: BlogCardProps) {
     const formatter = new Intl.DateTimeFormat('en-US', {
         month: 'short',
