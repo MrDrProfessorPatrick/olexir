@@ -4,9 +4,11 @@ import { useState } from 'react'
 export function BlogCardForm({
     postId,
     title,
+    createdAtSrt,
 }: {
     postId: string
     title: string
+    createdAtSrt: string
 }) {
     const [changedTitle, setTitle] = useState(title)
     const [file, setFile] = useState<File | null>(null)

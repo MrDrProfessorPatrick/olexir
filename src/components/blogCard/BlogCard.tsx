@@ -29,11 +29,13 @@ export default function BlogCard({
         month: 'short',
         day: 'numeric',
         year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false,
     })
     const createdAtSrt = formatter.format(createdAt)
     const [customizedPost, setCustomizePost] = useState<string>('')
-    console.log('isHidden BlogCard', isHidden)
-
+    console.log(title, createdAt)
     return (
         <div
             className={`${userId && customizedPost ? 'border-1 border-solid' : ''} relative min-h-[560px] rounded-2xl overflow-hidden`}
@@ -47,7 +49,11 @@ export default function BlogCard({
                 />
             )}
             {userId && customizedPost ? (
-                <BlogCardForm postId={postId} title={title} />
+                <BlogCardForm
+                    postId={postId}
+                    title={title}
+                    createdAtSrt={createdAtSrt}
+                />
             ) : (
                 <Link
                     href={`/blog/${slug}`}
