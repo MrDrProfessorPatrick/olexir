@@ -29,9 +29,6 @@ export default function BlogCard({
         month: 'short',
         day: 'numeric',
         year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: false,
     })
     const createdAtSrt = formatter.format(createdAt)
     const [customizedPost, setCustomizePost] = useState<string>('')
