@@ -9,7 +9,11 @@ export default async function Blog() {
     // const { userId } = authObj
     const userId = 'USER_ID'
     console.log('User ID:', userId)
-    const posts = await prisma.post.findMany()
+    const posts = await prisma.post.findMany({
+        orderBy: {
+            createdAt: 'desc',
+        },
+    })
     console.log('posts', posts)
 
     return (
