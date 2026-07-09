@@ -32,7 +32,7 @@ export default function BlogCard({
     })
     const createdAtSrt = formatter.format(createdAt)
     const [customizedPost, setCustomizePost] = useState<string>('')
-    console.log(title, createdAt)
+
     return (
         <div
             className={`${userId && customizedPost ? 'border-1 border-solid' : ''} relative min-h-[560px] rounded-2xl overflow-hidden`}

@@ -56,42 +56,33 @@ export default function BlogEditor({
         })
     )
 
-    const handleDragEnd = useCallback(
-        async (event: DragEndEvent) => {
-            const { active, over } = event
+    const handleDragEnd = useCallback(async (event: DragEndEvent) => {
+        const { active, over } = event
 
-            if (!over || active.id === over.id) return
+        if (!over || active.id === over.id) return
 
-            setBlocksState((prev) => {
-                const oldIndex = prev.findIndex(
-                    (block) => block.id === active.id
-                )
-                const newIndex = prev.findIndex(
-                    (block) => block.id === over.id
-                )
+        setBlocksState((prev) => {
+            const oldIndex = prev.findIndex((block) => block.id === active.id)
+            const newIndex = prev.findIndex((block) => block.id === over.id)
 
-                if (oldIndex === -1 || newIndex === -1) return prev
+            if (oldIndex === -1 || newIndex === -1) return prev
 
-                const reordered = arrayMove(prev, oldIndex, newIndex)
+            const reordered = arrayMove(prev, oldIndex, newIndex)
 
-                const payload = reordered.map((block, index) => ({
-                    id: block.id,
-                    position: index + 1,
-                }))
+            const payload = reordered.map((block, index) => ({
+                id: block.id,
+                position: index + 1,
+            }))
 
-                fetch('/api/reorderpostblocks', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ blocks: payload }),
-                }).catch((err) =>
-                    console.error('Failed to persist reorder:', err)
-                )
+            fetch('/api/reorderpostblocks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ blocks: payload }),
+            }).catch((err) => console.error('Failed to persist reorder:', err))
 
-                return reordered
-            })
-        },
-        []
-    )
+            return reordered
+        })
+    }, [])
 
     return (
         <div className="min-h-[1200px] w-[60%]">
@@ -161,7 +152,7 @@ export default function BlogEditor({
                                                 entity="postblock"
                                             />
                                         </div>
-                                        <figcaption>
+                                        <figure>
                                             <Image
                                                 className="w-full h-auto object-contain"
                                                 src={block.imageUrl || ''}
@@ -170,10 +161,10 @@ export default function BlogEditor({
                                                 height={0}
                                                 sizes="100vw"
                                             />
-                                            <figcaption>
+                                            <figcaption className="text-[14px]">
                                                 {block.text}
                                             </figcaption>
-                                        </figcaption>
+                                        </figure>
                                     </div>
                                 )
                             ) : (
@@ -212,7 +203,7 @@ export default function BlogEditor({
                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                         allowFullScreen
                                                     />
-                                                    <figcaption>
+                                                    <figcaption className="text-[14px]">
                                                         {block.text}
                                                     </figcaption>
                                                 </figure>
