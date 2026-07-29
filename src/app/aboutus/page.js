@@ -318,7 +318,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                         {/* tablet and desktop */}
-                        <div className="flex-row  pt-5 gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums">
+                        <div className="flex-row  pt-5 gap-8 lg:justify-center mt-2 hidden lg:flex tabular-nums pb:10 lg:pb-30">
                             <div
                                 id="planProtein"
                                 className={`w-full flex flex-col items-center border-1 border-solid border-white rounded-full md:rounded-4xl text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[22px] text-white px-1 lg:px-4 xl:px-4 2xl:px-12 py-4 ${lato.className}`}
@@ -395,7 +395,7 @@ export default function AboutUs() {
                             </div>
                         </div>
                     </>
-                    <div className="py-5 lg:py-15 pb:10 lg:pb-30">
+                    {/* <div className="py-5 lg:py-15 pb:10 lg:pb-30">
                         <h2
                             className={`${lato.className} text-[24px] lg:text-[48px] text-center text-[#D8AE02]`}
                         >
@@ -483,7 +483,7 @@ export default function AboutUs() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
